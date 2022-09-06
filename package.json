@@ -22,10 +22,9 @@
 		"predeploy": "npm run build"
 	},
 	"dependencies": {
-		"ecsy": "https://github.com/fe1ixz/felicsy.git",
-		"randomatic": "^3.1.1",
+		"elixr": "^0.2.0",
+		"gamepad-wrapper": "^1.1.2",
 		"three": "https://github.com/fe1ixz/three.js/#fix-srgb-from-working",
-		"three-mesh-bvh": "^0.5.11",
-		"uuid": "^8.3.2"
+		"three-mesh-bvh": "^0.5.15"
 	}
 }
