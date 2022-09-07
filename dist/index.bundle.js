@@ -2358,12 +2358,12 @@ class Core {
 		return this._ecsyWorld.getSystems();
 	}
 
-	registerGameComponent(gameComponent) {
-		this._ecsyWorld.registerComponent(gameComponent);
+	registerGameComponent(GameComponent) {
+		this._ecsyWorld.registerComponent(GameComponent);
 	}
 
 	hasRegisteredGameComponent(GameComponent) {
-		this._ecsyWorld.hasRegisteredComponent(GameComponent);
+		return this._ecsyWorld.hasRegisteredComponent(GameComponent);
 	}
 
 	unregisterGameSystem(GameSystem) {
@@ -2458,7 +2458,7 @@ class GameObject extends three__WEBPACK_IMPORTED_MODULE_0__.Group {
 		if (this.parent) this.parent.remove(this);
 	}
 
-	clone() {
+	duplicate() {
 		if (!this._ecsyEntity) throw UNINITIALIZED_GAMEOBJECT_ERROR;
 		const newGameObject = super.clone(true);
 		const newEntity = this._ecsyEntity.clone();
@@ -2559,9 +2559,7 @@ class GameSystem extends ecsy__WEBPACK_IMPORTED_MODULE_0__.System {
 		this.update(delta, time);
 	}
 
-	update(_delta, _time) {}
-
-	queryEntities(queryId) {
+	queryGameObjects(queryId) {
 		if (!this.queries[queryId])
 			throw 'Query id does not exist in current game system';
 		return this.queries[queryId].results.map((entity) => entity.gameObject);
@@ -3105,7 +3103,7 @@ __webpack_require__.r(__webpack_exports__);
 
 class ObjectManipulationSystem extends elixr__WEBPACK_IMPORTED_MODULE_2__.XRGameSystem {
 	update(_delta, _time) {
-		this.queryEntities('interactiveObjects').forEach((gameObject) => {
+		this.queryGameObjects('interactiveObjects').forEach((gameObject) => {
 			const interactiveObjectComponent = gameObject.getMutableComponent(
 				_InterativeObjectComponent__WEBPACK_IMPORTED_MODULE_1__.InteractiveObjectComponent,
 			);

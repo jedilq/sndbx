@@ -1188,10 +1188,10 @@ electron-to-chromium@^1.4.202:
   resolved "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.4.233.tgz"
   integrity sha512-ejwIKXTg1wqbmkcRJh9Ur3hFGHFDZDw1POzdsVrB2WZjgRuRMHIQQKNpe64N/qh3ZtH2otEoRoS+s6arAAuAAw==
 
-elixr@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/elixr/-/elixr-0.2.0.tgz#df87ea156439fcb18d23f5eb86947649ac84062f"
-  integrity sha512-LnKxesTxvLvLoEZvvorTqw0HNTkpH/KVkoXBTkjXRlYDUChKvNfLBakLvpePayiJayO6aramfODXiovQ+sLNmw==
+elixr@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/elixr/-/elixr-0.3.0.tgz#b29fc26a100d3b645ca97fb192b4f4c6ab4635e9"
+  integrity sha512-WYko38n0KEqseOUaFgEeg05i6BOfMD5z8UNU+1Mov82aTqWgigqME5NVr/zF9caIQrGqT/vXJAynZNZ9lDp5tQ==
   dependencies:
     ecsy "^0.4.2"
 

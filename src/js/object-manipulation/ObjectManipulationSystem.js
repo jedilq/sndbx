@@ -6,7 +6,7 @@ import { XRGameSystem } from 'elixr';
 
 export class ObjectManipulationSystem extends XRGameSystem {
 	update(_delta, _time) {
-		this.queryEntities('interactiveObjects').forEach((gameObject) => {
+		this.queryGameObjects('interactiveObjects').forEach((gameObject) => {
 			const interactiveObjectComponent = gameObject.getMutableComponent(
 				InteractiveObjectComponent,
 			);

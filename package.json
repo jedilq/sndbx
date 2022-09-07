@@ -22,7 +22,7 @@
 		"predeploy": "npm run build"
 	},
 	"dependencies": {
-		"elixr": "^0.2.0",
+		"elixr": "^0.3.0",
 		"gamepad-wrapper": "^1.1.2",
 		"three": "https://github.com/fe1ixz/three.js/#fix-srgb-from-working",
 		"three-mesh-bvh": "^0.5.15"
