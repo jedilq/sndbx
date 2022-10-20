@@ -22,6 +22,7 @@
 		"predeploy": "npm run build"
 	},
 	"dependencies": {
+		"cannon-es": "^0.20.0",
 		"elixr": "^0.3.0",
 		"gamepad-wrapper": "^1.1.2",
 		"three": "https://github.com/fe1ixz/three.js/#fix-srgb-from-working",
