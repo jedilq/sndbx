@@ -1,32 +1,51 @@
-import * as THREE from 'three';
-
 import { GameComponent, Types } from 'elixr';
 
-export class RigidBodyComponent extends GameComponent {}
+export class RigidBodyComponent extends GameComponent {
+	/**
+	 * Sync rigid body transform to rendered object
+	 * @param {THREE.Object3D} object3D
+	 */
+	copyTransformToObject3D(object3D) {
+		if (this._rigidBody) {
+			object3D.position.copy(this._rigidBody.position);
+			object3D.quaternion.copy(this._rigidBody.quaternion);
+		} else {
+			console.warn('Rigid body is not initialized yet');
+		}
+	}
+
+	/**
+	 * Set rigid body transform from rendered object
+	 * @param {THREE.Object3D} object3D
+	 */
+	setTransformFromObject3D(object3D) {
+		if (this._rigidBody) {
+			this._rigidBody.position.copy(object3D.position);
+			this._rigidBody.quaternion.copy(object3D.quaternion);
+		} else {
+			console.warn('Rigid body is not initialized yet');
+		}
+	}
+
+	remove() {
+		this._rigidBody.removalFlag = true;
+	}
+}
 
 RigidBodyComponent.schema = {
+	mass: { type: Types.Number, default: 0 },
+	shape: { type: Types.Ref },
+	bodyType: { type: Types.String },
+	velocity: { type: Types.Ref },
+
 	active: { type: Types.Boolean, default: true },
-	// translational movement
-	direction: { type: Types.Ref, default: undefined },
-	speed: { type: Types.Number, default: 0 },
-	dragDecel: { type: Types.Number, default: 0 },
-	// rotational movement
-	rotationAxis: { type: Types.Ref, default: undefined },
-	rotationSpeed: { type: Types.Number, default: 0 },
-	spinDown: { type: Types.Number, default: 0 },
+	angularDamping: { type: Types.Number, default: 0.01 },
+	angularConstraints: { type: Types.Ref },
+	linearDamping: { type: Types.Number, default: 0.01 },
+	linearConstraints: { type: Types.Ref },
+	collisionGroup: { type: Types.Number, default: 1 },
+	fixedRotation: { type: Types.Boolean, default: false },
+	isTrigger: { type: Types.Boolean, default: false },
 
-	collisionSpeedReductionFactor: { type: Types.Number, default: 0 },
-};
-
-RigidBodyComponent.createDefaultSchema = () => {
-	return {
-		active: true,
-		direction: new THREE.Vector3(0, 0, -1),
-		speed: 0,
-		dragDecel: -0.1,
-		rotationAxis: new THREE.Vector3(),
-		rotationSpeed: 0,
-		spinDown: 0.2,
-		collisionSpeedReductionFactor: 0.3,
-	};
+	_rigidBody: { type: Types.Ref },
 };

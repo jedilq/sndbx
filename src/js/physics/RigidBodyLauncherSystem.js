@@ -1,3 +1,4 @@
+import * as CANNON from 'cannon-es';
 import * as THREE from 'three';
 
 import { BUTTONS } from 'gamepad-wrapper';
@@ -9,33 +10,21 @@ export class RigidBodyLauncherSystem extends XRGameSystem {
 		Object.values(this.core.controllers).forEach((controller) => {
 			if (controller.gamepad.getButtonDown(BUTTONS.XR_STANDARD.TRIGGER)) {
 				const cubeMesh = new THREE.Mesh(
-					new THREE.BoxGeometry(0.1, 0.1, 0.1),
+					new THREE.BoxGeometry(0.2, 0.2, 0.2),
 					new THREE.MeshStandardMaterial({ color: Math.random() * 0xffffff }),
 				);
 				const cubeObject = this.core.createGameObject(cubeMesh);
 				controller.targetRaySpace.getWorldPosition(cubeObject.position);
 				controller.targetRaySpace.getWorldQuaternion(cubeObject.quaternion);
 				cubeObject.addComponent(RigidBodyComponent, {
-					active: true,
-					direction: new THREE.Vector3(0, 0, -1).applyQuaternion(
+					mass: 1,
+					shape: new CANNON.Box(new CANNON.Vec3(0.1, 0.1, 0.1)),
+					bodyType: CANNON.BODY_TYPES.DYNAMIC,
+					velocity: new THREE.Vector3(0, 0, -5).applyQuaternion(
 						cubeObject.quaternion,
 					),
-					speed: 1,
-					dragDecel: 0,
-					rotationAxis: generateRandomVec3().normalize(),
-					rotationSpeed: Math.random(),
-					spinDown: 0,
-					collisionSpeedReductionFactor: 0,
 				});
 			}
 		});
 	}
 }
-
-const generateRandomVec3 = (axisMax = 1) => {
-	return new THREE.Vector3(
-		Math.random() * axisMax,
-		Math.random() * axisMax,
-		Math.random() * axisMax,
-	);
-};

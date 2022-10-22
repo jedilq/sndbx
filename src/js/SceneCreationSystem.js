@@ -1,60 +1,19 @@
+import * as CANNON from 'cannon-es';
 import * as THREE from 'three';
 
 import { BoxLineGeometry } from 'three/examples/jsm/geometries/BoxLineGeometry';
 import { RigidBodyComponent } from './physics/RigidBodyComponent';
 import { SingleUseGameSystem } from 'elixr';
 
-const ORIENTATION = {
-	TOP_BOTTOM: 0,
-	FRONT_BACK: 1,
-	LEFT_RIGHT: 2,
-};
-
 export class SceneCreationSystem extends SingleUseGameSystem {
 	update() {
 		const room = new THREE.LineSegments(
-			new BoxLineGeometry(5.89, 5.89, 5.89, 10, 10, 10),
+			new BoxLineGeometry(5.99, 5.99, 5.99, 10, 10, 10),
 			new THREE.LineBasicMaterial({ color: 0x808080 }),
 		);
 		room.geometry.translate(0, 3, 0);
 		this.core.scene.add(room);
 		this.core.scene.background = new THREE.Color(0x505050);
-
-		// this._createWall(
-		// 	new THREE.Vector3(0, 0, 0),
-		// 	0xff5f1f,
-		// 	ORIENTATION.TOP_BOTTOM,
-		// );
-
-		// this._createWall(
-		// 	new THREE.Vector3(0, 6, 0),
-		// 	0x3a3b3c,
-		// 	ORIENTATION.TOP_BOTTOM,
-		// );
-
-		// this._createWall(
-		// 	new THREE.Vector3(3, 3, 0),
-		// 	0x3a3b3c,
-		// 	ORIENTATION.LEFT_RIGHT,
-		// );
-
-		// this._createWall(
-		// 	new THREE.Vector3(-3, 3, 0),
-		// 	0x3a3b3c,
-		// 	ORIENTATION.LEFT_RIGHT,
-		// );
-
-		// this._createWall(
-		// 	new THREE.Vector3(0, 3, -3),
-		// 	0x3a3b3c,
-		// 	ORIENTATION.FRONT_BACK,
-		// );
-
-		// this._createWall(
-		// 	new THREE.Vector3(0, 3, 3),
-		// 	0x3a3b3c,
-		// 	ORIENTATION.FRONT_BACK,
-		// );
 
 		const ambientLight = new THREE.AmbientLight(0xffffff, 0.2);
 		this.core.scene.add(ambientLight);
@@ -62,61 +21,67 @@ export class SceneCreationSystem extends SingleUseGameSystem {
 		const directionalLight = new THREE.DirectionalLight(0xffffff, 0.2);
 		this.core.scene.add(directionalLight);
 
-		// for (let i = 0; i < 100; i++) {
-		// 	this._createRandomRigidBody();
-		// }
+		this._createBox(
+			{ x: 6, y: 0.02, z: 6 },
+			new THREE.Vector3(0, 0, 0),
+			0xff5f1f,
+			false,
+		);
+
+		this._createBox(
+			{ x: 6, y: 0.02, z: 6 },
+			new THREE.Vector3(0, 6, 0),
+			0xff5f1f,
+			false,
+		);
+
+		this._createBox(
+			{ x: 6, y: 6, z: 0.02 },
+			new THREE.Vector3(0, 3, -3),
+			0x3a3b3c,
+			false,
+		);
+
+		this._createBox(
+			{ x: 6, y: 6, z: 0.02 },
+			new THREE.Vector3(0, 3, 3),
+			0x3a3b3c,
+			false,
+		);
+
+		this._createBox(
+			{ x: 0.02, y: 6, z: 6 },
+			new THREE.Vector3(3, 3, 0),
+			0x3a3b3c,
+			false,
+		);
+
+		this._createBox(
+			{ x: 0.02, y: 6, z: 6 },
+			new THREE.Vector3(-3, 3, 0),
+			0x3a3b3c,
+			false,
+		);
 	}
 
-	_createWall(position, color, orientation) {
-		const wallMesh = new THREE.Mesh(
-			new THREE.BoxGeometry(6, 6, 0.01),
-			new THREE.MeshStandardMaterial({
-				color,
-				side: THREE.DoubleSide,
-			}),
+	_createBox(dimensions, position, color, visible = true) {
+		const box = new THREE.Mesh(
+			new THREE.BoxGeometry(dimensions.x, dimensions.y, dimensions.z),
+			new THREE.MeshStandardMaterial({ color }),
 		);
-		const wallObject = this.core.createGameObject(wallMesh);
-		if (orientation == ORIENTATION.TOP_BOTTOM) {
-			wallObject.rotateX(Math.PI / 2);
-		} else if (orientation == ORIENTATION.LEFT_RIGHT) {
-			wallObject.rotateY(Math.PI / 2);
-		}
+		this.core.scene.add(box);
+
+		const wallObject = this.core.createGameObject(box);
+
 		wallObject.position.copy(position);
-		wallObject.addComponent(RigidBodyComponent, {
-			active: false,
-		});
-		wallObject.userData.isWall = true;
-	}
+		wallObject.visible = visible;
 
-	_createRandomRigidBody() {
-		const cubeMesh = new THREE.Mesh(
-			new THREE.BoxGeometry(0.1, 0.1, 0.1),
-			new THREE.MeshStandardMaterial({ color: Math.random() * 0xffffff }),
-		);
-		const cubeObject = this.core.createGameObject(cubeMesh);
-		cubeObject.position.set(
-			Math.random() * 6 - 3,
-			Math.random() * 6,
-			Math.random() * 6 - 3,
-		);
-		cubeObject.lookAt(generateRandomVec3(1000));
-		cubeObject.addComponent(RigidBodyComponent, {
-			active: true,
-			direction: generateRandomVec3().normalize(),
-			speed: Math.random() * 0.5,
-			dragDecel: 0,
-			rotationAxis: generateRandomVec3().normalize(),
-			rotationSpeed: Math.random(),
-			spinDown: 0,
-			collisionSpeedReductionFactor: 0,
+		wallObject.addComponent(RigidBodyComponent, {
+			mass: 0,
+			shape: new CANNON.Box(
+				new CANNON.Vec3(dimensions.x / 2, dimensions.y / 2, dimensions.z / 2),
+			),
+			bodyType: CANNON.BODY_TYPES.STATIC,
 		});
 	}
 }
-
-const generateRandomVec3 = (axisMax = 1) => {
-	return new THREE.Vector3(
-		Math.random() * axisMax,
-		Math.random() * axisMax,
-		Math.random() * axisMax,
-	);
-};
