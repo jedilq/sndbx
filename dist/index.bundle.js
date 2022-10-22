@@ -16041,6 +16041,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "SceneCreationSystem": () => (/* binding */ SceneCreationSystem)
 /* harmony export */ });
+/* harmony import */ var cannon_es__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! cannon-es */ "./node_modules/cannon-es/dist/cannon-es.js");
 /* harmony import */ var three__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! three */ "./node_modules/three/build/three.module.js");
 /* harmony import */ var three_examples_jsm_geometries_BoxLineGeometry__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! three/examples/jsm/geometries/BoxLineGeometry */ "./node_modules/three/examples/jsm/geometries/BoxLineGeometry.js");
 /* harmony import */ var _physics_RigidBodyComponent__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./physics/RigidBodyComponent */ "./src/js/physics/RigidBodyComponent.js");
@@ -16051,57 +16052,16 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const ORIENTATION = {
-	TOP_BOTTOM: 0,
-	FRONT_BACK: 1,
-	LEFT_RIGHT: 2,
-};
 
 class SceneCreationSystem extends elixr__WEBPACK_IMPORTED_MODULE_2__.SingleUseGameSystem {
 	update() {
 		const room = new three__WEBPACK_IMPORTED_MODULE_3__.LineSegments(
-			new three_examples_jsm_geometries_BoxLineGeometry__WEBPACK_IMPORTED_MODULE_0__.BoxLineGeometry(5.89, 5.89, 5.89, 10, 10, 10),
+			new three_examples_jsm_geometries_BoxLineGeometry__WEBPACK_IMPORTED_MODULE_0__.BoxLineGeometry(5.99, 5.99, 5.99, 10, 10, 10),
 			new three__WEBPACK_IMPORTED_MODULE_3__.LineBasicMaterial({ color: 0x808080 }),
 		);
 		room.geometry.translate(0, 3, 0);
 		this.core.scene.add(room);
 		this.core.scene.background = new three__WEBPACK_IMPORTED_MODULE_3__.Color(0x505050);
-
-		// this._createWall(
-		// 	new THREE.Vector3(0, 0, 0),
-		// 	0xff5f1f,
-		// 	ORIENTATION.TOP_BOTTOM,
-		// );
-
-		// this._createWall(
-		// 	new THREE.Vector3(0, 6, 0),
-		// 	0x3a3b3c,
-		// 	ORIENTATION.TOP_BOTTOM,
-		// );
-
-		// this._createWall(
-		// 	new THREE.Vector3(3, 3, 0),
-		// 	0x3a3b3c,
-		// 	ORIENTATION.LEFT_RIGHT,
-		// );
-
-		// this._createWall(
-		// 	new THREE.Vector3(-3, 3, 0),
-		// 	0x3a3b3c,
-		// 	ORIENTATION.LEFT_RIGHT,
-		// );
-
-		// this._createWall(
-		// 	new THREE.Vector3(0, 3, -3),
-		// 	0x3a3b3c,
-		// 	ORIENTATION.FRONT_BACK,
-		// );
-
-		// this._createWall(
-		// 	new THREE.Vector3(0, 3, 3),
-		// 	0x3a3b3c,
-		// 	ORIENTATION.FRONT_BACK,
-		// );
 
 		const ambientLight = new three__WEBPACK_IMPORTED_MODULE_3__.AmbientLight(0xffffff, 0.2);
 		this.core.scene.add(ambientLight);
@@ -16109,64 +16069,70 @@ class SceneCreationSystem extends elixr__WEBPACK_IMPORTED_MODULE_2__.SingleUseGa
 		const directionalLight = new three__WEBPACK_IMPORTED_MODULE_3__.DirectionalLight(0xffffff, 0.2);
 		this.core.scene.add(directionalLight);
 
-		// for (let i = 0; i < 100; i++) {
-		// 	this._createRandomRigidBody();
-		// }
+		this._createBox(
+			{ x: 6, y: 0.02, z: 6 },
+			new three__WEBPACK_IMPORTED_MODULE_3__.Vector3(0, 0, 0),
+			0xff5f1f,
+			false,
+		);
+
+		this._createBox(
+			{ x: 6, y: 0.02, z: 6 },
+			new three__WEBPACK_IMPORTED_MODULE_3__.Vector3(0, 6, 0),
+			0xff5f1f,
+			false,
+		);
+
+		this._createBox(
+			{ x: 6, y: 6, z: 0.02 },
+			new three__WEBPACK_IMPORTED_MODULE_3__.Vector3(0, 3, -3),
+			0x3a3b3c,
+			false,
+		);
+
+		this._createBox(
+			{ x: 6, y: 6, z: 0.02 },
+			new three__WEBPACK_IMPORTED_MODULE_3__.Vector3(0, 3, 3),
+			0x3a3b3c,
+			false,
+		);
+
+		this._createBox(
+			{ x: 0.02, y: 6, z: 6 },
+			new three__WEBPACK_IMPORTED_MODULE_3__.Vector3(3, 3, 0),
+			0x3a3b3c,
+			false,
+		);
+
+		this._createBox(
+			{ x: 0.02, y: 6, z: 6 },
+			new three__WEBPACK_IMPORTED_MODULE_3__.Vector3(-3, 3, 0),
+			0x3a3b3c,
+			false,
+		);
 	}
 
-	_createWall(position, color, orientation) {
-		const wallMesh = new three__WEBPACK_IMPORTED_MODULE_3__.Mesh(
-			new three__WEBPACK_IMPORTED_MODULE_3__.BoxGeometry(6, 6, 0.01),
-			new three__WEBPACK_IMPORTED_MODULE_3__.MeshStandardMaterial({
-				color,
-				side: three__WEBPACK_IMPORTED_MODULE_3__.DoubleSide,
-			}),
+	_createBox(dimensions, position, color, visible = true) {
+		const box = new three__WEBPACK_IMPORTED_MODULE_3__.Mesh(
+			new three__WEBPACK_IMPORTED_MODULE_3__.BoxGeometry(dimensions.x, dimensions.y, dimensions.z),
+			new three__WEBPACK_IMPORTED_MODULE_3__.MeshStandardMaterial({ color }),
 		);
-		const wallObject = this.core.createGameObject(wallMesh);
-		if (orientation == ORIENTATION.TOP_BOTTOM) {
-			wallObject.rotateX(Math.PI / 2);
-		} else if (orientation == ORIENTATION.LEFT_RIGHT) {
-			wallObject.rotateY(Math.PI / 2);
-		}
+		this.core.scene.add(box);
+
+		const wallObject = this.core.createGameObject(box);
+
 		wallObject.position.copy(position);
-		wallObject.addComponent(_physics_RigidBodyComponent__WEBPACK_IMPORTED_MODULE_1__.RigidBodyComponent, {
-			active: false,
-		});
-		wallObject.userData.isWall = true;
-	}
+		wallObject.visible = visible;
 
-	_createRandomRigidBody() {
-		const cubeMesh = new three__WEBPACK_IMPORTED_MODULE_3__.Mesh(
-			new three__WEBPACK_IMPORTED_MODULE_3__.BoxGeometry(0.1, 0.1, 0.1),
-			new three__WEBPACK_IMPORTED_MODULE_3__.MeshStandardMaterial({ color: Math.random() * 0xffffff }),
-		);
-		const cubeObject = this.core.createGameObject(cubeMesh);
-		cubeObject.position.set(
-			Math.random() * 6 - 3,
-			Math.random() * 6,
-			Math.random() * 6 - 3,
-		);
-		cubeObject.lookAt(generateRandomVec3(1000));
-		cubeObject.addComponent(_physics_RigidBodyComponent__WEBPACK_IMPORTED_MODULE_1__.RigidBodyComponent, {
-			active: true,
-			direction: generateRandomVec3().normalize(),
-			speed: Math.random() * 0.5,
-			dragDecel: 0,
-			rotationAxis: generateRandomVec3().normalize(),
-			rotationSpeed: Math.random(),
-			spinDown: 0,
-			collisionSpeedReductionFactor: 0,
+		wallObject.addComponent(_physics_RigidBodyComponent__WEBPACK_IMPORTED_MODULE_1__.RigidBodyComponent, {
+			mass: 0,
+			shape: new cannon_es__WEBPACK_IMPORTED_MODULE_4__.Box(
+				new cannon_es__WEBPACK_IMPORTED_MODULE_4__.Vec3(dimensions.x / 2, dimensions.y / 2, dimensions.z / 2),
+			),
+			bodyType: cannon_es__WEBPACK_IMPORTED_MODULE_4__.BODY_TYPES.STATIC,
 		});
 	}
 }
-
-const generateRandomVec3 = (axisMax = 1) => {
-	return new three__WEBPACK_IMPORTED_MODULE_3__.Vector3(
-		Math.random() * axisMax,
-		Math.random() * axisMax,
-		Math.random() * axisMax,
-	);
-};
 
 
 /***/ }),
@@ -16251,228 +16217,6 @@ class SnapTurnSystem extends elixr__WEBPACK_IMPORTED_MODULE_1__.XRGameSystem {
 
 /***/ }),
 
-/***/ "./src/js/physics/PhysicsSystem.js":
-/*!*****************************************!*\
-  !*** ./src/js/physics/PhysicsSystem.js ***!
-  \*****************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "PhysicsSystem": () => (/* binding */ PhysicsSystem)
-/* harmony export */ });
-/* harmony import */ var cannon_es__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! cannon-es */ "./node_modules/cannon-es/dist/cannon-es.js");
-/* harmony import */ var three__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! three */ "./node_modules/three/build/three.module.js");
-/* harmony import */ var gamepad_wrapper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gamepad-wrapper */ "./node_modules/gamepad-wrapper/lib/index.js");
-/* harmony import */ var elixr__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! elixr */ "./node_modules/elixr/src/index.js");
-
-
-
-
-
-
-class PhysicsSystem extends elixr__WEBPACK_IMPORTED_MODULE_1__.GameSystem {
-	init() {
-		// eslint-disable-next-line no-undef
-		// const CN = CANNON;
-		// this.physicsWorld = new CN.World({
-		// 	gravity: new CN.Vec3(0, 0, -9.82), // m/s²
-		// });
-
-		const world = new cannon_es__WEBPACK_IMPORTED_MODULE_2__.World();
-		world.gravity.set(0, 0, 0);
-		world.broadphase = new cannon_es__WEBPACK_IMPORTED_MODULE_2__.NaiveBroadphase();
-		world.solver.iterations = 10;
-
-		var radius = 0.2; // m
-		var sphereBody = new cannon_es__WEBPACK_IMPORTED_MODULE_2__.Body({
-			mass: 5,
-			shape: new cannon_es__WEBPACK_IMPORTED_MODULE_2__.Sphere(radius),
-		});
-		world.addBody(sphereBody);
-
-		const geometry = new three__WEBPACK_IMPORTED_MODULE_3__.SphereGeometry(0.2, 32, 16);
-		const material = new three__WEBPACK_IMPORTED_MODULE_3__.MeshBasicMaterial({ color: 0xffffff });
-		const sphere = new three__WEBPACK_IMPORTED_MODULE_3__.Mesh(geometry, material);
-		this.core.scene.add(sphere);
-		sphere.position.set(0, 10, -2);
-		sphereBody.position.copy(sphere.position);
-
-		// const box = new THREE.Mesh(
-		// 	new THREE.BoxGeometry(6, 0.02, 6),
-		// 	new THREE.MeshBasicMaterial({ color: 0xffff00, side: THREE.DoubleSide }),
-		// );
-		// this.core.scene.add(box);
-		// box.position.set(0, 0, 0);
-
-		// var groundBody = new CANNON.Body({
-		// 	mass: 0,
-		// 	shape: new CANNON.Box(new CANNON.Vec3(3, 0.01, 3)),
-		// });
-		// world.addBody(groundBody);
-		// groundBody.position.copy(box.position);
-		// groundBody.quaternion.copy(box.quaternion);
-
-		this._createBox(
-			world,
-			{ x: 6, y: 0.02, z: 6 },
-			0,
-			new three__WEBPACK_IMPORTED_MODULE_3__.Vector3(0, 0, 0),
-			0xff5f1f,
-			false,
-		);
-
-		this._createBox(
-			world,
-			{ x: 6, y: 0.02, z: 6 },
-			0,
-			new three__WEBPACK_IMPORTED_MODULE_3__.Vector3(0, 6, 0),
-			0xff5f1f,
-			false,
-		);
-
-		this._createBox(
-			world,
-			{ x: 6, y: 6, z: 0.02 },
-			0,
-			new three__WEBPACK_IMPORTED_MODULE_3__.Vector3(0, 3, -3),
-			0x3a3b3c,
-			false,
-		);
-
-		this._createBox(
-			world,
-			{ x: 6, y: 6, z: 0.02 },
-			0,
-			new three__WEBPACK_IMPORTED_MODULE_3__.Vector3(0, 3, 3),
-			0x3a3b3c,
-			false,
-		);
-
-		this._createBox(
-			world,
-			{ x: 0.02, y: 6, z: 6 },
-			0,
-			new three__WEBPACK_IMPORTED_MODULE_3__.Vector3(3, 3, 0),
-			0x3a3b3c,
-			false,
-		);
-
-		this._createBox(
-			world,
-			{ x: 0.02, y: 6, z: 6 },
-			0,
-			new three__WEBPACK_IMPORTED_MODULE_3__.Vector3(-3, 3, 0),
-			0x3a3b3c,
-			false,
-		);
-
-		this.pw = world;
-		this.body = sphereBody;
-		this.mesh = sphere;
-
-		this.meshes = [];
-
-		for (let i = 0; i < 10; i++) {
-			const box = this._createBox(
-				world,
-				{ x: 0.5, y: 0.5, z: 0.5 },
-				0.1,
-				generateRandomVec3(3),
-				0xfff000,
-			);
-
-			box.userData.rigidBody.velocity.set(Math.random(), Math.random(), -0.5);
-
-			this.meshes.push(box);
-		}
-
-		window.resetBody = () => {
-			sphereBody.velocity.setZero();
-			sphereBody.force.setZero();
-			sphereBody.position.set(0, 10, -2);
-			console.log(this.pw.gravity);
-		};
-	}
-
-	update(_delta, _time) {
-		this.pw.step(1 / 60);
-		if (this.body) {
-			this.mesh.position.copy(this.body.position);
-			// console.log(this.mesh.position);
-		}
-		this.meshes.forEach((mesh) => {
-			mesh.position.copy(mesh.userData.rigidBody.position);
-			mesh.quaternion.copy(mesh.userData.rigidBody.quaternion);
-		});
-
-		Object.values(this.core.controllers).forEach((controller) => {
-			if (controller.gamepad.getButtonDown(gamepad_wrapper__WEBPACK_IMPORTED_MODULE_0__.BUTTONS.XR_STANDARD.TRIGGER)) {
-				this.meshes.push(this._shootBox(this.pw, 0.2, controller));
-			}
-		});
-	}
-
-	_createBox(physicsWorld, dimensions, mass, position, color, visible = true) {
-		const box = new three__WEBPACK_IMPORTED_MODULE_3__.Mesh(
-			new three__WEBPACK_IMPORTED_MODULE_3__.BoxGeometry(dimensions.x, dimensions.y, dimensions.z),
-			new three__WEBPACK_IMPORTED_MODULE_3__.MeshStandardMaterial({ color, side: three__WEBPACK_IMPORTED_MODULE_3__.DoubleSide }),
-		);
-		this.core.scene.add(box);
-		box.position.copy(position);
-		box.visible = visible;
-
-		var groundBody = new cannon_es__WEBPACK_IMPORTED_MODULE_2__.Body({
-			mass,
-			shape: new cannon_es__WEBPACK_IMPORTED_MODULE_2__.Box(
-				new cannon_es__WEBPACK_IMPORTED_MODULE_2__.Vec3(dimensions.x / 2, dimensions.y / 2, dimensions.z / 2),
-			),
-		});
-		physicsWorld.addBody(groundBody);
-		groundBody.position.copy(box.position);
-		groundBody.quaternion.copy(box.quaternion);
-		box.userData.rigidBody = groundBody;
-		return box;
-	}
-
-	_shootBox(physicsWorld, mass, controller) {
-		const box = new three__WEBPACK_IMPORTED_MODULE_3__.Mesh(
-			new three__WEBPACK_IMPORTED_MODULE_3__.BoxGeometry(0.2, 0.2, 0.2),
-			new three__WEBPACK_IMPORTED_MODULE_3__.MeshStandardMaterial({ color: Math.random() * 0xffffff }),
-		);
-		this.core.scene.add(box);
-		controller.targetRaySpace.getWorldPosition(box.position);
-		controller.targetRaySpace.getWorldQuaternion(box.quaternion);
-
-		var groundBody = new cannon_es__WEBPACK_IMPORTED_MODULE_2__.Body({
-			mass,
-			shape: new cannon_es__WEBPACK_IMPORTED_MODULE_2__.Box(new cannon_es__WEBPACK_IMPORTED_MODULE_2__.Vec3(0.1, 0.1, 0.1)),
-		});
-		physicsWorld.addBody(groundBody);
-		groundBody.position.copy(box.position);
-		groundBody.quaternion.copy(box.quaternion);
-		box.userData.rigidBody = groundBody;
-
-		const direction = new three__WEBPACK_IMPORTED_MODULE_3__.Vector3(0, 0, -5).applyQuaternion(
-			box.quaternion,
-		);
-
-		box.userData.rigidBody.velocity.set(direction.x, direction.y, direction.z);
-		return box;
-	}
-}
-
-const generateRandomVec3 = (axisMax = 1) => {
-	return new three__WEBPACK_IMPORTED_MODULE_3__.Vector3(
-		Math.random() * axisMax,
-		Math.random() * axisMax,
-		Math.random() * axisMax,
-	);
-};
-
-
-/***/ }),
-
 /***/ "./src/js/physics/RigidBodyComponent.js":
 /*!**********************************************!*\
   !*** ./src/js/physics/RigidBodyComponent.js ***!
@@ -16483,39 +16227,173 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "RigidBodyComponent": () => (/* binding */ RigidBodyComponent)
 /* harmony export */ });
-/* harmony import */ var three__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! three */ "./node_modules/three/build/three.module.js");
 /* harmony import */ var elixr__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! elixr */ "./node_modules/elixr/src/index.js");
 
 
+class RigidBodyComponent extends elixr__WEBPACK_IMPORTED_MODULE_0__.GameComponent {
+	/**
+	 * Sync rigid body transform to rendered object
+	 * @param {THREE.Object3D} object3D
+	 */
+	copyTransformToObject3D(object3D) {
+		if (this._rigidBody) {
+			object3D.position.copy(this._rigidBody.position);
+			object3D.quaternion.copy(this._rigidBody.quaternion);
+		} else {
+			console.warn('Rigid body is not initialized yet');
+		}
+	}
 
+	/**
+	 * Set rigid body transform from rendered object
+	 * @param {THREE.Object3D} object3D
+	 */
+	setTransformFromObject3D(object3D) {
+		if (this._rigidBody) {
+			this._rigidBody.position.copy(object3D.position);
+			this._rigidBody.quaternion.copy(object3D.quaternion);
+		} else {
+			console.warn('Rigid body is not initialized yet');
+		}
+	}
 
-class RigidBodyComponent extends elixr__WEBPACK_IMPORTED_MODULE_0__.GameComponent {}
+	remove() {
+		this._rigidBody.removalFlag = true;
+	}
+}
 
 RigidBodyComponent.schema = {
-	active: { type: elixr__WEBPACK_IMPORTED_MODULE_0__.Types.Boolean, default: true },
-	// translational movement
-	direction: { type: elixr__WEBPACK_IMPORTED_MODULE_0__.Types.Ref, default: undefined },
-	speed: { type: elixr__WEBPACK_IMPORTED_MODULE_0__.Types.Number, default: 0 },
-	dragDecel: { type: elixr__WEBPACK_IMPORTED_MODULE_0__.Types.Number, default: 0 },
-	// rotational movement
-	rotationAxis: { type: elixr__WEBPACK_IMPORTED_MODULE_0__.Types.Ref, default: undefined },
-	rotationSpeed: { type: elixr__WEBPACK_IMPORTED_MODULE_0__.Types.Number, default: 0 },
-	spinDown: { type: elixr__WEBPACK_IMPORTED_MODULE_0__.Types.Number, default: 0 },
+	mass: { type: elixr__WEBPACK_IMPORTED_MODULE_0__.Types.Number, default: 0 },
+	shape: { type: elixr__WEBPACK_IMPORTED_MODULE_0__.Types.Ref },
+	bodyType: { type: elixr__WEBPACK_IMPORTED_MODULE_0__.Types.String },
+	velocity: { type: elixr__WEBPACK_IMPORTED_MODULE_0__.Types.Ref },
 
-	collisionSpeedReductionFactor: { type: elixr__WEBPACK_IMPORTED_MODULE_0__.Types.Number, default: 0 },
+	active: { type: elixr__WEBPACK_IMPORTED_MODULE_0__.Types.Boolean, default: true },
+	angularDamping: { type: elixr__WEBPACK_IMPORTED_MODULE_0__.Types.Number, default: 0.01 },
+	angularConstraints: { type: elixr__WEBPACK_IMPORTED_MODULE_0__.Types.Ref },
+	linearDamping: { type: elixr__WEBPACK_IMPORTED_MODULE_0__.Types.Number, default: 0.01 },
+	linearConstraints: { type: elixr__WEBPACK_IMPORTED_MODULE_0__.Types.Ref },
+	collisionGroup: { type: elixr__WEBPACK_IMPORTED_MODULE_0__.Types.Number, default: 1 },
+	fixedRotation: { type: elixr__WEBPACK_IMPORTED_MODULE_0__.Types.Boolean, default: false },
+	isTrigger: { type: elixr__WEBPACK_IMPORTED_MODULE_0__.Types.Boolean, default: false },
+
+	_rigidBody: { type: elixr__WEBPACK_IMPORTED_MODULE_0__.Types.Ref },
 };
 
-RigidBodyComponent.createDefaultSchema = () => {
-	return {
-		active: true,
-		direction: new three__WEBPACK_IMPORTED_MODULE_1__.Vector3(0, 0, -1),
-		speed: 0,
-		dragDecel: -0.1,
-		rotationAxis: new three__WEBPACK_IMPORTED_MODULE_1__.Vector3(),
-		rotationSpeed: 0,
-		spinDown: 0.2,
-		collisionSpeedReductionFactor: 0.3,
-	};
+
+/***/ }),
+
+/***/ "./src/js/physics/RigidBodyLauncherSystem.js":
+/*!***************************************************!*\
+  !*** ./src/js/physics/RigidBodyLauncherSystem.js ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "RigidBodyLauncherSystem": () => (/* binding */ RigidBodyLauncherSystem)
+/* harmony export */ });
+/* harmony import */ var cannon_es__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! cannon-es */ "./node_modules/cannon-es/dist/cannon-es.js");
+/* harmony import */ var three__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! three */ "./node_modules/three/build/three.module.js");
+/* harmony import */ var gamepad_wrapper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gamepad-wrapper */ "./node_modules/gamepad-wrapper/lib/index.js");
+/* harmony import */ var _RigidBodyComponent__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./RigidBodyComponent */ "./src/js/physics/RigidBodyComponent.js");
+/* harmony import */ var elixr__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! elixr */ "./node_modules/elixr/src/index.js");
+
+
+
+
+
+
+
+class RigidBodyLauncherSystem extends elixr__WEBPACK_IMPORTED_MODULE_2__.XRGameSystem {
+	update() {
+		Object.values(this.core.controllers).forEach((controller) => {
+			if (controller.gamepad.getButtonDown(gamepad_wrapper__WEBPACK_IMPORTED_MODULE_0__.BUTTONS.XR_STANDARD.TRIGGER)) {
+				const cubeMesh = new three__WEBPACK_IMPORTED_MODULE_3__.Mesh(
+					new three__WEBPACK_IMPORTED_MODULE_3__.BoxGeometry(0.2, 0.2, 0.2),
+					new three__WEBPACK_IMPORTED_MODULE_3__.MeshStandardMaterial({ color: Math.random() * 0xffffff }),
+				);
+				const cubeObject = this.core.createGameObject(cubeMesh);
+				controller.targetRaySpace.getWorldPosition(cubeObject.position);
+				controller.targetRaySpace.getWorldQuaternion(cubeObject.quaternion);
+				cubeObject.addComponent(_RigidBodyComponent__WEBPACK_IMPORTED_MODULE_1__.RigidBodyComponent, {
+					mass: 1,
+					shape: new cannon_es__WEBPACK_IMPORTED_MODULE_4__.Box(new cannon_es__WEBPACK_IMPORTED_MODULE_4__.Vec3(0.1, 0.1, 0.1)),
+					bodyType: cannon_es__WEBPACK_IMPORTED_MODULE_4__.BODY_TYPES.DYNAMIC,
+					velocity: new three__WEBPACK_IMPORTED_MODULE_3__.Vector3(0, 0, -5).applyQuaternion(
+						cubeObject.quaternion,
+					),
+				});
+			}
+		});
+	}
+}
+
+
+/***/ }),
+
+/***/ "./src/js/physics/RigidBodyPhysicsSystem.js":
+/*!**************************************************!*\
+  !*** ./src/js/physics/RigidBodyPhysicsSystem.js ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "RigidBodyPhysicsSystem": () => (/* binding */ RigidBodyPhysicsSystem)
+/* harmony export */ });
+/* harmony import */ var cannon_es__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! cannon-es */ "./node_modules/cannon-es/dist/cannon-es.js");
+/* harmony import */ var elixr__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! elixr */ "./node_modules/elixr/src/index.js");
+/* harmony import */ var _RigidBodyComponent__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./RigidBodyComponent */ "./src/js/physics/RigidBodyComponent.js");
+
+
+
+
+
+const STEP_TIME = 1 / 90;
+
+class RigidBodyPhysicsSystem extends elixr__WEBPACK_IMPORTED_MODULE_0__.GameSystem {
+	init() {
+		this.physicsWorld = new cannon_es__WEBPACK_IMPORTED_MODULE_2__.World();
+		this.physicsWorld.gravity.set(0, 0, 0);
+		this.physicsWorld.broadphase = new cannon_es__WEBPACK_IMPORTED_MODULE_2__.NaiveBroadphase();
+		this.physicsWorld.solver.iteractions = 2;
+	}
+
+	update(delta, _time) {
+		this.queryGameObjects('rigidBodies').forEach((gameObject) => {
+			const rigidBody = gameObject.getMutableComponent(_RigidBodyComponent__WEBPACK_IMPORTED_MODULE_1__.RigidBodyComponent);
+			if (!rigidBody._rigidBody) {
+				const body = new cannon_es__WEBPACK_IMPORTED_MODULE_2__.Body({
+					angularDamping: rigidBody.angularDamping,
+					angularFactor: rigidBody.angularConstraints,
+					linearDamping: rigidBody.linearDamping,
+					linearFactor: rigidBody.linearConstraints,
+					collisionFilterGroup: rigidBody.collisionGroup,
+					fixedRotation: rigidBody.fixedRotation,
+					isTrigger: rigidBody.isTrigger,
+					mass: rigidBody.mass,
+					shape: rigidBody.shape,
+					type: rigidBody.bodyType,
+					velocity: rigidBody.velocity,
+				});
+				this.physicsWorld.addBody(body);
+				rigidBody._rigidBody = body;
+				rigidBody.setTransformFromObject3D(gameObject);
+			} else if (rigidBody._rigidBody.removalFlag) {
+				this.physicsWorld.removeBody(rigidBody._rigidBody);
+			}
+		});
+		this.physicsWorld.step(STEP_TIME, delta);
+		this.queryGameObjects('rigidBodies').forEach((gameObject) => {
+			const rigidBody = gameObject.getMutableComponent(_RigidBodyComponent__WEBPACK_IMPORTED_MODULE_1__.RigidBodyComponent);
+			rigidBody.copyTransformToObject3D(gameObject);
+		});
+	}
+}
+
+RigidBodyPhysicsSystem.queries = {
+	rigidBodies: { components: [_RigidBodyComponent__WEBPACK_IMPORTED_MODULE_1__.RigidBodyComponent] },
 };
 
 
@@ -76407,49 +76285,41 @@ var __webpack_exports__ = {};
   !*** ./src/index.js ***!
   \**********************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var three__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! three */ "./node_modules/three/build/three.module.js");
-/* harmony import */ var three_mesh_bvh__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! three-mesh-bvh */ "./node_modules/three-mesh-bvh/src/utils/ExtensionUtilities.js");
+/* harmony import */ var three__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! three */ "./node_modules/three/build/three.module.js");
+/* harmony import */ var three_mesh_bvh__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! three-mesh-bvh */ "./node_modules/three-mesh-bvh/src/utils/ExtensionUtilities.js");
 /* harmony import */ var elixr__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! elixr */ "./node_modules/elixr/src/index.js");
 /* harmony import */ var _js_JoystickMovementSystem__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/JoystickMovementSystem */ "./src/js/JoystickMovementSystem.js");
-/* harmony import */ var _js_physics_PhysicsSystem__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js/physics/PhysicsSystem */ "./src/js/physics/PhysicsSystem.js");
-/* harmony import */ var _js_physics_RigidBodyComponent__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./js/physics/RigidBodyComponent */ "./src/js/physics/RigidBodyComponent.js");
-/* harmony import */ var _js_SceneCreationSystem__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./js/SceneCreationSystem */ "./src/js/SceneCreationSystem.js");
-/* harmony import */ var _js_SnapTurnSystem__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./js/SnapTurnSystem */ "./src/js/SnapTurnSystem.js");
+/* harmony import */ var _js_physics_RigidBodyComponent__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js/physics/RigidBodyComponent */ "./src/js/physics/RigidBodyComponent.js");
+/* harmony import */ var _js_physics_RigidBodyLauncherSystem__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./js/physics/RigidBodyLauncherSystem */ "./src/js/physics/RigidBodyLauncherSystem.js");
+/* harmony import */ var _js_physics_RigidBodyPhysicsSystem__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./js/physics/RigidBodyPhysicsSystem */ "./src/js/physics/RigidBodyPhysicsSystem.js");
+/* harmony import */ var _js_SceneCreationSystem__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./js/SceneCreationSystem */ "./src/js/SceneCreationSystem.js");
+/* harmony import */ var _js_SnapTurnSystem__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./js/SnapTurnSystem */ "./src/js/SnapTurnSystem.js");
 
 
 
 
 
-// import { InteractiveObjectComponent } from './js/object-manipulation/InterativeObjectComponent';
 
 
-// import { ObjectManipulationSystem } from './js/object-manipulation/ObjectManipulationSystem';
-// import { ObjectPrototypeWallSystem } from './js/object-manipulation/ObjectPrototypeWallSystem';
 
-// import { RigidBodyLauncherSystem } from './js/physics/RigidBodyLauncherSystem';
-// import { RigidBodyPhysicsSystem } from './js/physics/RigidBodyPhysicsSystem';
+
 
 
 
 // three-mesh-bvh initialization
-three__WEBPACK_IMPORTED_MODULE_6__.BufferGeometry.prototype.computeBoundsTree = three_mesh_bvh__WEBPACK_IMPORTED_MODULE_7__.computeBoundsTree;
-three__WEBPACK_IMPORTED_MODULE_6__.BufferGeometry.prototype.disposeBoundsTree = three_mesh_bvh__WEBPACK_IMPORTED_MODULE_7__.disposeBoundsTree;
-three__WEBPACK_IMPORTED_MODULE_6__.Mesh.prototype.raycast = three_mesh_bvh__WEBPACK_IMPORTED_MODULE_7__.acceleratedRaycast;
+three__WEBPACK_IMPORTED_MODULE_7__.BufferGeometry.prototype.computeBoundsTree = three_mesh_bvh__WEBPACK_IMPORTED_MODULE_8__.computeBoundsTree;
+three__WEBPACK_IMPORTED_MODULE_7__.BufferGeometry.prototype.disposeBoundsTree = three_mesh_bvh__WEBPACK_IMPORTED_MODULE_8__.disposeBoundsTree;
+three__WEBPACK_IMPORTED_MODULE_7__.Mesh.prototype.raycast = three_mesh_bvh__WEBPACK_IMPORTED_MODULE_8__.acceleratedRaycast;
 
 const core = new elixr__WEBPACK_IMPORTED_MODULE_0__.Core(document.getElementById('scene-container'));
 
-core.registerGameSystem(_js_SceneCreationSystem__WEBPACK_IMPORTED_MODULE_4__.SceneCreationSystem);
+core.registerGameSystem(_js_SceneCreationSystem__WEBPACK_IMPORTED_MODULE_5__.SceneCreationSystem);
 core.registerGameSystem(_js_JoystickMovementSystem__WEBPACK_IMPORTED_MODULE_1__.JoystickMovementSystem);
-core.registerGameSystem(_js_SnapTurnSystem__WEBPACK_IMPORTED_MODULE_5__.SnapTurnSystem);
+core.registerGameSystem(_js_SnapTurnSystem__WEBPACK_IMPORTED_MODULE_6__.SnapTurnSystem);
 
-// core.registerGameComponent(InteractiveObjectComponent);
-// core.registerGameSystem(ObjectPrototypeWallSystem);
-// core.registerGameSystem(ObjectManipulationSystem);
-
-core.registerGameComponent(_js_physics_RigidBodyComponent__WEBPACK_IMPORTED_MODULE_3__.RigidBodyComponent);
-// core.registerGameSystem(RigidBodyPhysicsSystem);
-// core.registerGameSystem(RigidBodyLauncherSystem);
-core.registerGameSystem(_js_physics_PhysicsSystem__WEBPACK_IMPORTED_MODULE_2__.PhysicsSystem);
+core.registerGameComponent(_js_physics_RigidBodyComponent__WEBPACK_IMPORTED_MODULE_2__.RigidBodyComponent);
+core.registerGameSystem(_js_physics_RigidBodyPhysicsSystem__WEBPACK_IMPORTED_MODULE_4__.RigidBodyPhysicsSystem);
+core.registerGameSystem(_js_physics_RigidBodyLauncherSystem__WEBPACK_IMPORTED_MODULE_3__.RigidBodyLauncherSystem);
 
 })();
 
