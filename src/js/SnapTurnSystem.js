@@ -1,7 +1,6 @@
 import * as THREE from 'three';
 
-import { BUTTONS } from 'gamepad-wrapper';
-import { XRGameSystem } from 'elixr';
+import { BUTTONS, XRGameSystem } from 'elixr';
 
 const LOCOMOTION_CONSTANTS = {
 	SNAP_TURN_ANGLE_MIN: (Math.PI / 180) * 45,
@@ -29,7 +28,7 @@ export class SnapTurnSystem extends XRGameSystem {
 	update(_delta, _time) {
 		if (!this.core.controllers['right']) return;
 		/**
-		 * @type {import('gamepad-wrapper').GamepadWrapper}
+		 * @type {import('elixr').GamepadWrapper}
 		 */
 		const gamepad = this.core.controllers['right'].gamepad;
 		const inputAngle = gamepad.get2DInputAngle(BUTTONS.XR_STANDARD.THUMBSTICK);

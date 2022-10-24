@@ -7,10 +7,9 @@ import {
 } from 'three-mesh-bvh';
 
 import { Core } from 'elixr';
+import { CubeLauncherSystem } from './js/CubeLauncherSystem';
 import { JoystickMovementSystem } from './js/JoystickMovementSystem';
-import { RigidBodyComponent } from './js/physics/RigidBodyComponent';
-import { RigidBodyLauncherSystem } from './js/physics/RigidBodyLauncherSystem';
-import { RigidBodyPhysicsSystem } from './js/physics/RigidBodyPhysicsSystem';
+import { ObjectManipulationSystem } from './js/ObjectManipulationSystem';
 import { SceneCreationSystem } from './js/SceneCreationSystem';
 import { SnapTurnSystem } from './js/SnapTurnSystem';
 
@@ -21,10 +20,15 @@ THREE.Mesh.prototype.raycast = acceleratedRaycast;
 
 const core = new Core(document.getElementById('scene-container'));
 
+core.enablePhysics();
+core.physics.gravity.set(0, 0, 0);
+core.physics.stepTime = 1 / 90;
+
 core.registerGameSystem(SceneCreationSystem);
 core.registerGameSystem(JoystickMovementSystem);
 core.registerGameSystem(SnapTurnSystem);
 
-core.registerGameComponent(RigidBodyComponent);
-core.registerGameSystem(RigidBodyPhysicsSystem);
-core.registerGameSystem(RigidBodyLauncherSystem);
+core.registerGameSystem(CubeLauncherSystem);
+core.registerGameSystem(ObjectManipulationSystem);
+
+document.body.append(core.vrButton);

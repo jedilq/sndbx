@@ -1,8 +1,6 @@
 import * as THREE from 'three';
 
-import { AXES, BUTTONS } from 'gamepad-wrapper';
-
-import { XRGameSystem } from 'elixr';
+import { AXES, BUTTONS, XRGameSystem } from 'elixr';
 
 const MAX_MOVEMENT_SPEED = 1;
 
@@ -10,7 +8,7 @@ export class JoystickMovementSystem extends XRGameSystem {
 	update(delta, _time) {
 		if (!this.core.controllers['left']) return;
 		/**
-		 * @type {import('gamepad-wrapper').GamepadWrapper}
+		 * @type {import('elixr').GamepadWrapper}
 		 */
 		const gamepad = this.core.controllers['left'].gamepad;
 		const xValue = gamepad.getAxis(AXES.XR_STANDARD.THUMBSTICK_X);

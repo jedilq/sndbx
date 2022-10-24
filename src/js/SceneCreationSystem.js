@@ -1,17 +1,16 @@
-import * as CANNON from 'cannon-es';
 import * as THREE from 'three';
 
+import { Physics, RigidBodyComponent, SingleUseGameSystem } from 'elixr';
+
 import { BoxLineGeometry } from 'three/examples/jsm/geometries/BoxLineGeometry';
-import { RigidBodyComponent } from './physics/RigidBodyComponent';
-import { SingleUseGameSystem } from 'elixr';
 
 export class SceneCreationSystem extends SingleUseGameSystem {
 	update() {
 		const room = new THREE.LineSegments(
-			new BoxLineGeometry(5.99, 5.99, 5.99, 10, 10, 10),
+			new BoxLineGeometry(5.98, 2.98, 5.98, 10, 5, 10),
 			new THREE.LineBasicMaterial({ color: 0x808080 }),
 		);
-		room.geometry.translate(0, 3, 0);
+		room.geometry.translate(0, 1.5, 0);
 		this.core.scene.add(room);
 		this.core.scene.background = new THREE.Color(0x505050);
 
@@ -30,35 +29,35 @@ export class SceneCreationSystem extends SingleUseGameSystem {
 
 		this._createBox(
 			{ x: 6, y: 0.02, z: 6 },
-			new THREE.Vector3(0, 6, 0),
+			new THREE.Vector3(0, 3, 0),
 			0xff5f1f,
 			false,
 		);
 
 		this._createBox(
-			{ x: 6, y: 6, z: 0.02 },
-			new THREE.Vector3(0, 3, -3),
+			{ x: 6, y: 3, z: 0.02 },
+			new THREE.Vector3(0, 1.5, -3),
 			0x3a3b3c,
 			false,
 		);
 
 		this._createBox(
-			{ x: 6, y: 6, z: 0.02 },
-			new THREE.Vector3(0, 3, 3),
+			{ x: 6, y: 3, z: 0.02 },
+			new THREE.Vector3(0, 1.5, 3),
 			0x3a3b3c,
 			false,
 		);
 
 		this._createBox(
-			{ x: 0.02, y: 6, z: 6 },
-			new THREE.Vector3(3, 3, 0),
+			{ x: 0.02, y: 3, z: 6 },
+			new THREE.Vector3(3, 1.5, 0),
 			0x3a3b3c,
 			false,
 		);
 
 		this._createBox(
-			{ x: 0.02, y: 6, z: 6 },
-			new THREE.Vector3(-3, 3, 0),
+			{ x: 0.02, y: 3, z: 6 },
+			new THREE.Vector3(-3, 1.5, 0),
 			0x3a3b3c,
 			false,
 		);
@@ -78,10 +77,10 @@ export class SceneCreationSystem extends SingleUseGameSystem {
 
 		wallObject.addComponent(RigidBodyComponent, {
 			mass: 0,
-			shape: new CANNON.Box(
-				new CANNON.Vec3(dimensions.x / 2, dimensions.y / 2, dimensions.z / 2),
+			shape: new Physics.Box(
+				new THREE.Vector3(dimensions.x / 2, dimensions.y / 2, dimensions.z / 2),
 			),
-			bodyType: CANNON.BODY_TYPES.STATIC,
+			type: Physics.BODY_TYPES.STATIC,
 		});
 	}
 }
