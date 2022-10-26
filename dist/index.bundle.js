@@ -15936,14 +15936,11 @@ const calculateRotationVector = (quat) => {
     else {
         s = Math.sqrt(1 - quat.w * quat.w);
     }
-    vec3.set(quat.x / s, quat.y / s, quat.z / s);
-    if (vec3.length() < 1e-6) {
-        vec3.set(0, 0, 0);
-    }
-    else {
-        vec3.normalize().multiplyScalar(angle);
-    }
-    return vec3;
+    vec3
+        .set(quat.x / s, quat.y / s, quat.z / s)
+        .normalize()
+        .multiplyScalar(angle);
+    return isNaN(vec3.length()) ? new THREE.Vector3() : vec3;
 };
 const threeVec3toCannonVec3 = (vec3) => {
     if (vec3 != null) {
@@ -16017,7 +16014,7 @@ class RigidBodyPhysicsSystem extends GameSystem_1.GameSystem {
                 copyThreeQuatToCannonQuat(rigidBody._body.quaternion, rigidBody._quaternionUpdate);
                 rigidBody._quaternionUpdate = null;
             }
-            if (rigidBody._body.type == CANNON.BODY_TYPES.KINEMATIC) {
+            if (rigidBody._body.type === CANNON.BODY_TYPES.KINEMATIC) {
                 const deltaPosVec3 = gameObject
                     .getWorldPosition(new THREE.Vector3())
                     .sub(rigidBody.position);
@@ -16482,6 +16479,12 @@ class ObjectManipulationSystem extends elixr__WEBPACK_IMPORTED_MODULE_0__.XRGame
 					) {
 						const closestObject = { object: null, distance: Infinity };
 						this.queryGameObjects('rigidBodies').forEach((gameObject) => {
+							if (
+								gameObject == this.objectInHand.left ||
+								gameObject == this.objectInHand.right
+							)
+								return;
+
 							const distance = gameObject
 								.getWorldPosition(new three__WEBPACK_IMPORTED_MODULE_1__.Vector3())
 								.distanceTo(

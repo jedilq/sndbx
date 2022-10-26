@@ -8,6 +8,7 @@
 		"eslint-config-prettier": "^8.2.0",
 		"eslint-webpack-plugin": "^2.5.3",
 		"html-webpack-plugin": "^5.3.1",
+		"pre-commit": "^1.2.2",
 		"prettier": "2.2.1",
 		"style-loader": "^2.0.0",
 		"webpack": "^5.33.2",
@@ -21,8 +22,11 @@
 		"format": "prettier --write ./src/**/*",
 		"predeploy": "npm run build"
 	},
+	"pre-commit": [
+		"build"
+	],
 	"dependencies": {
-		"elixr": "^0.4.0",
+		"elixr": "^0.4.1",
 		"three": "https://github.com/fe1ixz/three.js/#fix-srgb-from-working",
 		"three-mesh-bvh": "^0.5.15"
 	}

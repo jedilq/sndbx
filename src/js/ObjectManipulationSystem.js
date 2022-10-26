@@ -28,6 +28,12 @@ export class ObjectManipulationSystem extends XRGameSystem {
 					) {
 						const closestObject = { object: null, distance: Infinity };
 						this.queryGameObjects('rigidBodies').forEach((gameObject) => {
+							if (
+								gameObject == this.objectInHand.left ||
+								gameObject == this.objectInHand.right
+							)
+								return;
+
 							const distance = gameObject
 								.getWorldPosition(new THREE.Vector3())
 								.distanceTo(
