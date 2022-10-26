@@ -20,7 +20,7 @@
 		"serve": "webpack serve",
 		"lint": "eslint ./src",
 		"format": "prettier --write ./src/**/*",
-		"predeploy": "npm run build"
+		"includedist": "git add ./dist/*"
 	},
 	"pre-commit": [
 		"build"
