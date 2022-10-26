@@ -23,7 +23,8 @@
 		"includedist": "git add ./dist/*"
 	},
 	"pre-commit": [
-		"build"
+		"build",
+		"includedist"
 	],
 	"dependencies": {
 		"elixr": "^0.4.1",
