@@ -1,6 +1,4 @@
-import * as THREE from 'three';
-
-import { Physics, RigidBodyComponent, SingleUseGameSystem } from 'elixr';
+import { Physics, RigidBodyComponent, SingleUseGameSystem, THREE } from 'elixr';
 
 import { BoxLineGeometry } from 'three/examples/jsm/geometries/BoxLineGeometry';
 

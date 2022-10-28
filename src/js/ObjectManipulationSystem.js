@@ -1,6 +1,10 @@
-import * as THREE from 'three';
-
-import { BUTTONS, Physics, RigidBodyComponent, XRGameSystem } from 'elixr';
+import {
+	BUTTONS,
+	Physics,
+	RigidBodyComponent,
+	THREE,
+	XRGameSystem,
+} from 'elixr';
 
 const GRABBING_DISTANCE = 0.1;
 

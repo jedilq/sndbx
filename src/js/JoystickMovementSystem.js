@@ -1,6 +1,4 @@
-import * as THREE from 'three';
-
-import { AXES, BUTTONS, XRGameSystem } from 'elixr';
+import { AXES, BUTTONS, THREE, XRGameSystem } from 'elixr';
 
 const MAX_MOVEMENT_SPEED = 1;
 

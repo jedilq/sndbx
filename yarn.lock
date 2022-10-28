@@ -1212,14 +1212,13 @@ electron-to-chromium@^1.4.202:
   resolved "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.4.233.tgz"
   integrity sha512-ejwIKXTg1wqbmkcRJh9Ur3hFGHFDZDw1POzdsVrB2WZjgRuRMHIQQKNpe64N/qh3ZtH2otEoRoS+s6arAAuAAw==
 
-elixr@^0.4.1:
+elixr@../elixr:
   version "0.4.1"
-  resolved "https://registry.yarnpkg.com/elixr/-/elixr-0.4.1.tgz#a3ebfe4bd213521ae6737fd3956c66a5dfac9ef4"
-  integrity sha512-eKpGs1i0fIkI+IXSu+/q1hNfd55tsG9NjY2bq/0wNU0T74o7CTBB/LuZngaXNA+HqUw3SpKeIBnOBKdG4l+4/Q==
   dependencies:
     cannon-es "^0.20.0"
     ecsy "^0.4.2"
     gamepad-wrapper "^1.2.0"
+    three "^0.145.0"
 
 emoji-regex@^7.0.1:
   version "7.0.3"
@@ -3845,9 +3844,10 @@ three-mesh-bvh@^0.5.15:
   resolved "https://registry.npmjs.org/three-mesh-bvh/-/three-mesh-bvh-0.5.15.tgz"
   integrity sha512-jxE5iGjcoEMiyxUs7hMeZL6jBXBz9973ilqhXPhKlA1f7eitjIxRTtu7UWVQy+PhxXTsknmPzWmN5c+uAa/anA==
 
-"three@https://github.com/fe1ixz/three.js/#fix-srgb-from-working":
-  version "0.140.0"
-  resolved "git+ssh://git@github.com/fe1ixz/three.js.git#083a9e4e89415bcadad26faa9b02211c56910ccb"
+three@^0.145.0:
+  version "0.145.0"
+  resolved "https://registry.yarnpkg.com/three/-/three-0.145.0.tgz#a613d71e75effc2aed88be630027ca01e2b6502e"
+  integrity sha512-EKoHQEtEJ4CB6b2BGMBgLZrfwLjXcSUfoI/MiIXUuRpeYsfK5aPWbYhdtIVWOH+x6X0TouldHKHBuc/LAiFzAw==
 
 thunky@^1.0.2:
   version "1.1.0"

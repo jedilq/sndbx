@@ -27,8 +27,7 @@
 		"includedist"
 	],
 	"dependencies": {
-		"elixr": "^0.4.1",
-		"three": "https://github.com/fe1ixz/three.js/#fix-srgb-from-working",
+		"elixr": "../elixr",
 		"three-mesh-bvh": "^0.5.15"
 	}
 }

@@ -1,12 +1,10 @@
-import * as THREE from 'three';
-
+import { Core, THREE } from 'elixr';
 import {
 	acceleratedRaycast,
 	computeBoundsTree,
 	disposeBoundsTree,
 } from 'three-mesh-bvh';
 
-import { Core } from 'elixr';
 import { CubeLauncherSystem } from './js/CubeLauncherSystem';
 import { JoystickMovementSystem } from './js/JoystickMovementSystem';
 import { ObjectManipulationSystem } from './js/ObjectManipulationSystem';

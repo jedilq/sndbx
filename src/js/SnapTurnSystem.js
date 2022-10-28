@@ -1,6 +1,4 @@
-import * as THREE from 'three';
-
-import { BUTTONS, XRGameSystem } from 'elixr';
+import { BUTTONS, THREE, XRGameSystem } from 'elixr';
 
 const LOCOMOTION_CONSTANTS = {
 	SNAP_TURN_ANGLE_MIN: (Math.PI / 180) * 45,
