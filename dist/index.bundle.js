@@ -18118,24 +18118,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "SceneCreationSystem": () => (/* binding */ SceneCreationSystem)
 /* harmony export */ });
 /* harmony import */ var elixr__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! elixr */ "./node_modules/elixr/dist/index.js");
-/* harmony import */ var three_examples_jsm_geometries_BoxLineGeometry__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! three/examples/jsm/geometries/BoxLineGeometry */ "./node_modules/three/examples/jsm/geometries/BoxLineGeometry.js");
-
-
 
 
 class SceneCreationSystem extends elixr__WEBPACK_IMPORTED_MODULE_0__.SingleUseGameSystem {
 	update() {
-		const room = new elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.LineSegments(
-			new three_examples_jsm_geometries_BoxLineGeometry__WEBPACK_IMPORTED_MODULE_1__.BoxLineGeometry(5.98, 2.98, 5.98, 10, 5, 10),
-			new elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.LineBasicMaterial({ color: 0x808080 }),
-		);
-		room.geometry.translate(0, 1.5, 0);
-		this.core.scene.add(room);
 		this.core.scene.background = new elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.Color(0x505050);
 
 		this._createLighting();
 
-		this._createWalls();
+		this._createRoom1();
+		this._createRoom2();
+		this._createRamp();
 
 		const snowman = new elixr__WEBPACK_IMPORTED_MODULE_0__.GLTFObject('assets/Snowman.glb', {
 			hasPhysics: true,
@@ -18156,19 +18149,24 @@ class SceneCreationSystem extends elixr__WEBPACK_IMPORTED_MODULE_0__.SingleUseGa
 		this.core.scene.add(directionalLight);
 	}
 
-	_createWalls() {
+	_createRoom1() {
 		const boxFloor = new elixr__WEBPACK_IMPORTED_MODULE_0__.CubeObject(
 			6,
 			0.02,
 			6,
-			{ color: 0xff5f1f },
+			{ color: 0x3a3b3c },
 			{ mass: 0, type: elixr__WEBPACK_IMPORTED_MODULE_0__.BODY_TYPES.STATIC },
 		);
 		this.core.addGameObject(boxFloor);
-		boxFloor.visible = false;
 		boxFloor.addComponent(elixr__WEBPACK_IMPORTED_MODULE_0__.MovementSurface);
 
-		const boxCeiling = boxFloor.clone(true);
+		const boxCeiling = new elixr__WEBPACK_IMPORTED_MODULE_0__.CubeObject(
+			6,
+			0.02,
+			6,
+			{ color: 0xfaf9f6 },
+			{ mass: 0, type: elixr__WEBPACK_IMPORTED_MODULE_0__.BODY_TYPES.STATIC },
+		);
 		this.core.addGameObject(boxCeiling);
 		boxCeiling.position.set(0, 3, 0);
 
@@ -18176,17 +18174,12 @@ class SceneCreationSystem extends elixr__WEBPACK_IMPORTED_MODULE_0__.SingleUseGa
 			6,
 			3,
 			0.02,
-			{ color: 0xff5f1f },
+			{ color: 0xfaf9f6 },
 			{ mass: 0, type: elixr__WEBPACK_IMPORTED_MODULE_0__.BODY_TYPES.STATIC },
 		);
 		this.core.addGameObject(boxWall);
-		boxWall.visible = false;
-		boxWall.position.set(0, 1.5, -3);
+		boxWall.position.set(0, 1.5, 3);
 		boxWall.addComponent(elixr__WEBPACK_IMPORTED_MODULE_0__.MovementObstacle);
-
-		const boxWall2 = boxWall.clone(true);
-		this.core.addGameObject(boxWall2);
-		boxWall2.position.set(0, 1.5, 3);
 
 		const boxWall3 = boxWall.clone(true);
 		this.core.addGameObject(boxWall3);
@@ -18197,6 +18190,125 @@ class SceneCreationSystem extends elixr__WEBPACK_IMPORTED_MODULE_0__.SingleUseGa
 		this.core.addGameObject(boxWall4);
 		boxWall4.position.set(-3, 1.5, 0);
 		boxWall4.rotateY(Math.PI / 2);
+
+		const boxWall5 = new elixr__WEBPACK_IMPORTED_MODULE_0__.CubeObject(
+			2,
+			3,
+			0.02,
+			{ color: 0xfaf9f6 },
+			{ mass: 0, type: elixr__WEBPACK_IMPORTED_MODULE_0__.BODY_TYPES.STATIC },
+		);
+		this.core.addGameObject(boxWall5);
+		boxWall5.position.set(2, 1.5, -3);
+		boxWall5.addComponent(elixr__WEBPACK_IMPORTED_MODULE_0__.MovementObstacle);
+
+		const boxWall6 = boxWall5.clone(true);
+		this.core.addGameObject(boxWall6);
+		boxWall6.position.set(-2, 1.5, -3);
+	}
+
+	_createRoom2() {
+		const roomPositionOffset = new elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.Vector3(
+			0,
+			2,
+			-(6 + Math.pow(3, 0.5) * 2),
+		);
+		const boxFloor = new elixr__WEBPACK_IMPORTED_MODULE_0__.CubeObject(
+			6,
+			0.02,
+			6,
+			{ color: 0x3a3b3c },
+			{ mass: 0, type: elixr__WEBPACK_IMPORTED_MODULE_0__.BODY_TYPES.STATIC },
+		);
+		this.core.addGameObject(boxFloor);
+		boxFloor.addComponent(elixr__WEBPACK_IMPORTED_MODULE_0__.MovementSurface);
+		boxFloor.position.add(roomPositionOffset);
+
+		const boxCeiling = new elixr__WEBPACK_IMPORTED_MODULE_0__.CubeObject(
+			6,
+			0.02,
+			6,
+			{ color: 0xfaf9f6 },
+			{ mass: 0, type: elixr__WEBPACK_IMPORTED_MODULE_0__.BODY_TYPES.STATIC },
+		);
+		this.core.addGameObject(boxCeiling);
+		boxCeiling.position.set(0, 3, 0);
+		boxCeiling.position.add(roomPositionOffset);
+
+		const boxWall = new elixr__WEBPACK_IMPORTED_MODULE_0__.CubeObject(
+			6,
+			3,
+			0.02,
+			{ color: 0xfaf9f6 },
+			{ mass: 0, type: elixr__WEBPACK_IMPORTED_MODULE_0__.BODY_TYPES.STATIC },
+		);
+		this.core.addGameObject(boxWall);
+		boxWall.position.set(0, 1.5, -3);
+		boxWall.addComponent(elixr__WEBPACK_IMPORTED_MODULE_0__.MovementObstacle);
+		boxWall.position.add(roomPositionOffset);
+
+		const boxWall3 = boxWall.clone(true);
+		this.core.addGameObject(boxWall3);
+		boxWall3.position.set(3, 1.5, 0);
+		boxWall3.rotateY(Math.PI / 2);
+		boxWall3.position.add(roomPositionOffset);
+
+		const boxWall4 = boxWall.clone(true);
+		this.core.addGameObject(boxWall4);
+		boxWall4.position.set(-3, 1.5, 0);
+		boxWall4.rotateY(Math.PI / 2);
+		boxWall4.position.add(roomPositionOffset);
+
+		const boxWall5 = new elixr__WEBPACK_IMPORTED_MODULE_0__.CubeObject(
+			2,
+			3,
+			0.02,
+			{ color: 0xfaf9f6 },
+			{ mass: 0, type: elixr__WEBPACK_IMPORTED_MODULE_0__.BODY_TYPES.STATIC },
+		);
+		this.core.addGameObject(boxWall5);
+		boxWall5.position.set(2, 1.5, 3);
+		boxWall5.addComponent(elixr__WEBPACK_IMPORTED_MODULE_0__.MovementObstacle);
+		boxWall5.position.add(roomPositionOffset);
+
+		const boxWall6 = boxWall5.clone(true);
+		this.core.addGameObject(boxWall6);
+		boxWall6.position.set(-2, 1.5, 3);
+		boxWall6.position.add(roomPositionOffset);
+	}
+
+	_createRamp() {
+		const rampFloor = new elixr__WEBPACK_IMPORTED_MODULE_0__.CubeObject(
+			2,
+			0.02,
+			4,
+			{ color: 0xff5f1f },
+			{ mass: 0, type: elixr__WEBPACK_IMPORTED_MODULE_0__.BODY_TYPES.STATIC },
+		);
+		this.core.addGameObject(rampFloor);
+		rampFloor.rotateX(Math.PI / 6);
+		rampFloor.position.set(0, 1, -Math.pow(3, 0.5) - 3);
+		rampFloor.addComponent(elixr__WEBPACK_IMPORTED_MODULE_0__.MovementSurface);
+
+		const rampCeiling = rampFloor.clone(true);
+		this.core.addGameObject(rampCeiling);
+		rampCeiling.position.add(new elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.Vector3(0, 3, 0));
+		rampCeiling.removeComponent(elixr__WEBPACK_IMPORTED_MODULE_0__.MovementSurface);
+
+		const rampSidePanel = new elixr__WEBPACK_IMPORTED_MODULE_0__.CubeObject(
+			0.02,
+			5,
+			Math.pow(3, 0.5) * 2,
+			{ color: 0xff5f1f },
+			{ mass: 0, type: elixr__WEBPACK_IMPORTED_MODULE_0__.BODY_TYPES.STATIC },
+		);
+		this.core.addGameObject(rampSidePanel);
+		rampSidePanel.position.set(1, 2.5, -Math.pow(3, 0.5) - 3);
+		rampSidePanel.addComponent(elixr__WEBPACK_IMPORTED_MODULE_0__.MovementObstacle);
+
+		const rampSidePanel2 = rampSidePanel.clone(true);
+		this.core.addGameObject(rampSidePanel2);
+		rampSidePanel2.position.set(-1, 2.5, -Math.pow(3, 0.5) - 3);
 	}
 }
 
@@ -73606,87 +73718,6 @@ if ( typeof window !== 'undefined' ) {
 	} else {
 
 		window.__THREE__ = REVISION;
-
-	}
-
-}
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/three/examples/jsm/geometries/BoxLineGeometry.js":
-/*!***********************************************************************!*\
-  !*** ./node_modules/three/examples/jsm/geometries/BoxLineGeometry.js ***!
-  \***********************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "BoxLineGeometry": () => (/* binding */ BoxLineGeometry)
-/* harmony export */ });
-/* harmony import */ var three__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! three */ "./node_modules/three/build/three.module.js");
-
-
-class BoxLineGeometry extends three__WEBPACK_IMPORTED_MODULE_0__.BufferGeometry {
-
-	constructor( width = 1, height = 1, depth = 1, widthSegments = 1, heightSegments = 1, depthSegments = 1 ) {
-
-		super();
-
-		widthSegments = Math.floor( widthSegments );
-		heightSegments = Math.floor( heightSegments );
-		depthSegments = Math.floor( depthSegments );
-
-		const widthHalf = width / 2;
-		const heightHalf = height / 2;
-		const depthHalf = depth / 2;
-
-		const segmentWidth = width / widthSegments;
-		const segmentHeight = height / heightSegments;
-		const segmentDepth = depth / depthSegments;
-
-		const vertices = [];
-
-		let x = - widthHalf;
-		let y = - heightHalf;
-		let z = - depthHalf;
-
-		for ( let i = 0; i <= widthSegments; i ++ ) {
-
-			vertices.push( x, - heightHalf, - depthHalf, x, heightHalf, - depthHalf );
-			vertices.push( x, heightHalf, - depthHalf, x, heightHalf, depthHalf );
-			vertices.push( x, heightHalf, depthHalf, x, - heightHalf, depthHalf );
-			vertices.push( x, - heightHalf, depthHalf, x, - heightHalf, - depthHalf );
-
-			x += segmentWidth;
-
-		}
-
-		for ( let i = 0; i <= heightSegments; i ++ ) {
-
-			vertices.push( - widthHalf, y, - depthHalf, widthHalf, y, - depthHalf );
-			vertices.push( widthHalf, y, - depthHalf, widthHalf, y, depthHalf );
-			vertices.push( widthHalf, y, depthHalf, - widthHalf, y, depthHalf );
-			vertices.push( - widthHalf, y, depthHalf, - widthHalf, y, - depthHalf );
-
-			y += segmentHeight;
-
-		}
-
-		for ( let i = 0; i <= depthSegments; i ++ ) {
-
-			vertices.push( - widthHalf, - heightHalf, z, - widthHalf, heightHalf, z );
-			vertices.push( - widthHalf, heightHalf, z, widthHalf, heightHalf, z );
-			vertices.push( widthHalf, heightHalf, z, widthHalf, - heightHalf, z );
-			vertices.push( widthHalf, - heightHalf, z, - widthHalf, - heightHalf, z );
-
-			z += segmentDepth;
-
-		}
-
-		this.setAttribute( 'position', new three__WEBPACK_IMPORTED_MODULE_0__.Float32BufferAttribute( vertices, 3 ) );
 
 	}
 
