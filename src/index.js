@@ -1,3 +1,4 @@
+import { ConnectionComponent, ConnectionSystem } from './js/ConnectionSystem';
 import {
 	Core,
 	MovementObstacle,
@@ -20,6 +21,7 @@ core.physics.stepTime = 1 / 90;
 
 core.registerGameComponent(MovementSurface);
 core.registerGameComponent(MovementObstacle);
+core.registerGameComponent(ConnectionComponent);
 
 core.registerGameSystem(XRTeleportSystem);
 core.registerGameSystem(XRSlideSystem);
@@ -27,6 +29,7 @@ core.registerGameSystem(XRSnapTurnSystem);
 core.registerGameSystem(SceneCreationSystem);
 core.registerGameSystem(CubeLauncherSystem);
 core.registerGameSystem(ObjectManipulationSystem);
+core.registerGameSystem(ConnectionSystem);
 
 const slideConfig = core.getGameSystemConfig(XRSlideSystem);
 slideConfig.MAX_MOVEMENT_SPEED = 2.5;

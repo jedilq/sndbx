@@ -17986,6 +17986,196 @@ exports.XR_STANDARD_AXES_MAPPING = {
 
 /***/ }),
 
+/***/ "./src/js/ConnectionSystem.js":
+/*!************************************!*\
+  !*** ./src/js/ConnectionSystem.js ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "ConnectionComponent": () => (/* binding */ ConnectionComponent),
+/* harmony export */   "ConnectionSystem": () => (/* binding */ ConnectionSystem)
+/* harmony export */ });
+/* harmony import */ var elixr__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! elixr */ "./node_modules/elixr/dist/index.js");
+
+
+const SPW_OPTIONS = {
+	debug: true,
+	serverUrl: 'https://whereismypeer.net:8000',
+	simplePeerOptions: {
+		config: {
+			iceServers: [
+				{
+					urls: ['stun:ws-turn6.xirsys.com'],
+				},
+				{
+					username:
+						'uvHExGwBOpO3rvQwF-nt56O_ohdzs_cA4XZ2-fmJRjmJ195k3LKD66x5V4iqHMdpAAAAAGLsC5VmZWxpeHo=',
+					credential: 'b8e6e188-1420-11ed-a07f-0242ac140004',
+					urls: [
+						'turn:ws-turn6.xirsys.com:80?transport=udp',
+						'turn:ws-turn6.xirsys.com:3478?transport=udp',
+						'turn:ws-turn6.xirsys.com:80?transport=tcp',
+						'turn:ws-turn6.xirsys.com:3478?transport=tcp',
+						'turns:ws-turn6.xirsys.com:443?transport=tcp',
+						'turns:ws-turn6.xirsys.com:5349?transport=tcp',
+					],
+				},
+			],
+		},
+	},
+};
+
+class ConnectionSystem extends elixr__WEBPACK_IMPORTED_MODULE_0__.GameSystem {
+	init() {
+		const startButton = document.getElementById('start-button');
+		const sessionIdBox = document.getElementById('session-id');
+
+		startButton.onclick = () => {
+			navigator.mediaDevices.getUserMedia({ audio: true }).then((stream) => {
+				SPW_OPTIONS.isInitiator = sessionIdBox.value.length == 0;
+
+				if (!SPW_OPTIONS.isInitiator) {
+					SPW_OPTIONS.sessionId = sessionIdBox.value.toUpperCase();
+				}
+
+				SPW_OPTIONS.stream = stream;
+
+				// eslint-disable-next-line no-undef
+				this.spw = new SimplePeerWrapper(SPW_OPTIONS);
+
+				// Make the peer connection
+				this.spw.connect();
+
+				// Do something when the connection is made
+				this.spw.on('connect', () => {
+					onConnect(SPW_OPTIONS.isInitiator);
+				});
+
+				// When data recieved over the connection call gotData
+				this.spw.on('data', onData);
+
+				this.spw.on('stream', onStream);
+
+				this.spw.on('error', (error) => {
+					// eslint-disable-next-line no-undef
+					console.log(error);
+				});
+
+				this.spw.onCreated(onCreated);
+			});
+		};
+		this.guestPlayers = {};
+
+		const onConnect = (isHost) => {
+			this.peerSpace = new elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.Group();
+			this.core.scene.add(this.peerSpace);
+			const peerMaterial = new elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.MeshBasicMaterial({ color: 0xffff00 });
+			this.peerHead = new elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.Mesh(
+				new elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.SphereGeometry(0.1, 32, 16),
+				peerMaterial,
+			);
+			this.peerLeftHand = new elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.Mesh(
+				new elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.BoxGeometry(0.03, 0.1, 0.15),
+				peerMaterial,
+			);
+			this.peerRightHand = new elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.Mesh(
+				new elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.BoxGeometry(0.03, 0.1, 0.15),
+				peerMaterial,
+			);
+			this.core.scene.add(this.peerHead);
+			this.peerSpace.add(this.peerLeftHand);
+			this.peerSpace.add(this.peerRightHand);
+
+			if (!isHost) {
+				this.core.playerSpace.position.set(0, 0, -1);
+			}
+
+			this.core.game.addComponent(ConnectionComponent);
+
+			this.connection = this.core.game.getMutableComponent(ConnectionComponent);
+		};
+
+		const onCreated = (room) => {
+			sessionIdBox.disabled = true;
+			sessionIdBox.value = room;
+			startButton.disabled = true;
+		};
+
+		const onStream = (stream) => {
+			console.log(stream);
+		};
+
+		const onData = (payload) => {
+			const data = JSON.parse(payload.data);
+			if (data['playerSpace']) {
+				deserializeTransform(data['playerSpace'], this.peerSpace);
+			}
+			if (data['head']) {
+				deserializeTransform(data['head'], this.peerHead);
+			}
+			if (data['leftHand']) {
+				deserializeTransform(data['leftHand'], this.peerLeftHand);
+			}
+			if (data['rightHand']) {
+				deserializeTransform(data['rightHand'], this.peerRightHand);
+			}
+			if (this.connection && data['cubes'] && data['cubes'].length > 0) {
+				this.connection.incomingCubes.push(...data['cubes']);
+			}
+		};
+
+		window.onbeforeunload = () => {
+			this.spw.close();
+		};
+	}
+
+	execute(_delta, _time) {
+		if (this.spw && this.connection) {
+			const data = {};
+			data['playerSpace'] = serializeTransform(this.core.playerSpace);
+			data['head'] = serializeTransform(this.core.renderer.xr.getCamera());
+			if (this.core.controllers['left']) {
+				data['leftHand'] = serializeTransform(
+					this.core.controllers['left'].gripSpace,
+				);
+			}
+			if (this.core.controllers['right']) {
+				data['rightHand'] = serializeTransform(
+					this.core.controllers['right'].gripSpace,
+				);
+			}
+
+			data['cubes'] = this.connection.outgoingCubes;
+			this.spw.send(JSON.stringify(data));
+			this.connection.outgoingCubes.length = 0;
+		}
+	}
+}
+
+const serializeTransform = (object) => {
+	const transform = {};
+	transform['position'] = object.position.toArray();
+	transform['quaternion'] = object.quaternion.toArray();
+	return transform;
+};
+
+const deserializeTransform = (transform, object) => {
+	object.position.fromArray(transform['position']);
+	object.quaternion.fromArray(transform['quaternion']);
+};
+
+class ConnectionComponent extends elixr__WEBPACK_IMPORTED_MODULE_0__.GameComponent {}
+
+ConnectionComponent.schema = {
+	outgoingCubes: { type: elixr__WEBPACK_IMPORTED_MODULE_0__.Types.Array, default: [] },
+	incomingCubes: { type: elixr__WEBPACK_IMPORTED_MODULE_0__.Types.Array, default: [] },
+};
+
+
+/***/ }),
+
 /***/ "./src/js/CubeLauncherSystem.js":
 /*!**************************************!*\
   !*** ./src/js/CubeLauncherSystem.js ***!
@@ -17997,10 +18187,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "CubeLauncherSystem": () => (/* binding */ CubeLauncherSystem)
 /* harmony export */ });
 /* harmony import */ var elixr__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! elixr */ "./node_modules/elixr/dist/index.js");
+/* harmony import */ var _ConnectionSystem__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ConnectionSystem */ "./src/js/ConnectionSystem.js");
+
+
 
 
 class CubeLauncherSystem extends elixr__WEBPACK_IMPORTED_MODULE_0__.XRGameSystem {
 	update() {
+		const connection = this.core.game.getMutableComponent(_ConnectionSystem__WEBPACK_IMPORTED_MODULE_1__.ConnectionComponent);
+
 		Object.values(this.core.controllers).forEach((controller) => {
 			if (controller.gamepad.getButtonDown(elixr__WEBPACK_IMPORTED_MODULE_0__.BUTTONS.XR_STANDARD.TRIGGER)) {
 				const cubeMesh = new elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.Mesh(
@@ -18018,8 +18213,33 @@ class CubeLauncherSystem extends elixr__WEBPACK_IMPORTED_MODULE_0__.XRGameSystem
 						cubeObject.quaternion,
 					),
 				});
+				connection.outgoingCubes.push({
+					position: cubeObject.position.toArray(),
+					quaternion: cubeObject.quaternion.toArray(),
+					initVelocity: new elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.Vector3(0, 0, -5)
+						.applyQuaternion(cubeObject.quaternion)
+						.toArray(),
+				});
 			}
 		});
+
+		connection.incomingCubes.forEach((cube) => {
+			const cubeMesh = new elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.Mesh(
+				new elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.BoxGeometry(0.2, 0.2, 0.2),
+				new elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.MeshStandardMaterial({ color: Math.random() * 0xffffff }),
+			);
+			const cubeObject = this.core.createGameObject(cubeMesh);
+			cubeObject.position.fromArray(cube.position);
+			cubeObject.quaternion.fromArray(cube.quaternion);
+			cubeObject.addComponent(elixr__WEBPACK_IMPORTED_MODULE_0__.RigidBodyComponent, {
+				mass: 1,
+				shape: new elixr__WEBPACK_IMPORTED_MODULE_0__.Physics.Box(new elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.Vector3(0.1, 0.1, 0.1)),
+				type: elixr__WEBPACK_IMPORTED_MODULE_0__.Physics.BODY_TYPES.DYNAMIC,
+				initVelocity: new elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.Vector3().fromArray(cube.initVelocity),
+			});
+		});
+
+		connection.incomingCubes.length = 0;
 	}
 }
 
@@ -18118,6 +18338,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "SceneCreationSystem": () => (/* binding */ SceneCreationSystem)
 /* harmony export */ });
 /* harmony import */ var elixr__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! elixr */ "./node_modules/elixr/dist/index.js");
+/* harmony import */ var three_examples_jsm_loaders_RGBELoader_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! three/examples/jsm/loaders/RGBELoader.js */ "./node_modules/three/examples/jsm/loaders/RGBELoader.js");
+
+
 
 
 class SceneCreationSystem extends elixr__WEBPACK_IMPORTED_MODULE_0__.SingleUseGameSystem {
@@ -18142,11 +18365,12 @@ class SceneCreationSystem extends elixr__WEBPACK_IMPORTED_MODULE_0__.SingleUseGa
 	}
 
 	_createLighting() {
-		const ambientLight = new elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.AmbientLight(0xffffff, 0.2);
-		this.core.scene.add(ambientLight);
+		new three_examples_jsm_loaders_RGBELoader_js__WEBPACK_IMPORTED_MODULE_1__.RGBELoader().load('assets/studio_small_09_1k.hdr', (texture) => {
+			texture.mapping = elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.EquirectangularReflectionMapping;
 
-		const directionalLight = new elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.DirectionalLight(0xffffff, 0.2);
-		this.core.scene.add(directionalLight);
+			this.core.scene.background = texture;
+			this.core.scene.environment = texture;
+		});
 	}
 
 	_createRoom1() {
@@ -80303,6 +80527,482 @@ async function createDataTexture( container ) {
 
 /***/ }),
 
+/***/ "./node_modules/three/examples/jsm/loaders/RGBELoader.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/three/examples/jsm/loaders/RGBELoader.js ***!
+  \***************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "RGBELoader": () => (/* binding */ RGBELoader)
+/* harmony export */ });
+/* harmony import */ var three__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! three */ "./node_modules/three/build/three.module.js");
+
+
+// https://github.com/mrdoob/three.js/issues/5552
+// http://en.wikipedia.org/wiki/RGBE_image_format
+
+class RGBELoader extends three__WEBPACK_IMPORTED_MODULE_0__.DataTextureLoader {
+
+	constructor( manager ) {
+
+		super( manager );
+
+		this.type = three__WEBPACK_IMPORTED_MODULE_0__.HalfFloatType;
+
+	}
+
+	// adapted from http://www.graphics.cornell.edu/~bjw/rgbe.html
+
+	parse( buffer ) {
+
+		const
+			/* return codes for rgbe routines */
+			//RGBE_RETURN_SUCCESS = 0,
+			RGBE_RETURN_FAILURE = - 1,
+
+			/* default error routine.  change this to change error handling */
+			rgbe_read_error = 1,
+			rgbe_write_error = 2,
+			rgbe_format_error = 3,
+			rgbe_memory_error = 4,
+			rgbe_error = function ( rgbe_error_code, msg ) {
+
+				switch ( rgbe_error_code ) {
+
+					case rgbe_read_error: console.error( 'THREE.RGBELoader Read Error: ' + ( msg || '' ) );
+						break;
+					case rgbe_write_error: console.error( 'THREE.RGBELoader Write Error: ' + ( msg || '' ) );
+						break;
+					case rgbe_format_error: console.error( 'THREE.RGBELoader Bad File Format: ' + ( msg || '' ) );
+						break;
+					default:
+					case rgbe_memory_error: console.error( 'THREE.RGBELoader: Error: ' + ( msg || '' ) );
+
+				}
+
+				return RGBE_RETURN_FAILURE;
+
+			},
+
+			/* offsets to red, green, and blue components in a data (float) pixel */
+			//RGBE_DATA_RED = 0,
+			//RGBE_DATA_GREEN = 1,
+			//RGBE_DATA_BLUE = 2,
+
+			/* number of floats per pixel, use 4 since stored in rgba image format */
+			//RGBE_DATA_SIZE = 4,
+
+			/* flags indicating which fields in an rgbe_header_info are valid */
+			RGBE_VALID_PROGRAMTYPE = 1,
+			RGBE_VALID_FORMAT = 2,
+			RGBE_VALID_DIMENSIONS = 4,
+
+			NEWLINE = '\n',
+
+			fgets = function ( buffer, lineLimit, consume ) {
+
+				const chunkSize = 128;
+
+				lineLimit = ! lineLimit ? 1024 : lineLimit;
+				let p = buffer.pos,
+					i = - 1, len = 0, s = '',
+					chunk = String.fromCharCode.apply( null, new Uint16Array( buffer.subarray( p, p + chunkSize ) ) );
+
+				while ( ( 0 > ( i = chunk.indexOf( NEWLINE ) ) ) && ( len < lineLimit ) && ( p < buffer.byteLength ) ) {
+
+					s += chunk; len += chunk.length;
+					p += chunkSize;
+					chunk += String.fromCharCode.apply( null, new Uint16Array( buffer.subarray( p, p + chunkSize ) ) );
+
+				}
+
+				if ( - 1 < i ) {
+
+					/*for (i=l-1; i>=0; i--) {
+						byteCode = m.charCodeAt(i);
+						if (byteCode > 0x7f && byteCode <= 0x7ff) byteLen++;
+						else if (byteCode > 0x7ff && byteCode <= 0xffff) byteLen += 2;
+						if (byteCode >= 0xDC00 && byteCode <= 0xDFFF) i--; //trail surrogate
+					}*/
+					if ( false !== consume ) buffer.pos += len + i + 1;
+					return s + chunk.slice( 0, i );
+
+				}
+
+				return false;
+
+			},
+
+			/* minimal header reading.  modify if you want to parse more information */
+			RGBE_ReadHeader = function ( buffer ) {
+
+
+				// regexes to parse header info fields
+				const magic_token_re = /^#\?(\S+)/,
+					gamma_re = /^\s*GAMMA\s*=\s*(\d+(\.\d+)?)\s*$/,
+					exposure_re = /^\s*EXPOSURE\s*=\s*(\d+(\.\d+)?)\s*$/,
+					format_re = /^\s*FORMAT=(\S+)\s*$/,
+					dimensions_re = /^\s*\-Y\s+(\d+)\s+\+X\s+(\d+)\s*$/,
+
+					// RGBE format header struct
+					header = {
+
+						valid: 0, /* indicate which fields are valid */
+
+						string: '', /* the actual header string */
+
+						comments: '', /* comments found in header */
+
+						programtype: 'RGBE', /* listed at beginning of file to identify it after "#?". defaults to "RGBE" */
+
+						format: '', /* RGBE format, default 32-bit_rle_rgbe */
+
+						gamma: 1.0, /* image has already been gamma corrected with given gamma. defaults to 1.0 (no correction) */
+
+						exposure: 1.0, /* a value of 1.0 in an image corresponds to <exposure> watts/steradian/m^2. defaults to 1.0 */
+
+						width: 0, height: 0 /* image dimensions, width/height */
+
+					};
+
+				let line, match;
+
+				if ( buffer.pos >= buffer.byteLength || ! ( line = fgets( buffer ) ) ) {
+
+					return rgbe_error( rgbe_read_error, 'no header found' );
+
+				}
+
+				/* if you want to require the magic token then uncomment the next line */
+				if ( ! ( match = line.match( magic_token_re ) ) ) {
+
+					return rgbe_error( rgbe_format_error, 'bad initial token' );
+
+				}
+
+				header.valid |= RGBE_VALID_PROGRAMTYPE;
+				header.programtype = match[ 1 ];
+				header.string += line + '\n';
+
+				while ( true ) {
+
+					line = fgets( buffer );
+					if ( false === line ) break;
+					header.string += line + '\n';
+
+					if ( '#' === line.charAt( 0 ) ) {
+
+						header.comments += line + '\n';
+						continue; // comment line
+
+					}
+
+					if ( match = line.match( gamma_re ) ) {
+
+						header.gamma = parseFloat( match[ 1 ] );
+
+					}
+
+					if ( match = line.match( exposure_re ) ) {
+
+						header.exposure = parseFloat( match[ 1 ] );
+
+					}
+
+					if ( match = line.match( format_re ) ) {
+
+						header.valid |= RGBE_VALID_FORMAT;
+						header.format = match[ 1 ];//'32-bit_rle_rgbe';
+
+					}
+
+					if ( match = line.match( dimensions_re ) ) {
+
+						header.valid |= RGBE_VALID_DIMENSIONS;
+						header.height = parseInt( match[ 1 ], 10 );
+						header.width = parseInt( match[ 2 ], 10 );
+
+					}
+
+					if ( ( header.valid & RGBE_VALID_FORMAT ) && ( header.valid & RGBE_VALID_DIMENSIONS ) ) break;
+
+				}
+
+				if ( ! ( header.valid & RGBE_VALID_FORMAT ) ) {
+
+					return rgbe_error( rgbe_format_error, 'missing format specifier' );
+
+				}
+
+				if ( ! ( header.valid & RGBE_VALID_DIMENSIONS ) ) {
+
+					return rgbe_error( rgbe_format_error, 'missing image size specifier' );
+
+				}
+
+				return header;
+
+			},
+
+			RGBE_ReadPixels_RLE = function ( buffer, w, h ) {
+
+				const scanline_width = w;
+
+				if (
+					// run length encoding is not allowed so read flat
+					( ( scanline_width < 8 ) || ( scanline_width > 0x7fff ) ) ||
+					// this file is not run length encoded
+					( ( 2 !== buffer[ 0 ] ) || ( 2 !== buffer[ 1 ] ) || ( buffer[ 2 ] & 0x80 ) )
+				) {
+
+					// return the flat buffer
+					return new Uint8Array( buffer );
+
+				}
+
+				if ( scanline_width !== ( ( buffer[ 2 ] << 8 ) | buffer[ 3 ] ) ) {
+
+					return rgbe_error( rgbe_format_error, 'wrong scanline width' );
+
+				}
+
+				const data_rgba = new Uint8Array( 4 * w * h );
+
+				if ( ! data_rgba.length ) {
+
+					return rgbe_error( rgbe_memory_error, 'unable to allocate buffer space' );
+
+				}
+
+				let offset = 0, pos = 0;
+
+				const ptr_end = 4 * scanline_width;
+				const rgbeStart = new Uint8Array( 4 );
+				const scanline_buffer = new Uint8Array( ptr_end );
+				let num_scanlines = h;
+
+				// read in each successive scanline
+				while ( ( num_scanlines > 0 ) && ( pos < buffer.byteLength ) ) {
+
+					if ( pos + 4 > buffer.byteLength ) {
+
+						return rgbe_error( rgbe_read_error );
+
+					}
+
+					rgbeStart[ 0 ] = buffer[ pos ++ ];
+					rgbeStart[ 1 ] = buffer[ pos ++ ];
+					rgbeStart[ 2 ] = buffer[ pos ++ ];
+					rgbeStart[ 3 ] = buffer[ pos ++ ];
+
+					if ( ( 2 != rgbeStart[ 0 ] ) || ( 2 != rgbeStart[ 1 ] ) || ( ( ( rgbeStart[ 2 ] << 8 ) | rgbeStart[ 3 ] ) != scanline_width ) ) {
+
+						return rgbe_error( rgbe_format_error, 'bad rgbe scanline format' );
+
+					}
+
+					// read each of the four channels for the scanline into the buffer
+					// first red, then green, then blue, then exponent
+					let ptr = 0, count;
+
+					while ( ( ptr < ptr_end ) && ( pos < buffer.byteLength ) ) {
+
+						count = buffer[ pos ++ ];
+						const isEncodedRun = count > 128;
+						if ( isEncodedRun ) count -= 128;
+
+						if ( ( 0 === count ) || ( ptr + count > ptr_end ) ) {
+
+							return rgbe_error( rgbe_format_error, 'bad scanline data' );
+
+						}
+
+						if ( isEncodedRun ) {
+
+							// a (encoded) run of the same value
+							const byteValue = buffer[ pos ++ ];
+							for ( let i = 0; i < count; i ++ ) {
+
+								scanline_buffer[ ptr ++ ] = byteValue;
+
+							}
+							//ptr += count;
+
+						} else {
+
+							// a literal-run
+							scanline_buffer.set( buffer.subarray( pos, pos + count ), ptr );
+							ptr += count; pos += count;
+
+						}
+
+					}
+
+
+					// now convert data from buffer into rgba
+					// first red, then green, then blue, then exponent (alpha)
+					const l = scanline_width; //scanline_buffer.byteLength;
+					for ( let i = 0; i < l; i ++ ) {
+
+						let off = 0;
+						data_rgba[ offset ] = scanline_buffer[ i + off ];
+						off += scanline_width; //1;
+						data_rgba[ offset + 1 ] = scanline_buffer[ i + off ];
+						off += scanline_width; //1;
+						data_rgba[ offset + 2 ] = scanline_buffer[ i + off ];
+						off += scanline_width; //1;
+						data_rgba[ offset + 3 ] = scanline_buffer[ i + off ];
+						offset += 4;
+
+					}
+
+					num_scanlines --;
+
+				}
+
+				return data_rgba;
+
+			};
+
+		const RGBEByteToRGBFloat = function ( sourceArray, sourceOffset, destArray, destOffset ) {
+
+			const e = sourceArray[ sourceOffset + 3 ];
+			const scale = Math.pow( 2.0, e - 128.0 ) / 255.0;
+
+			destArray[ destOffset + 0 ] = sourceArray[ sourceOffset + 0 ] * scale;
+			destArray[ destOffset + 1 ] = sourceArray[ sourceOffset + 1 ] * scale;
+			destArray[ destOffset + 2 ] = sourceArray[ sourceOffset + 2 ] * scale;
+			destArray[ destOffset + 3 ] = 1;
+
+		};
+
+		const RGBEByteToRGBHalf = function ( sourceArray, sourceOffset, destArray, destOffset ) {
+
+			const e = sourceArray[ sourceOffset + 3 ];
+			const scale = Math.pow( 2.0, e - 128.0 ) / 255.0;
+
+			// clamping to 65504, the maximum representable value in float16
+			destArray[ destOffset + 0 ] = three__WEBPACK_IMPORTED_MODULE_0__.DataUtils.toHalfFloat( Math.min( sourceArray[ sourceOffset + 0 ] * scale, 65504 ) );
+			destArray[ destOffset + 1 ] = three__WEBPACK_IMPORTED_MODULE_0__.DataUtils.toHalfFloat( Math.min( sourceArray[ sourceOffset + 1 ] * scale, 65504 ) );
+			destArray[ destOffset + 2 ] = three__WEBPACK_IMPORTED_MODULE_0__.DataUtils.toHalfFloat( Math.min( sourceArray[ sourceOffset + 2 ] * scale, 65504 ) );
+			destArray[ destOffset + 3 ] = three__WEBPACK_IMPORTED_MODULE_0__.DataUtils.toHalfFloat( 1 );
+
+		};
+
+		const byteArray = new Uint8Array( buffer );
+		byteArray.pos = 0;
+		const rgbe_header_info = RGBE_ReadHeader( byteArray );
+
+		if ( RGBE_RETURN_FAILURE !== rgbe_header_info ) {
+
+			const w = rgbe_header_info.width,
+				h = rgbe_header_info.height,
+				image_rgba_data = RGBE_ReadPixels_RLE( byteArray.subarray( byteArray.pos ), w, h );
+
+			if ( RGBE_RETURN_FAILURE !== image_rgba_data ) {
+
+				let data, type;
+				let numElements;
+
+				switch ( this.type ) {
+
+					case three__WEBPACK_IMPORTED_MODULE_0__.FloatType:
+
+						numElements = image_rgba_data.length / 4;
+						const floatArray = new Float32Array( numElements * 4 );
+
+						for ( let j = 0; j < numElements; j ++ ) {
+
+							RGBEByteToRGBFloat( image_rgba_data, j * 4, floatArray, j * 4 );
+
+						}
+
+						data = floatArray;
+						type = three__WEBPACK_IMPORTED_MODULE_0__.FloatType;
+						break;
+
+					case three__WEBPACK_IMPORTED_MODULE_0__.HalfFloatType:
+
+						numElements = image_rgba_data.length / 4;
+						const halfArray = new Uint16Array( numElements * 4 );
+
+						for ( let j = 0; j < numElements; j ++ ) {
+
+							RGBEByteToRGBHalf( image_rgba_data, j * 4, halfArray, j * 4 );
+
+						}
+
+						data = halfArray;
+						type = three__WEBPACK_IMPORTED_MODULE_0__.HalfFloatType;
+						break;
+
+					default:
+
+						console.error( 'THREE.RGBELoader: unsupported type: ', this.type );
+						break;
+
+				}
+
+				return {
+					width: w, height: h,
+					data: data,
+					header: rgbe_header_info.string,
+					gamma: rgbe_header_info.gamma,
+					exposure: rgbe_header_info.exposure,
+					type: type
+				};
+
+			}
+
+		}
+
+		return null;
+
+	}
+
+	setDataType( value ) {
+
+		this.type = value;
+		return this;
+
+	}
+
+	load( url, onLoad, onProgress, onError ) {
+
+		function onLoadCallback( texture, texData ) {
+
+			switch ( texture.type ) {
+
+				case three__WEBPACK_IMPORTED_MODULE_0__.FloatType:
+				case three__WEBPACK_IMPORTED_MODULE_0__.HalfFloatType:
+
+					texture.encoding = three__WEBPACK_IMPORTED_MODULE_0__.LinearEncoding;
+					texture.minFilter = three__WEBPACK_IMPORTED_MODULE_0__.LinearFilter;
+					texture.magFilter = three__WEBPACK_IMPORTED_MODULE_0__.LinearFilter;
+					texture.generateMipmaps = false;
+					texture.flipY = true;
+
+					break;
+
+			}
+
+			if ( onLoad ) onLoad( texture, texData );
+
+		}
+
+		return super.load( url, onLoadCallback, onProgress, onError );
+
+	}
+
+}
+
+
+
+
+/***/ }),
+
 /***/ "./node_modules/three/examples/jsm/math/ConvexHull.js":
 /*!************************************************************!*\
   !*** ./node_modules/three/examples/jsm/math/ConvexHull.js ***!
@@ -82511,34 +83211,38 @@ var __webpack_exports__ = {};
   !*** ./src/index.js ***!
   \**********************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var elixr__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! elixr */ "./node_modules/elixr/dist/index.js");
-/* harmony import */ var _js_CubeLauncherSystem__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/CubeLauncherSystem */ "./src/js/CubeLauncherSystem.js");
-/* harmony import */ var _js_ObjectManipulationSystem__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js/ObjectManipulationSystem */ "./src/js/ObjectManipulationSystem.js");
-/* harmony import */ var _js_SceneCreationSystem__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./js/SceneCreationSystem */ "./src/js/SceneCreationSystem.js");
+/* harmony import */ var _js_ConnectionSystem__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js/ConnectionSystem */ "./src/js/ConnectionSystem.js");
+/* harmony import */ var elixr__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! elixr */ "./node_modules/elixr/dist/index.js");
+/* harmony import */ var _js_CubeLauncherSystem__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js/CubeLauncherSystem */ "./src/js/CubeLauncherSystem.js");
+/* harmony import */ var _js_ObjectManipulationSystem__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./js/ObjectManipulationSystem */ "./src/js/ObjectManipulationSystem.js");
+/* harmony import */ var _js_SceneCreationSystem__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./js/SceneCreationSystem */ "./src/js/SceneCreationSystem.js");
 
 
 
 
 
 
-const core = new elixr__WEBPACK_IMPORTED_MODULE_0__.Core(document.getElementById('scene-container'));
+
+const core = new elixr__WEBPACK_IMPORTED_MODULE_1__.Core(document.getElementById('scene-container'));
 
 core.enablePhysics();
 core.physics.gravity.set(0, 0, 0);
 core.physics.solverIterations = 2;
 core.physics.stepTime = 1 / 90;
 
-core.registerGameComponent(elixr__WEBPACK_IMPORTED_MODULE_0__.MovementSurface);
-core.registerGameComponent(elixr__WEBPACK_IMPORTED_MODULE_0__.MovementObstacle);
+core.registerGameComponent(elixr__WEBPACK_IMPORTED_MODULE_1__.MovementSurface);
+core.registerGameComponent(elixr__WEBPACK_IMPORTED_MODULE_1__.MovementObstacle);
+core.registerGameComponent(_js_ConnectionSystem__WEBPACK_IMPORTED_MODULE_0__.ConnectionComponent);
 
-core.registerGameSystem(elixr__WEBPACK_IMPORTED_MODULE_0__.XRTeleportSystem);
-core.registerGameSystem(elixr__WEBPACK_IMPORTED_MODULE_0__.XRSlideSystem);
-core.registerGameSystem(elixr__WEBPACK_IMPORTED_MODULE_0__.XRSnapTurnSystem);
-core.registerGameSystem(_js_SceneCreationSystem__WEBPACK_IMPORTED_MODULE_3__.SceneCreationSystem);
-core.registerGameSystem(_js_CubeLauncherSystem__WEBPACK_IMPORTED_MODULE_1__.CubeLauncherSystem);
-core.registerGameSystem(_js_ObjectManipulationSystem__WEBPACK_IMPORTED_MODULE_2__.ObjectManipulationSystem);
+core.registerGameSystem(elixr__WEBPACK_IMPORTED_MODULE_1__.XRTeleportSystem);
+core.registerGameSystem(elixr__WEBPACK_IMPORTED_MODULE_1__.XRSlideSystem);
+core.registerGameSystem(elixr__WEBPACK_IMPORTED_MODULE_1__.XRSnapTurnSystem);
+core.registerGameSystem(_js_SceneCreationSystem__WEBPACK_IMPORTED_MODULE_4__.SceneCreationSystem);
+core.registerGameSystem(_js_CubeLauncherSystem__WEBPACK_IMPORTED_MODULE_2__.CubeLauncherSystem);
+core.registerGameSystem(_js_ObjectManipulationSystem__WEBPACK_IMPORTED_MODULE_3__.ObjectManipulationSystem);
+core.registerGameSystem(_js_ConnectionSystem__WEBPACK_IMPORTED_MODULE_0__.ConnectionSystem);
 
-const slideConfig = core.getGameSystemConfig(elixr__WEBPACK_IMPORTED_MODULE_0__.XRSlideSystem);
+const slideConfig = core.getGameSystemConfig(elixr__WEBPACK_IMPORTED_MODULE_1__.XRSlideSystem);
 slideConfig.MAX_MOVEMENT_SPEED = 2.5;
 
 document.body.append(core.vrButton);

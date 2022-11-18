@@ -34,7 +34,10 @@ module.exports = {
 			template: './src/index.html',
 		}),
 		new CopyPlugin({
-			patterns: [{ from: 'src/assets', to: 'assets' }],
+			patterns: [
+				{ from: 'src/assets', to: 'assets' },
+				{ from: 'node_modules/simple-peer-wrapper/dist', to: 'spw' },
+			],
 		}),
 	],
 	devtool: 'source-map',

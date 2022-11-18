@@ -8,6 +8,8 @@ import {
 	THREE,
 } from 'elixr';
 
+import { RGBELoader } from 'three/examples/jsm/loaders/RGBELoader.js';
+
 export class SceneCreationSystem extends SingleUseGameSystem {
 	update() {
 		this.core.scene.background = new THREE.Color(0x505050);
@@ -30,11 +32,12 @@ export class SceneCreationSystem extends SingleUseGameSystem {
 	}
 
 	_createLighting() {
-		const ambientLight = new THREE.AmbientLight(0xffffff, 0.2);
-		this.core.scene.add(ambientLight);
+		new RGBELoader().load('assets/studio_small_09_1k.hdr', (texture) => {
+			texture.mapping = THREE.EquirectangularReflectionMapping;
 
-		const directionalLight = new THREE.DirectionalLight(0xffffff, 0.2);
-		this.core.scene.add(directionalLight);
+			this.core.scene.background = texture;
+			this.core.scene.environment = texture;
+		});
 	}
 
 	_createRoom1() {
