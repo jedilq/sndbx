@@ -66,7 +66,6 @@ export class ConnectionSystem extends GameSystem {
 				this.spw.onCreated(onCreated);
 			});
 		};
-		this.guestPlayers = {};
 
 		const onConnect = (isHost) => {
 			this.peerSpace = new THREE.Group();
@@ -84,7 +83,7 @@ export class ConnectionSystem extends GameSystem {
 				new THREE.BoxGeometry(0.03, 0.1, 0.15),
 				peerMaterial,
 			);
-			this.core.scene.add(this.peerHead);
+			this.peerSpace.add(this.peerHead);
 			this.peerSpace.add(this.peerLeftHand);
 			this.peerSpace.add(this.peerRightHand);
 
@@ -135,7 +134,7 @@ export class ConnectionSystem extends GameSystem {
 		if (this.spw && this.connection) {
 			const data = {};
 			data['playerSpace'] = serializeTransform(this.core.playerSpace);
-			data['head'] = serializeTransform(this.core.renderer.xr.getCamera());
+			data['head'] = serializeTransform(this.core.playerHead);
 			if (this.core.controllers['left']) {
 				data['leftHand'] = serializeTransform(
 					this.core.controllers['left'].gripSpace,

@@ -29,7 +29,7 @@ export class CubeLauncherSystem extends XRGameSystem {
 						cubeObject.quaternion,
 					),
 				});
-				connection.outgoingCubes.push({
+				connection?.outgoingCubes.push({
 					position: cubeObject.position.toArray(),
 					quaternion: cubeObject.quaternion.toArray(),
 					initVelocity: new THREE.Vector3(0, 0, -5)
@@ -39,7 +39,7 @@ export class CubeLauncherSystem extends XRGameSystem {
 			}
 		});
 
-		connection.incomingCubes.forEach((cube) => {
+		connection?.incomingCubes.forEach((cube) => {
 			const cubeMesh = new THREE.Mesh(
 				new THREE.BoxGeometry(0.2, 0.2, 0.2),
 				new THREE.MeshStandardMaterial({ color: Math.random() * 0xffffff }),
@@ -55,6 +55,6 @@ export class CubeLauncherSystem extends XRGameSystem {
 			});
 		});
 
-		connection.incomingCubes.length = 0;
+		if (connection) connection.incomingCubes.length = 0;
 	}
 }
