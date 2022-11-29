@@ -13093,6 +13093,153 @@ const endShapeContactEvent = {
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/dist/cjs.js!./src/styles/index.css":
+/*!********************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./src/styles/index.css ***!
+  \********************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/cssWithMappingToString.js */ "./node_modules/css-loader/dist/runtime/cssWithMappingToString.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
+___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.cdnfonts.com/css/space-mono);"]);
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "#scene-container {\n\twidth: 100%;\n\theight: 70vh;\n}\n\n.nav-bar {\n\tfont-family: 'Space Mono', sans-serif;\n\tposition: fixed;\n\ttop: 10px;\n\tleft: 10px;\n\tbackground-color: #333333;\n\twidth: calc(100vw - 20px);\n\theight: 50px;\n\tborder-radius: 25px;\n\topacity: 0.8;\n\ttransition: opacity 0.7s;\n}\n\n.nav-bar:hover {\n\topacity: 1;\n}\n\n.app-name {\n\tposition: absolute;\n\tfont-weight: lighter !important;\n\ttop: 0;\n\tleft: 60px;\n\tfont-size: 32px;\n\tcolor: #ffffff;\n\tletter-spacing: 0.6rem;\n}\n\n.nav-links {\n\tposition: absolute;\n\ttop: 12px;\n\tright: 5px;\n}\n\n.nav-links a {\n\tcolor: #ffffff;\n\tfont-size: 18px;\n\tletter-spacing: 0.15rem;\n\ttext-decoration: none;\n\tpadding-right: 15px;\n}\n\n.nav-links a:hover {\n\ttext-decoration: underline;\n}\n\n.icon-outer {\n\tposition: absolute;\n\ttop: 5px;\n\tleft: 5px;\n\twidth: 40px;\n\theight: 40px;\n\tborder: 5px solid #8f00ff;\n\tborder-radius: 50% 0 50% 50%;\n\ttransition: transform 0.7s ease-in-out;\n}\n\n.nav-bar:hover .icon-outer {\n\ttransform: rotate(45deg);\n}\n\n.icon-inner {\n\tposition: absolute;\n\ttop: 7px;\n\tleft: 11px;\n\twidth: 8px;\n\theight: 16px;\n\tborder-radius: 4px;\n\tbackground-color: #777777;\n}\n\n.main-box {\n\tposition: fixed;\n\twidth: 25rem;\n\theight: 25rem;\n\ttop: calc((100vh - 25rem) / 2);\n\tleft: calc((100vw - 25rem) / 2);\n}\n\n.intro-box {\n\tposition: absolute;\n\ttop: 0;\n\tleft: 0;\n\twidth: 25rem;\n\theight: calc(22rem - 5px);\n\tbackground-color: #333333;\n\tborder-radius: 25px 25px 0px 25px;\n\topacity: 1;\n\tcolor: white;\n}\n\n#ui-panel {\n\tposition: fixed;\n\tbottom: 0;\n\t/* left: 20px;\n\twidth: calc(100vw - 40px); */\n\tborder-radius: 0;\n\tcolor: white;\n\tbackground-color: #333333;\n\topacity: 0.9;\n}\n\n.action-button {\n\tcolor: #a7a7a7;\n\tborder-color: #a7a7a7;\n}\n\n.action-button:hover {\n\tcolor: #ffffff;\n\tborder-color: #ffffff;\n}\n", "",{"version":3,"sources":["webpack://./src/styles/index.css"],"names":[],"mappings":"AAEA;CACC,WAAW;CACX,YAAY;AACb;;AAEA;CACC,qCAAqC;CACrC,eAAe;CACf,SAAS;CACT,UAAU;CACV,yBAAyB;CACzB,yBAAyB;CACzB,YAAY;CACZ,mBAAmB;CACnB,YAAY;CACZ,wBAAwB;AACzB;;AAEA;CACC,UAAU;AACX;;AAEA;CACC,kBAAkB;CAClB,+BAA+B;CAC/B,MAAM;CACN,UAAU;CACV,eAAe;CACf,cAAc;CACd,sBAAsB;AACvB;;AAEA;CACC,kBAAkB;CAClB,SAAS;CACT,UAAU;AACX;;AAEA;CACC,cAAc;CACd,eAAe;CACf,uBAAuB;CACvB,qBAAqB;CACrB,mBAAmB;AACpB;;AAEA;CACC,0BAA0B;AAC3B;;AAEA;CACC,kBAAkB;CAClB,QAAQ;CACR,SAAS;CACT,WAAW;CACX,YAAY;CACZ,yBAAyB;CACzB,4BAA4B;CAC5B,sCAAsC;AACvC;;AAEA;CACC,wBAAwB;AACzB;;AAEA;CACC,kBAAkB;CAClB,QAAQ;CACR,UAAU;CACV,UAAU;CACV,YAAY;CACZ,kBAAkB;CAClB,yBAAyB;AAC1B;;AAEA;CACC,eAAe;CACf,YAAY;CACZ,aAAa;CACb,8BAA8B;CAC9B,+BAA+B;AAChC;;AAEA;CACC,kBAAkB;CAClB,MAAM;CACN,OAAO;CACP,YAAY;CACZ,yBAAyB;CACzB,yBAAyB;CACzB,iCAAiC;CACjC,UAAU;CACV,YAAY;AACb;;AAEA;CACC,eAAe;CACf,SAAS;CACT;6BAC4B;CAC5B,gBAAgB;CAChB,YAAY;CACZ,yBAAyB;CACzB,YAAY;AACb;;AAEA;CACC,cAAc;CACd,qBAAqB;AACtB;;AAEA;CACC,cAAc;CACd,qBAAqB;AACtB","sourcesContent":["@import url('https://fonts.cdnfonts.com/css/space-mono');\n\n#scene-container {\n\twidth: 100%;\n\theight: 70vh;\n}\n\n.nav-bar {\n\tfont-family: 'Space Mono', sans-serif;\n\tposition: fixed;\n\ttop: 10px;\n\tleft: 10px;\n\tbackground-color: #333333;\n\twidth: calc(100vw - 20px);\n\theight: 50px;\n\tborder-radius: 25px;\n\topacity: 0.8;\n\ttransition: opacity 0.7s;\n}\n\n.nav-bar:hover {\n\topacity: 1;\n}\n\n.app-name {\n\tposition: absolute;\n\tfont-weight: lighter !important;\n\ttop: 0;\n\tleft: 60px;\n\tfont-size: 32px;\n\tcolor: #ffffff;\n\tletter-spacing: 0.6rem;\n}\n\n.nav-links {\n\tposition: absolute;\n\ttop: 12px;\n\tright: 5px;\n}\n\n.nav-links a {\n\tcolor: #ffffff;\n\tfont-size: 18px;\n\tletter-spacing: 0.15rem;\n\ttext-decoration: none;\n\tpadding-right: 15px;\n}\n\n.nav-links a:hover {\n\ttext-decoration: underline;\n}\n\n.icon-outer {\n\tposition: absolute;\n\ttop: 5px;\n\tleft: 5px;\n\twidth: 40px;\n\theight: 40px;\n\tborder: 5px solid #8f00ff;\n\tborder-radius: 50% 0 50% 50%;\n\ttransition: transform 0.7s ease-in-out;\n}\n\n.nav-bar:hover .icon-outer {\n\ttransform: rotate(45deg);\n}\n\n.icon-inner {\n\tposition: absolute;\n\ttop: 7px;\n\tleft: 11px;\n\twidth: 8px;\n\theight: 16px;\n\tborder-radius: 4px;\n\tbackground-color: #777777;\n}\n\n.main-box {\n\tposition: fixed;\n\twidth: 25rem;\n\theight: 25rem;\n\ttop: calc((100vh - 25rem) / 2);\n\tleft: calc((100vw - 25rem) / 2);\n}\n\n.intro-box {\n\tposition: absolute;\n\ttop: 0;\n\tleft: 0;\n\twidth: 25rem;\n\theight: calc(22rem - 5px);\n\tbackground-color: #333333;\n\tborder-radius: 25px 25px 0px 25px;\n\topacity: 1;\n\tcolor: white;\n}\n\n#ui-panel {\n\tposition: fixed;\n\tbottom: 0;\n\t/* left: 20px;\n\twidth: calc(100vw - 40px); */\n\tborder-radius: 0;\n\tcolor: white;\n\tbackground-color: #333333;\n\topacity: 0.9;\n}\n\n.action-button {\n\tcolor: #a7a7a7;\n\tborder-color: #a7a7a7;\n}\n\n.action-button:hover {\n\tcolor: #ffffff;\n\tborder-color: #ffffff;\n}\n"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/runtime/api.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/css-loader/dist/runtime/api.js ***!
+  \*****************************************************/
+/***/ ((module) => {
+
+
+
+/*
+  MIT License http://www.opensource.org/licenses/mit-license.php
+  Author Tobias Koppers @sokra
+*/
+// css base code, injected by the css-loader
+// eslint-disable-next-line func-names
+module.exports = function (cssWithMappingToString) {
+  var list = []; // return the list of modules as css string
+
+  list.toString = function toString() {
+    return this.map(function (item) {
+      var content = cssWithMappingToString(item);
+
+      if (item[2]) {
+        return "@media ".concat(item[2], " {").concat(content, "}");
+      }
+
+      return content;
+    }).join("");
+  }; // import a list of modules into the list
+  // eslint-disable-next-line func-names
+
+
+  list.i = function (modules, mediaQuery, dedupe) {
+    if (typeof modules === "string") {
+      // eslint-disable-next-line no-param-reassign
+      modules = [[null, modules, ""]];
+    }
+
+    var alreadyImportedModules = {};
+
+    if (dedupe) {
+      for (var i = 0; i < this.length; i++) {
+        // eslint-disable-next-line prefer-destructuring
+        var id = this[i][0];
+
+        if (id != null) {
+          alreadyImportedModules[id] = true;
+        }
+      }
+    }
+
+    for (var _i = 0; _i < modules.length; _i++) {
+      var item = [].concat(modules[_i]);
+
+      if (dedupe && alreadyImportedModules[item[0]]) {
+        // eslint-disable-next-line no-continue
+        continue;
+      }
+
+      if (mediaQuery) {
+        if (!item[2]) {
+          item[2] = mediaQuery;
+        } else {
+          item[2] = "".concat(mediaQuery, " and ").concat(item[2]);
+        }
+      }
+
+      list.push(item);
+    }
+  };
+
+  return list;
+};
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/runtime/cssWithMappingToString.js":
+/*!************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/runtime/cssWithMappingToString.js ***!
+  \************************************************************************/
+/***/ ((module) => {
+
+
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr && (typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]); if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+module.exports = function cssWithMappingToString(item) {
+  var _item = _slicedToArray(item, 4),
+      content = _item[1],
+      cssMapping = _item[3];
+
+  if (!cssMapping) {
+    return content;
+  }
+
+  if (typeof btoa === "function") {
+    // eslint-disable-next-line no-undef
+    var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(cssMapping))));
+    var data = "sourceMappingURL=data:application/json;charset=utf-8;base64,".concat(base64);
+    var sourceMapping = "/*# ".concat(data, " */");
+    var sourceURLs = cssMapping.sources.map(function (source) {
+      return "/*# sourceURL=".concat(cssMapping.sourceRoot || "").concat(source, " */");
+    });
+    return [content].concat(sourceURLs).concat([sourceMapping]).join("\n");
+  }
+
+  return [content].join("\n");
+};
+
+/***/ }),
+
 /***/ "./node_modules/ecsy/src/Component.js":
 /*!********************************************!*\
   !*** ./node_modules/ecsy/src/Component.js ***!
@@ -15319,14 +15466,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var ecsy__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ecsy */ "./node_modules/ecsy/src/index.js");
 /* harmony import */ var _GameObject__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./GameObject */ "./node_modules/elixr/dist/GameObject.js");
 /* harmony import */ var _physics_PhysicsComponents__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./physics/PhysicsComponents */ "./node_modules/elixr/dist/physics/PhysicsComponents.js");
-/* harmony import */ var three_examples_jsm_webxr_ARButton_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! three/examples/jsm/webxr/ARButton.js */ "./node_modules/three/examples/jsm/webxr/ARButton.js");
 /* harmony import */ var _objects_GLTFObject__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./objects/GLTFObject */ "./node_modules/elixr/dist/objects/GLTFObject.js");
 /* harmony import */ var gamepad_wrapper__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! gamepad-wrapper */ "./node_modules/gamepad-wrapper/lib/index.js");
 /* harmony import */ var _physics_RigidBodyPhysicsSystem__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./physics/RigidBodyPhysicsSystem */ "./node_modules/elixr/dist/physics/RigidBodyPhysicsSystem.js");
-/* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./index */ "./node_modules/elixr/dist/index.js");
-/* harmony import */ var three_examples_jsm_webxr_VRButton_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! three/examples/jsm/webxr/VRButton.js */ "./node_modules/three/examples/jsm/webxr/VRButton.js");
-/* harmony import */ var three_examples_jsm_webxr_XRControllerModelFactory_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! three/examples/jsm/webxr/XRControllerModelFactory.js */ "./node_modules/three/examples/jsm/webxr/XRControllerModelFactory.js");
-
+/* harmony import */ var _enums__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./enums */ "./node_modules/elixr/dist/enums.js");
+/* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./index */ "./node_modules/elixr/dist/index.js");
+/* harmony import */ var three_examples_jsm_webxr_XRControllerModelFactory_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! three/examples/jsm/webxr/XRControllerModelFactory.js */ "./node_modules/three/examples/jsm/webxr/XRControllerModelFactory.js");
 
 
 
@@ -15338,57 +15483,103 @@ __webpack_require__.r(__webpack_exports__);
 
 class Core {
     _ecsyWorld;
+    _tempVec3 = new _index__WEBPACK_IMPORTED_MODULE_7__.THREE.Vector3();
+    /**
+     * Main scene for the experience which allows you to set up what and where is
+     * to be rendered by three.js. This is where you place game objects, lights
+     * and cameras.
+     *
+     * @see https://threejs.org/docs/index.html?q=Scene#api/en/scenes/Scene
+     */
     scene;
+    /**
+     * WebGL renderer used to render the scene.
+     *
+     * @see https://threejs.org/docs/index.html?q=renderer#api/en/renderers/WebGLRenderer
+     */
     renderer;
-    camera;
+    /**
+     * Camera for inline mode, DO NOT USE for getting player head transform, use
+     * {@link Core.playerHead} instead.
+     */
+    inlineCamera;
+    /**
+     * Accurate source for player head transform, can be used to attach game
+     * objects / audio listeners.
+     */
+    playerHead;
+    /**
+     * Core registers up to 2 xr controllers, the handedness keys for the
+     * controllers vary across devices, with the most typical handednesses being
+     * "left" and "right".
+     */
     controllers;
+    /** Local space for the player, parent of camera and controllers. */
     playerSpace;
-    vrButton;
-    arButton;
+    /**
+     * Empty game object used for registering unique components, like
+     * {@link SystemConfig} components.
+     */
     game;
+    /** Enum value indicating the current XRSessionMode */
+    get sessionMode() {
+        if (!this.renderer.xr.isPresenting) {
+            return _enums__WEBPACK_IMPORTED_MODULE_6__.SESSION_MODE.INLINE;
+        }
+        else {
+            const session = this.renderer.xr.getSession();
+            if (session.environmentBlendMode === 'opaque') {
+                return _enums__WEBPACK_IMPORTED_MODULE_6__.SESSION_MODE.IMMERSIVE_VR;
+            }
+            else {
+                return _enums__WEBPACK_IMPORTED_MODULE_6__.SESSION_MODE.IMMERSIVE_AR;
+            }
+        }
+    }
     constructor(sceneContainer, ecsyOptions = {}) {
         this._ecsyWorld = new ecsy__WEBPACK_IMPORTED_MODULE_0__.World(ecsyOptions);
         this._ecsyWorld.core = this;
-        this.createThreeScene();
+        this._createThreeScene();
         sceneContainer.appendChild(this.renderer.domElement);
-        this.vrButton = three_examples_jsm_webxr_VRButton_js__WEBPACK_IMPORTED_MODULE_7__.VRButton.createButton(this.renderer);
-        this.arButton = three_examples_jsm_webxr_ARButton_js__WEBPACK_IMPORTED_MODULE_8__.ARButton.createButton(this.renderer);
-        this.playerSpace = new _index__WEBPACK_IMPORTED_MODULE_6__.THREE.Group();
-        this.playerSpace.add(this.camera);
+        this.playerSpace = new _index__WEBPACK_IMPORTED_MODULE_7__.THREE.Group();
+        this.playerSpace.add(this.inlineCamera);
+        this.playerHead = new _index__WEBPACK_IMPORTED_MODULE_7__.THREE.Group();
+        this.playerSpace.add(this.playerHead);
         this.scene.add(this.playerSpace);
         this.controllers = {};
-        this.game = this.createEmptyGameObject();
+        this.game = new _GameObject__WEBPACK_IMPORTED_MODULE_1__.GameObject();
+        this.addGameObject(this.game);
         this.registerGameComponent(_physics_PhysicsComponents__WEBPACK_IMPORTED_MODULE_2__.PhysicsComponent);
         this.registerGameComponent(_physics_PhysicsComponents__WEBPACK_IMPORTED_MODULE_2__.RigidBodyComponent);
         this.game.addComponent(_physics_PhysicsComponents__WEBPACK_IMPORTED_MODULE_2__.PhysicsComponent, {
-            gravity: new _index__WEBPACK_IMPORTED_MODULE_6__.THREE.Vector3(0, -9.8, 0),
+            gravity: new _index__WEBPACK_IMPORTED_MODULE_7__.THREE.Vector3(0, -9.8, 0),
         });
         _objects_GLTFObject__WEBPACK_IMPORTED_MODULE_3__.GLTFModelLoader.init(this.renderer);
-        this.setupControllers();
-        this.setupRenderLoop();
+        this._setupControllers();
+        this._setupRenderLoop();
     }
-    createThreeScene() {
-        this.scene = new _index__WEBPACK_IMPORTED_MODULE_6__.THREE.Scene();
-        this.camera = new _index__WEBPACK_IMPORTED_MODULE_6__.THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 100);
-        this.renderer = new _index__WEBPACK_IMPORTED_MODULE_6__.THREE.WebGLRenderer({
+    _createThreeScene() {
+        this.scene = new _index__WEBPACK_IMPORTED_MODULE_7__.THREE.Scene();
+        this.inlineCamera = new _index__WEBPACK_IMPORTED_MODULE_7__.THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 100);
+        this.renderer = new _index__WEBPACK_IMPORTED_MODULE_7__.THREE.WebGLRenderer({
             antialias: true,
             alpha: true,
             multiviewStereo: true,
         });
         this.renderer.setPixelRatio(window.devicePixelRatio);
         this.renderer.setSize(window.innerWidth, window.innerHeight);
-        this.renderer.outputEncoding = _index__WEBPACK_IMPORTED_MODULE_6__.THREE.sRGBEncoding;
+        this.renderer.outputEncoding = _index__WEBPACK_IMPORTED_MODULE_7__.THREE.sRGBEncoding;
         this.renderer.xr.enabled = true;
-        this.camera.position.set(0, 1.7, 0);
+        this.inlineCamera.position.set(0, 1.7, 0);
         const onWindowResize = () => {
-            this.camera.aspect = window.innerWidth / window.innerHeight;
-            this.camera.updateProjectionMatrix();
+            this.inlineCamera.aspect = window.innerWidth / window.innerHeight;
+            this.inlineCamera.updateProjectionMatrix();
             this.renderer.setSize(window.innerWidth, window.innerHeight);
         };
         window.addEventListener('resize', onWindowResize, false);
     }
-    setupControllers() {
-        const controllerModelFactory = new three_examples_jsm_webxr_XRControllerModelFactory_js__WEBPACK_IMPORTED_MODULE_9__.XRControllerModelFactory();
+    _setupControllers() {
+        const controllerModelFactory = new three_examples_jsm_webxr_XRControllerModelFactory_js__WEBPACK_IMPORTED_MODULE_8__.XRControllerModelFactory();
         const webxrManager = this.renderer.xr;
         this.controllers = {};
         for (let i = 0; i < 2; i++) {
@@ -15416,25 +15607,38 @@ class Core {
             });
         }
     }
-    setupRenderLoop() {
-        const clock = new _index__WEBPACK_IMPORTED_MODULE_6__.THREE.Clock();
+    _updatePlayerHead() {
+        const xrManager = this.renderer.xr;
+        const frame = xrManager.getFrame();
+        const pose = frame?.getViewerPose(xrManager.getReferenceSpace());
+        if (pose) {
+            const headsetMatrix = new _index__WEBPACK_IMPORTED_MODULE_7__.THREE.Matrix4().fromArray(pose.views[0].transform.matrix);
+            headsetMatrix.decompose(this.playerHead.position, this.playerHead.quaternion, this._tempVec3);
+        }
+    }
+    _setupRenderLoop() {
+        const clock = new _index__WEBPACK_IMPORTED_MODULE_7__.THREE.Clock();
         const render = () => {
             const delta = clock.getDelta();
             const elapsedTime = clock.elapsedTime;
             Object.values(this.controllers).forEach((controller) => {
                 controller.gamepad.update();
             });
+            this._updatePlayerHead();
             this._ecsyWorld.execute(delta, elapsedTime);
-            this.renderer.render(this.scene, this.camera);
+            this.renderer.render(this.scene, this.inlineCamera);
         };
         this.renderer.setAnimationLoop(render);
     }
+    /** Shortcut for getting the {@link PhysicsComponent} */
     get physics() {
         return this.game.getMutableComponent(_physics_PhysicsComponents__WEBPACK_IMPORTED_MODULE_2__.PhysicsComponent);
     }
+    /** Boolean value for whether player is in immersive mode. */
     isImmersive() {
         return this.renderer.xr.isPresenting;
     }
+    /** Register a {@link GameSystem}. */
     registerGameSystem(GameSystem, attributes = {}) {
         if (GameSystem.systemConfig) {
             this._ecsyWorld.registerComponent(GameSystem.systemConfig);
@@ -15443,30 +15647,52 @@ class Core {
         }
         this._ecsyWorld.registerSystem(GameSystem, attributes);
     }
+    /** Get a {@link GameSystem} registered in this world. */
     getGameSystem(GameSystem) {
         return this._ecsyWorld.getSystem(GameSystem);
     }
+    /**
+     * Get the mutable {@link SystemConfig} component associated with the specified
+     * {@link GameSystem}.
+     */
     getGameSystemConfig(GameSystem) {
         return this.getGameSystem(GameSystem).config;
     }
+    /** Get a list of {@link GameSystem} registered in this world. */
     getGameSystems() {
         return this._ecsyWorld.getSystems();
     }
+    /** Register a {@link GameComponent} */
     registerGameComponent(GameComponent) {
         this._ecsyWorld.registerComponent(GameComponent);
     }
+    /**
+     * Boolean value indicating whether a {@link GameComponent} has been registered
+     * to Core or not.
+     */
     hasRegisteredGameComponent(GameComponent) {
         return this._ecsyWorld.hasRegisteredComponent(GameComponent);
     }
+    /** Unregister a {@link GameSystem}. */
     unregisterGameSystem(GameSystem) {
         this._ecsyWorld.unregisterSystem(GameSystem);
     }
+    /**
+     * Create an empty {@link GameObject}
+     *
+     * @deprecated Use {@link Core#addGameObject} instead.
+     */
     createEmptyGameObject() {
         const ecsyEntity = this._ecsyWorld.createEntity();
         const gameObject = new _GameObject__WEBPACK_IMPORTED_MODULE_1__.GameObject();
         gameObject._init(ecsyEntity);
         return gameObject;
     }
+    /**
+     * Create a {@link GameObject}
+     *
+     * @deprecated Use {@link Core#addGameObject} instead.
+     */
     createGameObject(object3D) {
         const ecsyEntity = this._ecsyWorld.createEntity();
         const gameObject = new _GameObject__WEBPACK_IMPORTED_MODULE_1__.GameObject();
@@ -15482,6 +15708,7 @@ class Core {
         }
         return gameObject;
     }
+    /** Add a {@link GameObject} to the game world. */
     addGameObject(gameObject) {
         if (!gameObject.isInitialized) {
             const ecsyEntity = this._ecsyWorld.createEntity();
@@ -15489,12 +15716,15 @@ class Core {
             gameObject._init(ecsyEntity);
         }
     }
+    /** Resume execution of registered systems. */
     play() {
         this._ecsyWorld.play();
     }
+    /** Pause execution of registered systems. */
     stop() {
         this._ecsyWorld.stop();
     }
+    /** Enable {@link RigidBodyPhysicsSystem}. */
     enablePhysics() {
         this._ecsyWorld.registerSystem(_physics_RigidBodyPhysicsSystem__WEBPACK_IMPORTED_MODULE_5__.RigidBodyPhysicsSystem, {
             priority: Infinity,
@@ -15559,22 +15789,20 @@ class GameObject extends _index__WEBPACK_IMPORTED_MODULE_0__.THREE.Object3D {
         });
         this._componentsToAdd = null;
     }
+    /** Boolean value indicating whether the GameObject has been added to Core. */
     get isInitialized() {
         return this._ecsyEntity != null;
     }
-    duplicate() {
-        if (!this.isInitialized)
-            throw GameObject.UNINITIALIZED_GAMEOBJECT_ERROR;
-        const newGameObject = super.clone(true);
-        const newEntity = this._ecsyEntity.clone();
-        newGameObject._init(newEntity);
-        return newGameObject;
-    }
+    /**
+     * Copy the given GameObject into this GameObject, and copy all components
+     * from the given GameObject.
+     */
     copy(source, recursive) {
         super.copy(source, recursive);
         this.copyAllComponentsFrom(source);
         return this;
     }
+    /** Copy all components from the given GameObject. */
     copyAllComponentsFrom(gameObject) {
         const components = gameObject.getComponents();
         if (!this.isInitialized) {
@@ -15600,6 +15828,7 @@ class GameObject extends _index__WEBPACK_IMPORTED_MODULE_0__.THREE.Object3D {
             }
         }
     }
+    /** Add a {@link GameComponent} to the entity. */
     addComponent(GameComponent, values) {
         if (!this.isInitialized) {
             this._componentsToAdd.push({
@@ -15613,56 +15842,85 @@ class GameObject extends _index__WEBPACK_IMPORTED_MODULE_0__.THREE.Object3D {
             newComponent.gameObject = this;
         }
     }
+    /** Get an immutable reference to a {@link GameComponent} on this entity. */
     getComponent(GameComponent, includeRemoved) {
         if (!this.isInitialized)
             throw GameObject.UNINITIALIZED_GAMEOBJECT_ERROR;
         return this._ecsyEntity.getComponent(GameComponent, includeRemoved);
     }
+    /** Get an mutable reference to a {@link GameComponent} on this entity. */
     getMutableComponent(GameComponent) {
         if (!this.isInitialized)
             throw GameObject.UNINITIALIZED_GAMEOBJECT_ERROR;
         return this._ecsyEntity.getMutableComponent(GameComponent);
     }
+    /**
+     * Get a list of {@link GameComponent} types that have been added to this
+     * entity.
+     */
     getComponentTypes() {
         if (!this.isInitialized)
             throw GameObject.UNINITIALIZED_GAMEOBJECT_ERROR;
         return this._ecsyEntity.getComponentTypes();
     }
+    /**
+     * Get an object containing all the {@link GameComponent} on this entity, where
+     * the object keys are the component types.
+     */
     getComponents() {
         if (!this.isInitialized)
             throw GameObject.UNINITIALIZED_GAMEOBJECT_ERROR;
         return this._ecsyEntity.getComponents();
     }
+    /**
+     * Get an object containing all the {@link GameComponent} that are slated to be
+     * removed from this entity, where the object keys are the component types.
+     */
     getComponentsToRemove() {
         if (!this.isInitialized)
             throw GameObject.UNINITIALIZED_GAMEOBJECT_ERROR;
         return this._ecsyEntity.getComponentsToRemove();
     }
+    /** Get a {@link GameComponent} that is slated to be removed from this entity. */
     getRemovedComponent(GameComponent) {
         if (!this.isInitialized)
             throw GameObject.UNINITIALIZED_GAMEOBJECT_ERROR;
         return this._ecsyEntity.getRemovedComponent(GameComponent);
     }
+    /**
+     * Boolean value indicating whether the entity has all {@link GameComponent} in
+     * a list.
+     */
     hasAllComponents(GameComponents) {
         if (!this.isInitialized)
             return false;
         return this._ecsyEntity.hasAllComponents(GameComponents);
     }
+    /**
+     * Boolean value indicating whether the entity has any {@link GameComponent} in
+     * a list.
+     */
     hasAnyComponents(GameComponents) {
         if (!this.isInitialized)
             return false;
         return this._ecsyEntity.hasAnyComponents(GameComponents);
     }
+    /**
+     * Boolean value indicating whether the entity has the given
+     * {@link GameComponent}.
+     */
     hasComponent(GameComponent) {
         if (!this.isInitialized)
             return false;
         return this._ecsyEntity.hasComponent(GameComponent);
     }
+    /** Remove all {@link GameComponent} on this entity. */
     removeAllComponents(forceImmediate) {
         if (!this.isInitialized)
             throw GameObject.UNINITIALIZED_GAMEOBJECT_ERROR;
         this._ecsyEntity.removeAllComponents(forceImmediate);
     }
+    /** Remove a {@link GameComponent} from the entity. */
     removeComponent(GameComponent, forceImmediate) {
         if (!this.isInitialized)
             throw GameObject.UNINITIALIZED_GAMEOBJECT_ERROR;
@@ -15692,22 +15950,43 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var ecsy__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ecsy */ "./node_modules/ecsy/src/index.js");
 
 class GameSystem extends ecsy__WEBPACK_IMPORTED_MODULE_0__.System {
+    /** {@link Core} object that this system is registered to. */
     core;
+    /**
+     * Mutable reference to the optional {@link SystemConfig} component associated
+     * with this system.
+     */
     config;
+    /** An optional {@link SystemConfig} class for configuring this system. */
     static systemConfig;
+    /**
+     * Defines what {@link GameComponent} the System will query for. This needs to
+     * be user defined.
+     */
+    static queries;
     constructor(world, attributes) {
         super(world, attributes);
         this.core = this.world.core;
         this.config = attributes?.config;
     }
+    /** @ignore */
     execute(delta, time) {
         this.update(delta, time);
     }
+    /**
+     * Get a list of all {@link GameObject} of the given queryId in
+     * {@link GameSystem.queries}.
+     */
     queryGameObjects(queryId) {
         if (!this.queries[queryId])
             throw 'Query id does not exist in current game system';
         return this.queries[queryId].results.map((entity) => entity.gameObject);
     }
+    /**
+     * Get a list of all {@link GameObject} of the given queryId that are added in
+     * this frame in {@link GameSystem.queries}. This does not include the
+     * GameObjects that gets added in GameSystems that execute after this system.
+     */
     queryAddedGameObjects(queryId) {
         if (!this.queries[queryId]) {
             throw 'Query id does not exist in current game system';
@@ -15717,6 +15996,12 @@ class GameSystem extends ecsy__WEBPACK_IMPORTED_MODULE_0__.System {
         }
         return this.queries[queryId].added?.map((entity) => entity.gameObject);
     }
+    /**
+     * Get a list of all {@link GameObject} of the given queryId that are removed
+     * in this frame in {@link GameSystem.queries}. This does not include the
+     * GameObjects that gets removed in GameSystems that execute after this
+     * system.
+     */
     queryRemovedGameObjects(queryId) {
         if (!this.queries[queryId]) {
             throw 'Query id does not exist in current game system';
@@ -15726,9 +16011,14 @@ class GameSystem extends ecsy__WEBPACK_IMPORTED_MODULE_0__.System {
         }
         return this.queries[queryId].removed?.map((entity) => entity.gameObject);
     }
+    /**
+     * This function is called on each frame {@link Core} is executed. All of the
+     * queries defined on the class are available here.
+     */
     update(_delta, _time) { }
 }
 class XRGameSystem extends GameSystem {
+    /** @ignore */
     execute(delta, time) {
         if (this.core.isImmersive()) {
             this.update(delta, time);
@@ -15736,12 +16026,14 @@ class XRGameSystem extends GameSystem {
     }
 }
 class SingleUseGameSystem extends GameSystem {
+    /** @ignore */
     execute(delta, time) {
         this.update(delta, time);
         this.stop();
     }
 }
 class SingleUseXRGameSystem extends GameSystem {
+    /** @ignore */
     execute(delta, time) {
         if (this.core.isImmersive()) {
             this.update(delta, time);
@@ -15762,7 +16054,8 @@ class SingleUseXRGameSystem extends GameSystem {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "HANDEDNESS": () => (/* binding */ HANDEDNESS),
-/* harmony export */   "JOYSTICK_STATES": () => (/* binding */ JOYSTICK_STATES)
+/* harmony export */   "JOYSTICK_STATES": () => (/* binding */ JOYSTICK_STATES),
+/* harmony export */   "SESSION_MODE": () => (/* binding */ SESSION_MODE)
 /* harmony export */ });
 var JOYSTICK_STATES;
 (function (JOYSTICK_STATES) {
@@ -15777,6 +16070,12 @@ var HANDEDNESS;
     HANDEDNESS["LEFT"] = "left";
     HANDEDNESS["RIGHT"] = "right";
 })(HANDEDNESS || (HANDEDNESS = {}));
+var SESSION_MODE;
+(function (SESSION_MODE) {
+    SESSION_MODE["INLINE"] = "inline";
+    SESSION_MODE["IMMERSIVE_VR"] = "immersive-vr";
+    SESSION_MODE["IMMERSIVE_AR"] = "immersive-ar";
+})(SESSION_MODE || (SESSION_MODE = {}));
 //# sourceMappingURL=enums.js.map
 
 /***/ }),
@@ -15920,6 +16219,7 @@ class CurveTubeGeometry extends three__WEBPACK_IMPORTED_MODULE_0__.BufferGeometr
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "ARButton": () => (/* reexport safe */ _utils_ARButton__WEBPACK_IMPORTED_MODULE_33__.ARButton),
 /* harmony export */   "AXES": () => (/* reexport safe */ gamepad_wrapper__WEBPACK_IMPORTED_MODULE_7__.AXES),
 /* harmony export */   "BODY_TYPES": () => (/* reexport safe */ _objects_PhysicsObject__WEBPACK_IMPORTED_MODULE_17__.BODY_TYPES),
 /* harmony export */   "BUTTONS": () => (/* reexport safe */ gamepad_wrapper__WEBPACK_IMPORTED_MODULE_7__.BUTTONS),
@@ -15953,12 +16253,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "PrimitiveObject": () => (/* reexport safe */ _objects_PrimitiveObject__WEBPACK_IMPORTED_MODULE_18__.PrimitiveObject),
 /* harmony export */   "Quaternion": () => (/* reexport safe */ _math_Quaternion__WEBPACK_IMPORTED_MODULE_11__.Quaternion),
 /* harmony export */   "RigidBodyComponent": () => (/* reexport safe */ _physics_PhysicsComponents__WEBPACK_IMPORTED_MODULE_9__.RigidBodyComponent),
+/* harmony export */   "SESSION_MODE": () => (/* reexport safe */ _enums__WEBPACK_IMPORTED_MODULE_30__.SESSION_MODE),
 /* harmony export */   "SingleUseGameSystem": () => (/* reexport safe */ _GameSystem__WEBPACK_IMPORTED_MODULE_5__.SingleUseGameSystem),
 /* harmony export */   "SingleUseXRGameSystem": () => (/* reexport safe */ _GameSystem__WEBPACK_IMPORTED_MODULE_5__.SingleUseXRGameSystem),
 /* harmony export */   "SphereObject": () => (/* reexport safe */ _objects_SphereObject__WEBPACK_IMPORTED_MODULE_20__.SphereObject),
 /* harmony export */   "SystemConfig": () => (/* reexport safe */ _GameComponent__WEBPACK_IMPORTED_MODULE_4__.SystemConfig),
 /* harmony export */   "THREE": () => (/* reexport module object */ three__WEBPACK_IMPORTED_MODULE_0__),
 /* harmony export */   "Types": () => (/* reexport safe */ ecsy__WEBPACK_IMPORTED_MODULE_2__.Types),
+/* harmony export */   "VRButton": () => (/* reexport safe */ _utils_VRButton__WEBPACK_IMPORTED_MODULE_32__.VRButton),
 /* harmony export */   "Vector2": () => (/* reexport safe */ _math_Vectors__WEBPACK_IMPORTED_MODULE_10__.Vector2),
 /* harmony export */   "Vector3": () => (/* reexport safe */ _math_Vectors__WEBPACK_IMPORTED_MODULE_10__.Vector3),
 /* harmony export */   "Vector4": () => (/* reexport safe */ _math_Vectors__WEBPACK_IMPORTED_MODULE_10__.Vector4),
@@ -16000,6 +16302,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _locomotion_XRSlideSystem__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./locomotion/XRSlideSystem */ "./node_modules/elixr/dist/locomotion/XRSlideSystem.js");
 /* harmony import */ var _enums__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./enums */ "./node_modules/elixr/dist/enums.js");
 /* harmony import */ var _geometries_CurveTubeGeometry__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./geometries/CurveTubeGeometry */ "./node_modules/elixr/dist/geometries/CurveTubeGeometry.js");
+/* harmony import */ var _utils_VRButton__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./utils/VRButton */ "./node_modules/elixr/dist/utils/VRButton.js");
+/* harmony import */ var _utils_ARButton__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./utils/ARButton */ "./node_modules/elixr/dist/utils/ARButton.js");
 /* -------------------------------------------------------------------------- */
 /*                                 3D Library                                 */
 /* -------------------------------------------------------------------------- */
@@ -16063,6 +16367,11 @@ three__WEBPACK_IMPORTED_MODULE_0__.Mesh.prototype.raycast = three_mesh_bvh__WEBP
 /* -------------------------------------------------------------------------- */
 /*                                 Geometries                                 */
 /* -------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*                                 XR Buttons                                 */
+/* -------------------------------------------------------------------------- */
+
 
 //# sourceMappingURL=index.js.map
 
@@ -17704,6 +18013,185 @@ const offsetCenterOfMass = (body, centreOfMass) => {
 
 /***/ }),
 
+/***/ "./node_modules/elixr/dist/utils/ARButton.js":
+/*!***************************************************!*\
+  !*** ./node_modules/elixr/dist/utils/ARButton.js ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "ARButton": () => (/* binding */ ARButton)
+/* harmony export */ });
+class ARButton {
+    static convertToARButton(button, renderer, options = {}) {
+        function showStartAR( /*device*/) {
+            const sessionInit = options.sessionInit ?? {};
+            let currentSession;
+            if (sessionInit.domOverlay === undefined) {
+                const overlay = document.createElement('div');
+                overlay.style.display = 'none';
+                document.body.appendChild(overlay);
+                sessionInit.optionalFeatures.push('dom-overlay');
+                sessionInit.domOverlay = { root: overlay };
+            }
+            async function onSessionStarted(session) {
+                session.addEventListener('end', onSessionEnded);
+                renderer.xr.setReferenceSpaceType('local');
+                await renderer.xr.setSession(session);
+                button.textContent = options.LEAVE_AR_TEXT ?? 'STOP AR';
+                currentSession = session;
+            }
+            function onSessionEnded( /*event*/) {
+                currentSession.removeEventListener('end', onSessionEnded);
+                button.textContent = options.ENTER_AR_TEXT ?? 'START AR';
+                currentSession = null;
+            }
+            button.textContent = options.ENTER_AR_TEXT ?? 'START AR';
+            button.onclick = function () {
+                if (!currentSession) {
+                    navigator.xr
+                        .requestSession('immersive-ar', sessionInit)
+                        .then(onSessionStarted);
+                }
+                else {
+                    currentSession.end();
+                }
+            };
+        }
+        function showARNotSupported() {
+            button.onclick = null;
+            button.textContent = 'AR NOT SUPPORTED';
+        }
+        function showARNotAllowed(exception) {
+            button.onclick = null;
+            button.textContent = options.AR_NOT_ALLOWED_TEXT ?? 'AR NOT ALLOWED';
+            console.warn('Exception when trying to call xr.isSessionSupported', exception);
+        }
+        if ('xr' in navigator) {
+            button.id = 'ARButton';
+            navigator.xr
+                .isSessionSupported('immersive-ar')
+                .then(function (supported) {
+                supported ? showStartAR() : showARNotSupported();
+            })
+                .catch(showARNotAllowed);
+        }
+        else {
+            showARNotSupported();
+        }
+    }
+    static createButton(renderer, options = {}) {
+        const button = document.createElement('button');
+        ARButton.convertToARButton(button, renderer, options);
+        return button;
+    }
+}
+//# sourceMappingURL=ARButton.js.map
+
+/***/ }),
+
+/***/ "./node_modules/elixr/dist/utils/VRButton.js":
+/*!***************************************************!*\
+  !*** ./node_modules/elixr/dist/utils/VRButton.js ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "VRButton": () => (/* binding */ VRButton)
+/* harmony export */ });
+class VRButton {
+    static convertToVRButton(button, renderer, options = {}) {
+        function showEnterVR( /*device*/) {
+            const sessionInit = options.sessionInit ?? {
+                optionalFeatures: [
+                    'local-floor',
+                    'bounded-floor',
+                    'hand-tracking',
+                    'layers',
+                ],
+            };
+            let currentSession;
+            async function onSessionStarted(session) {
+                session.addEventListener('end', onSessionEnded);
+                await renderer.xr.setSession(session);
+                button.textContent = options.LEAVE_VR_TEXT ?? 'EXIT VR';
+                currentSession = session;
+            }
+            function onSessionEnded( /*event*/) {
+                currentSession.removeEventListener('end', onSessionEnded);
+                button.textContent = options.ENTER_VR_TEXT ?? 'ENTER VR';
+                currentSession = null;
+            }
+            button.textContent = options.ENTER_VR_TEXT ?? 'ENTER VR';
+            button.onclick = function () {
+                if (!currentSession) {
+                    // WebXR's requestReferenceSpace only works if the corresponding feature
+                    // was requested at session creation time. For simplicity, just ask for
+                    // the interesting ones as optional features, but be aware that the
+                    // requestReferenceSpace call will fail if it turns out to be unavailable.
+                    // ('local' is always available for immersive sessions and doesn't need to
+                    // be requested separately.)
+                    navigator.xr
+                        .requestSession('immersive-vr', sessionInit)
+                        .then(onSessionStarted);
+                }
+                else {
+                    currentSession.end();
+                }
+            };
+        }
+        function showWebXRNotFound() {
+            button.onclick = null;
+            button.classList.add('webxr-not-found');
+            button.textContent = 'VR NOT SUPPORTED';
+        }
+        function showVRNotAllowed(exception) {
+            button.onclick = null;
+            button.classList.add('vr-not-allowed');
+            button.textContent = 'VR NOT ALLOWED';
+            console.warn('Exception when trying to call xr.isSessionSupported', exception);
+        }
+        if ('xr' in navigator) {
+            button.id = 'VRButton';
+            navigator.xr
+                .isSessionSupported('immersive-vr')
+                .then(function (supported) {
+                supported ? showEnterVR() : showWebXRNotFound();
+                if (supported && VRButton.xrSessionIsGranted) {
+                    button.click();
+                }
+            })
+                .catch(showVRNotAllowed);
+        }
+        else {
+            showWebXRNotFound();
+        }
+    }
+    static xrSessionIsGranted = false;
+    static registerSessionGrantedListener() {
+        if ('xr' in navigator) {
+            // WebXRViewer (based on Firefox) has a bug where addEventListener
+            // throws a silent exception and aborts execution entirely.
+            if (/WebXRViewer\//i.test(navigator.userAgent))
+                return;
+            navigator.xr.addEventListener('sessiongranted', () => {
+                VRButton.xrSessionIsGranted = true;
+            });
+        }
+    }
+    static createButton(renderer, options = {}) {
+        const button = document.createElement('button');
+        VRButton.convertToVRButton(button, renderer, options);
+        return button;
+    }
+}
+VRButton.registerSessionGrantedListener();
+//# sourceMappingURL=VRButton.js.map
+
+/***/ }),
+
 /***/ "./node_modules/gamepad-wrapper/lib/index.js":
 /*!***************************************************!*\
   !*** ./node_modules/gamepad-wrapper/lib/index.js ***!
@@ -17986,193 +18474,310 @@ exports.XR_STANDARD_AXES_MAPPING = {
 
 /***/ }),
 
-/***/ "./src/js/ConnectionSystem.js":
-/*!************************************!*\
-  !*** ./src/js/ConnectionSystem.js ***!
-  \************************************/
+/***/ "./src/styles/index.css":
+/*!******************************!*\
+  !*** ./src/styles/index.css ***!
+  \******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "ConnectionComponent": () => (/* binding */ ConnectionComponent),
-/* harmony export */   "ConnectionSystem": () => (/* binding */ ConnectionSystem)
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var elixr__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! elixr */ "./node_modules/elixr/dist/index.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_index_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../node_modules/css-loader/dist/cjs.js!./index.css */ "./node_modules/css-loader/dist/cjs.js!./src/styles/index.css");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_index_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
 
 
-const SPW_OPTIONS = {
-	debug: true,
-	serverUrl: 'https://whereismypeer.net:8000',
-	simplePeerOptions: {
-		config: {
-			iceServers: [
-				{
-					urls: ['stun:ws-turn6.xirsys.com'],
-				},
-				{
-					username:
-						'uvHExGwBOpO3rvQwF-nt56O_ohdzs_cA4XZ2-fmJRjmJ195k3LKD66x5V4iqHMdpAAAAAGLsC5VmZWxpeHo=',
-					credential: 'b8e6e188-1420-11ed-a07f-0242ac140004',
-					urls: [
-						'turn:ws-turn6.xirsys.com:80?transport=udp',
-						'turn:ws-turn6.xirsys.com:3478?transport=udp',
-						'turn:ws-turn6.xirsys.com:80?transport=tcp',
-						'turn:ws-turn6.xirsys.com:3478?transport=tcp',
-						'turns:ws-turn6.xirsys.com:443?transport=tcp',
-						'turns:ws-turn6.xirsys.com:5349?transport=tcp',
-					],
-				},
-			],
-		},
-	},
-};
 
-class ConnectionSystem extends elixr__WEBPACK_IMPORTED_MODULE_0__.GameSystem {
-	init() {
-		const startButton = document.getElementById('start-button');
-		const sessionIdBox = document.getElementById('session-id');
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_index_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
 
-		startButton.onclick = () => {
-			navigator.mediaDevices.getUserMedia({ audio: true }).then((stream) => {
-				SPW_OPTIONS.isInitiator = sessionIdBox.value.length == 0;
+/***/ }),
 
-				if (!SPW_OPTIONS.isInitiator) {
-					SPW_OPTIONS.sessionId = sessionIdBox.value.toUpperCase();
-				}
+/***/ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js":
+/*!****************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js ***!
+  \****************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-				SPW_OPTIONS.stream = stream;
 
-				// eslint-disable-next-line no-undef
-				this.spw = new SimplePeerWrapper(SPW_OPTIONS);
 
-				// Make the peer connection
-				this.spw.connect();
+var isOldIE = function isOldIE() {
+  var memo;
+  return function memorize() {
+    if (typeof memo === 'undefined') {
+      // Test for IE <= 9 as proposed by Browserhacks
+      // @see http://browserhacks.com/#hack-e71d8692f65334173fee715c222cb805
+      // Tests for existence of standard globals is to allow style-loader
+      // to operate correctly into non-standard environments
+      // @see https://github.com/webpack-contrib/style-loader/issues/177
+      memo = Boolean(window && document && document.all && !window.atob);
+    }
 
-				// Do something when the connection is made
-				this.spw.on('connect', () => {
-					onConnect(SPW_OPTIONS.isInitiator);
-				});
+    return memo;
+  };
+}();
 
-				// When data recieved over the connection call gotData
-				this.spw.on('data', onData);
+var getTarget = function getTarget() {
+  var memo = {};
+  return function memorize(target) {
+    if (typeof memo[target] === 'undefined') {
+      var styleTarget = document.querySelector(target); // Special case to return head of iframe instead of iframe itself
 
-				this.spw.on('stream', onStream);
+      if (window.HTMLIFrameElement && styleTarget instanceof window.HTMLIFrameElement) {
+        try {
+          // This will throw an exception if access to iframe is blocked
+          // due to cross-origin restrictions
+          styleTarget = styleTarget.contentDocument.head;
+        } catch (e) {
+          // istanbul ignore next
+          styleTarget = null;
+        }
+      }
 
-				this.spw.on('error', (error) => {
-					// eslint-disable-next-line no-undef
-					console.log(error);
-				});
+      memo[target] = styleTarget;
+    }
 
-				this.spw.onCreated(onCreated);
-			});
-		};
-		this.guestPlayers = {};
+    return memo[target];
+  };
+}();
 
-		const onConnect = (isHost) => {
-			this.peerSpace = new elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.Group();
-			this.core.scene.add(this.peerSpace);
-			const peerMaterial = new elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.MeshBasicMaterial({ color: 0xffff00 });
-			this.peerHead = new elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.Mesh(
-				new elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.SphereGeometry(0.1, 32, 16),
-				peerMaterial,
-			);
-			this.peerLeftHand = new elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.Mesh(
-				new elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.BoxGeometry(0.03, 0.1, 0.15),
-				peerMaterial,
-			);
-			this.peerRightHand = new elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.Mesh(
-				new elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.BoxGeometry(0.03, 0.1, 0.15),
-				peerMaterial,
-			);
-			this.core.scene.add(this.peerHead);
-			this.peerSpace.add(this.peerLeftHand);
-			this.peerSpace.add(this.peerRightHand);
+var stylesInDom = [];
 
-			if (!isHost) {
-				this.core.playerSpace.position.set(0, 0, -1);
-			}
+function getIndexByIdentifier(identifier) {
+  var result = -1;
 
-			this.core.game.addComponent(ConnectionComponent);
+  for (var i = 0; i < stylesInDom.length; i++) {
+    if (stylesInDom[i].identifier === identifier) {
+      result = i;
+      break;
+    }
+  }
 
-			this.connection = this.core.game.getMutableComponent(ConnectionComponent);
-		};
-
-		const onCreated = (room) => {
-			sessionIdBox.disabled = true;
-			sessionIdBox.value = room;
-			startButton.disabled = true;
-		};
-
-		const onStream = (stream) => {
-			console.log(stream);
-		};
-
-		const onData = (payload) => {
-			const data = JSON.parse(payload.data);
-			if (data['playerSpace']) {
-				deserializeTransform(data['playerSpace'], this.peerSpace);
-			}
-			if (data['head']) {
-				deserializeTransform(data['head'], this.peerHead);
-			}
-			if (data['leftHand']) {
-				deserializeTransform(data['leftHand'], this.peerLeftHand);
-			}
-			if (data['rightHand']) {
-				deserializeTransform(data['rightHand'], this.peerRightHand);
-			}
-			if (this.connection && data['cubes'] && data['cubes'].length > 0) {
-				this.connection.incomingCubes.push(...data['cubes']);
-			}
-		};
-
-		window.onbeforeunload = () => {
-			this.spw.close();
-		};
-	}
-
-	execute(_delta, _time) {
-		if (this.spw && this.connection) {
-			const data = {};
-			data['playerSpace'] = serializeTransform(this.core.playerSpace);
-			data['head'] = serializeTransform(this.core.renderer.xr.getCamera());
-			if (this.core.controllers['left']) {
-				data['leftHand'] = serializeTransform(
-					this.core.controllers['left'].gripSpace,
-				);
-			}
-			if (this.core.controllers['right']) {
-				data['rightHand'] = serializeTransform(
-					this.core.controllers['right'].gripSpace,
-				);
-			}
-
-			data['cubes'] = this.connection.outgoingCubes;
-			this.spw.send(JSON.stringify(data));
-			this.connection.outgoingCubes.length = 0;
-		}
-	}
+  return result;
 }
 
-const serializeTransform = (object) => {
-	const transform = {};
-	transform['position'] = object.position.toArray();
-	transform['quaternion'] = object.quaternion.toArray();
-	return transform;
+function modulesToDom(list, options) {
+  var idCountMap = {};
+  var identifiers = [];
+
+  for (var i = 0; i < list.length; i++) {
+    var item = list[i];
+    var id = options.base ? item[0] + options.base : item[0];
+    var count = idCountMap[id] || 0;
+    var identifier = "".concat(id, " ").concat(count);
+    idCountMap[id] = count + 1;
+    var index = getIndexByIdentifier(identifier);
+    var obj = {
+      css: item[1],
+      media: item[2],
+      sourceMap: item[3]
+    };
+
+    if (index !== -1) {
+      stylesInDom[index].references++;
+      stylesInDom[index].updater(obj);
+    } else {
+      stylesInDom.push({
+        identifier: identifier,
+        updater: addStyle(obj, options),
+        references: 1
+      });
+    }
+
+    identifiers.push(identifier);
+  }
+
+  return identifiers;
+}
+
+function insertStyleElement(options) {
+  var style = document.createElement('style');
+  var attributes = options.attributes || {};
+
+  if (typeof attributes.nonce === 'undefined') {
+    var nonce =  true ? __webpack_require__.nc : 0;
+
+    if (nonce) {
+      attributes.nonce = nonce;
+    }
+  }
+
+  Object.keys(attributes).forEach(function (key) {
+    style.setAttribute(key, attributes[key]);
+  });
+
+  if (typeof options.insert === 'function') {
+    options.insert(style);
+  } else {
+    var target = getTarget(options.insert || 'head');
+
+    if (!target) {
+      throw new Error("Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid.");
+    }
+
+    target.appendChild(style);
+  }
+
+  return style;
+}
+
+function removeStyleElement(style) {
+  // istanbul ignore if
+  if (style.parentNode === null) {
+    return false;
+  }
+
+  style.parentNode.removeChild(style);
+}
+/* istanbul ignore next  */
+
+
+var replaceText = function replaceText() {
+  var textStore = [];
+  return function replace(index, replacement) {
+    textStore[index] = replacement;
+    return textStore.filter(Boolean).join('\n');
+  };
+}();
+
+function applyToSingletonTag(style, index, remove, obj) {
+  var css = remove ? '' : obj.media ? "@media ".concat(obj.media, " {").concat(obj.css, "}") : obj.css; // For old IE
+
+  /* istanbul ignore if  */
+
+  if (style.styleSheet) {
+    style.styleSheet.cssText = replaceText(index, css);
+  } else {
+    var cssNode = document.createTextNode(css);
+    var childNodes = style.childNodes;
+
+    if (childNodes[index]) {
+      style.removeChild(childNodes[index]);
+    }
+
+    if (childNodes.length) {
+      style.insertBefore(cssNode, childNodes[index]);
+    } else {
+      style.appendChild(cssNode);
+    }
+  }
+}
+
+function applyToTag(style, options, obj) {
+  var css = obj.css;
+  var media = obj.media;
+  var sourceMap = obj.sourceMap;
+
+  if (media) {
+    style.setAttribute('media', media);
+  } else {
+    style.removeAttribute('media');
+  }
+
+  if (sourceMap && typeof btoa !== 'undefined') {
+    css += "\n/*# sourceMappingURL=data:application/json;base64,".concat(btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))), " */");
+  } // For old IE
+
+  /* istanbul ignore if  */
+
+
+  if (style.styleSheet) {
+    style.styleSheet.cssText = css;
+  } else {
+    while (style.firstChild) {
+      style.removeChild(style.firstChild);
+    }
+
+    style.appendChild(document.createTextNode(css));
+  }
+}
+
+var singleton = null;
+var singletonCounter = 0;
+
+function addStyle(obj, options) {
+  var style;
+  var update;
+  var remove;
+
+  if (options.singleton) {
+    var styleIndex = singletonCounter++;
+    style = singleton || (singleton = insertStyleElement(options));
+    update = applyToSingletonTag.bind(null, style, styleIndex, false);
+    remove = applyToSingletonTag.bind(null, style, styleIndex, true);
+  } else {
+    style = insertStyleElement(options);
+    update = applyToTag.bind(null, style, options);
+
+    remove = function remove() {
+      removeStyleElement(style);
+    };
+  }
+
+  update(obj);
+  return function updateStyle(newObj) {
+    if (newObj) {
+      if (newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap) {
+        return;
+      }
+
+      update(obj = newObj);
+    } else {
+      remove();
+    }
+  };
+}
+
+module.exports = function (list, options) {
+  options = options || {}; // Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
+  // tags it will allow on a page
+
+  if (!options.singleton && typeof options.singleton !== 'boolean') {
+    options.singleton = isOldIE();
+  }
+
+  list = list || [];
+  var lastIdentifiers = modulesToDom(list, options);
+  return function update(newList) {
+    newList = newList || [];
+
+    if (Object.prototype.toString.call(newList) !== '[object Array]') {
+      return;
+    }
+
+    for (var i = 0; i < lastIdentifiers.length; i++) {
+      var identifier = lastIdentifiers[i];
+      var index = getIndexByIdentifier(identifier);
+      stylesInDom[index].references--;
+    }
+
+    var newLastIdentifiers = modulesToDom(newList, options);
+
+    for (var _i = 0; _i < lastIdentifiers.length; _i++) {
+      var _identifier = lastIdentifiers[_i];
+
+      var _index = getIndexByIdentifier(_identifier);
+
+      if (stylesInDom[_index].references === 0) {
+        stylesInDom[_index].updater();
+
+        stylesInDom.splice(_index, 1);
+      }
+    }
+
+    lastIdentifiers = newLastIdentifiers;
+  };
 };
-
-const deserializeTransform = (transform, object) => {
-	object.position.fromArray(transform['position']);
-	object.quaternion.fromArray(transform['quaternion']);
-};
-
-class ConnectionComponent extends elixr__WEBPACK_IMPORTED_MODULE_0__.GameComponent {}
-
-ConnectionComponent.schema = {
-	outgoingCubes: { type: elixr__WEBPACK_IMPORTED_MODULE_0__.Types.Array, default: [] },
-	incomingCubes: { type: elixr__WEBPACK_IMPORTED_MODULE_0__.Types.Array, default: [] },
-};
-
 
 /***/ }),
 
@@ -18187,15 +18792,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "CubeLauncherSystem": () => (/* binding */ CubeLauncherSystem)
 /* harmony export */ });
 /* harmony import */ var elixr__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! elixr */ "./node_modules/elixr/dist/index.js");
-/* harmony import */ var _ConnectionSystem__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ConnectionSystem */ "./src/js/ConnectionSystem.js");
-
-
 
 
 class CubeLauncherSystem extends elixr__WEBPACK_IMPORTED_MODULE_0__.XRGameSystem {
 	update() {
-		const connection = this.core.game.getMutableComponent(_ConnectionSystem__WEBPACK_IMPORTED_MODULE_1__.ConnectionComponent);
-
 		Object.values(this.core.controllers).forEach((controller) => {
 			if (controller.gamepad.getButtonDown(elixr__WEBPACK_IMPORTED_MODULE_0__.BUTTONS.XR_STANDARD.TRIGGER)) {
 				const cubeMesh = new elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.Mesh(
@@ -18213,33 +18813,104 @@ class CubeLauncherSystem extends elixr__WEBPACK_IMPORTED_MODULE_0__.XRGameSystem
 						cubeObject.quaternion,
 					),
 				});
-				connection.outgoingCubes.push({
-					position: cubeObject.position.toArray(),
-					quaternion: cubeObject.quaternion.toArray(),
-					initVelocity: new elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.Vector3(0, 0, -5)
-						.applyQuaternion(cubeObject.quaternion)
-						.toArray(),
-				});
 			}
 		});
+	}
+}
 
-		connection.incomingCubes.forEach((cube) => {
-			const cubeMesh = new elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.Mesh(
-				new elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.BoxGeometry(0.2, 0.2, 0.2),
-				new elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.MeshStandardMaterial({ color: Math.random() * 0xffffff }),
-			);
-			const cubeObject = this.core.createGameObject(cubeMesh);
-			cubeObject.position.fromArray(cube.position);
-			cubeObject.quaternion.fromArray(cube.quaternion);
-			cubeObject.addComponent(elixr__WEBPACK_IMPORTED_MODULE_0__.RigidBodyComponent, {
-				mass: 1,
-				shape: new elixr__WEBPACK_IMPORTED_MODULE_0__.Physics.Box(new elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.Vector3(0.1, 0.1, 0.1)),
-				type: elixr__WEBPACK_IMPORTED_MODULE_0__.Physics.BODY_TYPES.DYNAMIC,
-				initVelocity: new elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.Vector3().fromArray(cube.initVelocity),
-			});
+
+/***/ }),
+
+/***/ "./src/js/InlineSceneCreationSystem.js":
+/*!*********************************************!*\
+  !*** ./src/js/InlineSceneCreationSystem.js ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "InlineSceneCreationSystem": () => (/* binding */ InlineSceneCreationSystem)
+/* harmony export */ });
+/* harmony import */ var elixr__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! elixr */ "./node_modules/elixr/dist/index.js");
+/* harmony import */ var three_examples_jsm_geometries_BoxLineGeometry__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! three/examples/jsm/geometries/BoxLineGeometry */ "./node_modules/three/examples/jsm/geometries/BoxLineGeometry.js");
+
+
+
+
+class InlineSceneCreationSystem extends elixr__WEBPACK_IMPORTED_MODULE_0__.SingleUseGameSystem {
+	update() {
+		const room = new elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.LineSegments(
+			new three_examples_jsm_geometries_BoxLineGeometry__WEBPACK_IMPORTED_MODULE_1__.BoxLineGeometry(5.98, 2.98, 5.98, 10, 5, 10),
+			new elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.LineBasicMaterial({ color: 0x808080 }),
+		);
+		room.geometry.translate(0, 1.5, 0);
+		this.core.scene.add(room);
+		this.core.scene.background = new elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.Color(0x505050);
+
+		this._createLighting();
+
+		this._createWalls();
+
+		const snowman = new elixr__WEBPACK_IMPORTED_MODULE_0__.GLTFObject('assets/Snowman.glb', {
+			hasPhysics: true,
+			mass: 1,
+			type: elixr__WEBPACK_IMPORTED_MODULE_0__.BODY_TYPES.DYNAMIC,
 		});
+		this.core.addGameObject(snowman);
+		snowman.position.set(0, 1.2, -2);
+		snowman.rotateZ(Math.PI / 4);
+		snowman.colliderVisible = true;
+	}
 
-		connection.incomingCubes.length = 0;
+	_createLighting() {
+		const ambientLight = new elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.AmbientLight(0xffffff, 0.2);
+		this.core.scene.add(ambientLight);
+
+		const directionalLight = new elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.DirectionalLight(0xffffff, 0.2);
+		this.core.scene.add(directionalLight);
+	}
+
+	_createWalls() {
+		const boxFloor = new elixr__WEBPACK_IMPORTED_MODULE_0__.CubeObject(
+			6,
+			0.02,
+			6,
+			{ color: 0xff5f1f },
+			{ mass: 0, type: elixr__WEBPACK_IMPORTED_MODULE_0__.BODY_TYPES.STATIC },
+		);
+		this.core.addGameObject(boxFloor);
+		boxFloor.visible = false;
+		boxFloor.addComponent(elixr__WEBPACK_IMPORTED_MODULE_0__.MovementSurface);
+
+		const boxCeiling = boxFloor.clone(true);
+		this.core.addGameObject(boxCeiling);
+		boxCeiling.position.set(0, 3, 0);
+
+		const boxWall = new elixr__WEBPACK_IMPORTED_MODULE_0__.CubeObject(
+			6,
+			3,
+			0.02,
+			{ color: 0xff5f1f },
+			{ mass: 0, type: elixr__WEBPACK_IMPORTED_MODULE_0__.BODY_TYPES.STATIC },
+		);
+		this.core.addGameObject(boxWall);
+		boxWall.visible = false;
+		boxWall.position.set(0, 1.5, -3);
+		boxWall.addComponent(elixr__WEBPACK_IMPORTED_MODULE_0__.MovementObstacle);
+
+		const boxWall2 = boxWall.clone(true);
+		this.core.addGameObject(boxWall2);
+		boxWall2.position.set(0, 1.5, 3);
+
+		const boxWall3 = boxWall.clone(true);
+		this.core.addGameObject(boxWall3);
+		boxWall3.position.set(3, 1.5, 0);
+		boxWall3.rotateY(Math.PI / 2);
+
+		const boxWall4 = boxWall.clone(true);
+		this.core.addGameObject(boxWall4);
+		boxWall4.position.set(-3, 1.5, 0);
+		boxWall4.rotateY(Math.PI / 2);
 	}
 }
 
@@ -18323,218 +18994,6 @@ class ObjectManipulationSystem extends elixr__WEBPACK_IMPORTED_MODULE_0__.XRGame
 ObjectManipulationSystem.queries = {
 	rigidBodies: { components: [elixr__WEBPACK_IMPORTED_MODULE_0__.RigidBodyComponent] },
 };
-
-
-/***/ }),
-
-/***/ "./src/js/SceneCreationSystem.js":
-/*!***************************************!*\
-  !*** ./src/js/SceneCreationSystem.js ***!
-  \***************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "SceneCreationSystem": () => (/* binding */ SceneCreationSystem)
-/* harmony export */ });
-/* harmony import */ var elixr__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! elixr */ "./node_modules/elixr/dist/index.js");
-/* harmony import */ var three_examples_jsm_loaders_RGBELoader_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! three/examples/jsm/loaders/RGBELoader.js */ "./node_modules/three/examples/jsm/loaders/RGBELoader.js");
-
-
-
-
-class SceneCreationSystem extends elixr__WEBPACK_IMPORTED_MODULE_0__.SingleUseGameSystem {
-	update() {
-		this.core.scene.background = new elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.Color(0x505050);
-
-		this._createLighting();
-
-		this._createRoom1();
-		this._createRoom2();
-		this._createRamp();
-
-		const snowman = new elixr__WEBPACK_IMPORTED_MODULE_0__.GLTFObject('assets/Snowman.glb', {
-			hasPhysics: true,
-			mass: 1,
-			type: elixr__WEBPACK_IMPORTED_MODULE_0__.BODY_TYPES.DYNAMIC,
-		});
-		this.core.addGameObject(snowman);
-		snowman.position.set(0, 1.2, -2);
-		snowman.rotateZ(Math.PI / 4);
-		snowman.colliderVisible = true;
-	}
-
-	_createLighting() {
-		new three_examples_jsm_loaders_RGBELoader_js__WEBPACK_IMPORTED_MODULE_1__.RGBELoader().load('assets/studio_small_09_1k.hdr', (texture) => {
-			texture.mapping = elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.EquirectangularReflectionMapping;
-
-			this.core.scene.background = texture;
-			this.core.scene.environment = texture;
-		});
-	}
-
-	_createRoom1() {
-		const boxFloor = new elixr__WEBPACK_IMPORTED_MODULE_0__.CubeObject(
-			6,
-			0.02,
-			6,
-			{ color: 0x3a3b3c },
-			{ mass: 0, type: elixr__WEBPACK_IMPORTED_MODULE_0__.BODY_TYPES.STATIC },
-		);
-		this.core.addGameObject(boxFloor);
-		boxFloor.addComponent(elixr__WEBPACK_IMPORTED_MODULE_0__.MovementSurface);
-
-		const boxCeiling = new elixr__WEBPACK_IMPORTED_MODULE_0__.CubeObject(
-			6,
-			0.02,
-			6,
-			{ color: 0xfaf9f6 },
-			{ mass: 0, type: elixr__WEBPACK_IMPORTED_MODULE_0__.BODY_TYPES.STATIC },
-		);
-		this.core.addGameObject(boxCeiling);
-		boxCeiling.position.set(0, 3, 0);
-
-		const boxWall = new elixr__WEBPACK_IMPORTED_MODULE_0__.CubeObject(
-			6,
-			3,
-			0.02,
-			{ color: 0xfaf9f6 },
-			{ mass: 0, type: elixr__WEBPACK_IMPORTED_MODULE_0__.BODY_TYPES.STATIC },
-		);
-		this.core.addGameObject(boxWall);
-		boxWall.position.set(0, 1.5, 3);
-		boxWall.addComponent(elixr__WEBPACK_IMPORTED_MODULE_0__.MovementObstacle);
-
-		const boxWall3 = boxWall.clone(true);
-		this.core.addGameObject(boxWall3);
-		boxWall3.position.set(3, 1.5, 0);
-		boxWall3.rotateY(Math.PI / 2);
-
-		const boxWall4 = boxWall.clone(true);
-		this.core.addGameObject(boxWall4);
-		boxWall4.position.set(-3, 1.5, 0);
-		boxWall4.rotateY(Math.PI / 2);
-
-		const boxWall5 = new elixr__WEBPACK_IMPORTED_MODULE_0__.CubeObject(
-			2,
-			3,
-			0.02,
-			{ color: 0xfaf9f6 },
-			{ mass: 0, type: elixr__WEBPACK_IMPORTED_MODULE_0__.BODY_TYPES.STATIC },
-		);
-		this.core.addGameObject(boxWall5);
-		boxWall5.position.set(2, 1.5, -3);
-		boxWall5.addComponent(elixr__WEBPACK_IMPORTED_MODULE_0__.MovementObstacle);
-
-		const boxWall6 = boxWall5.clone(true);
-		this.core.addGameObject(boxWall6);
-		boxWall6.position.set(-2, 1.5, -3);
-	}
-
-	_createRoom2() {
-		const roomPositionOffset = new elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.Vector3(
-			0,
-			2,
-			-(6 + Math.pow(3, 0.5) * 2),
-		);
-		const boxFloor = new elixr__WEBPACK_IMPORTED_MODULE_0__.CubeObject(
-			6,
-			0.02,
-			6,
-			{ color: 0x3a3b3c },
-			{ mass: 0, type: elixr__WEBPACK_IMPORTED_MODULE_0__.BODY_TYPES.STATIC },
-		);
-		this.core.addGameObject(boxFloor);
-		boxFloor.addComponent(elixr__WEBPACK_IMPORTED_MODULE_0__.MovementSurface);
-		boxFloor.position.add(roomPositionOffset);
-
-		const boxCeiling = new elixr__WEBPACK_IMPORTED_MODULE_0__.CubeObject(
-			6,
-			0.02,
-			6,
-			{ color: 0xfaf9f6 },
-			{ mass: 0, type: elixr__WEBPACK_IMPORTED_MODULE_0__.BODY_TYPES.STATIC },
-		);
-		this.core.addGameObject(boxCeiling);
-		boxCeiling.position.set(0, 3, 0);
-		boxCeiling.position.add(roomPositionOffset);
-
-		const boxWall = new elixr__WEBPACK_IMPORTED_MODULE_0__.CubeObject(
-			6,
-			3,
-			0.02,
-			{ color: 0xfaf9f6 },
-			{ mass: 0, type: elixr__WEBPACK_IMPORTED_MODULE_0__.BODY_TYPES.STATIC },
-		);
-		this.core.addGameObject(boxWall);
-		boxWall.position.set(0, 1.5, -3);
-		boxWall.addComponent(elixr__WEBPACK_IMPORTED_MODULE_0__.MovementObstacle);
-		boxWall.position.add(roomPositionOffset);
-
-		const boxWall3 = boxWall.clone(true);
-		this.core.addGameObject(boxWall3);
-		boxWall3.position.set(3, 1.5, 0);
-		boxWall3.rotateY(Math.PI / 2);
-		boxWall3.position.add(roomPositionOffset);
-
-		const boxWall4 = boxWall.clone(true);
-		this.core.addGameObject(boxWall4);
-		boxWall4.position.set(-3, 1.5, 0);
-		boxWall4.rotateY(Math.PI / 2);
-		boxWall4.position.add(roomPositionOffset);
-
-		const boxWall5 = new elixr__WEBPACK_IMPORTED_MODULE_0__.CubeObject(
-			2,
-			3,
-			0.02,
-			{ color: 0xfaf9f6 },
-			{ mass: 0, type: elixr__WEBPACK_IMPORTED_MODULE_0__.BODY_TYPES.STATIC },
-		);
-		this.core.addGameObject(boxWall5);
-		boxWall5.position.set(2, 1.5, 3);
-		boxWall5.addComponent(elixr__WEBPACK_IMPORTED_MODULE_0__.MovementObstacle);
-		boxWall5.position.add(roomPositionOffset);
-
-		const boxWall6 = boxWall5.clone(true);
-		this.core.addGameObject(boxWall6);
-		boxWall6.position.set(-2, 1.5, 3);
-		boxWall6.position.add(roomPositionOffset);
-	}
-
-	_createRamp() {
-		const rampFloor = new elixr__WEBPACK_IMPORTED_MODULE_0__.CubeObject(
-			2,
-			0.02,
-			4,
-			{ color: 0xff5f1f },
-			{ mass: 0, type: elixr__WEBPACK_IMPORTED_MODULE_0__.BODY_TYPES.STATIC },
-		);
-		this.core.addGameObject(rampFloor);
-		rampFloor.rotateX(Math.PI / 6);
-		rampFloor.position.set(0, 1, -Math.pow(3, 0.5) - 3);
-		rampFloor.addComponent(elixr__WEBPACK_IMPORTED_MODULE_0__.MovementSurface);
-
-		const rampCeiling = rampFloor.clone(true);
-		this.core.addGameObject(rampCeiling);
-		rampCeiling.position.add(new elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.Vector3(0, 3, 0));
-		rampCeiling.removeComponent(elixr__WEBPACK_IMPORTED_MODULE_0__.MovementSurface);
-
-		const rampSidePanel = new elixr__WEBPACK_IMPORTED_MODULE_0__.CubeObject(
-			0.02,
-			5,
-			Math.pow(3, 0.5) * 2,
-			{ color: 0xff5f1f },
-			{ mass: 0, type: elixr__WEBPACK_IMPORTED_MODULE_0__.BODY_TYPES.STATIC },
-		);
-		this.core.addGameObject(rampSidePanel);
-		rampSidePanel.position.set(1, 2.5, -Math.pow(3, 0.5) - 3);
-		rampSidePanel.addComponent(elixr__WEBPACK_IMPORTED_MODULE_0__.MovementObstacle);
-
-		const rampSidePanel2 = rampSidePanel.clone(true);
-		this.core.addGameObject(rampSidePanel2);
-		rampSidePanel2.position.set(-1, 2.5, -Math.pow(3, 0.5) - 3);
-	}
-}
 
 
 /***/ }),
@@ -73952,6 +74411,87 @@ if ( typeof window !== 'undefined' ) {
 
 /***/ }),
 
+/***/ "./node_modules/three/examples/jsm/geometries/BoxLineGeometry.js":
+/*!***********************************************************************!*\
+  !*** ./node_modules/three/examples/jsm/geometries/BoxLineGeometry.js ***!
+  \***********************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "BoxLineGeometry": () => (/* binding */ BoxLineGeometry)
+/* harmony export */ });
+/* harmony import */ var three__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! three */ "./node_modules/three/build/three.module.js");
+
+
+class BoxLineGeometry extends three__WEBPACK_IMPORTED_MODULE_0__.BufferGeometry {
+
+	constructor( width = 1, height = 1, depth = 1, widthSegments = 1, heightSegments = 1, depthSegments = 1 ) {
+
+		super();
+
+		widthSegments = Math.floor( widthSegments );
+		heightSegments = Math.floor( heightSegments );
+		depthSegments = Math.floor( depthSegments );
+
+		const widthHalf = width / 2;
+		const heightHalf = height / 2;
+		const depthHalf = depth / 2;
+
+		const segmentWidth = width / widthSegments;
+		const segmentHeight = height / heightSegments;
+		const segmentDepth = depth / depthSegments;
+
+		const vertices = [];
+
+		let x = - widthHalf;
+		let y = - heightHalf;
+		let z = - depthHalf;
+
+		for ( let i = 0; i <= widthSegments; i ++ ) {
+
+			vertices.push( x, - heightHalf, - depthHalf, x, heightHalf, - depthHalf );
+			vertices.push( x, heightHalf, - depthHalf, x, heightHalf, depthHalf );
+			vertices.push( x, heightHalf, depthHalf, x, - heightHalf, depthHalf );
+			vertices.push( x, - heightHalf, depthHalf, x, - heightHalf, - depthHalf );
+
+			x += segmentWidth;
+
+		}
+
+		for ( let i = 0; i <= heightSegments; i ++ ) {
+
+			vertices.push( - widthHalf, y, - depthHalf, widthHalf, y, - depthHalf );
+			vertices.push( widthHalf, y, - depthHalf, widthHalf, y, depthHalf );
+			vertices.push( widthHalf, y, depthHalf, - widthHalf, y, depthHalf );
+			vertices.push( - widthHalf, y, depthHalf, - widthHalf, y, - depthHalf );
+
+			y += segmentHeight;
+
+		}
+
+		for ( let i = 0; i <= depthSegments; i ++ ) {
+
+			vertices.push( - widthHalf, - heightHalf, z, - widthHalf, heightHalf, z );
+			vertices.push( - widthHalf, heightHalf, z, widthHalf, heightHalf, z );
+			vertices.push( widthHalf, heightHalf, z, widthHalf, - heightHalf, z );
+			vertices.push( widthHalf, - heightHalf, z, - widthHalf, - heightHalf, z );
+
+			z += segmentDepth;
+
+		}
+
+		this.setAttribute( 'position', new three__WEBPACK_IMPORTED_MODULE_0__.Float32BufferAttribute( vertices, 3 ) );
+
+	}
+
+}
+
+
+
+
+/***/ }),
+
 /***/ "./node_modules/three/examples/jsm/geometries/ConvexGeometry.js":
 /*!**********************************************************************!*\
   !*** ./node_modules/three/examples/jsm/geometries/ConvexGeometry.js ***!
@@ -80527,482 +81067,6 @@ async function createDataTexture( container ) {
 
 /***/ }),
 
-/***/ "./node_modules/three/examples/jsm/loaders/RGBELoader.js":
-/*!***************************************************************!*\
-  !*** ./node_modules/three/examples/jsm/loaders/RGBELoader.js ***!
-  \***************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "RGBELoader": () => (/* binding */ RGBELoader)
-/* harmony export */ });
-/* harmony import */ var three__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! three */ "./node_modules/three/build/three.module.js");
-
-
-// https://github.com/mrdoob/three.js/issues/5552
-// http://en.wikipedia.org/wiki/RGBE_image_format
-
-class RGBELoader extends three__WEBPACK_IMPORTED_MODULE_0__.DataTextureLoader {
-
-	constructor( manager ) {
-
-		super( manager );
-
-		this.type = three__WEBPACK_IMPORTED_MODULE_0__.HalfFloatType;
-
-	}
-
-	// adapted from http://www.graphics.cornell.edu/~bjw/rgbe.html
-
-	parse( buffer ) {
-
-		const
-			/* return codes for rgbe routines */
-			//RGBE_RETURN_SUCCESS = 0,
-			RGBE_RETURN_FAILURE = - 1,
-
-			/* default error routine.  change this to change error handling */
-			rgbe_read_error = 1,
-			rgbe_write_error = 2,
-			rgbe_format_error = 3,
-			rgbe_memory_error = 4,
-			rgbe_error = function ( rgbe_error_code, msg ) {
-
-				switch ( rgbe_error_code ) {
-
-					case rgbe_read_error: console.error( 'THREE.RGBELoader Read Error: ' + ( msg || '' ) );
-						break;
-					case rgbe_write_error: console.error( 'THREE.RGBELoader Write Error: ' + ( msg || '' ) );
-						break;
-					case rgbe_format_error: console.error( 'THREE.RGBELoader Bad File Format: ' + ( msg || '' ) );
-						break;
-					default:
-					case rgbe_memory_error: console.error( 'THREE.RGBELoader: Error: ' + ( msg || '' ) );
-
-				}
-
-				return RGBE_RETURN_FAILURE;
-
-			},
-
-			/* offsets to red, green, and blue components in a data (float) pixel */
-			//RGBE_DATA_RED = 0,
-			//RGBE_DATA_GREEN = 1,
-			//RGBE_DATA_BLUE = 2,
-
-			/* number of floats per pixel, use 4 since stored in rgba image format */
-			//RGBE_DATA_SIZE = 4,
-
-			/* flags indicating which fields in an rgbe_header_info are valid */
-			RGBE_VALID_PROGRAMTYPE = 1,
-			RGBE_VALID_FORMAT = 2,
-			RGBE_VALID_DIMENSIONS = 4,
-
-			NEWLINE = '\n',
-
-			fgets = function ( buffer, lineLimit, consume ) {
-
-				const chunkSize = 128;
-
-				lineLimit = ! lineLimit ? 1024 : lineLimit;
-				let p = buffer.pos,
-					i = - 1, len = 0, s = '',
-					chunk = String.fromCharCode.apply( null, new Uint16Array( buffer.subarray( p, p + chunkSize ) ) );
-
-				while ( ( 0 > ( i = chunk.indexOf( NEWLINE ) ) ) && ( len < lineLimit ) && ( p < buffer.byteLength ) ) {
-
-					s += chunk; len += chunk.length;
-					p += chunkSize;
-					chunk += String.fromCharCode.apply( null, new Uint16Array( buffer.subarray( p, p + chunkSize ) ) );
-
-				}
-
-				if ( - 1 < i ) {
-
-					/*for (i=l-1; i>=0; i--) {
-						byteCode = m.charCodeAt(i);
-						if (byteCode > 0x7f && byteCode <= 0x7ff) byteLen++;
-						else if (byteCode > 0x7ff && byteCode <= 0xffff) byteLen += 2;
-						if (byteCode >= 0xDC00 && byteCode <= 0xDFFF) i--; //trail surrogate
-					}*/
-					if ( false !== consume ) buffer.pos += len + i + 1;
-					return s + chunk.slice( 0, i );
-
-				}
-
-				return false;
-
-			},
-
-			/* minimal header reading.  modify if you want to parse more information */
-			RGBE_ReadHeader = function ( buffer ) {
-
-
-				// regexes to parse header info fields
-				const magic_token_re = /^#\?(\S+)/,
-					gamma_re = /^\s*GAMMA\s*=\s*(\d+(\.\d+)?)\s*$/,
-					exposure_re = /^\s*EXPOSURE\s*=\s*(\d+(\.\d+)?)\s*$/,
-					format_re = /^\s*FORMAT=(\S+)\s*$/,
-					dimensions_re = /^\s*\-Y\s+(\d+)\s+\+X\s+(\d+)\s*$/,
-
-					// RGBE format header struct
-					header = {
-
-						valid: 0, /* indicate which fields are valid */
-
-						string: '', /* the actual header string */
-
-						comments: '', /* comments found in header */
-
-						programtype: 'RGBE', /* listed at beginning of file to identify it after "#?". defaults to "RGBE" */
-
-						format: '', /* RGBE format, default 32-bit_rle_rgbe */
-
-						gamma: 1.0, /* image has already been gamma corrected with given gamma. defaults to 1.0 (no correction) */
-
-						exposure: 1.0, /* a value of 1.0 in an image corresponds to <exposure> watts/steradian/m^2. defaults to 1.0 */
-
-						width: 0, height: 0 /* image dimensions, width/height */
-
-					};
-
-				let line, match;
-
-				if ( buffer.pos >= buffer.byteLength || ! ( line = fgets( buffer ) ) ) {
-
-					return rgbe_error( rgbe_read_error, 'no header found' );
-
-				}
-
-				/* if you want to require the magic token then uncomment the next line */
-				if ( ! ( match = line.match( magic_token_re ) ) ) {
-
-					return rgbe_error( rgbe_format_error, 'bad initial token' );
-
-				}
-
-				header.valid |= RGBE_VALID_PROGRAMTYPE;
-				header.programtype = match[ 1 ];
-				header.string += line + '\n';
-
-				while ( true ) {
-
-					line = fgets( buffer );
-					if ( false === line ) break;
-					header.string += line + '\n';
-
-					if ( '#' === line.charAt( 0 ) ) {
-
-						header.comments += line + '\n';
-						continue; // comment line
-
-					}
-
-					if ( match = line.match( gamma_re ) ) {
-
-						header.gamma = parseFloat( match[ 1 ] );
-
-					}
-
-					if ( match = line.match( exposure_re ) ) {
-
-						header.exposure = parseFloat( match[ 1 ] );
-
-					}
-
-					if ( match = line.match( format_re ) ) {
-
-						header.valid |= RGBE_VALID_FORMAT;
-						header.format = match[ 1 ];//'32-bit_rle_rgbe';
-
-					}
-
-					if ( match = line.match( dimensions_re ) ) {
-
-						header.valid |= RGBE_VALID_DIMENSIONS;
-						header.height = parseInt( match[ 1 ], 10 );
-						header.width = parseInt( match[ 2 ], 10 );
-
-					}
-
-					if ( ( header.valid & RGBE_VALID_FORMAT ) && ( header.valid & RGBE_VALID_DIMENSIONS ) ) break;
-
-				}
-
-				if ( ! ( header.valid & RGBE_VALID_FORMAT ) ) {
-
-					return rgbe_error( rgbe_format_error, 'missing format specifier' );
-
-				}
-
-				if ( ! ( header.valid & RGBE_VALID_DIMENSIONS ) ) {
-
-					return rgbe_error( rgbe_format_error, 'missing image size specifier' );
-
-				}
-
-				return header;
-
-			},
-
-			RGBE_ReadPixels_RLE = function ( buffer, w, h ) {
-
-				const scanline_width = w;
-
-				if (
-					// run length encoding is not allowed so read flat
-					( ( scanline_width < 8 ) || ( scanline_width > 0x7fff ) ) ||
-					// this file is not run length encoded
-					( ( 2 !== buffer[ 0 ] ) || ( 2 !== buffer[ 1 ] ) || ( buffer[ 2 ] & 0x80 ) )
-				) {
-
-					// return the flat buffer
-					return new Uint8Array( buffer );
-
-				}
-
-				if ( scanline_width !== ( ( buffer[ 2 ] << 8 ) | buffer[ 3 ] ) ) {
-
-					return rgbe_error( rgbe_format_error, 'wrong scanline width' );
-
-				}
-
-				const data_rgba = new Uint8Array( 4 * w * h );
-
-				if ( ! data_rgba.length ) {
-
-					return rgbe_error( rgbe_memory_error, 'unable to allocate buffer space' );
-
-				}
-
-				let offset = 0, pos = 0;
-
-				const ptr_end = 4 * scanline_width;
-				const rgbeStart = new Uint8Array( 4 );
-				const scanline_buffer = new Uint8Array( ptr_end );
-				let num_scanlines = h;
-
-				// read in each successive scanline
-				while ( ( num_scanlines > 0 ) && ( pos < buffer.byteLength ) ) {
-
-					if ( pos + 4 > buffer.byteLength ) {
-
-						return rgbe_error( rgbe_read_error );
-
-					}
-
-					rgbeStart[ 0 ] = buffer[ pos ++ ];
-					rgbeStart[ 1 ] = buffer[ pos ++ ];
-					rgbeStart[ 2 ] = buffer[ pos ++ ];
-					rgbeStart[ 3 ] = buffer[ pos ++ ];
-
-					if ( ( 2 != rgbeStart[ 0 ] ) || ( 2 != rgbeStart[ 1 ] ) || ( ( ( rgbeStart[ 2 ] << 8 ) | rgbeStart[ 3 ] ) != scanline_width ) ) {
-
-						return rgbe_error( rgbe_format_error, 'bad rgbe scanline format' );
-
-					}
-
-					// read each of the four channels for the scanline into the buffer
-					// first red, then green, then blue, then exponent
-					let ptr = 0, count;
-
-					while ( ( ptr < ptr_end ) && ( pos < buffer.byteLength ) ) {
-
-						count = buffer[ pos ++ ];
-						const isEncodedRun = count > 128;
-						if ( isEncodedRun ) count -= 128;
-
-						if ( ( 0 === count ) || ( ptr + count > ptr_end ) ) {
-
-							return rgbe_error( rgbe_format_error, 'bad scanline data' );
-
-						}
-
-						if ( isEncodedRun ) {
-
-							// a (encoded) run of the same value
-							const byteValue = buffer[ pos ++ ];
-							for ( let i = 0; i < count; i ++ ) {
-
-								scanline_buffer[ ptr ++ ] = byteValue;
-
-							}
-							//ptr += count;
-
-						} else {
-
-							// a literal-run
-							scanline_buffer.set( buffer.subarray( pos, pos + count ), ptr );
-							ptr += count; pos += count;
-
-						}
-
-					}
-
-
-					// now convert data from buffer into rgba
-					// first red, then green, then blue, then exponent (alpha)
-					const l = scanline_width; //scanline_buffer.byteLength;
-					for ( let i = 0; i < l; i ++ ) {
-
-						let off = 0;
-						data_rgba[ offset ] = scanline_buffer[ i + off ];
-						off += scanline_width; //1;
-						data_rgba[ offset + 1 ] = scanline_buffer[ i + off ];
-						off += scanline_width; //1;
-						data_rgba[ offset + 2 ] = scanline_buffer[ i + off ];
-						off += scanline_width; //1;
-						data_rgba[ offset + 3 ] = scanline_buffer[ i + off ];
-						offset += 4;
-
-					}
-
-					num_scanlines --;
-
-				}
-
-				return data_rgba;
-
-			};
-
-		const RGBEByteToRGBFloat = function ( sourceArray, sourceOffset, destArray, destOffset ) {
-
-			const e = sourceArray[ sourceOffset + 3 ];
-			const scale = Math.pow( 2.0, e - 128.0 ) / 255.0;
-
-			destArray[ destOffset + 0 ] = sourceArray[ sourceOffset + 0 ] * scale;
-			destArray[ destOffset + 1 ] = sourceArray[ sourceOffset + 1 ] * scale;
-			destArray[ destOffset + 2 ] = sourceArray[ sourceOffset + 2 ] * scale;
-			destArray[ destOffset + 3 ] = 1;
-
-		};
-
-		const RGBEByteToRGBHalf = function ( sourceArray, sourceOffset, destArray, destOffset ) {
-
-			const e = sourceArray[ sourceOffset + 3 ];
-			const scale = Math.pow( 2.0, e - 128.0 ) / 255.0;
-
-			// clamping to 65504, the maximum representable value in float16
-			destArray[ destOffset + 0 ] = three__WEBPACK_IMPORTED_MODULE_0__.DataUtils.toHalfFloat( Math.min( sourceArray[ sourceOffset + 0 ] * scale, 65504 ) );
-			destArray[ destOffset + 1 ] = three__WEBPACK_IMPORTED_MODULE_0__.DataUtils.toHalfFloat( Math.min( sourceArray[ sourceOffset + 1 ] * scale, 65504 ) );
-			destArray[ destOffset + 2 ] = three__WEBPACK_IMPORTED_MODULE_0__.DataUtils.toHalfFloat( Math.min( sourceArray[ sourceOffset + 2 ] * scale, 65504 ) );
-			destArray[ destOffset + 3 ] = three__WEBPACK_IMPORTED_MODULE_0__.DataUtils.toHalfFloat( 1 );
-
-		};
-
-		const byteArray = new Uint8Array( buffer );
-		byteArray.pos = 0;
-		const rgbe_header_info = RGBE_ReadHeader( byteArray );
-
-		if ( RGBE_RETURN_FAILURE !== rgbe_header_info ) {
-
-			const w = rgbe_header_info.width,
-				h = rgbe_header_info.height,
-				image_rgba_data = RGBE_ReadPixels_RLE( byteArray.subarray( byteArray.pos ), w, h );
-
-			if ( RGBE_RETURN_FAILURE !== image_rgba_data ) {
-
-				let data, type;
-				let numElements;
-
-				switch ( this.type ) {
-
-					case three__WEBPACK_IMPORTED_MODULE_0__.FloatType:
-
-						numElements = image_rgba_data.length / 4;
-						const floatArray = new Float32Array( numElements * 4 );
-
-						for ( let j = 0; j < numElements; j ++ ) {
-
-							RGBEByteToRGBFloat( image_rgba_data, j * 4, floatArray, j * 4 );
-
-						}
-
-						data = floatArray;
-						type = three__WEBPACK_IMPORTED_MODULE_0__.FloatType;
-						break;
-
-					case three__WEBPACK_IMPORTED_MODULE_0__.HalfFloatType:
-
-						numElements = image_rgba_data.length / 4;
-						const halfArray = new Uint16Array( numElements * 4 );
-
-						for ( let j = 0; j < numElements; j ++ ) {
-
-							RGBEByteToRGBHalf( image_rgba_data, j * 4, halfArray, j * 4 );
-
-						}
-
-						data = halfArray;
-						type = three__WEBPACK_IMPORTED_MODULE_0__.HalfFloatType;
-						break;
-
-					default:
-
-						console.error( 'THREE.RGBELoader: unsupported type: ', this.type );
-						break;
-
-				}
-
-				return {
-					width: w, height: h,
-					data: data,
-					header: rgbe_header_info.string,
-					gamma: rgbe_header_info.gamma,
-					exposure: rgbe_header_info.exposure,
-					type: type
-				};
-
-			}
-
-		}
-
-		return null;
-
-	}
-
-	setDataType( value ) {
-
-		this.type = value;
-		return this;
-
-	}
-
-	load( url, onLoad, onProgress, onError ) {
-
-		function onLoadCallback( texture, texData ) {
-
-			switch ( texture.type ) {
-
-				case three__WEBPACK_IMPORTED_MODULE_0__.FloatType:
-				case three__WEBPACK_IMPORTED_MODULE_0__.HalfFloatType:
-
-					texture.encoding = three__WEBPACK_IMPORTED_MODULE_0__.LinearEncoding;
-					texture.minFilter = three__WEBPACK_IMPORTED_MODULE_0__.LinearFilter;
-					texture.magFilter = three__WEBPACK_IMPORTED_MODULE_0__.LinearFilter;
-					texture.generateMipmaps = false;
-					texture.flipY = true;
-
-					break;
-
-			}
-
-			if ( onLoad ) onLoad( texture, texData );
-
-		}
-
-		return super.load( url, onLoadCallback, onProgress, onError );
-
-	}
-
-}
-
-
-
-
-/***/ }),
-
 /***/ "./node_modules/three/examples/jsm/math/ConvexHull.js":
 /*!************************************************************!*\
   !*** ./node_modules/three/examples/jsm/math/ConvexHull.js ***!
@@ -82404,443 +82468,6 @@ class WorkerPool {
 
 /***/ }),
 
-/***/ "./node_modules/three/examples/jsm/webxr/ARButton.js":
-/*!***********************************************************!*\
-  !*** ./node_modules/three/examples/jsm/webxr/ARButton.js ***!
-  \***********************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "ARButton": () => (/* binding */ ARButton)
-/* harmony export */ });
-class ARButton {
-
-	static createButton( renderer, sessionInit = {} ) {
-
-		const button = document.createElement( 'button' );
-
-		function showStartAR( /*device*/ ) {
-
-			if ( sessionInit.domOverlay === undefined ) {
-
-				const overlay = document.createElement( 'div' );
-				overlay.style.display = 'none';
-				document.body.appendChild( overlay );
-
-				const svg = document.createElementNS( 'http://www.w3.org/2000/svg', 'svg' );
-				svg.setAttribute( 'width', 38 );
-				svg.setAttribute( 'height', 38 );
-				svg.style.position = 'absolute';
-				svg.style.right = '20px';
-				svg.style.top = '20px';
-				svg.addEventListener( 'click', function () {
-
-					currentSession.end();
-
-				} );
-				overlay.appendChild( svg );
-
-				const path = document.createElementNS( 'http://www.w3.org/2000/svg', 'path' );
-				path.setAttribute( 'd', 'M 12,12 L 28,28 M 28,12 12,28' );
-				path.setAttribute( 'stroke', '#fff' );
-				path.setAttribute( 'stroke-width', 2 );
-				svg.appendChild( path );
-
-				if ( sessionInit.optionalFeatures === undefined ) {
-
-					sessionInit.optionalFeatures = [];
-
-				}
-
-				sessionInit.optionalFeatures.push( 'dom-overlay' );
-				sessionInit.domOverlay = { root: overlay };
-
-			}
-
-			//
-
-			let currentSession = null;
-
-			async function onSessionStarted( session ) {
-
-				session.addEventListener( 'end', onSessionEnded );
-
-				renderer.xr.setReferenceSpaceType( 'local' );
-
-				await renderer.xr.setSession( session );
-
-				button.textContent = 'STOP AR';
-				sessionInit.domOverlay.root.style.display = '';
-
-				currentSession = session;
-
-			}
-
-			function onSessionEnded( /*event*/ ) {
-
-				currentSession.removeEventListener( 'end', onSessionEnded );
-
-				button.textContent = 'START AR';
-				sessionInit.domOverlay.root.style.display = 'none';
-
-				currentSession = null;
-
-			}
-
-			//
-
-			button.style.display = '';
-
-			button.style.cursor = 'pointer';
-			button.style.left = 'calc(50% - 50px)';
-			button.style.width = '100px';
-
-			button.textContent = 'START AR';
-
-			button.onmouseenter = function () {
-
-				button.style.opacity = '1.0';
-
-			};
-
-			button.onmouseleave = function () {
-
-				button.style.opacity = '0.5';
-
-			};
-
-			button.onclick = function () {
-
-				if ( currentSession === null ) {
-
-					navigator.xr.requestSession( 'immersive-ar', sessionInit ).then( onSessionStarted );
-
-				} else {
-
-					currentSession.end();
-
-				}
-
-			};
-
-		}
-
-		function disableButton() {
-
-			button.style.display = '';
-
-			button.style.cursor = 'auto';
-			button.style.left = 'calc(50% - 75px)';
-			button.style.width = '150px';
-
-			button.onmouseenter = null;
-			button.onmouseleave = null;
-
-			button.onclick = null;
-
-		}
-
-		function showARNotSupported() {
-
-			disableButton();
-
-			button.textContent = 'AR NOT SUPPORTED';
-
-		}
-
-		function showARNotAllowed( exception ) {
-
-			disableButton();
-
-			console.warn( 'Exception when trying to call xr.isSessionSupported', exception );
-
-			button.textContent = 'AR NOT ALLOWED';
-
-		}
-
-		function stylizeElement( element ) {
-
-			element.style.position = 'absolute';
-			element.style.bottom = '20px';
-			element.style.padding = '12px 6px';
-			element.style.border = '1px solid #fff';
-			element.style.borderRadius = '4px';
-			element.style.background = 'rgba(0,0,0,0.1)';
-			element.style.color = '#fff';
-			element.style.font = 'normal 13px sans-serif';
-			element.style.textAlign = 'center';
-			element.style.opacity = '0.5';
-			element.style.outline = 'none';
-			element.style.zIndex = '999';
-
-		}
-
-		if ( 'xr' in navigator ) {
-
-			button.id = 'ARButton';
-			button.style.display = 'none';
-
-			stylizeElement( button );
-
-			navigator.xr.isSessionSupported( 'immersive-ar' ).then( function ( supported ) {
-
-				supported ? showStartAR() : showARNotSupported();
-
-			} ).catch( showARNotAllowed );
-
-			return button;
-
-		} else {
-
-			const message = document.createElement( 'a' );
-
-			if ( window.isSecureContext === false ) {
-
-				message.href = document.location.href.replace( /^http:/, 'https:' );
-				message.innerHTML = 'WEBXR NEEDS HTTPS'; // TODO Improve message
-
-			} else {
-
-				message.href = 'https://immersiveweb.dev/';
-				message.innerHTML = 'WEBXR NOT AVAILABLE';
-
-			}
-
-			message.style.left = 'calc(50% - 90px)';
-			message.style.width = '180px';
-			message.style.textDecoration = 'none';
-
-			stylizeElement( message );
-
-			return message;
-
-		}
-
-	}
-
-}
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/three/examples/jsm/webxr/VRButton.js":
-/*!***********************************************************!*\
-  !*** ./node_modules/three/examples/jsm/webxr/VRButton.js ***!
-  \***********************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "VRButton": () => (/* binding */ VRButton)
-/* harmony export */ });
-class VRButton {
-
-	static createButton( renderer ) {
-
-		const button = document.createElement( 'button' );
-
-		function showEnterVR( /*device*/ ) {
-
-			let currentSession = null;
-
-			async function onSessionStarted( session ) {
-
-				session.addEventListener( 'end', onSessionEnded );
-
-				await renderer.xr.setSession( session );
-				button.textContent = 'EXIT VR';
-
-				currentSession = session;
-
-			}
-
-			function onSessionEnded( /*event*/ ) {
-
-				currentSession.removeEventListener( 'end', onSessionEnded );
-
-				button.textContent = 'ENTER VR';
-
-				currentSession = null;
-
-			}
-
-			//
-
-			button.style.display = '';
-
-			button.style.cursor = 'pointer';
-			button.style.left = 'calc(50% - 50px)';
-			button.style.width = '100px';
-
-			button.textContent = 'ENTER VR';
-
-			button.onmouseenter = function () {
-
-				button.style.opacity = '1.0';
-
-			};
-
-			button.onmouseleave = function () {
-
-				button.style.opacity = '0.5';
-
-			};
-
-			button.onclick = function () {
-
-				if ( currentSession === null ) {
-
-					// WebXR's requestReferenceSpace only works if the corresponding feature
-					// was requested at session creation time. For simplicity, just ask for
-					// the interesting ones as optional features, but be aware that the
-					// requestReferenceSpace call will fail if it turns out to be unavailable.
-					// ('local' is always available for immersive sessions and doesn't need to
-					// be requested separately.)
-
-					const sessionInit = { optionalFeatures: [ 'local-floor', 'bounded-floor', 'hand-tracking', 'layers' ] };
-					navigator.xr.requestSession( 'immersive-vr', sessionInit ).then( onSessionStarted );
-
-				} else {
-
-					currentSession.end();
-
-				}
-
-			};
-
-		}
-
-		function disableButton() {
-
-			button.style.display = '';
-
-			button.style.cursor = 'auto';
-			button.style.left = 'calc(50% - 75px)';
-			button.style.width = '150px';
-
-			button.onmouseenter = null;
-			button.onmouseleave = null;
-
-			button.onclick = null;
-
-		}
-
-		function showWebXRNotFound() {
-
-			disableButton();
-
-			button.textContent = 'VR NOT SUPPORTED';
-
-		}
-
-		function showVRNotAllowed( exception ) {
-
-			disableButton();
-
-			console.warn( 'Exception when trying to call xr.isSessionSupported', exception );
-
-			button.textContent = 'VR NOT ALLOWED';
-
-		}
-
-		function stylizeElement( element ) {
-
-			element.style.position = 'absolute';
-			element.style.bottom = '20px';
-			element.style.padding = '12px 6px';
-			element.style.border = '1px solid #fff';
-			element.style.borderRadius = '4px';
-			element.style.background = 'rgba(0,0,0,0.1)';
-			element.style.color = '#fff';
-			element.style.font = 'normal 13px sans-serif';
-			element.style.textAlign = 'center';
-			element.style.opacity = '0.5';
-			element.style.outline = 'none';
-			element.style.zIndex = '999';
-
-		}
-
-		if ( 'xr' in navigator ) {
-
-			button.id = 'VRButton';
-			button.style.display = 'none';
-
-			stylizeElement( button );
-
-			navigator.xr.isSessionSupported( 'immersive-vr' ).then( function ( supported ) {
-
-				supported ? showEnterVR() : showWebXRNotFound();
-
-				if ( supported && VRButton.xrSessionIsGranted ) {
-
-					button.click();
-
-				}
-
-			} ).catch( showVRNotAllowed );
-
-			return button;
-
-		} else {
-
-			const message = document.createElement( 'a' );
-
-			if ( window.isSecureContext === false ) {
-
-				message.href = document.location.href.replace( /^http:/, 'https:' );
-				message.innerHTML = 'WEBXR NEEDS HTTPS'; // TODO Improve message
-
-			} else {
-
-				message.href = 'https://immersiveweb.dev/';
-				message.innerHTML = 'WEBXR NOT AVAILABLE';
-
-			}
-
-			message.style.left = 'calc(50% - 90px)';
-			message.style.width = '180px';
-			message.style.textDecoration = 'none';
-
-			stylizeElement( message );
-
-			return message;
-
-		}
-
-	}
-
-	static xrSessionIsGranted = false;
-
-	static registerSessionGrantedListener() {
-
-		if ( 'xr' in navigator ) {
-
-			// WebXRViewer (based on Firefox) has a bug where addEventListener
-			// throws a silent exception and aborts execution entirely.
-			if ( /WebXRViewer\//i.test( navigator.userAgent ) ) return;
-
-			navigator.xr.addEventListener( 'sessiongranted', () => {
-
-				VRButton.xrSessionIsGranted = true;
-
-			} );
-
-		}
-
-	}
-
-}
-
-VRButton.registerSessionGrantedListener();
-
-
-
-
-/***/ }),
-
 /***/ "./node_modules/three/examples/jsm/webxr/XRControllerModelFactory.js":
 /*!***************************************************************************!*\
   !*** ./node_modules/three/examples/jsm/webxr/XRControllerModelFactory.js ***!
@@ -83162,7 +82789,7 @@ class XRControllerModelFactory {
 /******/ 		}
 /******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = __webpack_module_cache__[moduleId] = {
-/******/ 			// no module.id needed
+/******/ 			id: moduleId,
 /******/ 			// no module.loaded needed
 /******/ 			exports: {}
 /******/ 		};
@@ -83175,6 +82802,18 @@ class XRControllerModelFactory {
 /******/ 	}
 /******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
@@ -83203,6 +82842,11 @@ class XRControllerModelFactory {
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/nonce */
+/******/ 	(() => {
+/******/ 		__webpack_require__.nc = undefined;
+/******/ 	})();
+/******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
@@ -83211,14 +82855,17 @@ var __webpack_exports__ = {};
   !*** ./src/index.js ***!
   \**********************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _js_ConnectionSystem__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js/ConnectionSystem */ "./src/js/ConnectionSystem.js");
+/* harmony import */ var _styles_index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/index.css */ "./src/styles/index.css");
 /* harmony import */ var elixr__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! elixr */ "./node_modules/elixr/dist/index.js");
 /* harmony import */ var _js_CubeLauncherSystem__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js/CubeLauncherSystem */ "./src/js/CubeLauncherSystem.js");
-/* harmony import */ var _js_ObjectManipulationSystem__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./js/ObjectManipulationSystem */ "./src/js/ObjectManipulationSystem.js");
-/* harmony import */ var _js_SceneCreationSystem__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./js/SceneCreationSystem */ "./src/js/SceneCreationSystem.js");
+/* harmony import */ var _js_InlineSceneCreationSystem__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./js/InlineSceneCreationSystem */ "./src/js/InlineSceneCreationSystem.js");
+/* harmony import */ var _js_ObjectManipulationSystem__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./js/ObjectManipulationSystem */ "./src/js/ObjectManipulationSystem.js");
 
 
 
+
+// import { ARButton } from 'three/examples/jsm/webxr/ARButton';
+// import { ARSceneCreationSystem } from './js/ARSceneCreationSystem';
 
 
 
@@ -83230,22 +82877,36 @@ core.physics.gravity.set(0, 0, 0);
 core.physics.solverIterations = 2;
 core.physics.stepTime = 1 / 90;
 
-core.registerGameComponent(elixr__WEBPACK_IMPORTED_MODULE_1__.MovementSurface);
 core.registerGameComponent(elixr__WEBPACK_IMPORTED_MODULE_1__.MovementObstacle);
-core.registerGameComponent(_js_ConnectionSystem__WEBPACK_IMPORTED_MODULE_0__.ConnectionComponent);
+core.registerGameComponent(elixr__WEBPACK_IMPORTED_MODULE_1__.MovementSurface);
 
-core.registerGameSystem(elixr__WEBPACK_IMPORTED_MODULE_1__.XRTeleportSystem);
-core.registerGameSystem(elixr__WEBPACK_IMPORTED_MODULE_1__.XRSlideSystem);
-core.registerGameSystem(elixr__WEBPACK_IMPORTED_MODULE_1__.XRSnapTurnSystem);
-core.registerGameSystem(_js_SceneCreationSystem__WEBPACK_IMPORTED_MODULE_4__.SceneCreationSystem);
+// core.registerGameSystem(XRTeleportSystem);
+// core.registerGameSystem(XRSlideSystem);
+// core.registerGameSystem(XRSnapTurnSystem);
+// core.registerGameSystem(SceneCreationSystem);
+// core.registerGameSystem(ARSceneCreationSystem);
+core.registerGameSystem(_js_InlineSceneCreationSystem__WEBPACK_IMPORTED_MODULE_3__.InlineSceneCreationSystem);
 core.registerGameSystem(_js_CubeLauncherSystem__WEBPACK_IMPORTED_MODULE_2__.CubeLauncherSystem);
-core.registerGameSystem(_js_ObjectManipulationSystem__WEBPACK_IMPORTED_MODULE_3__.ObjectManipulationSystem);
-core.registerGameSystem(_js_ConnectionSystem__WEBPACK_IMPORTED_MODULE_0__.ConnectionSystem);
+core.registerGameSystem(_js_ObjectManipulationSystem__WEBPACK_IMPORTED_MODULE_4__.ObjectManipulationSystem);
 
-const slideConfig = core.getGameSystemConfig(elixr__WEBPACK_IMPORTED_MODULE_1__.XRSlideSystem);
-slideConfig.MAX_MOVEMENT_SPEED = 2.5;
+// const slideConfig = core.getGameSystemConfig(XRSlideSystem);
+// slideConfig.MAX_MOVEMENT_SPEED = 2.5;
 
-document.body.append(core.vrButton);
+// document.body.append(core.vrButton);
+
+// document.body.append(
+// 	ARButton.createButton(core.renderer, {
+// 		requiredFeatures: ['anchors', 'plane-detection'],
+// 		optionalFeatures: [],
+// 	}),
+// );
+
+elixr__WEBPACK_IMPORTED_MODULE_1__.VRButton.convertToVRButton(document.getElementById('vr-button'), core.renderer);
+
+const ambientLight = new elixr__WEBPACK_IMPORTED_MODULE_1__.THREE.AmbientLight(0xffffff, 0.2);
+core.scene.add(ambientLight);
+const directionalLight = new elixr__WEBPACK_IMPORTED_MODULE_1__.THREE.DirectionalLight(0xffffff, 0.2);
+core.scene.add(directionalLight);
 
 })();
 
