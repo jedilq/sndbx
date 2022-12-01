@@ -4,7 +4,9 @@ import {
 	GLTFObject,
 	MovementObstacle,
 	MovementSurface,
+	RigidBodyComponent,
 	SingleUseGameSystem,
+	SphereObject,
 	THREE,
 } from 'elixr';
 
@@ -24,13 +26,15 @@ export class InlineSceneCreationSystem extends SingleUseGameSystem {
 
 		this._createWalls();
 
+		this._createCubes();
+
 		const snowman = new GLTFObject('assets/Snowman.glb', {
 			hasPhysics: true,
 			mass: 1,
 			type: BODY_TYPES.DYNAMIC,
 		});
 		this.core.addGameObject(snowman);
-		snowman.position.set(0, 1.2, -2);
+		snowman.position.set(0, 1.2, 0);
 		snowman.rotateZ(Math.PI / 4);
 		snowman.colliderVisible = true;
 	}
@@ -84,5 +88,49 @@ export class InlineSceneCreationSystem extends SingleUseGameSystem {
 		this.core.addGameObject(boxWall4);
 		boxWall4.position.set(-3, 1.5, 0);
 		boxWall4.rotateY(Math.PI / 2);
+	}
+
+	_createCubes() {
+		const randomObjects = [];
+
+		for (let i = 0; i < 50; i++) {
+			const cube = new CubeObject(
+				0.2 * Math.random() + 0.1,
+				0.2 * Math.random() + 0.1,
+				0.2 * Math.random() + 0.1,
+				{ color: Math.random() * 0xffffff },
+				{ mass: 1, type: BODY_TYPES.DYNAMIC },
+			);
+			this.core.addGameObject(cube);
+			randomObjects.push(cube);
+		}
+
+		for (let i = 0; i < 50; i++) {
+			const sphere = new SphereObject(
+				0.1 * Math.random() + 0.05,
+				{ color: Math.random() * 0xffffff },
+				{ mass: 1, type: BODY_TYPES.DYNAMIC },
+			);
+			this.core.addGameObject(sphere);
+			randomObjects.push(sphere);
+		}
+
+		randomObjects.forEach((object) => {
+			object.position.set(
+				Math.random() * 6 - 3,
+				Math.random() * 3,
+				Math.random() * 6 - 3,
+			);
+			const rigidBodyComponent = object.getMutableComponent(RigidBodyComponent);
+			rigidBodyComponent.angularDamping = 0;
+			rigidBodyComponent.linearDamping = 0;
+			rigidBodyComponent.initVelocity = new THREE.Vector3(
+				Math.random() - 0.5,
+				Math.random() - 0.5,
+				Math.random() - 0.5,
+			)
+				.normalize()
+				.multiplyScalar(Math.random() * 5);
+		});
 	}
 }

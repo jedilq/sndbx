@@ -8,12 +8,10 @@ import {
 	THREE,
 } from 'elixr';
 
-// import { RGBELoader } from 'three/examples/jsm/loaders/RGBELoader.js';
+import { RGBELoader } from 'three/examples/jsm/loaders/RGBELoader.js';
 
-export class SceneCreationSystem extends SingleUseGameSystem {
+export class VRSceneCreationSystem extends SingleUseGameSystem {
 	update() {
-		// this.core.scene.background = new THREE.Color(0x505050);
-
 		this._createLighting();
 
 		this._createRoom1();
@@ -32,11 +30,11 @@ export class SceneCreationSystem extends SingleUseGameSystem {
 	}
 
 	_createLighting() {
-		// new RGBELoader().load('assets/studio_small_09_1k.hdr', (texture) => {
-		// 	texture.mapping = THREE.EquirectangularReflectionMapping;
-		// 	this.core.scene.background = texture;
-		// 	this.core.scene.environment = texture;
-		// });
+		new RGBELoader().load('assets/studio_small_09_1k.hdr', (texture) => {
+			texture.mapping = THREE.EquirectangularReflectionMapping;
+			this.core.scene.background = texture;
+			this.core.scene.environment = texture;
+		});
 		const ambientLight = new THREE.AmbientLight(0xffffff, 0.2);
 		this.core.scene.add(ambientLight);
 		const directionalLight = new THREE.DirectionalLight(0xffffff, 0.2);
@@ -63,7 +61,6 @@ export class SceneCreationSystem extends SingleUseGameSystem {
 		);
 		this.core.addGameObject(boxCeiling);
 		boxCeiling.position.set(0, 3, 0);
-		boxCeiling.visible = false;
 
 		const boxWall = new CubeObject(
 			6,
@@ -75,7 +72,6 @@ export class SceneCreationSystem extends SingleUseGameSystem {
 		this.core.addGameObject(boxWall);
 		boxWall.position.set(0, 1.5, 3);
 		boxWall.addComponent(MovementObstacle);
-		boxWall.visible = false;
 
 		const boxWall3 = boxWall.clone(true);
 		this.core.addGameObject(boxWall3);
@@ -97,7 +93,6 @@ export class SceneCreationSystem extends SingleUseGameSystem {
 		this.core.addGameObject(boxWall5);
 		boxWall5.position.set(2, 1.5, -3);
 		boxWall5.addComponent(MovementObstacle);
-		boxWall5.visible = false;
 
 		const boxWall6 = boxWall5.clone(true);
 		this.core.addGameObject(boxWall6);

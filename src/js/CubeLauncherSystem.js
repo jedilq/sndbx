@@ -1,5 +1,6 @@
 import {
 	BUTTONS,
+	GameObject,
 	Physics,
 	RigidBodyComponent,
 	THREE,
@@ -14,7 +15,9 @@ export class CubeLauncherSystem extends XRGameSystem {
 					new THREE.BoxGeometry(0.2, 0.2, 0.2),
 					new THREE.MeshStandardMaterial({ color: Math.random() * 0xffffff }),
 				);
-				const cubeObject = this.core.createGameObject(cubeMesh);
+				const cubeObject = new GameObject();
+				cubeObject.add(cubeMesh);
+				this.core.addGameObject(cubeObject);
 				controller.targetRaySpace.getWorldPosition(cubeObject.position);
 				controller.targetRaySpace.getWorldQuaternion(cubeObject.quaternion);
 				cubeObject.addComponent(RigidBodyComponent, {

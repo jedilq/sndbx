@@ -2,6 +2,13 @@ import { BODY_TYPES, CubeObject, THREE, XRGameSystem } from 'elixr';
 
 export class ARSceneCreationSystem extends XRGameSystem {
 	update() {
+		if (!this.lightingCreated) {
+			const ambientLight = new THREE.AmbientLight(0xffffff, 0.2);
+			this.core.scene.add(ambientLight);
+			const directionalLight = new THREE.DirectionalLight(0xffffff, 0.2);
+			this.core.scene.add(directionalLight);
+			this.lightingCreated = true;
+		}
 		const frame = this.core.renderer.xr.getFrame();
 		const referenceSpace = this.core.renderer.xr.getReferenceSpace();
 		if (!this.planesSetup && frame.detectedPlanes.size > 0) {

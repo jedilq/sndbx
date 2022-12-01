@@ -13113,7 +13113,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.cdnfonts.com/css/space-mono);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "#scene-container {\n\twidth: 100%;\n\theight: 70vh;\n}\n\n.nav-bar {\n\tfont-family: 'Space Mono', sans-serif;\n\tposition: fixed;\n\ttop: 10px;\n\tleft: 10px;\n\tbackground-color: #333333;\n\twidth: calc(100vw - 20px);\n\theight: 50px;\n\tborder-radius: 25px;\n\topacity: 0.8;\n\ttransition: opacity 0.7s;\n}\n\n.nav-bar:hover {\n\topacity: 1;\n}\n\n.app-name {\n\tposition: absolute;\n\tfont-weight: lighter !important;\n\ttop: 0;\n\tleft: 60px;\n\tfont-size: 32px;\n\tcolor: #ffffff;\n\tletter-spacing: 0.6rem;\n}\n\n.nav-links {\n\tposition: absolute;\n\ttop: 12px;\n\tright: 5px;\n}\n\n.nav-links a {\n\tcolor: #ffffff;\n\tfont-size: 18px;\n\tletter-spacing: 0.15rem;\n\ttext-decoration: none;\n\tpadding-right: 15px;\n}\n\n.nav-links a:hover {\n\ttext-decoration: underline;\n}\n\n.icon-outer {\n\tposition: absolute;\n\ttop: 5px;\n\tleft: 5px;\n\twidth: 40px;\n\theight: 40px;\n\tborder: 5px solid #8f00ff;\n\tborder-radius: 50% 0 50% 50%;\n\ttransition: transform 0.7s ease-in-out;\n}\n\n.nav-bar:hover .icon-outer {\n\ttransform: rotate(45deg);\n}\n\n.icon-inner {\n\tposition: absolute;\n\ttop: 7px;\n\tleft: 11px;\n\twidth: 8px;\n\theight: 16px;\n\tborder-radius: 4px;\n\tbackground-color: #777777;\n}\n\n.main-box {\n\tposition: fixed;\n\twidth: 25rem;\n\theight: 25rem;\n\ttop: calc((100vh - 25rem) / 2);\n\tleft: calc((100vw - 25rem) / 2);\n}\n\n.intro-box {\n\tposition: absolute;\n\ttop: 0;\n\tleft: 0;\n\twidth: 25rem;\n\theight: calc(22rem - 5px);\n\tbackground-color: #333333;\n\tborder-radius: 25px 25px 0px 25px;\n\topacity: 1;\n\tcolor: white;\n}\n\n#ui-panel {\n\tposition: fixed;\n\tbottom: 0;\n\t/* left: 20px;\n\twidth: calc(100vw - 40px); */\n\tborder-radius: 0;\n\tcolor: white;\n\tbackground-color: #333333;\n\topacity: 0.9;\n}\n\n.action-button {\n\tcolor: #a7a7a7;\n\tborder-color: #a7a7a7;\n}\n\n.action-button:hover {\n\tcolor: #ffffff;\n\tborder-color: #ffffff;\n}\n", "",{"version":3,"sources":["webpack://./src/styles/index.css"],"names":[],"mappings":"AAEA;CACC,WAAW;CACX,YAAY;AACb;;AAEA;CACC,qCAAqC;CACrC,eAAe;CACf,SAAS;CACT,UAAU;CACV,yBAAyB;CACzB,yBAAyB;CACzB,YAAY;CACZ,mBAAmB;CACnB,YAAY;CACZ,wBAAwB;AACzB;;AAEA;CACC,UAAU;AACX;;AAEA;CACC,kBAAkB;CAClB,+BAA+B;CAC/B,MAAM;CACN,UAAU;CACV,eAAe;CACf,cAAc;CACd,sBAAsB;AACvB;;AAEA;CACC,kBAAkB;CAClB,SAAS;CACT,UAAU;AACX;;AAEA;CACC,cAAc;CACd,eAAe;CACf,uBAAuB;CACvB,qBAAqB;CACrB,mBAAmB;AACpB;;AAEA;CACC,0BAA0B;AAC3B;;AAEA;CACC,kBAAkB;CAClB,QAAQ;CACR,SAAS;CACT,WAAW;CACX,YAAY;CACZ,yBAAyB;CACzB,4BAA4B;CAC5B,sCAAsC;AACvC;;AAEA;CACC,wBAAwB;AACzB;;AAEA;CACC,kBAAkB;CAClB,QAAQ;CACR,UAAU;CACV,UAAU;CACV,YAAY;CACZ,kBAAkB;CAClB,yBAAyB;AAC1B;;AAEA;CACC,eAAe;CACf,YAAY;CACZ,aAAa;CACb,8BAA8B;CAC9B,+BAA+B;AAChC;;AAEA;CACC,kBAAkB;CAClB,MAAM;CACN,OAAO;CACP,YAAY;CACZ,yBAAyB;CACzB,yBAAyB;CACzB,iCAAiC;CACjC,UAAU;CACV,YAAY;AACb;;AAEA;CACC,eAAe;CACf,SAAS;CACT;6BAC4B;CAC5B,gBAAgB;CAChB,YAAY;CACZ,yBAAyB;CACzB,YAAY;AACb;;AAEA;CACC,cAAc;CACd,qBAAqB;AACtB;;AAEA;CACC,cAAc;CACd,qBAAqB;AACtB","sourcesContent":["@import url('https://fonts.cdnfonts.com/css/space-mono');\n\n#scene-container {\n\twidth: 100%;\n\theight: 70vh;\n}\n\n.nav-bar {\n\tfont-family: 'Space Mono', sans-serif;\n\tposition: fixed;\n\ttop: 10px;\n\tleft: 10px;\n\tbackground-color: #333333;\n\twidth: calc(100vw - 20px);\n\theight: 50px;\n\tborder-radius: 25px;\n\topacity: 0.8;\n\ttransition: opacity 0.7s;\n}\n\n.nav-bar:hover {\n\topacity: 1;\n}\n\n.app-name {\n\tposition: absolute;\n\tfont-weight: lighter !important;\n\ttop: 0;\n\tleft: 60px;\n\tfont-size: 32px;\n\tcolor: #ffffff;\n\tletter-spacing: 0.6rem;\n}\n\n.nav-links {\n\tposition: absolute;\n\ttop: 12px;\n\tright: 5px;\n}\n\n.nav-links a {\n\tcolor: #ffffff;\n\tfont-size: 18px;\n\tletter-spacing: 0.15rem;\n\ttext-decoration: none;\n\tpadding-right: 15px;\n}\n\n.nav-links a:hover {\n\ttext-decoration: underline;\n}\n\n.icon-outer {\n\tposition: absolute;\n\ttop: 5px;\n\tleft: 5px;\n\twidth: 40px;\n\theight: 40px;\n\tborder: 5px solid #8f00ff;\n\tborder-radius: 50% 0 50% 50%;\n\ttransition: transform 0.7s ease-in-out;\n}\n\n.nav-bar:hover .icon-outer {\n\ttransform: rotate(45deg);\n}\n\n.icon-inner {\n\tposition: absolute;\n\ttop: 7px;\n\tleft: 11px;\n\twidth: 8px;\n\theight: 16px;\n\tborder-radius: 4px;\n\tbackground-color: #777777;\n}\n\n.main-box {\n\tposition: fixed;\n\twidth: 25rem;\n\theight: 25rem;\n\ttop: calc((100vh - 25rem) / 2);\n\tleft: calc((100vw - 25rem) / 2);\n}\n\n.intro-box {\n\tposition: absolute;\n\ttop: 0;\n\tleft: 0;\n\twidth: 25rem;\n\theight: calc(22rem - 5px);\n\tbackground-color: #333333;\n\tborder-radius: 25px 25px 0px 25px;\n\topacity: 1;\n\tcolor: white;\n}\n\n#ui-panel {\n\tposition: fixed;\n\tbottom: 0;\n\t/* left: 20px;\n\twidth: calc(100vw - 40px); */\n\tborder-radius: 0;\n\tcolor: white;\n\tbackground-color: #333333;\n\topacity: 0.9;\n}\n\n.action-button {\n\tcolor: #a7a7a7;\n\tborder-color: #a7a7a7;\n}\n\n.action-button:hover {\n\tcolor: #ffffff;\n\tborder-color: #ffffff;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "#scene-container {\n\twidth: 100%;\n\theight: 70vh;\n}\n\n.nav-bar {\n\tfont-family: 'Space Mono', sans-serif;\n\tposition: fixed;\n\ttop: 10px;\n\tleft: 10px;\n\tbackground-color: #333333;\n\twidth: calc(100vw - 20px);\n\theight: 50px;\n\tborder-radius: 25px;\n\topacity: 0.8;\n\ttransition: opacity 0.7s;\n}\n\n.nav-bar:hover {\n\topacity: 1;\n}\n\n.app-name {\n\tposition: absolute;\n\tfont-weight: lighter !important;\n\ttop: 0;\n\tleft: 60px;\n\tfont-size: 32px;\n\tcolor: #ffffff;\n\tletter-spacing: 0.6rem;\n}\n\n.nav-links {\n\tposition: absolute;\n\ttop: 12px;\n\tright: 5px;\n}\n\n.nav-links a {\n\tcolor: #ffffff;\n\tfont-size: 18px;\n\tletter-spacing: 0.15rem;\n\ttext-decoration: none;\n\tpadding-right: 15px;\n}\n\n.nav-links a:hover {\n\ttext-decoration: underline;\n}\n\n.icon-outer {\n\tposition: absolute;\n\ttop: 5px;\n\tleft: 5px;\n\twidth: 40px;\n\theight: 40px;\n\tborder: 5px solid #8f00ff;\n\tborder-radius: 50% 0 50% 50%;\n\ttransition: transform 0.7s ease-in-out;\n}\n\n.nav-bar:hover .icon-outer {\n\ttransform: rotate(45deg);\n}\n\n.icon-inner {\n\tposition: absolute;\n\ttop: 7px;\n\tleft: 11px;\n\twidth: 8px;\n\theight: 16px;\n\tborder-radius: 4px;\n\tbackground-color: #777777;\n}\n\n.main-box {\n\tposition: fixed;\n\twidth: 25rem;\n\theight: 25rem;\n\ttop: calc((100vh - 25rem) / 2);\n\tleft: calc((100vw - 25rem) / 2);\n}\n\n.intro-box {\n\tposition: absolute;\n\ttop: 0;\n\tleft: 0;\n\twidth: 25rem;\n\theight: calc(22rem - 5px);\n\tbackground-color: #333333;\n\tborder-radius: 25px 25px 0px 25px;\n\topacity: 1;\n\tcolor: white;\n}\n\n#ui-panel {\n\tposition: fixed;\n\tbottom: 0;\n\t/* left: 20px;\n\twidth: calc(100vw - 40px); */\n\tborder-radius: 0;\n\tcolor: white;\n\tbackground-color: #333333;\n\topacity: 0.9;\n\twidth: 100vw;\n\ttransition: opacity 0.7s;\n}\n\n#ui-panel:hover {\n\topacity: 1;\n}\n\n.action-button {\n\tcolor: #a7a7a7;\n\tborder-color: #a7a7a7;\n\tborder-radius: 0;\n\tmargin-right: 5px;\n}\n\n.action-button:hover {\n\tcolor: #ffffff;\n\tborder-color: #8f00ff;\n\tbackground-color: #8f00ff;\n}\n", "",{"version":3,"sources":["webpack://./src/styles/index.css"],"names":[],"mappings":"AAEA;CACC,WAAW;CACX,YAAY;AACb;;AAEA;CACC,qCAAqC;CACrC,eAAe;CACf,SAAS;CACT,UAAU;CACV,yBAAyB;CACzB,yBAAyB;CACzB,YAAY;CACZ,mBAAmB;CACnB,YAAY;CACZ,wBAAwB;AACzB;;AAEA;CACC,UAAU;AACX;;AAEA;CACC,kBAAkB;CAClB,+BAA+B;CAC/B,MAAM;CACN,UAAU;CACV,eAAe;CACf,cAAc;CACd,sBAAsB;AACvB;;AAEA;CACC,kBAAkB;CAClB,SAAS;CACT,UAAU;AACX;;AAEA;CACC,cAAc;CACd,eAAe;CACf,uBAAuB;CACvB,qBAAqB;CACrB,mBAAmB;AACpB;;AAEA;CACC,0BAA0B;AAC3B;;AAEA;CACC,kBAAkB;CAClB,QAAQ;CACR,SAAS;CACT,WAAW;CACX,YAAY;CACZ,yBAAyB;CACzB,4BAA4B;CAC5B,sCAAsC;AACvC;;AAEA;CACC,wBAAwB;AACzB;;AAEA;CACC,kBAAkB;CAClB,QAAQ;CACR,UAAU;CACV,UAAU;CACV,YAAY;CACZ,kBAAkB;CAClB,yBAAyB;AAC1B;;AAEA;CACC,eAAe;CACf,YAAY;CACZ,aAAa;CACb,8BAA8B;CAC9B,+BAA+B;AAChC;;AAEA;CACC,kBAAkB;CAClB,MAAM;CACN,OAAO;CACP,YAAY;CACZ,yBAAyB;CACzB,yBAAyB;CACzB,iCAAiC;CACjC,UAAU;CACV,YAAY;AACb;;AAEA;CACC,eAAe;CACf,SAAS;CACT;6BAC4B;CAC5B,gBAAgB;CAChB,YAAY;CACZ,yBAAyB;CACzB,YAAY;CACZ,YAAY;CACZ,wBAAwB;AACzB;;AAEA;CACC,UAAU;AACX;;AAEA;CACC,cAAc;CACd,qBAAqB;CACrB,gBAAgB;CAChB,iBAAiB;AAClB;;AAEA;CACC,cAAc;CACd,qBAAqB;CACrB,yBAAyB;AAC1B","sourcesContent":["@import url('https://fonts.cdnfonts.com/css/space-mono');\n\n#scene-container {\n\twidth: 100%;\n\theight: 70vh;\n}\n\n.nav-bar {\n\tfont-family: 'Space Mono', sans-serif;\n\tposition: fixed;\n\ttop: 10px;\n\tleft: 10px;\n\tbackground-color: #333333;\n\twidth: calc(100vw - 20px);\n\theight: 50px;\n\tborder-radius: 25px;\n\topacity: 0.8;\n\ttransition: opacity 0.7s;\n}\n\n.nav-bar:hover {\n\topacity: 1;\n}\n\n.app-name {\n\tposition: absolute;\n\tfont-weight: lighter !important;\n\ttop: 0;\n\tleft: 60px;\n\tfont-size: 32px;\n\tcolor: #ffffff;\n\tletter-spacing: 0.6rem;\n}\n\n.nav-links {\n\tposition: absolute;\n\ttop: 12px;\n\tright: 5px;\n}\n\n.nav-links a {\n\tcolor: #ffffff;\n\tfont-size: 18px;\n\tletter-spacing: 0.15rem;\n\ttext-decoration: none;\n\tpadding-right: 15px;\n}\n\n.nav-links a:hover {\n\ttext-decoration: underline;\n}\n\n.icon-outer {\n\tposition: absolute;\n\ttop: 5px;\n\tleft: 5px;\n\twidth: 40px;\n\theight: 40px;\n\tborder: 5px solid #8f00ff;\n\tborder-radius: 50% 0 50% 50%;\n\ttransition: transform 0.7s ease-in-out;\n}\n\n.nav-bar:hover .icon-outer {\n\ttransform: rotate(45deg);\n}\n\n.icon-inner {\n\tposition: absolute;\n\ttop: 7px;\n\tleft: 11px;\n\twidth: 8px;\n\theight: 16px;\n\tborder-radius: 4px;\n\tbackground-color: #777777;\n}\n\n.main-box {\n\tposition: fixed;\n\twidth: 25rem;\n\theight: 25rem;\n\ttop: calc((100vh - 25rem) / 2);\n\tleft: calc((100vw - 25rem) / 2);\n}\n\n.intro-box {\n\tposition: absolute;\n\ttop: 0;\n\tleft: 0;\n\twidth: 25rem;\n\theight: calc(22rem - 5px);\n\tbackground-color: #333333;\n\tborder-radius: 25px 25px 0px 25px;\n\topacity: 1;\n\tcolor: white;\n}\n\n#ui-panel {\n\tposition: fixed;\n\tbottom: 0;\n\t/* left: 20px;\n\twidth: calc(100vw - 40px); */\n\tborder-radius: 0;\n\tcolor: white;\n\tbackground-color: #333333;\n\topacity: 0.9;\n\twidth: 100vw;\n\ttransition: opacity 0.7s;\n}\n\n#ui-panel:hover {\n\topacity: 1;\n}\n\n.action-button {\n\tcolor: #a7a7a7;\n\tborder-color: #a7a7a7;\n\tborder-radius: 0;\n\tmargin-right: 5px;\n}\n\n.action-button:hover {\n\tcolor: #ffffff;\n\tborder-color: #8f00ff;\n\tbackground-color: #8f00ff;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -15463,16 +15463,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Core": () => (/* binding */ Core)
 /* harmony export */ });
-/* harmony import */ var ecsy__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ecsy */ "./node_modules/ecsy/src/index.js");
-/* harmony import */ var _GameObject__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./GameObject */ "./node_modules/elixr/dist/GameObject.js");
-/* harmony import */ var _physics_PhysicsComponents__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./physics/PhysicsComponents */ "./node_modules/elixr/dist/physics/PhysicsComponents.js");
-/* harmony import */ var _objects_GLTFObject__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./objects/GLTFObject */ "./node_modules/elixr/dist/objects/GLTFObject.js");
-/* harmony import */ var gamepad_wrapper__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! gamepad-wrapper */ "./node_modules/gamepad-wrapper/lib/index.js");
-/* harmony import */ var _physics_RigidBodyPhysicsSystem__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./physics/RigidBodyPhysicsSystem */ "./node_modules/elixr/dist/physics/RigidBodyPhysicsSystem.js");
-/* harmony import */ var _enums__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./enums */ "./node_modules/elixr/dist/enums.js");
-/* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./index */ "./node_modules/elixr/dist/index.js");
-/* harmony import */ var three_examples_jsm_webxr_XRControllerModelFactory_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! three/examples/jsm/webxr/XRControllerModelFactory.js */ "./node_modules/three/examples/jsm/webxr/XRControllerModelFactory.js");
-
+/* harmony import */ var _GameObject__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./GameObject */ "./node_modules/elixr/dist/GameObject.js");
+/* harmony import */ var _physics_RigidBodyPhysicsSystem__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./physics/RigidBodyPhysicsSystem */ "./node_modules/elixr/dist/physics/RigidBodyPhysicsSystem.js");
+/* harmony import */ var _objects_GLTFObject__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./objects/GLTFObject */ "./node_modules/elixr/dist/objects/GLTFObject.js");
+/* harmony import */ var gamepad_wrapper__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! gamepad-wrapper */ "./node_modules/gamepad-wrapper/lib/index.js");
+/* harmony import */ var _enums__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./enums */ "./node_modules/elixr/dist/enums.js");
+/* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./index */ "./node_modules/elixr/dist/index.js");
+/* harmony import */ var _World__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./World */ "./node_modules/elixr/dist/World.js");
+/* harmony import */ var three_examples_jsm_webxr_XRControllerModelFactory_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! three/examples/jsm/webxr/XRControllerModelFactory.js */ "./node_modules/three/examples/jsm/webxr/XRControllerModelFactory.js");
 
 
 
@@ -15482,8 +15480,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 class Core {
-    _ecsyWorld;
-    _tempVec3 = new _index__WEBPACK_IMPORTED_MODULE_7__.THREE.Vector3();
+    _worlds = {};
+    _tempVec3 = new _index__WEBPACK_IMPORTED_MODULE_5__.THREE.Vector3();
+    activeWorld;
     /**
      * Main scene for the experience which allows you to set up what and where is
      * to be rendered by three.js. This is where you place game objects, lights
@@ -15520,55 +15519,50 @@ class Core {
      * Empty game object used for registering unique components, like
      * {@link SystemConfig} components.
      */
-    game;
+    get game() {
+        return this.activeWorld.game;
+    }
     /** Enum value indicating the current XRSessionMode */
     get sessionMode() {
         if (!this.renderer.xr.isPresenting) {
-            return _enums__WEBPACK_IMPORTED_MODULE_6__.SESSION_MODE.INLINE;
+            return _enums__WEBPACK_IMPORTED_MODULE_4__.SESSION_MODE.INLINE;
         }
         else {
             const session = this.renderer.xr.getSession();
             if (session.environmentBlendMode === 'opaque') {
-                return _enums__WEBPACK_IMPORTED_MODULE_6__.SESSION_MODE.IMMERSIVE_VR;
+                return _enums__WEBPACK_IMPORTED_MODULE_4__.SESSION_MODE.IMMERSIVE_VR;
             }
             else {
-                return _enums__WEBPACK_IMPORTED_MODULE_6__.SESSION_MODE.IMMERSIVE_AR;
+                return _enums__WEBPACK_IMPORTED_MODULE_4__.SESSION_MODE.IMMERSIVE_AR;
             }
         }
     }
     constructor(sceneContainer, ecsyOptions = {}) {
-        this._ecsyWorld = new ecsy__WEBPACK_IMPORTED_MODULE_0__.World(ecsyOptions);
-        this._ecsyWorld.core = this;
-        this._createThreeScene();
-        sceneContainer.appendChild(this.renderer.domElement);
-        this.playerSpace = new _index__WEBPACK_IMPORTED_MODULE_7__.THREE.Group();
-        this.playerSpace.add(this.inlineCamera);
-        this.playerHead = new _index__WEBPACK_IMPORTED_MODULE_7__.THREE.Group();
-        this.playerSpace.add(this.playerHead);
-        this.scene.add(this.playerSpace);
-        this.controllers = {};
-        this.game = new _GameObject__WEBPACK_IMPORTED_MODULE_1__.GameObject();
-        this.addGameObject(this.game);
-        this.registerGameComponent(_physics_PhysicsComponents__WEBPACK_IMPORTED_MODULE_2__.PhysicsComponent);
-        this.registerGameComponent(_physics_PhysicsComponents__WEBPACK_IMPORTED_MODULE_2__.RigidBodyComponent);
-        this.game.addComponent(_physics_PhysicsComponents__WEBPACK_IMPORTED_MODULE_2__.PhysicsComponent, {
-            gravity: new _index__WEBPACK_IMPORTED_MODULE_7__.THREE.Vector3(0, -9.8, 0),
-        });
-        _objects_GLTFObject__WEBPACK_IMPORTED_MODULE_3__.GLTFModelLoader.init(this.renderer);
+        this._setupThreeGlobals();
+        this._setupPlayerSpace();
         this._setupControllers();
+        this.createWorld('default', ecsyOptions);
+        this.switchToWorld('default');
+        _objects_GLTFObject__WEBPACK_IMPORTED_MODULE_2__.GLTFModelLoader.init(this.renderer);
+        sceneContainer.appendChild(this.renderer.domElement);
         this._setupRenderLoop();
     }
-    _createThreeScene() {
-        this.scene = new _index__WEBPACK_IMPORTED_MODULE_7__.THREE.Scene();
-        this.inlineCamera = new _index__WEBPACK_IMPORTED_MODULE_7__.THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 100);
-        this.renderer = new _index__WEBPACK_IMPORTED_MODULE_7__.THREE.WebGLRenderer({
+    _setupPlayerSpace() {
+        this.playerSpace = new _index__WEBPACK_IMPORTED_MODULE_5__.THREE.Group();
+        this.playerSpace.add(this.inlineCamera);
+        this.playerHead = new _index__WEBPACK_IMPORTED_MODULE_5__.THREE.Group();
+        this.playerSpace.add(this.playerHead);
+    }
+    _setupThreeGlobals() {
+        this.inlineCamera = new _index__WEBPACK_IMPORTED_MODULE_5__.THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 100);
+        this.renderer = new _index__WEBPACK_IMPORTED_MODULE_5__.THREE.WebGLRenderer({
             antialias: true,
             alpha: true,
             multiviewStereo: true,
         });
         this.renderer.setPixelRatio(window.devicePixelRatio);
         this.renderer.setSize(window.innerWidth, window.innerHeight);
-        this.renderer.outputEncoding = _index__WEBPACK_IMPORTED_MODULE_7__.THREE.sRGBEncoding;
+        this.renderer.outputEncoding = _index__WEBPACK_IMPORTED_MODULE_5__.THREE.sRGBEncoding;
         this.renderer.xr.enabled = true;
         this.inlineCamera.position.set(0, 1.7, 0);
         const onWindowResize = () => {
@@ -15579,7 +15573,7 @@ class Core {
         window.addEventListener('resize', onWindowResize, false);
     }
     _setupControllers() {
-        const controllerModelFactory = new three_examples_jsm_webxr_XRControllerModelFactory_js__WEBPACK_IMPORTED_MODULE_8__.XRControllerModelFactory();
+        const controllerModelFactory = new three_examples_jsm_webxr_XRControllerModelFactory_js__WEBPACK_IMPORTED_MODULE_7__.XRControllerModelFactory();
         const webxrManager = this.renderer.xr;
         this.controllers = {};
         for (let i = 0; i < 2; i++) {
@@ -15597,7 +15591,7 @@ class Core {
                 this.controllers[handedness] = {
                     targetRaySpace,
                     gripSpace,
-                    gamepad: new gamepad_wrapper__WEBPACK_IMPORTED_MODULE_4__.GamepadWrapper(event.data.gamepad),
+                    gamepad: new gamepad_wrapper__WEBPACK_IMPORTED_MODULE_3__.GamepadWrapper(event.data.gamepad),
                     model: controllerModel,
                 };
             });
@@ -15612,12 +15606,12 @@ class Core {
         const frame = xrManager.getFrame();
         const pose = frame?.getViewerPose(xrManager.getReferenceSpace());
         if (pose) {
-            const headsetMatrix = new _index__WEBPACK_IMPORTED_MODULE_7__.THREE.Matrix4().fromArray(pose.views[0].transform.matrix);
+            const headsetMatrix = new _index__WEBPACK_IMPORTED_MODULE_5__.THREE.Matrix4().fromArray(pose.views[0].transform.matrix);
             headsetMatrix.decompose(this.playerHead.position, this.playerHead.quaternion, this._tempVec3);
         }
     }
     _setupRenderLoop() {
-        const clock = new _index__WEBPACK_IMPORTED_MODULE_7__.THREE.Clock();
+        const clock = new _index__WEBPACK_IMPORTED_MODULE_5__.THREE.Clock();
         const render = () => {
             const delta = clock.getDelta();
             const elapsedTime = clock.elapsedTime;
@@ -15625,31 +15619,54 @@ class Core {
                 controller.gamepad.update();
             });
             this._updatePlayerHead();
-            this._ecsyWorld.execute(delta, elapsedTime);
+            this.activeWorld.execute(delta, elapsedTime);
             this.renderer.render(this.scene, this.inlineCamera);
         };
         this.renderer.setAnimationLoop(render);
     }
-    /** Shortcut for getting the {@link PhysicsComponent} */
+    /** Shortcut for getting the {@link PhysicsConfig} */
     get physics() {
-        return this.game.getMutableComponent(_physics_PhysicsComponents__WEBPACK_IMPORTED_MODULE_2__.PhysicsComponent);
+        return this.getGameSystemConfig(_physics_RigidBodyPhysicsSystem__WEBPACK_IMPORTED_MODULE_1__.RigidBodyPhysicsSystem);
     }
     /** Boolean value for whether player is in immersive mode. */
     isImmersive() {
         return this.renderer.xr.isPresenting;
     }
+    /**
+     * Create a new world with a separate scene, its own collection of GameObjects
+     * and physics world
+     */
+    createWorld(worldKey, ecsyOptions = {}) {
+        const world = new _World__WEBPACK_IMPORTED_MODULE_6__.World(ecsyOptions, this);
+        this._worlds[worldKey] = world;
+        return world;
+    }
+    /**
+     * Switch to the specified world, playerSpace will be transported to the new
+     * world, developer is responsible for removing all GameObjects tied to the
+     * previous world that are parented under playerSpace
+     */
+    switchToWorld(worldKey) {
+        const world = this._worlds[worldKey];
+        if (!world) {
+            throw new Error(`World ${worldKey} does not exist`);
+        }
+        this.activeWorld = world;
+        this.scene = world.threeScene;
+        this.scene.add(this.playerSpace);
+    }
     /** Register a {@link GameSystem}. */
     registerGameSystem(GameSystem, attributes = {}) {
         if (GameSystem.systemConfig) {
-            this._ecsyWorld.registerComponent(GameSystem.systemConfig);
+            this.activeWorld.registerComponent(GameSystem.systemConfig);
             this.game.addComponent(GameSystem.systemConfig);
             attributes.config = this.game.getMutableComponent(GameSystem.systemConfig);
         }
-        this._ecsyWorld.registerSystem(GameSystem, attributes);
+        this.activeWorld.registerSystem(GameSystem, attributes);
     }
     /** Get a {@link GameSystem} registered in this world. */
     getGameSystem(GameSystem) {
-        return this._ecsyWorld.getSystem(GameSystem);
+        return this.activeWorld.getSystem(GameSystem);
     }
     /**
      * Get the mutable {@link SystemConfig} component associated with the specified
@@ -15660,22 +15677,22 @@ class Core {
     }
     /** Get a list of {@link GameSystem} registered in this world. */
     getGameSystems() {
-        return this._ecsyWorld.getSystems();
+        return this.activeWorld.getSystems();
     }
     /** Register a {@link GameComponent} */
     registerGameComponent(GameComponent) {
-        this._ecsyWorld.registerComponent(GameComponent);
+        this.activeWorld.registerComponent(GameComponent);
     }
     /**
      * Boolean value indicating whether a {@link GameComponent} has been registered
      * to Core or not.
      */
     hasRegisteredGameComponent(GameComponent) {
-        return this._ecsyWorld.hasRegisteredComponent(GameComponent);
+        return this.activeWorld.hasRegisteredComponent(GameComponent);
     }
     /** Unregister a {@link GameSystem}. */
     unregisterGameSystem(GameSystem) {
-        this._ecsyWorld.unregisterSystem(GameSystem);
+        this.activeWorld.unregisterSystem(GameSystem);
     }
     /**
      * Create an empty {@link GameObject}
@@ -15683,8 +15700,8 @@ class Core {
      * @deprecated Use {@link Core#addGameObject} instead.
      */
     createEmptyGameObject() {
-        const ecsyEntity = this._ecsyWorld.createEntity();
-        const gameObject = new _GameObject__WEBPACK_IMPORTED_MODULE_1__.GameObject();
+        const ecsyEntity = this.activeWorld.createEntity();
+        const gameObject = new _GameObject__WEBPACK_IMPORTED_MODULE_0__.GameObject();
         gameObject._init(ecsyEntity);
         return gameObject;
     }
@@ -15694,8 +15711,8 @@ class Core {
      * @deprecated Use {@link Core#addGameObject} instead.
      */
     createGameObject(object3D) {
-        const ecsyEntity = this._ecsyWorld.createEntity();
-        const gameObject = new _GameObject__WEBPACK_IMPORTED_MODULE_1__.GameObject();
+        const ecsyEntity = this.activeWorld.createEntity();
+        const gameObject = new _GameObject__WEBPACK_IMPORTED_MODULE_0__.GameObject();
         this.scene.add(gameObject);
         gameObject._init(ecsyEntity);
         if (object3D) {
@@ -15711,24 +15728,18 @@ class Core {
     /** Add a {@link GameObject} to the game world. */
     addGameObject(gameObject) {
         if (!gameObject.isInitialized) {
-            const ecsyEntity = this._ecsyWorld.createEntity();
+            const ecsyEntity = this.activeWorld.createEntity();
             this.scene.add(gameObject);
             gameObject._init(ecsyEntity);
         }
     }
     /** Resume execution of registered systems. */
     play() {
-        this._ecsyWorld.play();
+        this.activeWorld.play();
     }
     /** Pause execution of registered systems. */
     stop() {
-        this._ecsyWorld.stop();
-    }
-    /** Enable {@link RigidBodyPhysicsSystem}. */
-    enablePhysics() {
-        this._ecsyWorld.registerSystem(_physics_RigidBodyPhysicsSystem__WEBPACK_IMPORTED_MODULE_5__.RigidBodyPhysicsSystem, {
-            priority: Infinity,
-        });
+        this.activeWorld.stop();
     }
 }
 //# sourceMappingURL=Core.js.map
@@ -16045,6 +16056,49 @@ class SingleUseXRGameSystem extends GameSystem {
 
 /***/ }),
 
+/***/ "./node_modules/elixr/dist/World.js":
+/*!******************************************!*\
+  !*** ./node_modules/elixr/dist/World.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "World": () => (/* binding */ World)
+/* harmony export */ });
+/* harmony import */ var cannon_es__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! cannon-es */ "./node_modules/cannon-es/dist/cannon-es.js");
+/* harmony import */ var ecsy__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ecsy */ "./node_modules/ecsy/src/index.js");
+/* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index */ "./node_modules/elixr/dist/index.js");
+
+
+
+class World extends ecsy__WEBPACK_IMPORTED_MODULE_0__.World {
+    threeScene;
+    core;
+    game;
+    constructor(options = {}, core) {
+        super(options);
+        this.core = core;
+        this.game = new _index__WEBPACK_IMPORTED_MODULE_1__.GameObject();
+        this.game._init(this.createEntity());
+        this.threeScene = new _index__WEBPACK_IMPORTED_MODULE_1__.THREE.Scene();
+        this.registerComponent(_index__WEBPACK_IMPORTED_MODULE_1__.RigidBodyComponent);
+        this.registerComponent(_index__WEBPACK_IMPORTED_MODULE_1__.RigidBodyPhysicsSystem.systemConfig);
+        this.game.addComponent(_index__WEBPACK_IMPORTED_MODULE_1__.RigidBodyPhysicsSystem.systemConfig);
+        const physicsConfig = this.game.getMutableComponent(_index__WEBPACK_IMPORTED_MODULE_1__.RigidBodyPhysicsSystem.systemConfig);
+        this.registerSystem(_index__WEBPACK_IMPORTED_MODULE_1__.RigidBodyPhysicsSystem, {
+            priority: Infinity,
+            config: physicsConfig,
+        });
+        physicsConfig.gravity = new _index__WEBPACK_IMPORTED_MODULE_1__.THREE.Vector3(0, 0, 0);
+        physicsConfig.world = new cannon_es__WEBPACK_IMPORTED_MODULE_2__.World();
+        physicsConfig.world.broadphase = new cannon_es__WEBPACK_IMPORTED_MODULE_2__.NaiveBroadphase();
+    }
+}
+//# sourceMappingURL=World.js.map
+
+/***/ }),
+
 /***/ "./node_modules/elixr/dist/enums.js":
 /*!******************************************!*\
   !*** ./node_modules/elixr/dist/enums.js ***!
@@ -16219,91 +16273,94 @@ class CurveTubeGeometry extends three__WEBPACK_IMPORTED_MODULE_0__.BufferGeometr
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "ARButton": () => (/* reexport safe */ _utils_ARButton__WEBPACK_IMPORTED_MODULE_33__.ARButton),
-/* harmony export */   "AXES": () => (/* reexport safe */ gamepad_wrapper__WEBPACK_IMPORTED_MODULE_7__.AXES),
-/* harmony export */   "BODY_TYPES": () => (/* reexport safe */ _objects_PhysicsObject__WEBPACK_IMPORTED_MODULE_17__.BODY_TYPES),
-/* harmony export */   "BUTTONS": () => (/* reexport safe */ gamepad_wrapper__WEBPACK_IMPORTED_MODULE_7__.BUTTONS),
-/* harmony export */   "Box2": () => (/* reexport safe */ _math_Boxes__WEBPACK_IMPORTED_MODULE_13__.Box2),
-/* harmony export */   "Box3": () => (/* reexport safe */ _math_Boxes__WEBPACK_IMPORTED_MODULE_13__.Box3),
-/* harmony export */   "Color": () => (/* reexport safe */ _math_Color__WEBPACK_IMPORTED_MODULE_14__.Color),
-/* harmony export */   "ComplexObject": () => (/* reexport safe */ _objects_ComplexObject__WEBPACK_IMPORTED_MODULE_23__.ComplexObject),
-/* harmony export */   "ConeObject": () => (/* reexport safe */ _objects_ConeObject__WEBPACK_IMPORTED_MODULE_22__.ConeObject),
-/* harmony export */   "Core": () => (/* reexport safe */ _Core__WEBPACK_IMPORTED_MODULE_6__.Core),
-/* harmony export */   "CubeObject": () => (/* reexport safe */ _objects_CubeObject__WEBPACK_IMPORTED_MODULE_19__.CubeObject),
-/* harmony export */   "CurveTubeGeometry": () => (/* reexport safe */ _geometries_CurveTubeGeometry__WEBPACK_IMPORTED_MODULE_31__.CurveTubeGeometry),
-/* harmony export */   "CurvedRaycaster": () => (/* reexport safe */ _math_CurvedRaycaster__WEBPACK_IMPORTED_MODULE_16__.CurvedRaycaster),
-/* harmony export */   "CylinderObject": () => (/* reexport safe */ _objects_CylinderObject__WEBPACK_IMPORTED_MODULE_21__.CylinderObject),
-/* harmony export */   "Euler": () => (/* reexport safe */ _math_Euler__WEBPACK_IMPORTED_MODULE_15__.Euler),
-/* harmony export */   "GLTFModelLoader": () => (/* reexport safe */ _objects_GLTFObject__WEBPACK_IMPORTED_MODULE_24__.GLTFModelLoader),
-/* harmony export */   "GLTFObject": () => (/* reexport safe */ _objects_GLTFObject__WEBPACK_IMPORTED_MODULE_24__.GLTFObject),
-/* harmony export */   "GameComponent": () => (/* reexport safe */ _GameComponent__WEBPACK_IMPORTED_MODULE_4__.GameComponent),
-/* harmony export */   "GameObject": () => (/* reexport safe */ _GameObject__WEBPACK_IMPORTED_MODULE_3__.GameObject),
-/* harmony export */   "GameSystem": () => (/* reexport safe */ _GameSystem__WEBPACK_IMPORTED_MODULE_5__.GameSystem),
-/* harmony export */   "GamepadWrapper": () => (/* reexport safe */ gamepad_wrapper__WEBPACK_IMPORTED_MODULE_7__.GamepadWrapper),
-/* harmony export */   "HANDEDNESS": () => (/* reexport safe */ _enums__WEBPACK_IMPORTED_MODULE_30__.HANDEDNESS),
-/* harmony export */   "JOYSTICK_STATES": () => (/* reexport safe */ _enums__WEBPACK_IMPORTED_MODULE_30__.JOYSTICK_STATES),
-/* harmony export */   "Matrix3": () => (/* reexport safe */ _math_Matrices__WEBPACK_IMPORTED_MODULE_12__.Matrix3),
-/* harmony export */   "Matrix4": () => (/* reexport safe */ _math_Matrices__WEBPACK_IMPORTED_MODULE_12__.Matrix4),
-/* harmony export */   "MovementObstacle": () => (/* reexport safe */ _locomotion_MovementComponents__WEBPACK_IMPORTED_MODULE_25__.MovementObstacle),
-/* harmony export */   "MovementSurface": () => (/* reexport safe */ _locomotion_MovementComponents__WEBPACK_IMPORTED_MODULE_25__.MovementSurface),
+/* harmony export */   "ARButton": () => (/* reexport safe */ _utils_ARButton__WEBPACK_IMPORTED_MODULE_35__.ARButton),
+/* harmony export */   "AXES": () => (/* reexport safe */ gamepad_wrapper__WEBPACK_IMPORTED_MODULE_8__.AXES),
+/* harmony export */   "BODY_TYPES": () => (/* reexport safe */ _objects_PhysicsObject__WEBPACK_IMPORTED_MODULE_19__.BODY_TYPES),
+/* harmony export */   "BUTTONS": () => (/* reexport safe */ gamepad_wrapper__WEBPACK_IMPORTED_MODULE_8__.BUTTONS),
+/* harmony export */   "Box2": () => (/* reexport safe */ _math_Boxes__WEBPACK_IMPORTED_MODULE_15__.Box2),
+/* harmony export */   "Box3": () => (/* reexport safe */ _math_Boxes__WEBPACK_IMPORTED_MODULE_15__.Box3),
+/* harmony export */   "Color": () => (/* reexport safe */ _math_Color__WEBPACK_IMPORTED_MODULE_16__.Color),
+/* harmony export */   "ComplexObject": () => (/* reexport safe */ _objects_ComplexObject__WEBPACK_IMPORTED_MODULE_25__.ComplexObject),
+/* harmony export */   "ConeObject": () => (/* reexport safe */ _objects_ConeObject__WEBPACK_IMPORTED_MODULE_24__.ConeObject),
+/* harmony export */   "Core": () => (/* reexport safe */ _Core__WEBPACK_IMPORTED_MODULE_7__.Core),
+/* harmony export */   "CubeObject": () => (/* reexport safe */ _objects_CubeObject__WEBPACK_IMPORTED_MODULE_21__.CubeObject),
+/* harmony export */   "CurveTubeGeometry": () => (/* reexport safe */ _geometries_CurveTubeGeometry__WEBPACK_IMPORTED_MODULE_33__.CurveTubeGeometry),
+/* harmony export */   "CurvedRaycaster": () => (/* reexport safe */ _math_CurvedRaycaster__WEBPACK_IMPORTED_MODULE_18__.CurvedRaycaster),
+/* harmony export */   "CylinderObject": () => (/* reexport safe */ _objects_CylinderObject__WEBPACK_IMPORTED_MODULE_23__.CylinderObject),
+/* harmony export */   "Euler": () => (/* reexport safe */ _math_Euler__WEBPACK_IMPORTED_MODULE_17__.Euler),
+/* harmony export */   "GLTFModelLoader": () => (/* reexport safe */ _objects_GLTFObject__WEBPACK_IMPORTED_MODULE_26__.GLTFModelLoader),
+/* harmony export */   "GLTFObject": () => (/* reexport safe */ _objects_GLTFObject__WEBPACK_IMPORTED_MODULE_26__.GLTFObject),
+/* harmony export */   "GameComponent": () => (/* reexport safe */ _GameComponent__WEBPACK_IMPORTED_MODULE_5__.GameComponent),
+/* harmony export */   "GameObject": () => (/* reexport safe */ _GameObject__WEBPACK_IMPORTED_MODULE_4__.GameObject),
+/* harmony export */   "GameSystem": () => (/* reexport safe */ _GameSystem__WEBPACK_IMPORTED_MODULE_6__.GameSystem),
+/* harmony export */   "GamepadWrapper": () => (/* reexport safe */ gamepad_wrapper__WEBPACK_IMPORTED_MODULE_8__.GamepadWrapper),
+/* harmony export */   "HANDEDNESS": () => (/* reexport safe */ _enums__WEBPACK_IMPORTED_MODULE_32__.HANDEDNESS),
+/* harmony export */   "JOYSTICK_STATES": () => (/* reexport safe */ _enums__WEBPACK_IMPORTED_MODULE_32__.JOYSTICK_STATES),
+/* harmony export */   "Matrix3": () => (/* reexport safe */ _math_Matrices__WEBPACK_IMPORTED_MODULE_14__.Matrix3),
+/* harmony export */   "Matrix4": () => (/* reexport safe */ _math_Matrices__WEBPACK_IMPORTED_MODULE_14__.Matrix4),
+/* harmony export */   "MovementObstacle": () => (/* reexport safe */ _locomotion_MovementComponents__WEBPACK_IMPORTED_MODULE_27__.MovementObstacle),
+/* harmony export */   "MovementSurface": () => (/* reexport safe */ _locomotion_MovementComponents__WEBPACK_IMPORTED_MODULE_27__.MovementSurface),
 /* harmony export */   "Not": () => (/* reexport safe */ ecsy__WEBPACK_IMPORTED_MODULE_2__.Not),
-/* harmony export */   "Physics": () => (/* reexport module object */ cannon_es__WEBPACK_IMPORTED_MODULE_8__),
-/* harmony export */   "PhysicsComponent": () => (/* reexport safe */ _physics_PhysicsComponents__WEBPACK_IMPORTED_MODULE_9__.PhysicsComponent),
-/* harmony export */   "PhysicsObject": () => (/* reexport safe */ _objects_PhysicsObject__WEBPACK_IMPORTED_MODULE_17__.PhysicsObject),
-/* harmony export */   "PrimitiveObject": () => (/* reexport safe */ _objects_PrimitiveObject__WEBPACK_IMPORTED_MODULE_18__.PrimitiveObject),
-/* harmony export */   "Quaternion": () => (/* reexport safe */ _math_Quaternion__WEBPACK_IMPORTED_MODULE_11__.Quaternion),
-/* harmony export */   "RigidBodyComponent": () => (/* reexport safe */ _physics_PhysicsComponents__WEBPACK_IMPORTED_MODULE_9__.RigidBodyComponent),
-/* harmony export */   "SESSION_MODE": () => (/* reexport safe */ _enums__WEBPACK_IMPORTED_MODULE_30__.SESSION_MODE),
-/* harmony export */   "SingleUseGameSystem": () => (/* reexport safe */ _GameSystem__WEBPACK_IMPORTED_MODULE_5__.SingleUseGameSystem),
-/* harmony export */   "SingleUseXRGameSystem": () => (/* reexport safe */ _GameSystem__WEBPACK_IMPORTED_MODULE_5__.SingleUseXRGameSystem),
-/* harmony export */   "SphereObject": () => (/* reexport safe */ _objects_SphereObject__WEBPACK_IMPORTED_MODULE_20__.SphereObject),
-/* harmony export */   "SystemConfig": () => (/* reexport safe */ _GameComponent__WEBPACK_IMPORTED_MODULE_4__.SystemConfig),
+/* harmony export */   "Physics": () => (/* reexport module object */ cannon_es__WEBPACK_IMPORTED_MODULE_9__),
+/* harmony export */   "PhysicsObject": () => (/* reexport safe */ _objects_PhysicsObject__WEBPACK_IMPORTED_MODULE_19__.PhysicsObject),
+/* harmony export */   "PrimitiveObject": () => (/* reexport safe */ _objects_PrimitiveObject__WEBPACK_IMPORTED_MODULE_20__.PrimitiveObject),
+/* harmony export */   "Quaternion": () => (/* reexport safe */ _math_Quaternion__WEBPACK_IMPORTED_MODULE_13__.Quaternion),
+/* harmony export */   "RigidBodyComponent": () => (/* reexport safe */ _physics_PhysicsComponents__WEBPACK_IMPORTED_MODULE_10__.RigidBodyComponent),
+/* harmony export */   "RigidBodyPhysicsSystem": () => (/* reexport safe */ _physics_RigidBodyPhysicsSystem__WEBPACK_IMPORTED_MODULE_11__.RigidBodyPhysicsSystem),
+/* harmony export */   "SESSION_MODE": () => (/* reexport safe */ _enums__WEBPACK_IMPORTED_MODULE_32__.SESSION_MODE),
+/* harmony export */   "SingleUseGameSystem": () => (/* reexport safe */ _GameSystem__WEBPACK_IMPORTED_MODULE_6__.SingleUseGameSystem),
+/* harmony export */   "SingleUseXRGameSystem": () => (/* reexport safe */ _GameSystem__WEBPACK_IMPORTED_MODULE_6__.SingleUseXRGameSystem),
+/* harmony export */   "SphereObject": () => (/* reexport safe */ _objects_SphereObject__WEBPACK_IMPORTED_MODULE_22__.SphereObject),
+/* harmony export */   "SystemConfig": () => (/* reexport safe */ _GameComponent__WEBPACK_IMPORTED_MODULE_5__.SystemConfig),
 /* harmony export */   "THREE": () => (/* reexport module object */ three__WEBPACK_IMPORTED_MODULE_0__),
 /* harmony export */   "Types": () => (/* reexport safe */ ecsy__WEBPACK_IMPORTED_MODULE_2__.Types),
-/* harmony export */   "VRButton": () => (/* reexport safe */ _utils_VRButton__WEBPACK_IMPORTED_MODULE_32__.VRButton),
-/* harmony export */   "Vector2": () => (/* reexport safe */ _math_Vectors__WEBPACK_IMPORTED_MODULE_10__.Vector2),
-/* harmony export */   "Vector3": () => (/* reexport safe */ _math_Vectors__WEBPACK_IMPORTED_MODULE_10__.Vector3),
-/* harmony export */   "Vector4": () => (/* reexport safe */ _math_Vectors__WEBPACK_IMPORTED_MODULE_10__.Vector4),
-/* harmony export */   "XRGameSystem": () => (/* reexport safe */ _GameSystem__WEBPACK_IMPORTED_MODULE_5__.XRGameSystem),
-/* harmony export */   "XRSlideSystem": () => (/* reexport safe */ _locomotion_XRSlideSystem__WEBPACK_IMPORTED_MODULE_29__.XRSlideSystem),
-/* harmony export */   "XRSmoothTurnSystem": () => (/* reexport safe */ _locomotion_XRSmoothTurnSystem__WEBPACK_IMPORTED_MODULE_27__.XRSmoothTurnSystem),
-/* harmony export */   "XRSnapTurnSystem": () => (/* reexport safe */ _locomotion_XRSnapTurnSystem__WEBPACK_IMPORTED_MODULE_26__.XRSnapTurnSystem),
-/* harmony export */   "XRTeleportSystem": () => (/* reexport safe */ _locomotion_XRTeleportSystem__WEBPACK_IMPORTED_MODULE_28__.XRTeleportSystem)
+/* harmony export */   "VRButton": () => (/* reexport safe */ _utils_VRButton__WEBPACK_IMPORTED_MODULE_34__.VRButton),
+/* harmony export */   "Vector2": () => (/* reexport safe */ _math_Vectors__WEBPACK_IMPORTED_MODULE_12__.Vector2),
+/* harmony export */   "Vector3": () => (/* reexport safe */ _math_Vectors__WEBPACK_IMPORTED_MODULE_12__.Vector3),
+/* harmony export */   "Vector4": () => (/* reexport safe */ _math_Vectors__WEBPACK_IMPORTED_MODULE_12__.Vector4),
+/* harmony export */   "World": () => (/* reexport safe */ _World__WEBPACK_IMPORTED_MODULE_3__.World),
+/* harmony export */   "XRGameSystem": () => (/* reexport safe */ _GameSystem__WEBPACK_IMPORTED_MODULE_6__.XRGameSystem),
+/* harmony export */   "XRSlideSystem": () => (/* reexport safe */ _locomotion_XRSlideSystem__WEBPACK_IMPORTED_MODULE_31__.XRSlideSystem),
+/* harmony export */   "XRSmoothTurnSystem": () => (/* reexport safe */ _locomotion_XRSmoothTurnSystem__WEBPACK_IMPORTED_MODULE_29__.XRSmoothTurnSystem),
+/* harmony export */   "XRSnapTurnSystem": () => (/* reexport safe */ _locomotion_XRSnapTurnSystem__WEBPACK_IMPORTED_MODULE_28__.XRSnapTurnSystem),
+/* harmony export */   "XRTeleportSystem": () => (/* reexport safe */ _locomotion_XRTeleportSystem__WEBPACK_IMPORTED_MODULE_30__.XRTeleportSystem)
 /* harmony export */ });
 /* harmony import */ var three__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! three */ "./node_modules/three/build/three.module.js");
 /* harmony import */ var three_mesh_bvh__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! three-mesh-bvh */ "./node_modules/three-mesh-bvh/src/utils/ExtensionUtilities.js");
 /* harmony import */ var ecsy__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ecsy */ "./node_modules/ecsy/src/index.js");
-/* harmony import */ var _GameObject__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./GameObject */ "./node_modules/elixr/dist/GameObject.js");
-/* harmony import */ var _GameComponent__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./GameComponent */ "./node_modules/elixr/dist/GameComponent.js");
-/* harmony import */ var _GameSystem__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./GameSystem */ "./node_modules/elixr/dist/GameSystem.js");
-/* harmony import */ var _Core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Core */ "./node_modules/elixr/dist/Core.js");
-/* harmony import */ var gamepad_wrapper__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! gamepad-wrapper */ "./node_modules/gamepad-wrapper/lib/index.js");
-/* harmony import */ var cannon_es__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! cannon-es */ "./node_modules/cannon-es/dist/cannon-es.js");
-/* harmony import */ var _physics_PhysicsComponents__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./physics/PhysicsComponents */ "./node_modules/elixr/dist/physics/PhysicsComponents.js");
-/* harmony import */ var _math_Vectors__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./math/Vectors */ "./node_modules/elixr/dist/math/Vectors.js");
-/* harmony import */ var _math_Quaternion__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./math/Quaternion */ "./node_modules/elixr/dist/math/Quaternion.js");
-/* harmony import */ var _math_Matrices__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./math/Matrices */ "./node_modules/elixr/dist/math/Matrices.js");
-/* harmony import */ var _math_Boxes__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./math/Boxes */ "./node_modules/elixr/dist/math/Boxes.js");
-/* harmony import */ var _math_Color__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./math/Color */ "./node_modules/elixr/dist/math/Color.js");
-/* harmony import */ var _math_Euler__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./math/Euler */ "./node_modules/elixr/dist/math/Euler.js");
-/* harmony import */ var _math_CurvedRaycaster__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./math/CurvedRaycaster */ "./node_modules/elixr/dist/math/CurvedRaycaster.js");
-/* harmony import */ var _objects_PhysicsObject__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./objects/PhysicsObject */ "./node_modules/elixr/dist/objects/PhysicsObject.js");
-/* harmony import */ var _objects_PrimitiveObject__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./objects/PrimitiveObject */ "./node_modules/elixr/dist/objects/PrimitiveObject.js");
-/* harmony import */ var _objects_CubeObject__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./objects/CubeObject */ "./node_modules/elixr/dist/objects/CubeObject.js");
-/* harmony import */ var _objects_SphereObject__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./objects/SphereObject */ "./node_modules/elixr/dist/objects/SphereObject.js");
-/* harmony import */ var _objects_CylinderObject__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./objects/CylinderObject */ "./node_modules/elixr/dist/objects/CylinderObject.js");
-/* harmony import */ var _objects_ConeObject__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./objects/ConeObject */ "./node_modules/elixr/dist/objects/ConeObject.js");
-/* harmony import */ var _objects_ComplexObject__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./objects/ComplexObject */ "./node_modules/elixr/dist/objects/ComplexObject.js");
-/* harmony import */ var _objects_GLTFObject__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./objects/GLTFObject */ "./node_modules/elixr/dist/objects/GLTFObject.js");
-/* harmony import */ var _locomotion_MovementComponents__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./locomotion/MovementComponents */ "./node_modules/elixr/dist/locomotion/MovementComponents.js");
-/* harmony import */ var _locomotion_XRSnapTurnSystem__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./locomotion/XRSnapTurnSystem */ "./node_modules/elixr/dist/locomotion/XRSnapTurnSystem.js");
-/* harmony import */ var _locomotion_XRSmoothTurnSystem__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./locomotion/XRSmoothTurnSystem */ "./node_modules/elixr/dist/locomotion/XRSmoothTurnSystem.js");
-/* harmony import */ var _locomotion_XRTeleportSystem__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./locomotion/XRTeleportSystem */ "./node_modules/elixr/dist/locomotion/XRTeleportSystem.js");
-/* harmony import */ var _locomotion_XRSlideSystem__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./locomotion/XRSlideSystem */ "./node_modules/elixr/dist/locomotion/XRSlideSystem.js");
-/* harmony import */ var _enums__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./enums */ "./node_modules/elixr/dist/enums.js");
-/* harmony import */ var _geometries_CurveTubeGeometry__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./geometries/CurveTubeGeometry */ "./node_modules/elixr/dist/geometries/CurveTubeGeometry.js");
-/* harmony import */ var _utils_VRButton__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./utils/VRButton */ "./node_modules/elixr/dist/utils/VRButton.js");
-/* harmony import */ var _utils_ARButton__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./utils/ARButton */ "./node_modules/elixr/dist/utils/ARButton.js");
+/* harmony import */ var _World__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./World */ "./node_modules/elixr/dist/World.js");
+/* harmony import */ var _GameObject__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./GameObject */ "./node_modules/elixr/dist/GameObject.js");
+/* harmony import */ var _GameComponent__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./GameComponent */ "./node_modules/elixr/dist/GameComponent.js");
+/* harmony import */ var _GameSystem__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./GameSystem */ "./node_modules/elixr/dist/GameSystem.js");
+/* harmony import */ var _Core__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Core */ "./node_modules/elixr/dist/Core.js");
+/* harmony import */ var gamepad_wrapper__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! gamepad-wrapper */ "./node_modules/gamepad-wrapper/lib/index.js");
+/* harmony import */ var cannon_es__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! cannon-es */ "./node_modules/cannon-es/dist/cannon-es.js");
+/* harmony import */ var _physics_PhysicsComponents__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./physics/PhysicsComponents */ "./node_modules/elixr/dist/physics/PhysicsComponents.js");
+/* harmony import */ var _physics_RigidBodyPhysicsSystem__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./physics/RigidBodyPhysicsSystem */ "./node_modules/elixr/dist/physics/RigidBodyPhysicsSystem.js");
+/* harmony import */ var _math_Vectors__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./math/Vectors */ "./node_modules/elixr/dist/math/Vectors.js");
+/* harmony import */ var _math_Quaternion__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./math/Quaternion */ "./node_modules/elixr/dist/math/Quaternion.js");
+/* harmony import */ var _math_Matrices__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./math/Matrices */ "./node_modules/elixr/dist/math/Matrices.js");
+/* harmony import */ var _math_Boxes__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./math/Boxes */ "./node_modules/elixr/dist/math/Boxes.js");
+/* harmony import */ var _math_Color__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./math/Color */ "./node_modules/elixr/dist/math/Color.js");
+/* harmony import */ var _math_Euler__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./math/Euler */ "./node_modules/elixr/dist/math/Euler.js");
+/* harmony import */ var _math_CurvedRaycaster__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./math/CurvedRaycaster */ "./node_modules/elixr/dist/math/CurvedRaycaster.js");
+/* harmony import */ var _objects_PhysicsObject__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./objects/PhysicsObject */ "./node_modules/elixr/dist/objects/PhysicsObject.js");
+/* harmony import */ var _objects_PrimitiveObject__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./objects/PrimitiveObject */ "./node_modules/elixr/dist/objects/PrimitiveObject.js");
+/* harmony import */ var _objects_CubeObject__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./objects/CubeObject */ "./node_modules/elixr/dist/objects/CubeObject.js");
+/* harmony import */ var _objects_SphereObject__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./objects/SphereObject */ "./node_modules/elixr/dist/objects/SphereObject.js");
+/* harmony import */ var _objects_CylinderObject__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./objects/CylinderObject */ "./node_modules/elixr/dist/objects/CylinderObject.js");
+/* harmony import */ var _objects_ConeObject__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./objects/ConeObject */ "./node_modules/elixr/dist/objects/ConeObject.js");
+/* harmony import */ var _objects_ComplexObject__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./objects/ComplexObject */ "./node_modules/elixr/dist/objects/ComplexObject.js");
+/* harmony import */ var _objects_GLTFObject__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./objects/GLTFObject */ "./node_modules/elixr/dist/objects/GLTFObject.js");
+/* harmony import */ var _locomotion_MovementComponents__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./locomotion/MovementComponents */ "./node_modules/elixr/dist/locomotion/MovementComponents.js");
+/* harmony import */ var _locomotion_XRSnapTurnSystem__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./locomotion/XRSnapTurnSystem */ "./node_modules/elixr/dist/locomotion/XRSnapTurnSystem.js");
+/* harmony import */ var _locomotion_XRSmoothTurnSystem__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./locomotion/XRSmoothTurnSystem */ "./node_modules/elixr/dist/locomotion/XRSmoothTurnSystem.js");
+/* harmony import */ var _locomotion_XRTeleportSystem__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./locomotion/XRTeleportSystem */ "./node_modules/elixr/dist/locomotion/XRTeleportSystem.js");
+/* harmony import */ var _locomotion_XRSlideSystem__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./locomotion/XRSlideSystem */ "./node_modules/elixr/dist/locomotion/XRSlideSystem.js");
+/* harmony import */ var _enums__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./enums */ "./node_modules/elixr/dist/enums.js");
+/* harmony import */ var _geometries_CurveTubeGeometry__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./geometries/CurveTubeGeometry */ "./node_modules/elixr/dist/geometries/CurveTubeGeometry.js");
+/* harmony import */ var _utils_VRButton__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./utils/VRButton */ "./node_modules/elixr/dist/utils/VRButton.js");
+/* harmony import */ var _utils_ARButton__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./utils/ARButton */ "./node_modules/elixr/dist/utils/ARButton.js");
 /* -------------------------------------------------------------------------- */
 /*                                 3D Library                                 */
 /* -------------------------------------------------------------------------- */
@@ -16322,6 +16379,7 @@ three__WEBPACK_IMPORTED_MODULE_0__.Mesh.prototype.raycast = three_mesh_bvh__WEBP
 
 
 
+
 /* -------------------------------------------------------------------------- */
 /*                                Gamepad Utils                               */
 /* -------------------------------------------------------------------------- */
@@ -16329,6 +16387,7 @@ three__WEBPACK_IMPORTED_MODULE_0__.Mesh.prototype.raycast = three_mesh_bvh__WEBP
 /* -------------------------------------------------------------------------- */
 /*                               Physics Engine                               */
 /* -------------------------------------------------------------------------- */
+
 
 
 /* -------------------------------------------------------------------------- */
@@ -17644,7 +17703,6 @@ class SphereObject extends _PrimitiveObject__WEBPACK_IMPORTED_MODULE_2__.Primiti
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "PhysicsComponent": () => (/* binding */ PhysicsComponent),
 /* harmony export */   "RigidBodyComponent": () => (/* binding */ RigidBodyComponent)
 /* harmony export */ });
 /* harmony import */ var _GameComponent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../GameComponent */ "./node_modules/elixr/dist/GameComponent.js");
@@ -17653,18 +17711,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-class PhysicsComponent extends _GameComponent__WEBPACK_IMPORTED_MODULE_0__.GameComponent {
-    gravity;
-    solverIterations;
-    stepTime;
-    world;
-}
-PhysicsComponent.schema = {
-    gravity: { type: ecsy__WEBPACK_IMPORTED_MODULE_2__.Types.Ref },
-    solverIterations: { type: ecsy__WEBPACK_IMPORTED_MODULE_2__.Types.Number, default: 2 },
-    stepTime: { type: ecsy__WEBPACK_IMPORTED_MODULE_2__.Types.Number, default: 1 / 60 },
-    world: { type: ecsy__WEBPACK_IMPORTED_MODULE_2__.Types.Ref },
-};
 class RigidBodyComponent extends _GameComponent__WEBPACK_IMPORTED_MODULE_0__.GameComponent {
     mass;
     shape;
@@ -17761,15 +17807,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "RigidBodyPhysicsSystem": () => (/* binding */ RigidBodyPhysicsSystem)
 /* harmony export */ });
 /* harmony import */ var cannon_es__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! cannon-es */ "./node_modules/cannon-es/dist/cannon-es.js");
-/* harmony import */ var _GameSystem__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../GameSystem */ "./node_modules/elixr/dist/GameSystem.js");
-/* harmony import */ var _PhysicsComponents__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./PhysicsComponents */ "./node_modules/elixr/dist/physics/PhysicsComponents.js");
-/* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../index */ "./node_modules/elixr/dist/index.js");
+/* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../index */ "./node_modules/elixr/dist/index.js");
+/* harmony import */ var _GameSystem__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../GameSystem */ "./node_modules/elixr/dist/GameSystem.js");
+/* harmony import */ var _PhysicsComponents__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./PhysicsComponents */ "./node_modules/elixr/dist/physics/PhysicsComponents.js");
 
 
 
 
 const calculateRotationVector = (quat) => {
-    const vec3 = new _index__WEBPACK_IMPORTED_MODULE_2__.THREE.Vector3();
+    const vec3 = new _index__WEBPACK_IMPORTED_MODULE_0__.THREE.Vector3();
     const angle = 2 * Math.acos(quat.w);
     var s;
     if (1 - quat.w * quat.w < 1e-6) {
@@ -17782,7 +17828,7 @@ const calculateRotationVector = (quat) => {
         .set(quat.x / s, quat.y / s, quat.z / s)
         .normalize()
         .multiplyScalar(angle);
-    return isNaN(vec3.length()) ? new _index__WEBPACK_IMPORTED_MODULE_2__.THREE.Vector3() : vec3;
+    return isNaN(vec3.length()) ? new _index__WEBPACK_IMPORTED_MODULE_0__.THREE.Vector3() : vec3;
 };
 const threeVec3toCannonVec3 = (vec3) => {
     if (vec3 != null) {
@@ -17798,18 +17844,28 @@ const copyThreeVec3ToCannonVec3 = (cannonVec3, threeVec3) => {
 const copyThreeQuatToCannonQuat = (cannonQuat, threeQuat) => {
     cannonQuat.set(threeQuat.x, threeQuat.y, threeQuat.z, threeQuat.w);
 };
-class RigidBodyPhysicsSystem extends _GameSystem__WEBPACK_IMPORTED_MODULE_0__.GameSystem {
+class PhysicsComponent extends _index__WEBPACK_IMPORTED_MODULE_0__.SystemConfig {
+}
+PhysicsComponent.schema = {
+    gravity: { type: _index__WEBPACK_IMPORTED_MODULE_0__.Types.Ref },
+    solverIterations: { type: _index__WEBPACK_IMPORTED_MODULE_0__.Types.Number, default: 2 },
+    stepTime: { type: _index__WEBPACK_IMPORTED_MODULE_0__.Types.Number, default: 1 / 60 },
+    world: { type: _index__WEBPACK_IMPORTED_MODULE_0__.Types.Ref },
+};
+class RigidBodyPhysicsSystem extends _GameSystem__WEBPACK_IMPORTED_MODULE_1__.GameSystem {
+    _config;
     init() {
-        const physicsWorld = new cannon_es__WEBPACK_IMPORTED_MODULE_3__.World();
-        physicsWorld.broadphase = new cannon_es__WEBPACK_IMPORTED_MODULE_3__.NaiveBroadphase();
-        this.core.physics.world = physicsWorld;
+        this._config = this.config;
     }
     update(delta, _time) {
-        this.core.physics.world.gravity.set(this.core.physics.gravity.x, this.core.physics.gravity.y, this.core.physics.gravity.z);
-        this.core.physics.world.solver.iterations =
-            this.core.physics.solverIterations;
+        // physics is not initialized
+        if (!this._config.world)
+            return;
+        this._config.world.gravity.set(this._config.gravity.x, this._config.gravity.y, this._config.gravity.z);
+        this._config.world.solver.iterations =
+            this._config.solverIterations;
         this.queryAddedGameObjects('rigidBodies').forEach((gameObject) => {
-            const rigidBody = gameObject.getMutableComponent(_PhysicsComponents__WEBPACK_IMPORTED_MODULE_1__.RigidBodyComponent);
+            const rigidBody = gameObject.getMutableComponent(_PhysicsComponents__WEBPACK_IMPORTED_MODULE_2__.RigidBodyComponent);
             const body = new cannon_es__WEBPACK_IMPORTED_MODULE_3__.Body({
                 angularDamping: rigidBody.angularDamping,
                 angularFactor: threeVec3toCannonVec3(rigidBody.angularConstraints),
@@ -17825,22 +17881,22 @@ class RigidBodyPhysicsSystem extends _GameSystem__WEBPACK_IMPORTED_MODULE_0__.Ga
             });
             if (rigidBody.initVelocity)
                 body.velocity.copy(threeVec3toCannonVec3(rigidBody.initVelocity));
-            this.core.physics.world.addBody(body);
+            this._config.world.addBody(body);
             rigidBody._body = body;
             rigidBody.setTransformFromObject3D(gameObject);
         });
         this._preStep(delta);
-        this.core.physics.world.step(this.core.physics.stepTime, delta);
+        this._config.world.step(this._config.stepTime, delta);
         this._postStep();
     }
     _preStep(delta) {
-        [...this.core.physics.world.bodies].forEach((body) => {
+        [...this._config.world.bodies].forEach((body) => {
             if (body.removalFlag) {
-                this.core.physics.world.removeBody(body);
+                this._config.world.removeBody(body);
             }
         });
         this.queryGameObjects('rigidBodies').forEach((gameObject) => {
-            const rigidBody = gameObject.getMutableComponent(_PhysicsComponents__WEBPACK_IMPORTED_MODULE_1__.RigidBodyComponent);
+            const rigidBody = gameObject.getMutableComponent(_PhysicsComponents__WEBPACK_IMPORTED_MODULE_2__.RigidBodyComponent);
             rigidBody._body.type = rigidBody.type;
             if (rigidBody._velocityUpdate) {
                 copyThreeVec3ToCannonVec3(rigidBody._body.velocity, rigidBody._velocityUpdate);
@@ -17860,19 +17916,19 @@ class RigidBodyPhysicsSystem extends _GameSystem__WEBPACK_IMPORTED_MODULE_0__.Ga
             }
             if (rigidBody._body.type === cannon_es__WEBPACK_IMPORTED_MODULE_3__.BODY_TYPES.KINEMATIC) {
                 const deltaPosVec3 = gameObject
-                    .getWorldPosition(new _index__WEBPACK_IMPORTED_MODULE_2__.THREE.Vector3())
+                    .getWorldPosition(new _index__WEBPACK_IMPORTED_MODULE_0__.THREE.Vector3())
                     .sub(rigidBody.position);
                 copyThreeVec3ToCannonVec3(rigidBody._body.velocity, deltaPosVec3.divideScalar(delta));
                 const deltaQuat = gameObject
-                    .getWorldQuaternion(new _index__WEBPACK_IMPORTED_MODULE_2__.THREE.Quaternion())
-                    .multiply(new _index__WEBPACK_IMPORTED_MODULE_2__.THREE.Quaternion().copy(rigidBody.quaternion).conjugate());
+                    .getWorldQuaternion(new _index__WEBPACK_IMPORTED_MODULE_0__.THREE.Quaternion())
+                    .multiply(new _index__WEBPACK_IMPORTED_MODULE_0__.THREE.Quaternion().copy(rigidBody.quaternion).conjugate());
                 copyThreeVec3ToCannonVec3(rigidBody._body.angularVelocity, calculateRotationVector(deltaQuat).divideScalar(delta));
             }
         });
     }
     _postStep() {
         this.queryGameObjects('rigidBodies').forEach((gameObject) => {
-            const rigidBody = gameObject.getMutableComponent(_PhysicsComponents__WEBPACK_IMPORTED_MODULE_1__.RigidBodyComponent);
+            const rigidBody = gameObject.getMutableComponent(_PhysicsComponents__WEBPACK_IMPORTED_MODULE_2__.RigidBodyComponent);
             if (rigidBody.type != cannon_es__WEBPACK_IMPORTED_MODULE_3__.BODY_TYPES.DYNAMIC)
                 return;
             switch (rigidBody.type) {
@@ -17898,12 +17954,13 @@ class RigidBodyPhysicsSystem extends _GameSystem__WEBPACK_IMPORTED_MODULE_0__.Ga
 }
 RigidBodyPhysicsSystem.queries = {
     rigidBodies: {
-        components: [_PhysicsComponents__WEBPACK_IMPORTED_MODULE_1__.RigidBodyComponent],
+        components: [_PhysicsComponents__WEBPACK_IMPORTED_MODULE_2__.RigidBodyComponent],
         listen: {
             added: true,
         },
     },
 };
+RigidBodyPhysicsSystem.systemConfig = PhysicsComponent;
 //# sourceMappingURL=RigidBodyPhysicsSystem.js.map
 
 /***/ }),
@@ -18026,28 +18083,25 @@ __webpack_require__.r(__webpack_exports__);
 class ARButton {
     static convertToARButton(button, renderer, options = {}) {
         function showStartAR( /*device*/) {
-            const sessionInit = options.sessionInit ?? {};
+            const sessionInit = options.sessionInit ?? { optionalFeatures: [] };
             let currentSession;
-            if (sessionInit.domOverlay === undefined) {
-                const overlay = document.createElement('div');
-                overlay.style.display = 'none';
-                document.body.appendChild(overlay);
-                sessionInit.optionalFeatures.push('dom-overlay');
-                sessionInit.domOverlay = { root: overlay };
-            }
             async function onSessionStarted(session) {
                 session.addEventListener('end', onSessionEnded);
                 renderer.xr.setReferenceSpaceType('local');
                 await renderer.xr.setSession(session);
-                button.textContent = options.LEAVE_AR_TEXT ?? 'STOP AR';
+                button.textContent = options.LEAVE_AR_TEXT ?? 'EXIT AR';
                 currentSession = session;
+                if (options.onSessionStarted)
+                    options.onSessionStarted(currentSession);
             }
             function onSessionEnded( /*event*/) {
                 currentSession.removeEventListener('end', onSessionEnded);
-                button.textContent = options.ENTER_AR_TEXT ?? 'START AR';
+                button.textContent = options.ENTER_AR_TEXT ?? 'ENTER AR';
+                if (options.onSessionEnded)
+                    options.onSessionEnded(currentSession);
                 currentSession = null;
             }
-            button.textContent = options.ENTER_AR_TEXT ?? 'START AR';
+            button.textContent = options.ENTER_AR_TEXT ?? 'ENTER AR';
             button.onclick = function () {
                 if (!currentSession) {
                     navigator.xr
@@ -18069,7 +18123,6 @@ class ARButton {
             console.warn('Exception when trying to call xr.isSessionSupported', exception);
         }
         if ('xr' in navigator) {
-            button.id = 'ARButton';
             navigator.xr
                 .isSessionSupported('immersive-ar')
                 .then(function (supported) {
@@ -18118,10 +18171,14 @@ class VRButton {
                 await renderer.xr.setSession(session);
                 button.textContent = options.LEAVE_VR_TEXT ?? 'EXIT VR';
                 currentSession = session;
+                if (options.onSessionStarted)
+                    options.onSessionStarted(currentSession);
             }
             function onSessionEnded( /*event*/) {
                 currentSession.removeEventListener('end', onSessionEnded);
                 button.textContent = options.ENTER_VR_TEXT ?? 'ENTER VR';
+                if (options.onSessionEnded)
+                    options.onSessionEnded(currentSession);
                 currentSession = null;
             }
             button.textContent = options.ENTER_VR_TEXT ?? 'ENTER VR';
@@ -18154,7 +18211,6 @@ class VRButton {
             console.warn('Exception when trying to call xr.isSessionSupported', exception);
         }
         if ('xr' in navigator) {
-            button.id = 'VRButton';
             navigator.xr
                 .isSessionSupported('immersive-vr')
                 .then(function (supported) {
@@ -18781,6 +18837,73 @@ module.exports = function (list, options) {
 
 /***/ }),
 
+/***/ "./src/js/ARSceneCreationSystem.js":
+/*!*****************************************!*\
+  !*** ./src/js/ARSceneCreationSystem.js ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "ARSceneCreationSystem": () => (/* binding */ ARSceneCreationSystem)
+/* harmony export */ });
+/* harmony import */ var elixr__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! elixr */ "./node_modules/elixr/dist/index.js");
+
+
+class ARSceneCreationSystem extends elixr__WEBPACK_IMPORTED_MODULE_0__.XRGameSystem {
+	update() {
+		if (!this.lightingCreated) {
+			const ambientLight = new elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.AmbientLight(0xffffff, 0.2);
+			this.core.scene.add(ambientLight);
+			const directionalLight = new elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.DirectionalLight(0xffffff, 0.2);
+			this.core.scene.add(directionalLight);
+			this.lightingCreated = true;
+		}
+		const frame = this.core.renderer.xr.getFrame();
+		const referenceSpace = this.core.renderer.xr.getReferenceSpace();
+		if (!this.planesSetup && frame.detectedPlanes.size > 0) {
+			this.planesSetup = true;
+			frame.detectedPlanes.forEach((plane) => {
+				const planePose = frame.getPose(plane.planeSpace, referenceSpace);
+				const polygon = plane.polygon;
+				console.log(plane.orientation, polygon.length);
+
+				let minx = Infinity;
+				let minz = Infinity;
+				let maxx = -Infinity;
+				let maxz = -Infinity;
+
+				polygon.forEach((point) => {
+					minx = Math.min(minx, point.x);
+					minz = Math.min(minz, point.z);
+					maxx = Math.max(maxx, point.x);
+					maxz = Math.max(maxz, point.z);
+				});
+
+				const planeObject = new elixr__WEBPACK_IMPORTED_MODULE_0__.CubeObject(
+					maxx - minx,
+					0.02,
+					maxz - minz,
+					{ color: 0xffffff * Math.random() },
+					{ mass: 0, type: elixr__WEBPACK_IMPORTED_MODULE_0__.BODY_TYPES.STATIC },
+				);
+				this.core.addGameObject(planeObject);
+				planeObject.visible = false;
+				new elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.Matrix4()
+					.fromArray(planePose.transform.matrix)
+					.decompose(
+						planeObject.position,
+						planeObject.quaternion,
+						planeObject.scale,
+					);
+			});
+		}
+	}
+}
+
+
+/***/ }),
+
 /***/ "./src/js/CubeLauncherSystem.js":
 /*!**************************************!*\
   !*** ./src/js/CubeLauncherSystem.js ***!
@@ -18802,7 +18925,9 @@ class CubeLauncherSystem extends elixr__WEBPACK_IMPORTED_MODULE_0__.XRGameSystem
 					new elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.BoxGeometry(0.2, 0.2, 0.2),
 					new elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.MeshStandardMaterial({ color: Math.random() * 0xffffff }),
 				);
-				const cubeObject = this.core.createGameObject(cubeMesh);
+				const cubeObject = new elixr__WEBPACK_IMPORTED_MODULE_0__.GameObject();
+				cubeObject.add(cubeMesh);
+				this.core.addGameObject(cubeObject);
 				controller.targetRaySpace.getWorldPosition(cubeObject.position);
 				controller.targetRaySpace.getWorldQuaternion(cubeObject.quaternion);
 				cubeObject.addComponent(elixr__WEBPACK_IMPORTED_MODULE_0__.RigidBodyComponent, {
@@ -18851,13 +18976,15 @@ class InlineSceneCreationSystem extends elixr__WEBPACK_IMPORTED_MODULE_0__.Singl
 
 		this._createWalls();
 
+		this._createCubes();
+
 		const snowman = new elixr__WEBPACK_IMPORTED_MODULE_0__.GLTFObject('assets/Snowman.glb', {
 			hasPhysics: true,
 			mass: 1,
 			type: elixr__WEBPACK_IMPORTED_MODULE_0__.BODY_TYPES.DYNAMIC,
 		});
 		this.core.addGameObject(snowman);
-		snowman.position.set(0, 1.2, -2);
+		snowman.position.set(0, 1.2, 0);
 		snowman.rotateZ(Math.PI / 4);
 		snowman.colliderVisible = true;
 	}
@@ -18911,6 +19038,50 @@ class InlineSceneCreationSystem extends elixr__WEBPACK_IMPORTED_MODULE_0__.Singl
 		this.core.addGameObject(boxWall4);
 		boxWall4.position.set(-3, 1.5, 0);
 		boxWall4.rotateY(Math.PI / 2);
+	}
+
+	_createCubes() {
+		const randomObjects = [];
+
+		for (let i = 0; i < 50; i++) {
+			const cube = new elixr__WEBPACK_IMPORTED_MODULE_0__.CubeObject(
+				0.2 * Math.random() + 0.1,
+				0.2 * Math.random() + 0.1,
+				0.2 * Math.random() + 0.1,
+				{ color: Math.random() * 0xffffff },
+				{ mass: 1, type: elixr__WEBPACK_IMPORTED_MODULE_0__.BODY_TYPES.DYNAMIC },
+			);
+			this.core.addGameObject(cube);
+			randomObjects.push(cube);
+		}
+
+		for (let i = 0; i < 50; i++) {
+			const sphere = new elixr__WEBPACK_IMPORTED_MODULE_0__.SphereObject(
+				0.1 * Math.random() + 0.05,
+				{ color: Math.random() * 0xffffff },
+				{ mass: 1, type: elixr__WEBPACK_IMPORTED_MODULE_0__.BODY_TYPES.DYNAMIC },
+			);
+			this.core.addGameObject(sphere);
+			randomObjects.push(sphere);
+		}
+
+		randomObjects.forEach((object) => {
+			object.position.set(
+				Math.random() * 6 - 3,
+				Math.random() * 3,
+				Math.random() * 6 - 3,
+			);
+			const rigidBodyComponent = object.getMutableComponent(elixr__WEBPACK_IMPORTED_MODULE_0__.RigidBodyComponent);
+			rigidBodyComponent.angularDamping = 0;
+			rigidBodyComponent.linearDamping = 0;
+			rigidBodyComponent.initVelocity = new elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.Vector3(
+				Math.random() - 0.5,
+				Math.random() - 0.5,
+				Math.random() - 0.5,
+			)
+				.normalize()
+				.multiplyScalar(Math.random() * 5);
+		});
 	}
 }
 
@@ -18994,6 +19165,219 @@ class ObjectManipulationSystem extends elixr__WEBPACK_IMPORTED_MODULE_0__.XRGame
 ObjectManipulationSystem.queries = {
 	rigidBodies: { components: [elixr__WEBPACK_IMPORTED_MODULE_0__.RigidBodyComponent] },
 };
+
+
+/***/ }),
+
+/***/ "./src/js/VRSceneCreationSystem.js":
+/*!*****************************************!*\
+  !*** ./src/js/VRSceneCreationSystem.js ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "VRSceneCreationSystem": () => (/* binding */ VRSceneCreationSystem)
+/* harmony export */ });
+/* harmony import */ var elixr__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! elixr */ "./node_modules/elixr/dist/index.js");
+/* harmony import */ var three_examples_jsm_loaders_RGBELoader_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! three/examples/jsm/loaders/RGBELoader.js */ "./node_modules/three/examples/jsm/loaders/RGBELoader.js");
+
+
+
+
+class VRSceneCreationSystem extends elixr__WEBPACK_IMPORTED_MODULE_0__.SingleUseGameSystem {
+	update() {
+		this._createLighting();
+
+		this._createRoom1();
+		this._createRoom2();
+		this._createRamp();
+
+		const snowman = new elixr__WEBPACK_IMPORTED_MODULE_0__.GLTFObject('assets/Snowman.glb', {
+			hasPhysics: true,
+			mass: 1,
+			type: elixr__WEBPACK_IMPORTED_MODULE_0__.BODY_TYPES.DYNAMIC,
+		});
+		this.core.addGameObject(snowman);
+		snowman.position.set(0, 1.2, -2);
+		snowman.rotateZ(Math.PI / 4);
+		snowman.colliderVisible = true;
+	}
+
+	_createLighting() {
+		new three_examples_jsm_loaders_RGBELoader_js__WEBPACK_IMPORTED_MODULE_1__.RGBELoader().load('assets/studio_small_09_1k.hdr', (texture) => {
+			texture.mapping = elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.EquirectangularReflectionMapping;
+			this.core.scene.background = texture;
+			this.core.scene.environment = texture;
+		});
+		const ambientLight = new elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.AmbientLight(0xffffff, 0.2);
+		this.core.scene.add(ambientLight);
+		const directionalLight = new elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.DirectionalLight(0xffffff, 0.2);
+		this.core.scene.add(directionalLight);
+	}
+
+	_createRoom1() {
+		const boxFloor = new elixr__WEBPACK_IMPORTED_MODULE_0__.CubeObject(
+			6,
+			0.02,
+			6,
+			{ color: 0x3a3b3c },
+			{ mass: 0, type: elixr__WEBPACK_IMPORTED_MODULE_0__.BODY_TYPES.STATIC },
+		);
+		this.core.addGameObject(boxFloor);
+		boxFloor.addComponent(elixr__WEBPACK_IMPORTED_MODULE_0__.MovementSurface);
+
+		const boxCeiling = new elixr__WEBPACK_IMPORTED_MODULE_0__.CubeObject(
+			6,
+			0.02,
+			6,
+			{ color: 0xfaf9f6 },
+			{ mass: 0, type: elixr__WEBPACK_IMPORTED_MODULE_0__.BODY_TYPES.STATIC },
+		);
+		this.core.addGameObject(boxCeiling);
+		boxCeiling.position.set(0, 3, 0);
+
+		const boxWall = new elixr__WEBPACK_IMPORTED_MODULE_0__.CubeObject(
+			6,
+			3,
+			0.02,
+			{ color: 0xfaf9f6 },
+			{ mass: 0, type: elixr__WEBPACK_IMPORTED_MODULE_0__.BODY_TYPES.STATIC },
+		);
+		this.core.addGameObject(boxWall);
+		boxWall.position.set(0, 1.5, 3);
+		boxWall.addComponent(elixr__WEBPACK_IMPORTED_MODULE_0__.MovementObstacle);
+
+		const boxWall3 = boxWall.clone(true);
+		this.core.addGameObject(boxWall3);
+		boxWall3.position.set(3, 1.5, 0);
+		boxWall3.rotateY(Math.PI / 2);
+
+		const boxWall4 = boxWall.clone(true);
+		this.core.addGameObject(boxWall4);
+		boxWall4.position.set(-3, 1.5, 0);
+		boxWall4.rotateY(Math.PI / 2);
+
+		const boxWall5 = new elixr__WEBPACK_IMPORTED_MODULE_0__.CubeObject(
+			2,
+			3,
+			0.02,
+			{ color: 0xfaf9f6 },
+			{ mass: 0, type: elixr__WEBPACK_IMPORTED_MODULE_0__.BODY_TYPES.STATIC },
+		);
+		this.core.addGameObject(boxWall5);
+		boxWall5.position.set(2, 1.5, -3);
+		boxWall5.addComponent(elixr__WEBPACK_IMPORTED_MODULE_0__.MovementObstacle);
+
+		const boxWall6 = boxWall5.clone(true);
+		this.core.addGameObject(boxWall6);
+		boxWall6.position.set(-2, 1.5, -3);
+	}
+
+	_createRoom2() {
+		const roomPositionOffset = new elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.Vector3(
+			0,
+			2,
+			-(6 + Math.pow(3, 0.5) * 2),
+		);
+		const boxFloor = new elixr__WEBPACK_IMPORTED_MODULE_0__.CubeObject(
+			6,
+			0.02,
+			6,
+			{ color: 0x3a3b3c },
+			{ mass: 0, type: elixr__WEBPACK_IMPORTED_MODULE_0__.BODY_TYPES.STATIC },
+		);
+		this.core.addGameObject(boxFloor);
+		boxFloor.addComponent(elixr__WEBPACK_IMPORTED_MODULE_0__.MovementSurface);
+		boxFloor.position.add(roomPositionOffset);
+
+		const boxCeiling = new elixr__WEBPACK_IMPORTED_MODULE_0__.CubeObject(
+			6,
+			0.02,
+			6,
+			{ color: 0xfaf9f6 },
+			{ mass: 0, type: elixr__WEBPACK_IMPORTED_MODULE_0__.BODY_TYPES.STATIC },
+		);
+		this.core.addGameObject(boxCeiling);
+		boxCeiling.position.set(0, 3, 0);
+		boxCeiling.position.add(roomPositionOffset);
+
+		const boxWall = new elixr__WEBPACK_IMPORTED_MODULE_0__.CubeObject(
+			6,
+			3,
+			0.02,
+			{ color: 0xfaf9f6 },
+			{ mass: 0, type: elixr__WEBPACK_IMPORTED_MODULE_0__.BODY_TYPES.STATIC },
+		);
+		this.core.addGameObject(boxWall);
+		boxWall.position.set(0, 1.5, -3);
+		boxWall.addComponent(elixr__WEBPACK_IMPORTED_MODULE_0__.MovementObstacle);
+		boxWall.position.add(roomPositionOffset);
+
+		const boxWall3 = boxWall.clone(true);
+		this.core.addGameObject(boxWall3);
+		boxWall3.position.set(3, 1.5, 0);
+		boxWall3.rotateY(Math.PI / 2);
+		boxWall3.position.add(roomPositionOffset);
+
+		const boxWall4 = boxWall.clone(true);
+		this.core.addGameObject(boxWall4);
+		boxWall4.position.set(-3, 1.5, 0);
+		boxWall4.rotateY(Math.PI / 2);
+		boxWall4.position.add(roomPositionOffset);
+
+		const boxWall5 = new elixr__WEBPACK_IMPORTED_MODULE_0__.CubeObject(
+			2,
+			3,
+			0.02,
+			{ color: 0xfaf9f6 },
+			{ mass: 0, type: elixr__WEBPACK_IMPORTED_MODULE_0__.BODY_TYPES.STATIC },
+		);
+		this.core.addGameObject(boxWall5);
+		boxWall5.position.set(2, 1.5, 3);
+		boxWall5.addComponent(elixr__WEBPACK_IMPORTED_MODULE_0__.MovementObstacle);
+		boxWall5.position.add(roomPositionOffset);
+
+		const boxWall6 = boxWall5.clone(true);
+		this.core.addGameObject(boxWall6);
+		boxWall6.position.set(-2, 1.5, 3);
+		boxWall6.position.add(roomPositionOffset);
+	}
+
+	_createRamp() {
+		const rampFloor = new elixr__WEBPACK_IMPORTED_MODULE_0__.CubeObject(
+			2,
+			0.02,
+			4,
+			{ color: 0xff5f1f },
+			{ mass: 0, type: elixr__WEBPACK_IMPORTED_MODULE_0__.BODY_TYPES.STATIC },
+		);
+		this.core.addGameObject(rampFloor);
+		rampFloor.rotateX(Math.PI / 6);
+		rampFloor.position.set(0, 1, -Math.pow(3, 0.5) - 3);
+		rampFloor.addComponent(elixr__WEBPACK_IMPORTED_MODULE_0__.MovementSurface);
+
+		const rampCeiling = rampFloor.clone(true);
+		this.core.addGameObject(rampCeiling);
+		rampCeiling.position.add(new elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.Vector3(0, 3, 0));
+		rampCeiling.removeComponent(elixr__WEBPACK_IMPORTED_MODULE_0__.MovementSurface);
+
+		const rampSidePanel = new elixr__WEBPACK_IMPORTED_MODULE_0__.CubeObject(
+			0.02,
+			5,
+			Math.pow(3, 0.5) * 2,
+			{ color: 0xff5f1f },
+			{ mass: 0, type: elixr__WEBPACK_IMPORTED_MODULE_0__.BODY_TYPES.STATIC },
+		);
+		this.core.addGameObject(rampSidePanel);
+		rampSidePanel.position.set(1, 2.5, -Math.pow(3, 0.5) - 3);
+		rampSidePanel.addComponent(elixr__WEBPACK_IMPORTED_MODULE_0__.MovementObstacle);
+
+		const rampSidePanel2 = rampSidePanel.clone(true);
+		this.core.addGameObject(rampSidePanel2);
+		rampSidePanel2.position.set(-1, 2.5, -Math.pow(3, 0.5) - 3);
+	}
+}
 
 
 /***/ }),
@@ -81067,6 +81451,482 @@ async function createDataTexture( container ) {
 
 /***/ }),
 
+/***/ "./node_modules/three/examples/jsm/loaders/RGBELoader.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/three/examples/jsm/loaders/RGBELoader.js ***!
+  \***************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "RGBELoader": () => (/* binding */ RGBELoader)
+/* harmony export */ });
+/* harmony import */ var three__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! three */ "./node_modules/three/build/three.module.js");
+
+
+// https://github.com/mrdoob/three.js/issues/5552
+// http://en.wikipedia.org/wiki/RGBE_image_format
+
+class RGBELoader extends three__WEBPACK_IMPORTED_MODULE_0__.DataTextureLoader {
+
+	constructor( manager ) {
+
+		super( manager );
+
+		this.type = three__WEBPACK_IMPORTED_MODULE_0__.HalfFloatType;
+
+	}
+
+	// adapted from http://www.graphics.cornell.edu/~bjw/rgbe.html
+
+	parse( buffer ) {
+
+		const
+			/* return codes for rgbe routines */
+			//RGBE_RETURN_SUCCESS = 0,
+			RGBE_RETURN_FAILURE = - 1,
+
+			/* default error routine.  change this to change error handling */
+			rgbe_read_error = 1,
+			rgbe_write_error = 2,
+			rgbe_format_error = 3,
+			rgbe_memory_error = 4,
+			rgbe_error = function ( rgbe_error_code, msg ) {
+
+				switch ( rgbe_error_code ) {
+
+					case rgbe_read_error: console.error( 'THREE.RGBELoader Read Error: ' + ( msg || '' ) );
+						break;
+					case rgbe_write_error: console.error( 'THREE.RGBELoader Write Error: ' + ( msg || '' ) );
+						break;
+					case rgbe_format_error: console.error( 'THREE.RGBELoader Bad File Format: ' + ( msg || '' ) );
+						break;
+					default:
+					case rgbe_memory_error: console.error( 'THREE.RGBELoader: Error: ' + ( msg || '' ) );
+
+				}
+
+				return RGBE_RETURN_FAILURE;
+
+			},
+
+			/* offsets to red, green, and blue components in a data (float) pixel */
+			//RGBE_DATA_RED = 0,
+			//RGBE_DATA_GREEN = 1,
+			//RGBE_DATA_BLUE = 2,
+
+			/* number of floats per pixel, use 4 since stored in rgba image format */
+			//RGBE_DATA_SIZE = 4,
+
+			/* flags indicating which fields in an rgbe_header_info are valid */
+			RGBE_VALID_PROGRAMTYPE = 1,
+			RGBE_VALID_FORMAT = 2,
+			RGBE_VALID_DIMENSIONS = 4,
+
+			NEWLINE = '\n',
+
+			fgets = function ( buffer, lineLimit, consume ) {
+
+				const chunkSize = 128;
+
+				lineLimit = ! lineLimit ? 1024 : lineLimit;
+				let p = buffer.pos,
+					i = - 1, len = 0, s = '',
+					chunk = String.fromCharCode.apply( null, new Uint16Array( buffer.subarray( p, p + chunkSize ) ) );
+
+				while ( ( 0 > ( i = chunk.indexOf( NEWLINE ) ) ) && ( len < lineLimit ) && ( p < buffer.byteLength ) ) {
+
+					s += chunk; len += chunk.length;
+					p += chunkSize;
+					chunk += String.fromCharCode.apply( null, new Uint16Array( buffer.subarray( p, p + chunkSize ) ) );
+
+				}
+
+				if ( - 1 < i ) {
+
+					/*for (i=l-1; i>=0; i--) {
+						byteCode = m.charCodeAt(i);
+						if (byteCode > 0x7f && byteCode <= 0x7ff) byteLen++;
+						else if (byteCode > 0x7ff && byteCode <= 0xffff) byteLen += 2;
+						if (byteCode >= 0xDC00 && byteCode <= 0xDFFF) i--; //trail surrogate
+					}*/
+					if ( false !== consume ) buffer.pos += len + i + 1;
+					return s + chunk.slice( 0, i );
+
+				}
+
+				return false;
+
+			},
+
+			/* minimal header reading.  modify if you want to parse more information */
+			RGBE_ReadHeader = function ( buffer ) {
+
+
+				// regexes to parse header info fields
+				const magic_token_re = /^#\?(\S+)/,
+					gamma_re = /^\s*GAMMA\s*=\s*(\d+(\.\d+)?)\s*$/,
+					exposure_re = /^\s*EXPOSURE\s*=\s*(\d+(\.\d+)?)\s*$/,
+					format_re = /^\s*FORMAT=(\S+)\s*$/,
+					dimensions_re = /^\s*\-Y\s+(\d+)\s+\+X\s+(\d+)\s*$/,
+
+					// RGBE format header struct
+					header = {
+
+						valid: 0, /* indicate which fields are valid */
+
+						string: '', /* the actual header string */
+
+						comments: '', /* comments found in header */
+
+						programtype: 'RGBE', /* listed at beginning of file to identify it after "#?". defaults to "RGBE" */
+
+						format: '', /* RGBE format, default 32-bit_rle_rgbe */
+
+						gamma: 1.0, /* image has already been gamma corrected with given gamma. defaults to 1.0 (no correction) */
+
+						exposure: 1.0, /* a value of 1.0 in an image corresponds to <exposure> watts/steradian/m^2. defaults to 1.0 */
+
+						width: 0, height: 0 /* image dimensions, width/height */
+
+					};
+
+				let line, match;
+
+				if ( buffer.pos >= buffer.byteLength || ! ( line = fgets( buffer ) ) ) {
+
+					return rgbe_error( rgbe_read_error, 'no header found' );
+
+				}
+
+				/* if you want to require the magic token then uncomment the next line */
+				if ( ! ( match = line.match( magic_token_re ) ) ) {
+
+					return rgbe_error( rgbe_format_error, 'bad initial token' );
+
+				}
+
+				header.valid |= RGBE_VALID_PROGRAMTYPE;
+				header.programtype = match[ 1 ];
+				header.string += line + '\n';
+
+				while ( true ) {
+
+					line = fgets( buffer );
+					if ( false === line ) break;
+					header.string += line + '\n';
+
+					if ( '#' === line.charAt( 0 ) ) {
+
+						header.comments += line + '\n';
+						continue; // comment line
+
+					}
+
+					if ( match = line.match( gamma_re ) ) {
+
+						header.gamma = parseFloat( match[ 1 ] );
+
+					}
+
+					if ( match = line.match( exposure_re ) ) {
+
+						header.exposure = parseFloat( match[ 1 ] );
+
+					}
+
+					if ( match = line.match( format_re ) ) {
+
+						header.valid |= RGBE_VALID_FORMAT;
+						header.format = match[ 1 ];//'32-bit_rle_rgbe';
+
+					}
+
+					if ( match = line.match( dimensions_re ) ) {
+
+						header.valid |= RGBE_VALID_DIMENSIONS;
+						header.height = parseInt( match[ 1 ], 10 );
+						header.width = parseInt( match[ 2 ], 10 );
+
+					}
+
+					if ( ( header.valid & RGBE_VALID_FORMAT ) && ( header.valid & RGBE_VALID_DIMENSIONS ) ) break;
+
+				}
+
+				if ( ! ( header.valid & RGBE_VALID_FORMAT ) ) {
+
+					return rgbe_error( rgbe_format_error, 'missing format specifier' );
+
+				}
+
+				if ( ! ( header.valid & RGBE_VALID_DIMENSIONS ) ) {
+
+					return rgbe_error( rgbe_format_error, 'missing image size specifier' );
+
+				}
+
+				return header;
+
+			},
+
+			RGBE_ReadPixels_RLE = function ( buffer, w, h ) {
+
+				const scanline_width = w;
+
+				if (
+					// run length encoding is not allowed so read flat
+					( ( scanline_width < 8 ) || ( scanline_width > 0x7fff ) ) ||
+					// this file is not run length encoded
+					( ( 2 !== buffer[ 0 ] ) || ( 2 !== buffer[ 1 ] ) || ( buffer[ 2 ] & 0x80 ) )
+				) {
+
+					// return the flat buffer
+					return new Uint8Array( buffer );
+
+				}
+
+				if ( scanline_width !== ( ( buffer[ 2 ] << 8 ) | buffer[ 3 ] ) ) {
+
+					return rgbe_error( rgbe_format_error, 'wrong scanline width' );
+
+				}
+
+				const data_rgba = new Uint8Array( 4 * w * h );
+
+				if ( ! data_rgba.length ) {
+
+					return rgbe_error( rgbe_memory_error, 'unable to allocate buffer space' );
+
+				}
+
+				let offset = 0, pos = 0;
+
+				const ptr_end = 4 * scanline_width;
+				const rgbeStart = new Uint8Array( 4 );
+				const scanline_buffer = new Uint8Array( ptr_end );
+				let num_scanlines = h;
+
+				// read in each successive scanline
+				while ( ( num_scanlines > 0 ) && ( pos < buffer.byteLength ) ) {
+
+					if ( pos + 4 > buffer.byteLength ) {
+
+						return rgbe_error( rgbe_read_error );
+
+					}
+
+					rgbeStart[ 0 ] = buffer[ pos ++ ];
+					rgbeStart[ 1 ] = buffer[ pos ++ ];
+					rgbeStart[ 2 ] = buffer[ pos ++ ];
+					rgbeStart[ 3 ] = buffer[ pos ++ ];
+
+					if ( ( 2 != rgbeStart[ 0 ] ) || ( 2 != rgbeStart[ 1 ] ) || ( ( ( rgbeStart[ 2 ] << 8 ) | rgbeStart[ 3 ] ) != scanline_width ) ) {
+
+						return rgbe_error( rgbe_format_error, 'bad rgbe scanline format' );
+
+					}
+
+					// read each of the four channels for the scanline into the buffer
+					// first red, then green, then blue, then exponent
+					let ptr = 0, count;
+
+					while ( ( ptr < ptr_end ) && ( pos < buffer.byteLength ) ) {
+
+						count = buffer[ pos ++ ];
+						const isEncodedRun = count > 128;
+						if ( isEncodedRun ) count -= 128;
+
+						if ( ( 0 === count ) || ( ptr + count > ptr_end ) ) {
+
+							return rgbe_error( rgbe_format_error, 'bad scanline data' );
+
+						}
+
+						if ( isEncodedRun ) {
+
+							// a (encoded) run of the same value
+							const byteValue = buffer[ pos ++ ];
+							for ( let i = 0; i < count; i ++ ) {
+
+								scanline_buffer[ ptr ++ ] = byteValue;
+
+							}
+							//ptr += count;
+
+						} else {
+
+							// a literal-run
+							scanline_buffer.set( buffer.subarray( pos, pos + count ), ptr );
+							ptr += count; pos += count;
+
+						}
+
+					}
+
+
+					// now convert data from buffer into rgba
+					// first red, then green, then blue, then exponent (alpha)
+					const l = scanline_width; //scanline_buffer.byteLength;
+					for ( let i = 0; i < l; i ++ ) {
+
+						let off = 0;
+						data_rgba[ offset ] = scanline_buffer[ i + off ];
+						off += scanline_width; //1;
+						data_rgba[ offset + 1 ] = scanline_buffer[ i + off ];
+						off += scanline_width; //1;
+						data_rgba[ offset + 2 ] = scanline_buffer[ i + off ];
+						off += scanline_width; //1;
+						data_rgba[ offset + 3 ] = scanline_buffer[ i + off ];
+						offset += 4;
+
+					}
+
+					num_scanlines --;
+
+				}
+
+				return data_rgba;
+
+			};
+
+		const RGBEByteToRGBFloat = function ( sourceArray, sourceOffset, destArray, destOffset ) {
+
+			const e = sourceArray[ sourceOffset + 3 ];
+			const scale = Math.pow( 2.0, e - 128.0 ) / 255.0;
+
+			destArray[ destOffset + 0 ] = sourceArray[ sourceOffset + 0 ] * scale;
+			destArray[ destOffset + 1 ] = sourceArray[ sourceOffset + 1 ] * scale;
+			destArray[ destOffset + 2 ] = sourceArray[ sourceOffset + 2 ] * scale;
+			destArray[ destOffset + 3 ] = 1;
+
+		};
+
+		const RGBEByteToRGBHalf = function ( sourceArray, sourceOffset, destArray, destOffset ) {
+
+			const e = sourceArray[ sourceOffset + 3 ];
+			const scale = Math.pow( 2.0, e - 128.0 ) / 255.0;
+
+			// clamping to 65504, the maximum representable value in float16
+			destArray[ destOffset + 0 ] = three__WEBPACK_IMPORTED_MODULE_0__.DataUtils.toHalfFloat( Math.min( sourceArray[ sourceOffset + 0 ] * scale, 65504 ) );
+			destArray[ destOffset + 1 ] = three__WEBPACK_IMPORTED_MODULE_0__.DataUtils.toHalfFloat( Math.min( sourceArray[ sourceOffset + 1 ] * scale, 65504 ) );
+			destArray[ destOffset + 2 ] = three__WEBPACK_IMPORTED_MODULE_0__.DataUtils.toHalfFloat( Math.min( sourceArray[ sourceOffset + 2 ] * scale, 65504 ) );
+			destArray[ destOffset + 3 ] = three__WEBPACK_IMPORTED_MODULE_0__.DataUtils.toHalfFloat( 1 );
+
+		};
+
+		const byteArray = new Uint8Array( buffer );
+		byteArray.pos = 0;
+		const rgbe_header_info = RGBE_ReadHeader( byteArray );
+
+		if ( RGBE_RETURN_FAILURE !== rgbe_header_info ) {
+
+			const w = rgbe_header_info.width,
+				h = rgbe_header_info.height,
+				image_rgba_data = RGBE_ReadPixels_RLE( byteArray.subarray( byteArray.pos ), w, h );
+
+			if ( RGBE_RETURN_FAILURE !== image_rgba_data ) {
+
+				let data, type;
+				let numElements;
+
+				switch ( this.type ) {
+
+					case three__WEBPACK_IMPORTED_MODULE_0__.FloatType:
+
+						numElements = image_rgba_data.length / 4;
+						const floatArray = new Float32Array( numElements * 4 );
+
+						for ( let j = 0; j < numElements; j ++ ) {
+
+							RGBEByteToRGBFloat( image_rgba_data, j * 4, floatArray, j * 4 );
+
+						}
+
+						data = floatArray;
+						type = three__WEBPACK_IMPORTED_MODULE_0__.FloatType;
+						break;
+
+					case three__WEBPACK_IMPORTED_MODULE_0__.HalfFloatType:
+
+						numElements = image_rgba_data.length / 4;
+						const halfArray = new Uint16Array( numElements * 4 );
+
+						for ( let j = 0; j < numElements; j ++ ) {
+
+							RGBEByteToRGBHalf( image_rgba_data, j * 4, halfArray, j * 4 );
+
+						}
+
+						data = halfArray;
+						type = three__WEBPACK_IMPORTED_MODULE_0__.HalfFloatType;
+						break;
+
+					default:
+
+						console.error( 'THREE.RGBELoader: unsupported type: ', this.type );
+						break;
+
+				}
+
+				return {
+					width: w, height: h,
+					data: data,
+					header: rgbe_header_info.string,
+					gamma: rgbe_header_info.gamma,
+					exposure: rgbe_header_info.exposure,
+					type: type
+				};
+
+			}
+
+		}
+
+		return null;
+
+	}
+
+	setDataType( value ) {
+
+		this.type = value;
+		return this;
+
+	}
+
+	load( url, onLoad, onProgress, onError ) {
+
+		function onLoadCallback( texture, texData ) {
+
+			switch ( texture.type ) {
+
+				case three__WEBPACK_IMPORTED_MODULE_0__.FloatType:
+				case three__WEBPACK_IMPORTED_MODULE_0__.HalfFloatType:
+
+					texture.encoding = three__WEBPACK_IMPORTED_MODULE_0__.LinearEncoding;
+					texture.minFilter = three__WEBPACK_IMPORTED_MODULE_0__.LinearFilter;
+					texture.magFilter = three__WEBPACK_IMPORTED_MODULE_0__.LinearFilter;
+					texture.generateMipmaps = false;
+					texture.flipY = true;
+
+					break;
+
+			}
+
+			if ( onLoad ) onLoad( texture, texData );
+
+		}
+
+		return super.load( url, onLoadCallback, onProgress, onError );
+
+	}
+
+}
+
+
+
+
+/***/ }),
+
 /***/ "./node_modules/three/examples/jsm/math/ConvexHull.js":
 /*!************************************************************!*\
   !*** ./node_modules/three/examples/jsm/math/ConvexHull.js ***!
@@ -82857,56 +83717,86 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/index.css */ "./src/styles/index.css");
 /* harmony import */ var elixr__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! elixr */ "./node_modules/elixr/dist/index.js");
-/* harmony import */ var _js_CubeLauncherSystem__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js/CubeLauncherSystem */ "./src/js/CubeLauncherSystem.js");
-/* harmony import */ var _js_InlineSceneCreationSystem__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./js/InlineSceneCreationSystem */ "./src/js/InlineSceneCreationSystem.js");
-/* harmony import */ var _js_ObjectManipulationSystem__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./js/ObjectManipulationSystem */ "./src/js/ObjectManipulationSystem.js");
+/* harmony import */ var _js_ARSceneCreationSystem__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js/ARSceneCreationSystem */ "./src/js/ARSceneCreationSystem.js");
+/* harmony import */ var _js_CubeLauncherSystem__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./js/CubeLauncherSystem */ "./src/js/CubeLauncherSystem.js");
+/* harmony import */ var _js_InlineSceneCreationSystem__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./js/InlineSceneCreationSystem */ "./src/js/InlineSceneCreationSystem.js");
+/* harmony import */ var _js_ObjectManipulationSystem__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./js/ObjectManipulationSystem */ "./src/js/ObjectManipulationSystem.js");
+/* harmony import */ var _js_VRSceneCreationSystem__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./js/VRSceneCreationSystem */ "./src/js/VRSceneCreationSystem.js");
 
 
 
 
-// import { ARButton } from 'three/examples/jsm/webxr/ARButton';
-// import { ARSceneCreationSystem } from './js/ARSceneCreationSystem';
+
+
 
 
 
 
 const core = new elixr__WEBPACK_IMPORTED_MODULE_1__.Core(document.getElementById('scene-container'));
 
-core.enablePhysics();
-core.physics.gravity.set(0, 0, 0);
-core.physics.solverIterations = 2;
-core.physics.stepTime = 1 / 90;
-
+// create vr mode
+core.createWorld('vrworld');
+core.switchToWorld('vrworld');
 core.registerGameComponent(elixr__WEBPACK_IMPORTED_MODULE_1__.MovementObstacle);
 core.registerGameComponent(elixr__WEBPACK_IMPORTED_MODULE_1__.MovementSurface);
 
-// core.registerGameSystem(XRTeleportSystem);
-// core.registerGameSystem(XRSlideSystem);
-// core.registerGameSystem(XRSnapTurnSystem);
-// core.registerGameSystem(SceneCreationSystem);
-// core.registerGameSystem(ARSceneCreationSystem);
-core.registerGameSystem(_js_InlineSceneCreationSystem__WEBPACK_IMPORTED_MODULE_3__.InlineSceneCreationSystem);
-core.registerGameSystem(_js_CubeLauncherSystem__WEBPACK_IMPORTED_MODULE_2__.CubeLauncherSystem);
-core.registerGameSystem(_js_ObjectManipulationSystem__WEBPACK_IMPORTED_MODULE_4__.ObjectManipulationSystem);
+core.registerGameSystem(elixr__WEBPACK_IMPORTED_MODULE_1__.XRTeleportSystem);
+core.registerGameSystem(elixr__WEBPACK_IMPORTED_MODULE_1__.XRSlideSystem);
+core.registerGameSystem(elixr__WEBPACK_IMPORTED_MODULE_1__.XRSnapTurnSystem);
+core.registerGameSystem(_js_VRSceneCreationSystem__WEBPACK_IMPORTED_MODULE_6__.VRSceneCreationSystem);
+core.registerGameSystem(_js_CubeLauncherSystem__WEBPACK_IMPORTED_MODULE_3__.CubeLauncherSystem);
+core.registerGameSystem(_js_ObjectManipulationSystem__WEBPACK_IMPORTED_MODULE_5__.ObjectManipulationSystem);
+const slideConfig = core.getGameSystemConfig(elixr__WEBPACK_IMPORTED_MODULE_1__.XRSlideSystem);
+slideConfig.MAX_MOVEMENT_SPEED = 2.5;
+const switchToVR = () => {
+	core.switchToWorld('vrworld');
+	core.playerSpace.position.set(0, 0, 0);
+	core.playerSpace.quaternion.set(0, 0, 0, 1);
+};
 
-// const slideConfig = core.getGameSystemConfig(XRSlideSystem);
-// slideConfig.MAX_MOVEMENT_SPEED = 2.5;
+// create ar mode
+core.createWorld('arworld');
+core.switchToWorld('arworld');
+core.registerGameSystem(_js_ARSceneCreationSystem__WEBPACK_IMPORTED_MODULE_2__.ARSceneCreationSystem);
+core.registerGameSystem(_js_CubeLauncherSystem__WEBPACK_IMPORTED_MODULE_3__.CubeLauncherSystem);
+core.registerGameSystem(_js_ObjectManipulationSystem__WEBPACK_IMPORTED_MODULE_5__.ObjectManipulationSystem);
+const switchToAR = () => {
+	core.switchToWorld('arworld');
+	core.playerSpace.position.set(0, 0, 0);
+	core.playerSpace.quaternion.set(0, 0, 0, 1);
+};
 
-// document.body.append(core.vrButton);
+// default to inline world
+core.switchToWorld('default');
+core.registerGameSystem(_js_InlineSceneCreationSystem__WEBPACK_IMPORTED_MODULE_4__.InlineSceneCreationSystem);
+core.registerGameSystem(_js_CubeLauncherSystem__WEBPACK_IMPORTED_MODULE_3__.CubeLauncherSystem);
+core.registerGameSystem(_js_ObjectManipulationSystem__WEBPACK_IMPORTED_MODULE_5__.ObjectManipulationSystem);
+const switchToInline = () => {
+	core.switchToWorld('default');
+	core.inlineCamera.position.set(-2.5, 0.5, -2.5);
+	core.inlineCamera.lookAt(3, 2, 2);
+};
 
-// document.body.append(
-// 	ARButton.createButton(core.renderer, {
-// 		requiredFeatures: ['anchors', 'plane-detection'],
-// 		optionalFeatures: [],
-// 	}),
-// );
+switchToInline();
 
-elixr__WEBPACK_IMPORTED_MODULE_1__.VRButton.convertToVRButton(document.getElementById('vr-button'), core.renderer);
+const vrButton = document.getElementById('vr-button');
+elixr__WEBPACK_IMPORTED_MODULE_1__.VRButton.convertToVRButton(vrButton, core.renderer, {
+	onSessionStarted: switchToVR,
+	onSessionEnded: switchToInline,
+});
 
-const ambientLight = new elixr__WEBPACK_IMPORTED_MODULE_1__.THREE.AmbientLight(0xffffff, 0.2);
-core.scene.add(ambientLight);
-const directionalLight = new elixr__WEBPACK_IMPORTED_MODULE_1__.THREE.DirectionalLight(0xffffff, 0.2);
-core.scene.add(directionalLight);
+const arButton = document.getElementById('ar-button');
+elixr__WEBPACK_IMPORTED_MODULE_1__.ARButton.convertToARButton(arButton, core.renderer, {
+	sessionInit: {
+		requiredFeatures: ['anchors', 'plane-detection'],
+		optionalFeatures: [],
+	},
+	onSessionStarted: switchToAR,
+	onSessionEnded: switchToInline,
+});
+arButton.addEventListener('click', () => {
+	core.switchToWorld('arworld');
+});
 
 })();
 
