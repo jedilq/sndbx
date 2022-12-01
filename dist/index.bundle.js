@@ -83794,9 +83794,6 @@ elixr__WEBPACK_IMPORTED_MODULE_1__.ARButton.convertToARButton(arButton, core.ren
 	onSessionStarted: switchToAR,
 	onSessionEnded: switchToInline,
 });
-arButton.addEventListener('click', () => {
-	core.switchToWorld('arworld');
-});
 
 })();
 

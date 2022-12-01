@@ -79,6 +79,3 @@ ARButton.convertToARButton(arButton, core.renderer, {
 	onSessionStarted: switchToAR,
 	onSessionEnded: switchToInline,
 });
-arButton.addEventListener('click', () => {
-	core.switchToWorld('arworld');
-});
