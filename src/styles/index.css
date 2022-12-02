@@ -126,21 +126,34 @@
 }
 
 .gravity-sliders {
-	position: absolute;
-	top: -80px;
-	right: 10px;
-	width: 120px;
+	position: fixed;
+	top: 80px;
+	right: -120px;
+	width: 146px;
+	padding: 15px 10px 15px 36px;
+	background-color: #333333;
+	border-radius: 25px 0 0 25px;
+	opacity: 0.8;
+	transition: all 0.3s;
+}
+
+.gravity-sliders:hover {
+	right: 0px;
 }
 
 .gravity-slider {
 	appearance: none;
-	width: 120px;
+	width: 100px;
 	height: 10px;
 	background: #d3d3d3;
 	outline: none;
 	opacity: 0.9;
 	border-radius: 5px;
 	transition: opacity 0.2s;
+}
+
+.gravity-sliders > h4 {
+	color: #ffffff;
 }
 
 .gravity-slider:hover {
@@ -160,4 +173,14 @@
 	height: 16px;
 	background: #8f00ff;
 	cursor: pointer;
+}
+
+.pull-strip {
+	position: absolute;
+	top: 20px;
+	left: 11px;
+	width: 6px;
+	height: calc(100% - 40px);
+	background-color: #ffffff;
+	border-radius: 3px;
 }
