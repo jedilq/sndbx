@@ -13113,7 +13113,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.cdnfonts.com/css/space-mono);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "#scene-container {\n\twidth: 100%;\n\theight: 70vh;\n}\n\n.nav-bar {\n\tfont-family: 'Space Mono', sans-serif;\n\tposition: fixed;\n\ttop: 10px;\n\tleft: 10px;\n\tbackground-color: #333333;\n\twidth: calc(100vw - 20px);\n\theight: 50px;\n\tborder-radius: 25px;\n\topacity: 0.8;\n\ttransition: opacity 0.7s;\n}\n\n.nav-bar:hover {\n\topacity: 1;\n}\n\n.app-name {\n\tposition: absolute;\n\tfont-weight: lighter !important;\n\ttop: 0;\n\tleft: 60px;\n\tfont-size: 32px;\n\tcolor: #ffffff;\n\tletter-spacing: 0.6rem;\n}\n\n.nav-links {\n\tposition: absolute;\n\ttop: 12px;\n\tright: 5px;\n}\n\n.nav-links a {\n\tcolor: #ffffff;\n\tfont-size: 18px;\n\tletter-spacing: 0.15rem;\n\ttext-decoration: none;\n\tpadding-right: 15px;\n}\n\n.nav-links a:hover {\n\ttext-decoration: underline;\n}\n\n.icon-outer {\n\tposition: absolute;\n\ttop: 5px;\n\tleft: 5px;\n\twidth: 40px;\n\theight: 40px;\n\tborder: 5px solid #8f00ff;\n\tborder-radius: 50% 0 50% 50%;\n\ttransition: transform 0.7s ease-in-out;\n}\n\n.nav-bar:hover .icon-outer {\n\ttransform: rotate(45deg);\n}\n\n.icon-inner {\n\tposition: absolute;\n\ttop: 7px;\n\tleft: 11px;\n\twidth: 8px;\n\theight: 16px;\n\tborder-radius: 4px;\n\tbackground-color: #777777;\n}\n\n.main-box {\n\tposition: fixed;\n\twidth: 25rem;\n\theight: 25rem;\n\ttop: calc((100vh - 25rem) / 2);\n\tleft: calc((100vw - 25rem) / 2);\n}\n\n.intro-box {\n\tposition: absolute;\n\ttop: 0;\n\tleft: 0;\n\twidth: 25rem;\n\theight: calc(22rem - 5px);\n\tbackground-color: #333333;\n\tborder-radius: 25px 25px 0px 25px;\n\topacity: 1;\n\tcolor: white;\n}\n\n#ui-panel {\n\tposition: fixed;\n\tbottom: 0;\n\t/* left: 20px;\n\twidth: calc(100vw - 40px); */\n\tborder-radius: 0;\n\tcolor: white;\n\tbackground-color: #333333;\n\topacity: 0.9;\n\twidth: 100vw;\n\ttransition: opacity 0.7s;\n}\n\n#ui-panel:hover {\n\topacity: 1;\n}\n\n.action-button {\n\tcolor: #a7a7a7;\n\tborder-color: #a7a7a7;\n\tborder-radius: 0;\n\tmargin-right: 5px;\n}\n\n.action-button:hover {\n\tcolor: #ffffff;\n\tborder-color: #8f00ff;\n\tbackground-color: #8f00ff;\n}\n", "",{"version":3,"sources":["webpack://./src/styles/index.css"],"names":[],"mappings":"AAEA;CACC,WAAW;CACX,YAAY;AACb;;AAEA;CACC,qCAAqC;CACrC,eAAe;CACf,SAAS;CACT,UAAU;CACV,yBAAyB;CACzB,yBAAyB;CACzB,YAAY;CACZ,mBAAmB;CACnB,YAAY;CACZ,wBAAwB;AACzB;;AAEA;CACC,UAAU;AACX;;AAEA;CACC,kBAAkB;CAClB,+BAA+B;CAC/B,MAAM;CACN,UAAU;CACV,eAAe;CACf,cAAc;CACd,sBAAsB;AACvB;;AAEA;CACC,kBAAkB;CAClB,SAAS;CACT,UAAU;AACX;;AAEA;CACC,cAAc;CACd,eAAe;CACf,uBAAuB;CACvB,qBAAqB;CACrB,mBAAmB;AACpB;;AAEA;CACC,0BAA0B;AAC3B;;AAEA;CACC,kBAAkB;CAClB,QAAQ;CACR,SAAS;CACT,WAAW;CACX,YAAY;CACZ,yBAAyB;CACzB,4BAA4B;CAC5B,sCAAsC;AACvC;;AAEA;CACC,wBAAwB;AACzB;;AAEA;CACC,kBAAkB;CAClB,QAAQ;CACR,UAAU;CACV,UAAU;CACV,YAAY;CACZ,kBAAkB;CAClB,yBAAyB;AAC1B;;AAEA;CACC,eAAe;CACf,YAAY;CACZ,aAAa;CACb,8BAA8B;CAC9B,+BAA+B;AAChC;;AAEA;CACC,kBAAkB;CAClB,MAAM;CACN,OAAO;CACP,YAAY;CACZ,yBAAyB;CACzB,yBAAyB;CACzB,iCAAiC;CACjC,UAAU;CACV,YAAY;AACb;;AAEA;CACC,eAAe;CACf,SAAS;CACT;6BAC4B;CAC5B,gBAAgB;CAChB,YAAY;CACZ,yBAAyB;CACzB,YAAY;CACZ,YAAY;CACZ,wBAAwB;AACzB;;AAEA;CACC,UAAU;AACX;;AAEA;CACC,cAAc;CACd,qBAAqB;CACrB,gBAAgB;CAChB,iBAAiB;AAClB;;AAEA;CACC,cAAc;CACd,qBAAqB;CACrB,yBAAyB;AAC1B","sourcesContent":["@import url('https://fonts.cdnfonts.com/css/space-mono');\n\n#scene-container {\n\twidth: 100%;\n\theight: 70vh;\n}\n\n.nav-bar {\n\tfont-family: 'Space Mono', sans-serif;\n\tposition: fixed;\n\ttop: 10px;\n\tleft: 10px;\n\tbackground-color: #333333;\n\twidth: calc(100vw - 20px);\n\theight: 50px;\n\tborder-radius: 25px;\n\topacity: 0.8;\n\ttransition: opacity 0.7s;\n}\n\n.nav-bar:hover {\n\topacity: 1;\n}\n\n.app-name {\n\tposition: absolute;\n\tfont-weight: lighter !important;\n\ttop: 0;\n\tleft: 60px;\n\tfont-size: 32px;\n\tcolor: #ffffff;\n\tletter-spacing: 0.6rem;\n}\n\n.nav-links {\n\tposition: absolute;\n\ttop: 12px;\n\tright: 5px;\n}\n\n.nav-links a {\n\tcolor: #ffffff;\n\tfont-size: 18px;\n\tletter-spacing: 0.15rem;\n\ttext-decoration: none;\n\tpadding-right: 15px;\n}\n\n.nav-links a:hover {\n\ttext-decoration: underline;\n}\n\n.icon-outer {\n\tposition: absolute;\n\ttop: 5px;\n\tleft: 5px;\n\twidth: 40px;\n\theight: 40px;\n\tborder: 5px solid #8f00ff;\n\tborder-radius: 50% 0 50% 50%;\n\ttransition: transform 0.7s ease-in-out;\n}\n\n.nav-bar:hover .icon-outer {\n\ttransform: rotate(45deg);\n}\n\n.icon-inner {\n\tposition: absolute;\n\ttop: 7px;\n\tleft: 11px;\n\twidth: 8px;\n\theight: 16px;\n\tborder-radius: 4px;\n\tbackground-color: #777777;\n}\n\n.main-box {\n\tposition: fixed;\n\twidth: 25rem;\n\theight: 25rem;\n\ttop: calc((100vh - 25rem) / 2);\n\tleft: calc((100vw - 25rem) / 2);\n}\n\n.intro-box {\n\tposition: absolute;\n\ttop: 0;\n\tleft: 0;\n\twidth: 25rem;\n\theight: calc(22rem - 5px);\n\tbackground-color: #333333;\n\tborder-radius: 25px 25px 0px 25px;\n\topacity: 1;\n\tcolor: white;\n}\n\n#ui-panel {\n\tposition: fixed;\n\tbottom: 0;\n\t/* left: 20px;\n\twidth: calc(100vw - 40px); */\n\tborder-radius: 0;\n\tcolor: white;\n\tbackground-color: #333333;\n\topacity: 0.9;\n\twidth: 100vw;\n\ttransition: opacity 0.7s;\n}\n\n#ui-panel:hover {\n\topacity: 1;\n}\n\n.action-button {\n\tcolor: #a7a7a7;\n\tborder-color: #a7a7a7;\n\tborder-radius: 0;\n\tmargin-right: 5px;\n}\n\n.action-button:hover {\n\tcolor: #ffffff;\n\tborder-color: #8f00ff;\n\tbackground-color: #8f00ff;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "#scene-container {\n\twidth: 100%;\n\theight: 70vh;\n}\n\n.nav-bar {\n\tfont-family: 'Space Mono', sans-serif;\n\tposition: fixed;\n\ttop: 10px;\n\tleft: 10px;\n\tbackground-color: #333333;\n\twidth: calc(100vw - 20px);\n\theight: 50px;\n\tborder-radius: 25px;\n\topacity: 0.8;\n\ttransition: opacity 0.7s;\n}\n\n.nav-bar:hover {\n\topacity: 1;\n}\n\n.app-name {\n\tposition: absolute;\n\tfont-weight: lighter !important;\n\ttop: 0;\n\tleft: 60px;\n\tfont-size: 32px;\n\tcolor: #ffffff;\n\tletter-spacing: 0.6rem;\n}\n\n.nav-links {\n\tposition: absolute;\n\ttop: 12px;\n\tright: 5px;\n}\n\n.nav-links a {\n\tcolor: #ffffff;\n\tfont-size: 18px;\n\tletter-spacing: 0.15rem;\n\ttext-decoration: none;\n\tpadding-right: 15px;\n}\n\n.nav-links a:hover {\n\ttext-decoration: underline;\n}\n\n.icon-outer {\n\tposition: absolute;\n\ttop: 5px;\n\tleft: 5px;\n\twidth: 40px;\n\theight: 40px;\n\tborder: 5px solid #8f00ff;\n\tborder-radius: 50% 0 50% 50%;\n\ttransition: transform 0.7s ease-in-out;\n}\n\n.nav-bar:hover .icon-outer {\n\ttransform: rotate(45deg);\n}\n\n.icon-inner {\n\tposition: absolute;\n\ttop: 7px;\n\tleft: 11px;\n\twidth: 8px;\n\theight: 16px;\n\tborder-radius: 4px;\n\tbackground-color: #777777;\n}\n\n.main-box {\n\tposition: fixed;\n\twidth: 25rem;\n\theight: 25rem;\n\ttop: calc((100vh - 25rem) / 2);\n\tleft: calc((100vw - 25rem) / 2);\n}\n\n.intro-box {\n\tposition: absolute;\n\ttop: 0;\n\tleft: 0;\n\twidth: 25rem;\n\theight: calc(22rem - 5px);\n\tbackground-color: #333333;\n\tborder-radius: 25px 25px 0px 25px;\n\topacity: 1;\n\tcolor: white;\n}\n\n#ui-panel {\n\tposition: fixed;\n\tbottom: 0;\n\t/* left: 20px;\n\twidth: calc(100vw - 40px); */\n\tborder-radius: 0;\n\tcolor: white;\n\tbackground-color: #333333;\n\topacity: 0.9;\n\twidth: 100vw;\n\ttransition: opacity 0.7s;\n}\n\n#ui-panel:hover {\n\topacity: 1;\n}\n\n.action-button {\n\tcolor: #a7a7a7;\n\tborder-color: #a7a7a7;\n\tborder-radius: 0;\n\tmargin-right: 5px;\n}\n\n.action-button:hover {\n\tcolor: #ffffff;\n\tborder-color: #8f00ff;\n\tbackground-color: #8f00ff;\n}\n\n.gravity-sliders {\n\tposition: absolute;\n\ttop: -80px;\n\tright: 10px;\n\twidth: 120px;\n}\n\n.gravity-slider {\n\tappearance: none;\n\twidth: 120px;\n\theight: 10px;\n\tbackground: #d3d3d3;\n\toutline: none;\n\topacity: 0.9;\n\tborder-radius: 5px;\n\ttransition: opacity 0.2s;\n}\n\n.gravity-slider:hover {\n\topacity: 1;\n}\n\n.gravity-slider::-webkit-slider-thumb {\n\tappearance: none;\n\twidth: 8px;\n\theight: 16px;\n\tbackground: #8f00ff;\n\tcursor: pointer;\n}\n\n.gravity-slider::-moz-range-thumb {\n\twidth: 8px;\n\theight: 16px;\n\tbackground: #8f00ff;\n\tcursor: pointer;\n}\n", "",{"version":3,"sources":["webpack://./src/styles/index.css"],"names":[],"mappings":"AAEA;CACC,WAAW;CACX,YAAY;AACb;;AAEA;CACC,qCAAqC;CACrC,eAAe;CACf,SAAS;CACT,UAAU;CACV,yBAAyB;CACzB,yBAAyB;CACzB,YAAY;CACZ,mBAAmB;CACnB,YAAY;CACZ,wBAAwB;AACzB;;AAEA;CACC,UAAU;AACX;;AAEA;CACC,kBAAkB;CAClB,+BAA+B;CAC/B,MAAM;CACN,UAAU;CACV,eAAe;CACf,cAAc;CACd,sBAAsB;AACvB;;AAEA;CACC,kBAAkB;CAClB,SAAS;CACT,UAAU;AACX;;AAEA;CACC,cAAc;CACd,eAAe;CACf,uBAAuB;CACvB,qBAAqB;CACrB,mBAAmB;AACpB;;AAEA;CACC,0BAA0B;AAC3B;;AAEA;CACC,kBAAkB;CAClB,QAAQ;CACR,SAAS;CACT,WAAW;CACX,YAAY;CACZ,yBAAyB;CACzB,4BAA4B;CAC5B,sCAAsC;AACvC;;AAEA;CACC,wBAAwB;AACzB;;AAEA;CACC,kBAAkB;CAClB,QAAQ;CACR,UAAU;CACV,UAAU;CACV,YAAY;CACZ,kBAAkB;CAClB,yBAAyB;AAC1B;;AAEA;CACC,eAAe;CACf,YAAY;CACZ,aAAa;CACb,8BAA8B;CAC9B,+BAA+B;AAChC;;AAEA;CACC,kBAAkB;CAClB,MAAM;CACN,OAAO;CACP,YAAY;CACZ,yBAAyB;CACzB,yBAAyB;CACzB,iCAAiC;CACjC,UAAU;CACV,YAAY;AACb;;AAEA;CACC,eAAe;CACf,SAAS;CACT;6BAC4B;CAC5B,gBAAgB;CAChB,YAAY;CACZ,yBAAyB;CACzB,YAAY;CACZ,YAAY;CACZ,wBAAwB;AACzB;;AAEA;CACC,UAAU;AACX;;AAEA;CACC,cAAc;CACd,qBAAqB;CACrB,gBAAgB;CAChB,iBAAiB;AAClB;;AAEA;CACC,cAAc;CACd,qBAAqB;CACrB,yBAAyB;AAC1B;;AAEA;CACC,kBAAkB;CAClB,UAAU;CACV,WAAW;CACX,YAAY;AACb;;AAEA;CACC,gBAAgB;CAChB,YAAY;CACZ,YAAY;CACZ,mBAAmB;CACnB,aAAa;CACb,YAAY;CACZ,kBAAkB;CAClB,wBAAwB;AACzB;;AAEA;CACC,UAAU;AACX;;AAEA;CACC,gBAAgB;CAChB,UAAU;CACV,YAAY;CACZ,mBAAmB;CACnB,eAAe;AAChB;;AAEA;CACC,UAAU;CACV,YAAY;CACZ,mBAAmB;CACnB,eAAe;AAChB","sourcesContent":["@import url('https://fonts.cdnfonts.com/css/space-mono');\n\n#scene-container {\n\twidth: 100%;\n\theight: 70vh;\n}\n\n.nav-bar {\n\tfont-family: 'Space Mono', sans-serif;\n\tposition: fixed;\n\ttop: 10px;\n\tleft: 10px;\n\tbackground-color: #333333;\n\twidth: calc(100vw - 20px);\n\theight: 50px;\n\tborder-radius: 25px;\n\topacity: 0.8;\n\ttransition: opacity 0.7s;\n}\n\n.nav-bar:hover {\n\topacity: 1;\n}\n\n.app-name {\n\tposition: absolute;\n\tfont-weight: lighter !important;\n\ttop: 0;\n\tleft: 60px;\n\tfont-size: 32px;\n\tcolor: #ffffff;\n\tletter-spacing: 0.6rem;\n}\n\n.nav-links {\n\tposition: absolute;\n\ttop: 12px;\n\tright: 5px;\n}\n\n.nav-links a {\n\tcolor: #ffffff;\n\tfont-size: 18px;\n\tletter-spacing: 0.15rem;\n\ttext-decoration: none;\n\tpadding-right: 15px;\n}\n\n.nav-links a:hover {\n\ttext-decoration: underline;\n}\n\n.icon-outer {\n\tposition: absolute;\n\ttop: 5px;\n\tleft: 5px;\n\twidth: 40px;\n\theight: 40px;\n\tborder: 5px solid #8f00ff;\n\tborder-radius: 50% 0 50% 50%;\n\ttransition: transform 0.7s ease-in-out;\n}\n\n.nav-bar:hover .icon-outer {\n\ttransform: rotate(45deg);\n}\n\n.icon-inner {\n\tposition: absolute;\n\ttop: 7px;\n\tleft: 11px;\n\twidth: 8px;\n\theight: 16px;\n\tborder-radius: 4px;\n\tbackground-color: #777777;\n}\n\n.main-box {\n\tposition: fixed;\n\twidth: 25rem;\n\theight: 25rem;\n\ttop: calc((100vh - 25rem) / 2);\n\tleft: calc((100vw - 25rem) / 2);\n}\n\n.intro-box {\n\tposition: absolute;\n\ttop: 0;\n\tleft: 0;\n\twidth: 25rem;\n\theight: calc(22rem - 5px);\n\tbackground-color: #333333;\n\tborder-radius: 25px 25px 0px 25px;\n\topacity: 1;\n\tcolor: white;\n}\n\n#ui-panel {\n\tposition: fixed;\n\tbottom: 0;\n\t/* left: 20px;\n\twidth: calc(100vw - 40px); */\n\tborder-radius: 0;\n\tcolor: white;\n\tbackground-color: #333333;\n\topacity: 0.9;\n\twidth: 100vw;\n\ttransition: opacity 0.7s;\n}\n\n#ui-panel:hover {\n\topacity: 1;\n}\n\n.action-button {\n\tcolor: #a7a7a7;\n\tborder-color: #a7a7a7;\n\tborder-radius: 0;\n\tmargin-right: 5px;\n}\n\n.action-button:hover {\n\tcolor: #ffffff;\n\tborder-color: #8f00ff;\n\tbackground-color: #8f00ff;\n}\n\n.gravity-sliders {\n\tposition: absolute;\n\ttop: -80px;\n\tright: 10px;\n\twidth: 120px;\n}\n\n.gravity-slider {\n\tappearance: none;\n\twidth: 120px;\n\theight: 10px;\n\tbackground: #d3d3d3;\n\toutline: none;\n\topacity: 0.9;\n\tborder-radius: 5px;\n\ttransition: opacity 0.2s;\n}\n\n.gravity-slider:hover {\n\topacity: 1;\n}\n\n.gravity-slider::-webkit-slider-thumb {\n\tappearance: none;\n\twidth: 8px;\n\theight: 16px;\n\tbackground: #8f00ff;\n\tcursor: pointer;\n}\n\n.gravity-slider::-moz-range-thumb {\n\twidth: 8px;\n\theight: 16px;\n\tbackground: #8f00ff;\n\tcursor: pointer;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -18940,6 +18940,35 @@ class CubeLauncherSystem extends elixr__WEBPACK_IMPORTED_MODULE_0__.XRGameSystem
 				});
 			}
 		});
+	}
+}
+
+
+/***/ }),
+
+/***/ "./src/js/GravityControlSystem.js":
+/*!****************************************!*\
+  !*** ./src/js/GravityControlSystem.js ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "GravityControlSystem": () => (/* binding */ GravityControlSystem)
+/* harmony export */ });
+/* harmony import */ var elixr__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! elixr */ "./node_modules/elixr/dist/index.js");
+
+
+class GravityControlSystem extends elixr__WEBPACK_IMPORTED_MODULE_0__.GameSystem {
+	update() {
+		const gravitySliderX = document.getElementById('gravity-slider-x');
+		const gravitySliderY = document.getElementById('gravity-slider-y');
+		const gravitySliderZ = document.getElementById('gravity-slider-z');
+		this.core.physics.gravity.set(
+			gravitySliderX.value,
+			gravitySliderY.value,
+			gravitySliderZ.value,
+		);
 	}
 }
 
@@ -83719,9 +83748,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var elixr__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! elixr */ "./node_modules/elixr/dist/index.js");
 /* harmony import */ var _js_ARSceneCreationSystem__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js/ARSceneCreationSystem */ "./src/js/ARSceneCreationSystem.js");
 /* harmony import */ var _js_CubeLauncherSystem__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./js/CubeLauncherSystem */ "./src/js/CubeLauncherSystem.js");
-/* harmony import */ var _js_InlineSceneCreationSystem__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./js/InlineSceneCreationSystem */ "./src/js/InlineSceneCreationSystem.js");
-/* harmony import */ var _js_ObjectManipulationSystem__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./js/ObjectManipulationSystem */ "./src/js/ObjectManipulationSystem.js");
-/* harmony import */ var _js_VRSceneCreationSystem__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./js/VRSceneCreationSystem */ "./src/js/VRSceneCreationSystem.js");
+/* harmony import */ var _js_GravityControlSystem__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./js/GravityControlSystem */ "./src/js/GravityControlSystem.js");
+/* harmony import */ var _js_InlineSceneCreationSystem__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./js/InlineSceneCreationSystem */ "./src/js/InlineSceneCreationSystem.js");
+/* harmony import */ var _js_ObjectManipulationSystem__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./js/ObjectManipulationSystem */ "./src/js/ObjectManipulationSystem.js");
+/* harmony import */ var _js_VRSceneCreationSystem__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./js/VRSceneCreationSystem */ "./src/js/VRSceneCreationSystem.js");
+
 
 
 
@@ -83743,9 +83774,9 @@ core.registerGameComponent(elixr__WEBPACK_IMPORTED_MODULE_1__.MovementSurface);
 core.registerGameSystem(elixr__WEBPACK_IMPORTED_MODULE_1__.XRTeleportSystem);
 core.registerGameSystem(elixr__WEBPACK_IMPORTED_MODULE_1__.XRSlideSystem);
 core.registerGameSystem(elixr__WEBPACK_IMPORTED_MODULE_1__.XRSnapTurnSystem);
-core.registerGameSystem(_js_VRSceneCreationSystem__WEBPACK_IMPORTED_MODULE_6__.VRSceneCreationSystem);
+core.registerGameSystem(_js_VRSceneCreationSystem__WEBPACK_IMPORTED_MODULE_7__.VRSceneCreationSystem);
 core.registerGameSystem(_js_CubeLauncherSystem__WEBPACK_IMPORTED_MODULE_3__.CubeLauncherSystem);
-core.registerGameSystem(_js_ObjectManipulationSystem__WEBPACK_IMPORTED_MODULE_5__.ObjectManipulationSystem);
+core.registerGameSystem(_js_ObjectManipulationSystem__WEBPACK_IMPORTED_MODULE_6__.ObjectManipulationSystem);
 const slideConfig = core.getGameSystemConfig(elixr__WEBPACK_IMPORTED_MODULE_1__.XRSlideSystem);
 slideConfig.MAX_MOVEMENT_SPEED = 2.5;
 const switchToVR = () => {
@@ -83759,7 +83790,7 @@ core.createWorld('arworld');
 core.switchToWorld('arworld');
 core.registerGameSystem(_js_ARSceneCreationSystem__WEBPACK_IMPORTED_MODULE_2__.ARSceneCreationSystem);
 core.registerGameSystem(_js_CubeLauncherSystem__WEBPACK_IMPORTED_MODULE_3__.CubeLauncherSystem);
-core.registerGameSystem(_js_ObjectManipulationSystem__WEBPACK_IMPORTED_MODULE_5__.ObjectManipulationSystem);
+core.registerGameSystem(_js_ObjectManipulationSystem__WEBPACK_IMPORTED_MODULE_6__.ObjectManipulationSystem);
 const switchToAR = () => {
 	core.switchToWorld('arworld');
 	core.playerSpace.position.set(0, 0, 0);
@@ -83768,9 +83799,10 @@ const switchToAR = () => {
 
 // default to inline world
 core.switchToWorld('default');
-core.registerGameSystem(_js_InlineSceneCreationSystem__WEBPACK_IMPORTED_MODULE_4__.InlineSceneCreationSystem);
+core.registerGameSystem(_js_InlineSceneCreationSystem__WEBPACK_IMPORTED_MODULE_5__.InlineSceneCreationSystem);
 core.registerGameSystem(_js_CubeLauncherSystem__WEBPACK_IMPORTED_MODULE_3__.CubeLauncherSystem);
-core.registerGameSystem(_js_ObjectManipulationSystem__WEBPACK_IMPORTED_MODULE_5__.ObjectManipulationSystem);
+core.registerGameSystem(_js_ObjectManipulationSystem__WEBPACK_IMPORTED_MODULE_6__.ObjectManipulationSystem);
+core.registerGameSystem(_js_GravityControlSystem__WEBPACK_IMPORTED_MODULE_4__.GravityControlSystem);
 const switchToInline = () => {
 	core.switchToWorld('default');
 	core.inlineCamera.position.set(-2.5, 0.5, -2.5);

@@ -124,3 +124,40 @@
 	border-color: #8f00ff;
 	background-color: #8f00ff;
 }
+
+.gravity-sliders {
+	position: absolute;
+	top: -80px;
+	right: 10px;
+	width: 120px;
+}
+
+.gravity-slider {
+	appearance: none;
+	width: 120px;
+	height: 10px;
+	background: #d3d3d3;
+	outline: none;
+	opacity: 0.9;
+	border-radius: 5px;
+	transition: opacity 0.2s;
+}
+
+.gravity-slider:hover {
+	opacity: 1;
+}
+
+.gravity-slider::-webkit-slider-thumb {
+	appearance: none;
+	width: 8px;
+	height: 16px;
+	background: #8f00ff;
+	cursor: pointer;
+}
+
+.gravity-slider::-moz-range-thumb {
+	width: 8px;
+	height: 16px;
+	background: #8f00ff;
+	cursor: pointer;
+}

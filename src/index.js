@@ -13,6 +13,7 @@ import {
 
 import { ARSceneCreationSystem } from './js/ARSceneCreationSystem';
 import { CubeLauncherSystem } from './js/CubeLauncherSystem';
+import { GravityControlSystem } from './js/GravityControlSystem';
 import { InlineSceneCreationSystem } from './js/InlineSceneCreationSystem';
 import { ObjectManipulationSystem } from './js/ObjectManipulationSystem';
 import { VRSceneCreationSystem } from './js/VRSceneCreationSystem';
@@ -56,6 +57,7 @@ core.switchToWorld('default');
 core.registerGameSystem(InlineSceneCreationSystem);
 core.registerGameSystem(CubeLauncherSystem);
 core.registerGameSystem(ObjectManipulationSystem);
+core.registerGameSystem(GravityControlSystem);
 const switchToInline = () => {
 	core.switchToWorld('default');
 	core.inlineCamera.position.set(-2.5, 0.5, -2.5);
