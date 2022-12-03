@@ -27,7 +27,7 @@
 		"includedist"
 	],
 	"dependencies": {
-		"elixr": "^0.4.9",
+		"elixr": "../elixr",
 		"simple-peer-wrapper": "https://github.com/felixtrz/spw.git"
 	}
 }

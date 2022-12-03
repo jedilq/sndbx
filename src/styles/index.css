@@ -38,7 +38,8 @@
 	right: 5px;
 }
 
-.nav-links a {
+.nav-links a,
+.links-panel a {
 	color: #ffffff;
 	font-size: 18px;
 	letter-spacing: 0.15rem;
@@ -105,7 +106,7 @@
 	background-color: #333333;
 	opacity: 0.9;
 	width: 100vw;
-	transition: opacity 0.7s;
+	transition: all 0.7s;
 }
 
 #ui-panel:hover {
@@ -117,6 +118,7 @@
 	border-color: #a7a7a7;
 	border-radius: 0;
 	margin-right: 5px;
+	margin-top: 5px;
 }
 
 .action-button:hover {
@@ -128,17 +130,17 @@
 .gravity-sliders {
 	position: fixed;
 	top: 80px;
-	right: -120px;
+	left: -120px;
 	width: 146px;
-	padding: 15px 10px 15px 36px;
+	padding: 15px 36px 15px 10px;
 	background-color: #333333;
-	border-radius: 25px 0 0 25px;
+	border-radius: 0 25px 25px 0;
 	opacity: 0.8;
 	transition: all 0.3s;
 }
 
 .gravity-sliders:hover {
-	right: 0px;
+	left: 0px;
 }
 
 .gravity-slider {
@@ -178,9 +180,74 @@
 .pull-strip {
 	position: absolute;
 	top: 20px;
-	left: 11px;
+	right: 11px;
 	width: 6px;
 	height: calc(100% - 40px);
 	background-color: #ffffff;
 	border-radius: 3px;
+}
+
+.fold {
+	border: none;
+	background-color: transparent;
+	font-family: 'Space Mono', sans-serif;
+	max-width: 20px !important;
+	height: 20px;
+	color: #ffffff;
+	padding: auto;
+}
+
+.fold-vertical-line {
+	position: absolute;
+	top: 0;
+	right: 8px;
+	width: 4px;
+	height: 20px;
+	background-color: #ffffff;
+}
+
+.fold-horizontal-line {
+	position: absolute;
+	top: 8px;
+	right: 0px;
+	width: 20px;
+	height: 4px;
+	background-color: #ffffff;
+}
+
+#fold-desc {
+	position: fixed;
+	bottom: 25px;
+	right: 16px;
+}
+
+#fold-links {
+	display: none;
+	position: absolute;
+	top: 15px;
+	right: 20px;
+}
+
+@media only screen and (max-width: 500px) {
+	#fold-links {
+		display: block;
+	}
+
+	.nav-links {
+		display: none;
+	}
+
+	.links-panel {
+		display: none;
+		background-color: #333333;
+		border-radius: 25px;
+		position: absolute;
+		top: 56px;
+		right: 0;
+	}
+
+	.links-panel > a {
+		display: block;
+		padding: 10px 20px;
+	}
 }

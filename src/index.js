@@ -17,6 +17,7 @@ import { GravityControlSystem } from './js/GravityControlSystem';
 import { InlineSceneCreationSystem } from './js/InlineSceneCreationSystem';
 import { ObjectManipulationSystem } from './js/ObjectManipulationSystem';
 import { VRSceneCreationSystem } from './js/VRSceneCreationSystem';
+import { landingPageLogic } from './landing';
 
 const core = new Core(document.getElementById('scene-container'));
 
@@ -68,6 +69,8 @@ switchToInline();
 
 const vrButton = document.getElementById('vr-button');
 VRButton.convertToVRButton(vrButton, core.renderer, {
+	VR_NOT_ALLOWED_TEXT: 'VR BLOCKED',
+	VR_NOT_SUPPORTED_TEXT: 'VR UNSUPPORTED',
 	onSessionStarted: switchToVR,
 	onSessionEnded: switchToInline,
 });
@@ -78,6 +81,10 @@ ARButton.convertToARButton(arButton, core.renderer, {
 		requiredFeatures: ['anchors', 'plane-detection'],
 		optionalFeatures: [],
 	},
+	AR_NOT_ALLOWED_TEXT: 'AR BLOCKED',
+	AR_NOT_SUPPORTED_TEXT: 'AR UNSUPPORTED',
 	onSessionStarted: switchToAR,
 	onSessionEnded: switchToInline,
 });
+
+landingPageLogic();
