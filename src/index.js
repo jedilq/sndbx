@@ -73,6 +73,9 @@ VRButton.convertToVRButton(vrButton, core.renderer, {
 	VR_NOT_SUPPORTED_TEXT: 'VR UNSUPPORTED',
 	onSessionStarted: switchToVR,
 	onSessionEnded: switchToInline,
+	onUnsupported: () => {
+		vrButton.style.display = 'none';
+	},
 });
 
 const arButton = document.getElementById('ar-button');
@@ -85,6 +88,9 @@ ARButton.convertToARButton(arButton, core.renderer, {
 	AR_NOT_SUPPORTED_TEXT: 'AR UNSUPPORTED',
 	onSessionStarted: switchToAR,
 	onSessionEnded: switchToInline,
+	onUnsupported: () => {
+		arButton.style.display = 'none';
+	},
 });
 
 landingPageLogic();

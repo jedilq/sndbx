@@ -1,17 +1,19 @@
 export const landingPageLogic = () => {
-	const foldDescButton = document.getElementById('fold-desc');
-	const foldDescVerticalLine = foldDescButton.getElementsByClassName(
-		'fold-vertical-line',
-	)[0];
 	const uiPanel = document.getElementById('ui-panel');
-	foldDescButton.onclick = () => {
-		if (foldDescVerticalLine.style.display === 'none') {
-			uiPanel.style.transform = `translateY(${uiPanel.offsetHeight}px)`;
-			foldDescVerticalLine.style.display = 'block';
-		} else {
-			uiPanel.style.transform = `translateY(0px)`;
-			foldDescVerticalLine.style.display = 'none';
-		}
+	const gravityControls = document.getElementById('gravity-controls');
+
+	const inlineButton = document.getElementById('inline-button');
+	inlineButton.onclick = () => {
+		uiPanel.style.transform = `translateY(${uiPanel.offsetHeight}px)`;
+		gravityControls.style.opacity = 0.9;
+	};
+
+	const foldGravityControlsButton = document.getElementById(
+		'fold-gravity-controls',
+	);
+	foldGravityControlsButton.onclick = () => {
+		uiPanel.style.transform = `translateY(0px)`;
+		gravityControls.style.opacity = 0;
 	};
 
 	const foldLinksButton = document.getElementById('fold-links');

@@ -127,35 +127,42 @@
 	background-color: #8f00ff;
 }
 
-.gravity-sliders {
+#gravity-controls {
 	position: fixed;
-	top: 80px;
-	left: -120px;
-	width: 146px;
-	padding: 15px 36px 15px 10px;
+	bottom: 10px;
+	left: 10px;
+	width: calc(100vw - 20px);
+	padding: 15px 20px;
 	background-color: #333333;
-	border-radius: 0 25px 25px 0;
-	opacity: 0.8;
+	border-radius: 25px;
+	opacity: 0;
 	transition: all 0.3s;
 }
 
-.gravity-sliders:hover {
-	left: 0px;
+.gravity-sliders {
+	font-size: 0;
 }
 
 .gravity-slider {
 	appearance: none;
-	width: 100px;
+	width: calc((100% - 110px) / 3);
 	height: 10px;
 	background: #d3d3d3;
 	outline: none;
 	opacity: 0.9;
 	border-radius: 5px;
 	transition: opacity 0.2s;
+	padding: 8px;
+	margin-right: 10px;
 }
 
-.gravity-sliders > h4 {
+.gravity-slider:last-child {
+	margin-right: 0;
+}
+
+#gravity-controls > h4 {
 	color: #ffffff;
+	padding-right: 24px;
 }
 
 .gravity-slider:hover {
@@ -177,14 +184,14 @@
 	cursor: pointer;
 }
 
-.pull-strip {
-	position: absolute;
-	top: 20px;
-	right: 11px;
-	width: 6px;
-	height: calc(100% - 40px);
-	background-color: #ffffff;
-	border-radius: 3px;
+.slider-label {
+	color: #ffffff;
+	font-size: 20px;
+	height: 16px;
+	width: 20px;
+	margin-right: 10px;
+	display: inline-block;
+	text-align: center;
 }
 
 .fold {
@@ -215,10 +222,10 @@
 	background-color: #ffffff;
 }
 
-#fold-desc {
-	position: fixed;
-	bottom: 25px;
-	right: 16px;
+#fold-gravity-controls {
+	position: absolute;
+	top: 16px;
+	right: 24px;
 }
 
 #fold-links {
@@ -226,6 +233,10 @@
 	position: absolute;
 	top: 15px;
 	right: 20px;
+}
+
+.links-panel {
+	display: none;
 }
 
 @media only screen and (max-width: 500px) {
@@ -249,5 +260,10 @@
 	.links-panel > a {
 		display: block;
 		padding: 10px 20px;
+	}
+
+	.gravity-slider {
+		width: calc(100% - 30px);
+		margin: 8px 0;
 	}
 }
