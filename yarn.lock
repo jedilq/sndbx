@@ -1238,8 +1238,10 @@ electron-to-chromium@^1.4.202:
   resolved "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.4.233.tgz"
   integrity sha512-ejwIKXTg1wqbmkcRJh9Ur3hFGHFDZDw1POzdsVrB2WZjgRuRMHIQQKNpe64N/qh3ZtH2otEoRoS+s6arAAuAAw==
 
-elixr@../elixr:
-  version "0.4.9"
+elixr@^0.4.10:
+  version "0.4.10"
+  resolved "https://registry.yarnpkg.com/elixr/-/elixr-0.4.10.tgz#8c1696cd7896b8e969ab51309b57501a09d77f8c"
+  integrity sha512-/QLlHETC12NYbkt1c4AcYGubxA0ionj2BD0prWVwzX7OYM8GrGMygq2l7mSmUNWKdEbCEap/Cs14eSVCvaTZYg==
   dependencies:
     cannon-es "^0.20.0"
     ecsy "github:felixtrz/felicsy"
