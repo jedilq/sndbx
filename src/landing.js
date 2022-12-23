@@ -1,21 +1,4 @@
 export const landingPageLogic = () => {
-	const uiPanel = document.getElementById('ui-panel');
-	const gravityControls = document.getElementById('gravity-controls');
-
-	const inlineButton = document.getElementById('inline-button');
-	inlineButton.onclick = () => {
-		uiPanel.style.transform = `translateY(${uiPanel.offsetHeight}px)`;
-		gravityControls.style.opacity = 0.9;
-	};
-
-	const foldGravityControlsButton = document.getElementById(
-		'fold-gravity-controls',
-	);
-	foldGravityControlsButton.onclick = () => {
-		uiPanel.style.transform = `translateY(0px)`;
-		gravityControls.style.opacity = 0;
-	};
-
 	const foldLinksButton = document.getElementById('fold-links');
 	const foldLinksVerticalLine = foldLinksButton.getElementsByClassName(
 		'fold-vertical-line',

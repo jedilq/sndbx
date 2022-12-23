@@ -18862,6 +18862,7 @@ __webpack_require__.r(__webpack_exports__);
 
 class ARSceneCreationSystem extends elixr__WEBPACK_IMPORTED_MODULE_0__.XRGameSystem {
 	update() {
+		console.log(this.core.sessionMode);
 		if (!this.lightingCreated) {
 			const ambientLight = new elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.AmbientLight(0xffffff, 0.2);
 			this.core.scene.add(ambientLight);
@@ -18949,177 +18950,6 @@ class CubeLauncherSystem extends elixr__WEBPACK_IMPORTED_MODULE_0__.XRGameSystem
 					),
 				});
 			}
-		});
-	}
-}
-
-
-/***/ }),
-
-/***/ "./src/js/GravityControlSystem.js":
-/*!****************************************!*\
-  !*** ./src/js/GravityControlSystem.js ***!
-  \****************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "GravityControlSystem": () => (/* binding */ GravityControlSystem)
-/* harmony export */ });
-/* harmony import */ var elixr__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! elixr */ "./node_modules/elixr/dist/index.js");
-
-
-class GravityControlSystem extends elixr__WEBPACK_IMPORTED_MODULE_0__.GameSystem {
-	update() {
-		const gravitySliderX = document.getElementById('gravity-slider-x');
-		const gravitySliderY = document.getElementById('gravity-slider-y');
-		const gravitySliderZ = document.getElementById('gravity-slider-z');
-		this.core.physics.gravity.set(
-			gravitySliderX.value,
-			gravitySliderY.value,
-			gravitySliderZ.value,
-		);
-	}
-}
-
-
-/***/ }),
-
-/***/ "./src/js/InlineSceneCreationSystem.js":
-/*!*********************************************!*\
-  !*** ./src/js/InlineSceneCreationSystem.js ***!
-  \*********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "InlineSceneCreationSystem": () => (/* binding */ InlineSceneCreationSystem)
-/* harmony export */ });
-/* harmony import */ var elixr__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! elixr */ "./node_modules/elixr/dist/index.js");
-/* harmony import */ var three_examples_jsm_geometries_BoxLineGeometry__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! three/examples/jsm/geometries/BoxLineGeometry */ "./node_modules/three/examples/jsm/geometries/BoxLineGeometry.js");
-
-
-
-
-class InlineSceneCreationSystem extends elixr__WEBPACK_IMPORTED_MODULE_0__.SingleUseGameSystem {
-	update() {
-		const room = new elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.LineSegments(
-			new three_examples_jsm_geometries_BoxLineGeometry__WEBPACK_IMPORTED_MODULE_1__.BoxLineGeometry(5.98, 2.98, 5.98, 10, 5, 10),
-			new elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.LineBasicMaterial({ color: 0x808080 }),
-		);
-		room.geometry.translate(0, 1.5, 0);
-		this.core.scene.add(room);
-		this.core.scene.background = new elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.Color(0x505050);
-
-		this._createLighting();
-
-		this._createWalls();
-
-		this._createCubes();
-
-		const snowman = new elixr__WEBPACK_IMPORTED_MODULE_0__.GLTFObject('assets/Snowman.glb', {
-			hasPhysics: true,
-			mass: 1,
-			type: elixr__WEBPACK_IMPORTED_MODULE_0__.BODY_TYPES.DYNAMIC,
-		});
-		this.core.addGameObject(snowman);
-		snowman.position.set(0, 1.2, 0);
-		snowman.rotateZ(Math.PI / 4);
-		snowman.colliderVisible = true;
-	}
-
-	_createLighting() {
-		const ambientLight = new elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.AmbientLight(0xffffff, 0.2);
-		this.core.scene.add(ambientLight);
-
-		const directionalLight = new elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.DirectionalLight(0xffffff, 0.2);
-		this.core.scene.add(directionalLight);
-	}
-
-	_createWalls() {
-		const boxFloor = new elixr__WEBPACK_IMPORTED_MODULE_0__.CubeObject(
-			6,
-			0.02,
-			6,
-			{ color: 0xff5f1f },
-			{ mass: 0, type: elixr__WEBPACK_IMPORTED_MODULE_0__.BODY_TYPES.STATIC },
-		);
-		this.core.addGameObject(boxFloor);
-		boxFloor.visible = false;
-		boxFloor.addComponent(elixr__WEBPACK_IMPORTED_MODULE_0__.MovementSurface);
-
-		const boxCeiling = boxFloor.clone(true);
-		this.core.addGameObject(boxCeiling);
-		boxCeiling.position.set(0, 3, 0);
-
-		const boxWall = new elixr__WEBPACK_IMPORTED_MODULE_0__.CubeObject(
-			6,
-			3,
-			0.02,
-			{ color: 0xff5f1f },
-			{ mass: 0, type: elixr__WEBPACK_IMPORTED_MODULE_0__.BODY_TYPES.STATIC },
-		);
-		this.core.addGameObject(boxWall);
-		boxWall.visible = false;
-		boxWall.position.set(0, 1.5, -3);
-		boxWall.addComponent(elixr__WEBPACK_IMPORTED_MODULE_0__.MovementObstacle);
-
-		const boxWall2 = boxWall.clone(true);
-		this.core.addGameObject(boxWall2);
-		boxWall2.position.set(0, 1.5, 3);
-
-		const boxWall3 = boxWall.clone(true);
-		this.core.addGameObject(boxWall3);
-		boxWall3.position.set(3, 1.5, 0);
-		boxWall3.rotateY(Math.PI / 2);
-
-		const boxWall4 = boxWall.clone(true);
-		this.core.addGameObject(boxWall4);
-		boxWall4.position.set(-3, 1.5, 0);
-		boxWall4.rotateY(Math.PI / 2);
-	}
-
-	_createCubes() {
-		const randomObjects = [];
-
-		for (let i = 0; i < 50; i++) {
-			const cube = new elixr__WEBPACK_IMPORTED_MODULE_0__.CubeObject(
-				0.2 * Math.random() + 0.1,
-				0.2 * Math.random() + 0.1,
-				0.2 * Math.random() + 0.1,
-				{ color: Math.random() * 0xffffff },
-				{ mass: 1, type: elixr__WEBPACK_IMPORTED_MODULE_0__.BODY_TYPES.DYNAMIC },
-			);
-			this.core.addGameObject(cube);
-			randomObjects.push(cube);
-		}
-
-		for (let i = 0; i < 50; i++) {
-			const sphere = new elixr__WEBPACK_IMPORTED_MODULE_0__.SphereObject(
-				0.1 * Math.random() + 0.05,
-				{ color: Math.random() * 0xffffff },
-				{ mass: 1, type: elixr__WEBPACK_IMPORTED_MODULE_0__.BODY_TYPES.DYNAMIC },
-			);
-			this.core.addGameObject(sphere);
-			randomObjects.push(sphere);
-		}
-
-		randomObjects.forEach((object) => {
-			object.position.set(
-				Math.random() * 6 - 3,
-				Math.random() * 3,
-				Math.random() * 6 - 3,
-			);
-			const rigidBodyComponent = object.getMutableComponent(elixr__WEBPACK_IMPORTED_MODULE_0__.RigidBodyComponent);
-			rigidBodyComponent.angularDamping = 0;
-			rigidBodyComponent.linearDamping = 0;
-			rigidBodyComponent.initVelocity = new elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.Vector3(
-				Math.random() - 0.5,
-				Math.random() - 0.5,
-				Math.random() - 0.5,
-			)
-				.normalize()
-				.multiplyScalar(Math.random() * 5);
 		});
 	}
 }
@@ -19432,23 +19262,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "landingPageLogic": () => (/* binding */ landingPageLogic)
 /* harmony export */ });
 const landingPageLogic = () => {
-	const uiPanel = document.getElementById('ui-panel');
-	const gravityControls = document.getElementById('gravity-controls');
-
-	const inlineButton = document.getElementById('inline-button');
-	inlineButton.onclick = () => {
-		uiPanel.style.transform = `translateY(${uiPanel.offsetHeight}px)`;
-		gravityControls.style.opacity = 0.9;
-	};
-
-	const foldGravityControlsButton = document.getElementById(
-		'fold-gravity-controls',
-	);
-	foldGravityControlsButton.onclick = () => {
-		uiPanel.style.transform = `translateY(0px)`;
-		gravityControls.style.opacity = 0;
-	};
-
 	const foldLinksButton = document.getElementById('fold-links');
 	const foldLinksVerticalLine = foldLinksButton.getElementsByClassName(
 		'fold-vertical-line',
@@ -74881,87 +74694,6 @@ if ( typeof window !== 'undefined' ) {
 
 /***/ }),
 
-/***/ "./node_modules/three/examples/jsm/geometries/BoxLineGeometry.js":
-/*!***********************************************************************!*\
-  !*** ./node_modules/three/examples/jsm/geometries/BoxLineGeometry.js ***!
-  \***********************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "BoxLineGeometry": () => (/* binding */ BoxLineGeometry)
-/* harmony export */ });
-/* harmony import */ var three__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! three */ "./node_modules/three/build/three.module.js");
-
-
-class BoxLineGeometry extends three__WEBPACK_IMPORTED_MODULE_0__.BufferGeometry {
-
-	constructor( width = 1, height = 1, depth = 1, widthSegments = 1, heightSegments = 1, depthSegments = 1 ) {
-
-		super();
-
-		widthSegments = Math.floor( widthSegments );
-		heightSegments = Math.floor( heightSegments );
-		depthSegments = Math.floor( depthSegments );
-
-		const widthHalf = width / 2;
-		const heightHalf = height / 2;
-		const depthHalf = depth / 2;
-
-		const segmentWidth = width / widthSegments;
-		const segmentHeight = height / heightSegments;
-		const segmentDepth = depth / depthSegments;
-
-		const vertices = [];
-
-		let x = - widthHalf;
-		let y = - heightHalf;
-		let z = - depthHalf;
-
-		for ( let i = 0; i <= widthSegments; i ++ ) {
-
-			vertices.push( x, - heightHalf, - depthHalf, x, heightHalf, - depthHalf );
-			vertices.push( x, heightHalf, - depthHalf, x, heightHalf, depthHalf );
-			vertices.push( x, heightHalf, depthHalf, x, - heightHalf, depthHalf );
-			vertices.push( x, - heightHalf, depthHalf, x, - heightHalf, - depthHalf );
-
-			x += segmentWidth;
-
-		}
-
-		for ( let i = 0; i <= heightSegments; i ++ ) {
-
-			vertices.push( - widthHalf, y, - depthHalf, widthHalf, y, - depthHalf );
-			vertices.push( widthHalf, y, - depthHalf, widthHalf, y, depthHalf );
-			vertices.push( widthHalf, y, depthHalf, - widthHalf, y, depthHalf );
-			vertices.push( - widthHalf, y, depthHalf, - widthHalf, y, - depthHalf );
-
-			y += segmentHeight;
-
-		}
-
-		for ( let i = 0; i <= depthSegments; i ++ ) {
-
-			vertices.push( - widthHalf, - heightHalf, z, - widthHalf, heightHalf, z );
-			vertices.push( - widthHalf, heightHalf, z, widthHalf, heightHalf, z );
-			vertices.push( widthHalf, heightHalf, z, widthHalf, - heightHalf, z );
-			vertices.push( widthHalf, - heightHalf, z, - widthHalf, - heightHalf, z );
-
-			z += segmentDepth;
-
-		}
-
-		this.setAttribute( 'position', new three__WEBPACK_IMPORTED_MODULE_0__.Float32BufferAttribute( vertices, 3 ) );
-
-	}
-
-}
-
-
-
-
-/***/ }),
-
 /***/ "./node_modules/three/examples/jsm/geometries/ConvexGeometry.js":
 /*!**********************************************************************!*\
   !*** ./node_modules/three/examples/jsm/geometries/ConvexGeometry.js ***!
@@ -83805,13 +83537,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var elixr__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! elixr */ "./node_modules/elixr/dist/index.js");
 /* harmony import */ var _js_ARSceneCreationSystem__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js/ARSceneCreationSystem */ "./src/js/ARSceneCreationSystem.js");
 /* harmony import */ var _js_CubeLauncherSystem__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./js/CubeLauncherSystem */ "./src/js/CubeLauncherSystem.js");
-/* harmony import */ var _js_GravityControlSystem__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./js/GravityControlSystem */ "./src/js/GravityControlSystem.js");
-/* harmony import */ var _js_InlineSceneCreationSystem__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./js/InlineSceneCreationSystem */ "./src/js/InlineSceneCreationSystem.js");
-/* harmony import */ var _js_ObjectManipulationSystem__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./js/ObjectManipulationSystem */ "./src/js/ObjectManipulationSystem.js");
-/* harmony import */ var _js_VRSceneCreationSystem__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./js/VRSceneCreationSystem */ "./src/js/VRSceneCreationSystem.js");
-/* harmony import */ var _landing__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./landing */ "./src/landing.js");
-
-
+/* harmony import */ var _js_ObjectManipulationSystem__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./js/ObjectManipulationSystem */ "./src/js/ObjectManipulationSystem.js");
+/* harmony import */ var _js_VRSceneCreationSystem__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./js/VRSceneCreationSystem */ "./src/js/VRSceneCreationSystem.js");
+/* harmony import */ var _landing__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./landing */ "./src/landing.js");
 
 
 
@@ -83824,58 +83552,34 @@ __webpack_require__.r(__webpack_exports__);
 
 const core = new elixr__WEBPACK_IMPORTED_MODULE_1__.Core(document.getElementById('scene-container'));
 
-// create vr mode
-core.createWorld('vrworld');
-core.switchToWorld('vrworld');
-core.registerGameComponent(elixr__WEBPACK_IMPORTED_MODULE_1__.MovementObstacle);
-core.registerGameComponent(elixr__WEBPACK_IMPORTED_MODULE_1__.MovementSurface);
-
-core.registerGameSystem(elixr__WEBPACK_IMPORTED_MODULE_1__.XRTeleportSystem);
-core.registerGameSystem(elixr__WEBPACK_IMPORTED_MODULE_1__.XRSlideSystem);
-core.registerGameSystem(elixr__WEBPACK_IMPORTED_MODULE_1__.XRSnapTurnSystem);
-core.registerGameSystem(_js_VRSceneCreationSystem__WEBPACK_IMPORTED_MODULE_7__.VRSceneCreationSystem);
 core.registerGameSystem(_js_CubeLauncherSystem__WEBPACK_IMPORTED_MODULE_3__.CubeLauncherSystem);
-core.registerGameSystem(_js_ObjectManipulationSystem__WEBPACK_IMPORTED_MODULE_6__.ObjectManipulationSystem);
-const slideConfig = core.getGameSystemConfig(elixr__WEBPACK_IMPORTED_MODULE_1__.XRSlideSystem);
-slideConfig.MAX_MOVEMENT_SPEED = 2.5;
+core.registerGameSystem(_js_ObjectManipulationSystem__WEBPACK_IMPORTED_MODULE_4__.ObjectManipulationSystem);
+
 const switchToVR = () => {
-	core.switchToWorld('vrworld');
+	core.registerGameComponent(elixr__WEBPACK_IMPORTED_MODULE_1__.MovementObstacle);
+	core.registerGameComponent(elixr__WEBPACK_IMPORTED_MODULE_1__.MovementSurface);
+	core.registerGameSystem(elixr__WEBPACK_IMPORTED_MODULE_1__.XRTeleportSystem);
+	core.registerGameSystem(elixr__WEBPACK_IMPORTED_MODULE_1__.XRSlideSystem);
+	core.registerGameSystem(elixr__WEBPACK_IMPORTED_MODULE_1__.XRSnapTurnSystem);
+	core.registerGameSystem(_js_VRSceneCreationSystem__WEBPACK_IMPORTED_MODULE_5__.VRSceneCreationSystem);
+	const slideConfig = core.getGameSystemConfig(elixr__WEBPACK_IMPORTED_MODULE_1__.XRSlideSystem);
+	slideConfig.MAX_MOVEMENT_SPEED = 2.5;
 	core.playerSpace.position.set(0, 0, 0);
 	core.playerSpace.quaternion.set(0, 0, 0, 1);
 };
 
-// create ar mode
-core.createWorld('arworld');
-core.switchToWorld('arworld');
-core.registerGameSystem(_js_ARSceneCreationSystem__WEBPACK_IMPORTED_MODULE_2__.ARSceneCreationSystem);
-core.registerGameSystem(_js_CubeLauncherSystem__WEBPACK_IMPORTED_MODULE_3__.CubeLauncherSystem);
-core.registerGameSystem(_js_ObjectManipulationSystem__WEBPACK_IMPORTED_MODULE_6__.ObjectManipulationSystem);
 const switchToAR = () => {
-	core.switchToWorld('arworld');
+	core.registerGameSystem(_js_ARSceneCreationSystem__WEBPACK_IMPORTED_MODULE_2__.ARSceneCreationSystem);
 	core.playerSpace.position.set(0, 0, 0);
 	core.playerSpace.quaternion.set(0, 0, 0, 1);
 };
-
-// default to inline world
-core.switchToWorld('default');
-core.registerGameSystem(_js_InlineSceneCreationSystem__WEBPACK_IMPORTED_MODULE_5__.InlineSceneCreationSystem);
-core.registerGameSystem(_js_CubeLauncherSystem__WEBPACK_IMPORTED_MODULE_3__.CubeLauncherSystem);
-core.registerGameSystem(_js_ObjectManipulationSystem__WEBPACK_IMPORTED_MODULE_6__.ObjectManipulationSystem);
-core.registerGameSystem(_js_GravityControlSystem__WEBPACK_IMPORTED_MODULE_4__.GravityControlSystem);
-const switchToInline = () => {
-	core.switchToWorld('default');
-	core.inlineCamera.position.set(-2.5, 0.5, -2.5);
-	core.inlineCamera.lookAt(3, 2, 2);
-};
-
-switchToInline();
 
 const vrButton = document.getElementById('vr-button');
 elixr__WEBPACK_IMPORTED_MODULE_1__.VRButton.convertToVRButton(vrButton, core.renderer, {
 	VR_NOT_ALLOWED_TEXT: 'VR BLOCKED',
 	VR_NOT_SUPPORTED_TEXT: 'VR UNSUPPORTED',
 	onSessionStarted: switchToVR,
-	onSessionEnded: switchToInline,
+	onSessionEnded: () => {},
 	onUnsupported: () => {
 		vrButton.style.display = 'none';
 	},
@@ -83890,13 +83594,13 @@ elixr__WEBPACK_IMPORTED_MODULE_1__.ARButton.convertToARButton(arButton, core.ren
 	AR_NOT_ALLOWED_TEXT: 'AR BLOCKED',
 	AR_NOT_SUPPORTED_TEXT: 'AR UNSUPPORTED',
 	onSessionStarted: switchToAR,
-	onSessionEnded: switchToInline,
+	onSessionEnded: () => {},
 	onUnsupported: () => {
 		arButton.style.display = 'none';
 	},
 });
 
-(0,_landing__WEBPACK_IMPORTED_MODULE_8__.landingPageLogic)();
+(0,_landing__WEBPACK_IMPORTED_MODULE_6__.landingPageLogic)();
 
 })();
 

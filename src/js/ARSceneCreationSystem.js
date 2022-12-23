@@ -2,6 +2,7 @@ import { BODY_TYPES, CubeObject, THREE, XRGameSystem } from 'elixr';
 
 export class ARSceneCreationSystem extends XRGameSystem {
 	update() {
+		console.log(this.core.sessionMode);
 		if (!this.lightingCreated) {
 			const ambientLight = new THREE.AmbientLight(0xffffff, 0.2);
 			this.core.scene.add(ambientLight);
