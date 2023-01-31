@@ -55,7 +55,7 @@ VRButton.convertToVRButton(vrButton, core.renderer, {
 const arButton = document.getElementById('ar-button');
 ARButton.convertToARButton(arButton, core.renderer, {
 	sessionInit: {
-		requiredFeatures: ['anchors', 'plane-detection'],
+		requiredFeatures: ['anchors'],
 		optionalFeatures: [],
 	},
 	AR_NOT_ALLOWED_TEXT: 'AR BLOCKED',
