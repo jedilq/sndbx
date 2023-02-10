@@ -1,8 +1,15 @@
-import { GLTFObject, Matrix4, THREE, XRGameSystem } from 'elixr';
+import {
+	GLTFModelLoader,
+	GLTFObject,
+	Matrix4,
+	THREE,
+	XRGameSystem,
+} from 'elixr';
 
 export class ARSceneCreationSystem extends XRGameSystem {
 	init() {
 		this.snowman = null;
+		this.objects = [];
 	}
 
 	update() {
@@ -52,6 +59,39 @@ export class ARSceneCreationSystem extends XRGameSystem {
 			);
 
 			this.snowman = snowman;
+
+			const position = new THREE.Vector3(0, 0, -2);
+			const quaternion = new THREE.Quaternion(0, 0, 0, 1);
+			// eslint-disable-next-line no-undef
+			const anchorPose2 = new XRRigidTransform(
+				{
+					x: position.x,
+					y: position.y,
+					z: position.z,
+				},
+				{
+					x: quaternion.x,
+					y: quaternion.y,
+					z: quaternion.z,
+					w: quaternion.w,
+				},
+			);
+			frame.createAnchor(anchorPose2, referenceSpace).then(
+				(anchor) => {
+					GLTFModelLoader.getInstance().load('assets/snowman.glb', (gltf) => {
+						const model = gltf.scene;
+
+						model.position.copy(position);
+						model.quaternion.copy(quaternion);
+						model.anchor = anchor;
+						anchor.gameObject = model;
+						this.objects.push(model);
+					});
+				},
+				(error) => {
+					console.error('Could not create anchor: ' + error);
+				},
+			);
 		}
 
 		const anchor = this.snowman.anchor;
@@ -72,5 +112,58 @@ export class ARSceneCreationSystem extends XRGameSystem {
 				this.snowman.visible = false;
 			}
 		}
+
+		for (const model of this.objects) {
+			if (model.anchor) {
+				const anchorPose = frame.getPose(
+					model.anchor.anchorSpace,
+					referenceSpace,
+				);
+				if (anchorPose) {
+					new THREE.Matrix4()
+						.fromArray(anchorPose.transform.matrix)
+						.decompose(model.position, model.quaternion, new THREE.Vector3());
+					model.visible = true;
+				} else {
+					model.visible = false;
+				}
+			}
+		}
 	}
 }
+
+// const addStuffToRoom = (objectUrl, frame, referenceSpace, models) => {
+// 	GLTFModelLoader.getInstance().load(objectUrl, (gltf) => {
+// 		const model = gltf.scene;
+
+// 		model.position.set(0, 0, -2);
+// 		model.quaternion.set(0, 0, 0, 1);
+
+// 		// eslint-disable-next-line no-undef
+// 		const anchorPose = new XRRigidTransform(
+// 			{
+// 				x: model.position.x,
+// 				y: model.position.y,
+// 				z: model.position.z,
+// 			},
+// 			{
+// 				x: model.quaternion.x,
+// 				y: model.quaternion.y,
+// 				z: model.quaternion.z,
+// 				w: model.quaternion.w,
+// 			},
+// 		);
+
+// 		// create anchor using anchor pose and reference space
+// 		frame.createAnchor(anchorPose, referenceSpace).then(
+// 			(anchor) => {
+// 				model.anchor = anchor;
+// 				anchor.gameObject = model;
+// 				models.push(model);
+// 			},
+// 			(error) => {
+// 				console.error('Could not create anchor: ' + error);
+// 			},
+// 		);
+// 	});
+// };
