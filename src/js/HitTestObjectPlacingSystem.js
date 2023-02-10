@@ -15,6 +15,10 @@ export class HitTestObjectPlacingSystem extends XRGameSystem {
 		if (frame) {
 			if (this.hitTestSourceRequested === false) {
 				this.hitTestSourceRequested = true;
+				// Request a hit test source using the viewer as the reference space
+				// On mobile devices, this translates to the direction the camera is facing
+				// On headsets, this translates to the direction the headset is facing
+				// We only need one hit test source for the entire session
 				frame.session.requestReferenceSpace('viewer').then((referenceSpace) => {
 					frame.session
 						.requestHitTestSource({ space: referenceSpace })
@@ -23,14 +27,20 @@ export class HitTestObjectPlacingSystem extends XRGameSystem {
 						});
 				});
 
+				// Load a gltf model
+				// We don't want to load this model every time we place an object
 				GLTFModelLoader.getInstance().load(
 					'https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/Duck/glTF/Duck.gltf',
 					(gltf) => {
 						const duck = gltf.scene;
 						duck.scale.setScalar(0.1);
 
+						// Once the model is loaded, we listen for the select event
+						// On mobile devices, this translates to a tap
+						// On headsets, this translates to a trigger press
 						frame.session.addEventListener('select', () => {
 							if (this.reticle) {
+								// Clone the duck model and place it at the reticle's position
 								const duckClone = duck.clone();
 								duckClone.position.set(
 									this.reticle.position.x,
@@ -60,6 +70,7 @@ export class HitTestObjectPlacingSystem extends XRGameSystem {
 									},
 								);
 
+								// create anchor using anchor pose and reference space
 								frame.createAnchor(anchorPose, referenceSpace).then(
 									(anchor) => {
 										duckClone.anchor = anchor;
@@ -80,6 +91,8 @@ export class HitTestObjectPlacingSystem extends XRGameSystem {
 				const hitTestResults = frame.getHitTestResults(this.hitTestSource);
 				if (hitTestResults.length) {
 					const hit = hitTestResults[0];
+					// Create a reticle if it doesn't exist
+					// This reticle is a cylinder that we will place at the hit test result's pose
 					if (this.reticle === null) {
 						this.reticle = new THREE.Mesh(
 							new THREE.CylinderGeometry(0.1, 0.1, 0.001, 32),
@@ -88,7 +101,7 @@ export class HitTestObjectPlacingSystem extends XRGameSystem {
 						this.core.scene.add(this.reticle);
 					}
 
-					// get hit test result's pose and update placed object's position and rotation
+					// get hit test result's pose and update reticle's position and rotation
 					const hitPose = hit.getPose(referenceSpace);
 					this.reticle.position.set(
 						hitPose.transform.position.x,
@@ -104,6 +117,7 @@ export class HitTestObjectPlacingSystem extends XRGameSystem {
 				}
 			}
 
+			// Update the position of the duck using its attached anchor
 			for (const duck of this.ducks) {
 				if (duck.anchor) {
 					const anchorPose = frame.getPose(

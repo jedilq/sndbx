@@ -19008,6 +19008,10 @@ class HitTestObjectPlacingSystem extends elixr__WEBPACK_IMPORTED_MODULE_0__.XRGa
 		if (frame) {
 			if (this.hitTestSourceRequested === false) {
 				this.hitTestSourceRequested = true;
+				// Request a hit test source using the viewer as the reference space
+				// On mobile devices, this translates to the direction the camera is facing
+				// On headsets, this translates to the direction the headset is facing
+				// We only need one hit test source for the entire session
 				frame.session.requestReferenceSpace('viewer').then((referenceSpace) => {
 					frame.session
 						.requestHitTestSource({ space: referenceSpace })
@@ -19016,14 +19020,20 @@ class HitTestObjectPlacingSystem extends elixr__WEBPACK_IMPORTED_MODULE_0__.XRGa
 						});
 				});
 
+				// Load a gltf model
+				// We don't want to load this model every time we place an object
 				elixr__WEBPACK_IMPORTED_MODULE_0__.GLTFModelLoader.getInstance().load(
 					'https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/Duck/glTF/Duck.gltf',
 					(gltf) => {
 						const duck = gltf.scene;
 						duck.scale.setScalar(0.1);
 
+						// Once the model is loaded, we listen for the select event
+						// On mobile devices, this translates to a tap
+						// On headsets, this translates to a trigger press
 						frame.session.addEventListener('select', () => {
 							if (this.reticle) {
+								// Clone the duck model and place it at the reticle's position
 								const duckClone = duck.clone();
 								duckClone.position.set(
 									this.reticle.position.x,
@@ -19053,6 +19063,7 @@ class HitTestObjectPlacingSystem extends elixr__WEBPACK_IMPORTED_MODULE_0__.XRGa
 									},
 								);
 
+								// create anchor using anchor pose and reference space
 								frame.createAnchor(anchorPose, referenceSpace).then(
 									(anchor) => {
 										duckClone.anchor = anchor;
@@ -19073,6 +19084,8 @@ class HitTestObjectPlacingSystem extends elixr__WEBPACK_IMPORTED_MODULE_0__.XRGa
 				const hitTestResults = frame.getHitTestResults(this.hitTestSource);
 				if (hitTestResults.length) {
 					const hit = hitTestResults[0];
+					// Create a reticle if it doesn't exist
+					// This reticle is a cylinder that we will place at the hit test result's pose
 					if (this.reticle === null) {
 						this.reticle = new elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.Mesh(
 							new elixr__WEBPACK_IMPORTED_MODULE_0__.THREE.CylinderGeometry(0.1, 0.1, 0.001, 32),
@@ -19081,7 +19094,7 @@ class HitTestObjectPlacingSystem extends elixr__WEBPACK_IMPORTED_MODULE_0__.XRGa
 						this.core.scene.add(this.reticle);
 					}
 
-					// get hit test result's pose and update placed object's position and rotation
+					// get hit test result's pose and update reticle's position and rotation
 					const hitPose = hit.getPose(referenceSpace);
 					this.reticle.position.set(
 						hitPose.transform.position.x,
@@ -19097,6 +19110,7 @@ class HitTestObjectPlacingSystem extends elixr__WEBPACK_IMPORTED_MODULE_0__.XRGa
 				}
 			}
 
+			// Update the position of the duck using its attached anchor
 			for (const duck of this.ducks) {
 				if (duck.anchor) {
 					const anchorPose = frame.getPose(
