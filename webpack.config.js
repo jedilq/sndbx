@@ -17,9 +17,11 @@ module.exports = {
 		],
 	},
 	devServer: {
-		https: true,
+		static: {
+			directory: path.join(__dirname, 'dist'),
+		},
 		host: '0.0.0.0',
-		contentBase: path.join(__dirname, 'dist'),
+		server: 'https',
 		compress: true,
 		port: 8081,
 	},
