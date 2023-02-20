@@ -28,6 +28,7 @@ export class CubeLauncherSystem extends XRGameSystem {
 						cubeObject.quaternion,
 					),
 				});
+				cubeMesh.castShadow = true;
 			}
 		});
 	}

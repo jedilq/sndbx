@@ -12,11 +12,10 @@ import { RGBELoader } from 'three/examples/jsm/loaders/RGBELoader.js';
 
 export class VRSceneCreationSystem extends SingleUseGameSystem {
 	update() {
-		this._createLighting();
-
 		this._createRoom1();
 		this._createRoom2();
 		this._createRamp();
+		this._createLighting();
 
 		const snowman = new GLTFObject('assets/Snowman.glb', {
 			hasPhysics: true,
@@ -37,8 +36,20 @@ export class VRSceneCreationSystem extends SingleUseGameSystem {
 		});
 		const ambientLight = new THREE.AmbientLight(0xffffff, 0.2);
 		this.core.scene.add(ambientLight);
-		const directionalLight = new THREE.DirectionalLight(0xffffff, 0.2);
+		const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+		directionalLight.position.set(0, 2.8, 0);
+		directionalLight.castShadow = true;
+		directionalLight.shadow.mapSize.set(4096, 4096);
 		this.core.scene.add(directionalLight);
+		this.core.renderer.shadowMap.enabled = true;
+
+		this.core.scene.traverse((node) => {
+			console.log(node);
+			if (node.isMesh) {
+				node.castShadow = true;
+				node.receiveShadow = true;
+			}
+		});
 	}
 
 	_createRoom1() {
